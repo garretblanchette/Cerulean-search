@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cerulean Search</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="title">
+          <h1>Cerulean Search</h1>
+          <div class="subtitle">Ad-minimized. Quality-ranked. Fast synthesis with citations.</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="row">
+          <input id="q" class="input" type="text" placeholder="Search…" />
+          <button id="go" class="btn">Search</button>
+        </div>
+
+        <div class="row wrap">
+          <label class="chip">
+            <span>Provider</span>
+            <select id="provider" class="select">
+              <option value="brave">Brave (API key)</option>
+              <option value="serper">Google via Serper (API key)</option>
+              <option value="ddg">DuckDuckGo (no key)</option>
+            </select>
+          </label>
+
+          <label class="chip">
+            <input id="no_commerce" type="checkbox" checked />
+            <span>No commerce</span>
+          </label>
+
+          <label class="chip">
+            <input id="prefer_official" type="checkbox" checked />
+            <span>Prefer official</span>
+          </label>
+
+          <label class="chip">
+            <span>Recent (days)</span>
+            <input id="recent_days" class="num" type="number" min="1" max="3650" placeholder="—" />
+          </label>
+
+          <label class="chip">
+            <input id="synthesize" type="checkbox" checked />
+            <span>Synthesize</span>
+          </label>
+
+          <label class="chip">
+            <span>Top pages</span>
+            <input id="fetch_top_n" class="num" type="number" min="0" max="5" value="3" />
+          </label>
+        </div>
+
+        <div class="row wrap">
+          <label class="chip wide">
+            <span>Block domains (comma-separated)</span>
+            <input id="block" class="input small" type="text" placeholder="example.com, spam.site" />
+          </label>
+          <label class="chip wide">
+            <span>Allow domains (comma-separated)</span>
+            <input id="allow" class="input small" type="text" placeholder="nih.gov, w3.org" />
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div id="status" class="status">Idle</div>
+        <div id="synthesis" class="synthesis hidden"></div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
