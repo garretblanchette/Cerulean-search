@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py" },
+    { "src": "/docs", "dest": "/api/index.py" },
+    { "src": "/openapi.json", "dest": "/api/index.py" },
+    { "src": "/(.*)", "dest": "/public/$1" },
+    { "src": "/", "dest": "/public/index.html" }
+  ]
+}
