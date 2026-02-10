@@ -1,7 +1,8 @@
 import os
 import sys
 
-# Ensure imports work on Vercel regardless of working directory.
+# Vercel serverless entrypoint.
+# Make imports robust regardless of working directory and whether /backend is a package.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 BACKEND_DIR = os.path.join(PROJECT_ROOT, "backend")
 
@@ -9,18 +10,26 @@ for p in (PROJECT_ROOT, BACKEND_DIR):
     if p not in sys.path:
         sys.path.insert(0, p)
 
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, HTTPException  # noqa: E402
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 
-# Import backend modules (these must exist in /backend)
-from backend.models import SearchRequest, SearchResponse
-from backend.search_providers import brave_search, serper_search, ddg_search
-from backend.ranking import rerank
-from backend.summarizer import synthesize
+# Import backend modules with a two-path fallback:
+try:
+    from backend.models import SearchRequest, SearchResponse  # type: ignore
+    from backend.search_providers import brave_search, serper_search, ddg_search  # type: ignore
+    from backend.ranking import rerank  # type: ignore
+    from backend.summarizer import synthesize  # type: ignore
+except Exception:
+    # If backend isn't a package (no __init__.py), import from BACKEND_DIR directly
+    from models import SearchRequest, SearchResponse  # type: ignore
+    from search_providers import brave_search, serper_search, ddg_search  # type: ignore
+    from ranking import rerank  # type: ignore
+    from summarizer import synthesize  # type: ignore
 
 app = FastAPI(
     title="Cerulean Search API",
     version="0.1.0",
+    description="Ad-minimized, quality-weighted search API (Vercel serverless entrypoint).",
 )
 
 app.add_middleware(
@@ -47,7 +56,6 @@ def api_search(req: SearchRequest):
         else:
             raise HTTPException(status_code=400, detail="Unsupported provider")
     except RuntimeError as e:
-        # Missing API keys etc.
         raise HTTPException(status_code=400, detail=str(e))
     except HTTPException:
         raise
