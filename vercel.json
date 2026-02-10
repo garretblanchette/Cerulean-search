@@ -1,12 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-          { "src": "api/index.py", "use": "@vercel/python" }
-    ],
-    "routes": [
-          { "src": "/api/(.*)", "dest": "/api/index.py" },
-          { "src": "/docs", "dest": "/api/index.py" },
-          { "src": "/openapi\\.json", "dest": "/api/index.py" },
-          { "src": "/(.*)", "dest": "/api/index.py" }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": "backend/**/*.py"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py" },
+    { "src": "/docs", "dest": "/api/index.py" },
+    { "src": "/openapi\\.json", "dest": "/api/index.py" },
+    { "src": "/(.*)", "dest": "/api/index.py" }
+  ]
 }
