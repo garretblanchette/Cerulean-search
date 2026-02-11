@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <!-- Dark mode toggle (always visible) -->
+  <button id="dark-toggle" title="Toggle dark mode">🌙</button>
+
   <div id="app" class="app landing">
 
     <!-- Landing header (centered) -->
@@ -39,9 +42,9 @@
           </button>
         </div>
 
-        <!-- Filter chips shown after first search -->
+        <!-- Filter chips -->
         <div id="filters" class="filters hidden">
-          <button class="chip active" id="chip-no-commerce" data-key="no_commerce" title="Demote affiliate and shopping links">
+          <button class="chip active" id="chip-no-commerce" data-key="no_commerce" title="Demote affiliate & shopping links">
             <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M2.5 2A1.5 1.5 0 001 3.5V5h14V3.5A1.5 1.5 0 0013.5 2h-11zM15 6H1v6.5A1.5 1.5 0 002.5 14h11a1.5 1.5 0 001.5-1.5V6zM5 8h6v1.5H5V8z"/></svg>
             No ads
           </button>
@@ -66,6 +69,9 @@
           </div>
         </div>
       </div>
+
+      <!-- Instant answer (calculator, conversions, etc.) -->
+      <div id="instant-answer" class="hidden"></div>
 
       <!-- Status -->
       <div id="status" class="status hidden"></div>
