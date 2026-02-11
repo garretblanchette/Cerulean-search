@@ -46,13 +46,3 @@ def api_search(req: SearchRequest):
         except Exception:
             syn = []
     return SearchResponse(query=req.q, provider=req.provider, results=ranked, synthesis=syn, meta={"count_requested": req.count, "count_returned": len(ranked), "no_commerce": req.no_commerce, "prefer_official": req.prefer_official, "prefer_recent_days": req.prefer_recent_days})
-```
-
-And also update `api/requirements.txt` to:
-```
-fastapi==0.115.6
-uvicorn==0.30.6
-requests==2.32.3
-beautifulsoup4==4.12.3
-duckduckgo_search==6.3.5
-pydantic>=2.0
