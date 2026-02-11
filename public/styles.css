@@ -26,6 +26,44 @@
   --ease:         cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ---- Dark Mode (manual toggle) ---- */
+html.dark {
+  --cerulean:     #22d3ee;
+  --cerulean-l:   #67e8f9;
+  --cerulean-xl:  rgba(34, 211, 238, 0.1);
+  --cerulean-d:   #a5f3fc;
+  --ink:          #e4e6eb;
+  --body:         #c0c5d0;
+  --muted:        #7a8394;
+  --faint:        #3d4455;
+  --bg:           #0f1117;
+  --surface:      #1a1d27;
+  --line:         #252a36;
+  --shadow-s:     0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-m:     0 4px 16px rgba(0,0,0,0.4);
+  --shadow-focus: 0 0 0 3px rgba(34,211,238,0.2);
+}
+
+/* ---- Auto dark for OS preference ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-forced) {
+    --cerulean:     #22d3ee;
+    --cerulean-l:   #67e8f9;
+    --cerulean-xl:  rgba(34, 211, 238, 0.1);
+    --cerulean-d:   #a5f3fc;
+    --ink:          #e4e6eb;
+    --body:         #c0c5d0;
+    --muted:        #7a8394;
+    --faint:        #3d4455;
+    --bg:           #0f1117;
+    --surface:      #1a1d27;
+    --line:         #252a36;
+    --shadow-s:     0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-m:     0 4px 16px rgba(0,0,0,0.4);
+    --shadow-focus: 0 0 0 3px rgba(34,211,238,0.2);
+  }
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { height: 100%; }
@@ -37,6 +75,32 @@ body {
   color: var(--body);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+/* ---- Dark Mode Toggle Button ---- */
+#dark-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-s);
+  transition: border-color 0.2s, transform 0.15s, background 0.3s;
+}
+#dark-toggle:hover {
+  border-color: var(--cerulean-l);
+  transform: scale(1.08);
 }
 
 /* ---- App container ---- */
@@ -161,7 +225,7 @@ body {
   border: 1.5px solid var(--line);
   border-radius: var(--radius);
   padding: 4px 6px 4px 16px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.3s;
 }
 .search-bar:hover {
   border-color: var(--faint);
@@ -217,6 +281,9 @@ body {
 .search-btn:active {
   transform: scale(0.95);
 }
+html.dark .search-btn {
+  color: #0f1117;
+}
 
 /* ---- Filter Chips ---- */
 .filters {
@@ -253,6 +320,9 @@ body {
   border-color: rgba(0,123,167,0.3);
   color: var(--cerulean);
 }
+html.dark .chip.active {
+  border-color: rgba(34, 211, 238, 0.3);
+}
 .chip svg { opacity: 0.7; }
 .chip.active svg { opacity: 1; }
 
@@ -269,6 +339,7 @@ body {
   background: var(--bg);
   cursor: pointer;
   outline: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 .provider-select select:focus {
   border-color: var(--cerulean-l);
@@ -292,6 +363,9 @@ body {
   padding: 16px 18px;
   margin-top: 8px;
   animation: fadeUp 0.3s var(--ease) both;
+}
+html.dark .synthesis {
+  border-color: rgba(34, 211, 238, 0.15);
 }
 .synthesis h2 {
   font-size: 13px;
@@ -366,6 +440,9 @@ body {
 .result .title a:visited {
   color: #6B21A8;
 }
+html.dark .result .title a:visited {
+  color: #c084fc;
+}
 .result .title a:hover {
   text-decoration: underline;
 }
@@ -428,6 +505,7 @@ body {
   color: var(--faint);
   background: var(--bg);
   border-top: 1px solid var(--line);
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 /* ---- Loading spinner ---- */
