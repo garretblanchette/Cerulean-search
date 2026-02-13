@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
 :root {
-  --cerulean:     #007BA7;
+  --cerulean:     #007BA7;h
   --cerulean-l:   #2A9FCA;
   --cerulean-xl:  #E8F4F9;
   --cerulean-d:   #005F80;
@@ -83,7 +83,7 @@ body {
   position: fixed;
   top: 14px;
   right: 14px;
-  z-index: 9999;
+  z-index: 999;
   width: 40px;
   height: 40px;
   border-radius: 50%;
