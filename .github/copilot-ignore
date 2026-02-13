@@ -1,0 +1,2 @@
+# This file opts this repository out of GitHub Copilot AI training.
+# Its presence instructs GitHub to exclude this repo from AI training datasets.
