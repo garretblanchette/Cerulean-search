@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valley Builders — Cerulean</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/directory.css">
+  <script>
+    (function() {
+      const saved = localStorage.getItem('cerulean-dark');
+      if (saved === '1') document.documentElement.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <button id="dark-toggle" title="Toggle dark mode">🌙</button>
+
+  <div class="dir-page">
+    <header class="dir-header">
+      <a href="/" class="dir-wordmark" title="Back to Cerulean Search">
+        <span class="mini-wordmark">Cerulean</span>
+      </a>
+      <nav class="dir-nav">
+        <a href="/directory">Directory</a>
+        <a href="/submit">Submit</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <main class="dir-main">
+      <section class="dir-intro">
+        <h1>Valley Builders</h1>
+        <p class="dir-subtitle" id="dir-count">Loading builders…</p>
+      </section>
+
+      <section class="dir-filters">
+        <select id="filter-city" aria-label="Filter by city">
+          <option value="">All cities</option>
+          <option>Palm Springs</option>
+          <option>Desert Hot Springs</option>
+          <option>Cathedral City</option>
+          <option>Rancho Mirage</option>
+          <option>Palm Desert</option>
+          <option>Indian Wells</option>
+          <option>La Quinta</option>
+          <option>Indio</option>
+          <option>Coachella</option>
+        </select>
+
+        <select id="filter-industry" aria-label="Filter by industry">
+          <option value="">All industries</option>
+          <option>Clean tech</option>
+          <option>Healthcare</option>
+          <option>Hospitality</option>
+          <option>Retail</option>
+          <option>Software</option>
+          <option>Media</option>
+          <option>Education</option>
+          <option>Food and Beverage</option>
+          <option>Real estate</option>
+          <option>Other</option>
+        </select>
+
+        <input type="search" id="filter-search" placeholder="Search names or projects" aria-label="Search">
+      </section>
+
+      <section id="dir-grid" class="dir-grid"></section>
+
+      <section id="dir-empty" class="dir-empty hidden">
+        <p>No builders match those filters yet.</p>
+        <button id="reset-filters">Reset filters</button>
+      </section>
+    </main>
+
+    <footer class="dir-footer">
+      <span>© 2026 CVIA Directory · An independent community project</span>
+    </footer>
+  </div>
+
+  <script src="/directory.js"></script>
+</body>
+</html>

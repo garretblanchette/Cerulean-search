@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "maya-okafor",
+    "name": "Maya Okafor",
+    "city": "Palm Springs",
+    "industry": "Clean tech",
+    "building": "Solar microgrid retrofits for mid-century homes",
+    "story": "Moved here for the architecture and stayed for the sun. Mid-century homes were never designed for 115-degree summers, so retrofitting them with smart solar and storage is climate adaptation at the household level. I'd rather rebuild the desert grid one home at a time than chase another big-tech salary in Oakland.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "reuben-castaneda",
+    "name": "Reuben Castaneda",
+    "city": "Coachella",
+    "industry": "Food and Beverage",
+    "building": "Heritage-grain bakery using local desert wheat",
+    "story": "Three generations of my family farmed this valley. The bakery uses heritage wheat varieties grown within forty miles of the storefront, which almost nobody else in the country can claim. People come for the bread and stay to ask where it actually comes from.",
+    "looking_for_collaborators": false
+  },
+  {
+    "slug": "sarah-liu",
+    "name": "Sarah Liu",
+    "city": "Cathedral City",
+    "industry": "Software",
+    "building": "Scheduling tools for hospitality workers",
+    "story": "Built scheduling software at three SaaS companies before realizing the hospitality workers who served me coffee every morning were using paper schedules pinned to a wall. I'm building the tool I should have built fifteen years ago, for an industry the Bay Area never bothered with.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "doug-whitfield",
+    "name": "Doug Whitfield",
+    "city": "Indian Wells",
+    "industry": "Healthcare",
+    "building": "Concierge cardiology clinic for retirees",
+    "story": "Forty years of cardiology in Chicago hospitals, retired here, and within six months realized our retiree population deserves better than rushed Medicare visits. The concierge model isn't new, but doing it for desert healthcare needs specifically is. We see the whole patient, not the seven-minute slot.",
+    "looking_for_collaborators": false
+  },
+  {
+    "slug": "priya-sharma",
+    "name": "Priya Sharma",
+    "city": "La Quinta",
+    "industry": "Education",
+    "building": "After-school robotics program in underserved schools",
+    "story": "Watched my own kids leave for opportunities elsewhere and realized the pipeline was broken by middle school, not high school. The robotics program meets kids before they decide tech isn't for them, in the schools that need it most. The valley raises talented kids; we should be the place that keeps them.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "hector-mendoza",
+    "name": "Hector Mendoza",
+    "city": "Indio",
+    "industry": "Real estate",
+    "building": "Workforce housing development partnerships",
+    "story": "Workforce housing isn't a side project, it's the foundation of every other development conversation in the valley. I built luxury for fifteen years; this is harder, but the math is starting to work with city partnerships and the right capital stack. If the people who serve the resorts can't afford to live near them, we don't have an economy, we have a charade.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "anya-petrov",
+    "name": "Anya Petrov",
+    "city": "Palm Desert",
+    "industry": "Media",
+    "building": "Documentary podcast on Salton Sea recovery",
+    "story": "Came from public radio in New York. The Salton Sea is the largest environmental and social story in California that nobody outside the region has heard reported well. Podcasts let me do the long-form work that broadcast was never going to fund. The story is here; the gap is in who's telling it.",
+    "looking_for_collaborators": false
+  },
+  {
+    "slug": "james-crowley",
+    "name": "James Crowley",
+    "city": "Desert Hot Springs",
+    "industry": "Hospitality",
+    "building": "Hot springs spa with wellness retreat programming",
+    "story": "Bought a tired motel on the geothermal aquifer in 2019 and realized DHS has actual hot springs that nobody in modern wellness culture talks about. Built a spa around the natural mineral water that we don't have to fake or pipe in. The water is doing the differentiation; we just stopped apologizing for the zip code.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "lila-thompson",
+    "name": "Lila Thompson",
+    "city": "Rancho Mirage",
+    "industry": "Retail",
+    "building": "Mid-century furniture restoration and resale",
+    "story": "Mid-century restoration is craft work and most of the originals are sitting in valley garages waiting for somebody to remember they're valuable. Trained as a furniture conservator in Copenhagen, came here for family, found a regional asset that nobody had organized into a business. Shipping to LA, San Francisco, and increasingly Europe.",
+    "looking_for_collaborators": false
+  },
+  {
+    "slug": "tomas-garcia",
+    "name": "Tomas Garcia",
+    "city": "Coachella",
+    "industry": "Clean tech",
+    "building": "Greenhouse cooling using geothermal heat exchange",
+    "story": "Spent a decade designing HVAC systems for warehouses. Greenhouse cooling using ground-temperature heat exchange is the same physics applied to agriculture, and the East Valley grows more produce than people realize. We can extend growing seasons without burning more grid capacity. Nobody else in California is targeting this specific gap.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "eleanor-chen",
+    "name": "Eleanor Chen",
+    "city": "Palm Springs",
+    "industry": "Healthcare",
+    "building": "Mobile mental health crisis response unit",
+    "story": "Worked psychiatric emergency at LA County for twelve years before moving here for my mother. The mobile crisis unit model exists everywhere except in the valley, where police are still doing welfare checks that should be clinical responses. We're piloting the alternative response with two cities; the data is going to change minds.",
+    "looking_for_collaborators": true
+  },
+  {
+    "slug": "marcus-bell",
+    "name": "Marcus Bell",
+    "city": "Indio",
+    "industry": "Other",
+    "building": "Community radio station and audio production cooperative",
+    "story": "Started a low-power FM station in 2018 because the East Valley deserved actual local radio, not syndicated chatter from Riverside. The cooperative model means our DJs, our hosts, and the small businesses who run audio ads share ownership. It's the only valley media outlet where the people on the air also have a vote in what the station becomes.",
+    "looking_for_collaborators": false
+  }
+]
