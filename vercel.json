@@ -11,6 +11,10 @@
     { "src": "/favicon\\.(ico|png)", "dest": "/public/favicon.$1" },
     { "src": "/app\\.js", "dest": "/public/app.js" },
     { "src": "/styles\\.css", "dest": "/public/styles.css" },
+    { "src": "/directory\\.js", "dest": "/public/directory.js" },
+    { "src": "/directory\\.css", "dest": "/public/directory.css" },
+    { "src": "/directory", "dest": "/public/directory.html" },
+    { "src": "/data/builders\\.json", "dest": "/public/data/builders.json" },
     { "src": "/index\\.html", "dest": "/public/index.html" },
     { "src": "/", "dest": "/public/index.html" }
   ]
