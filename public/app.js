@@ -10,6 +10,7 @@ function el(tag, cls, text) {
   return e;
 }
 
+const SOURCE_LABELS = { news:'News', reference:'Reference', wiki_community:'Fan Wiki', academic:'Academic', gov:'Official', forum:'Forum', social:'Social', video:'Video', docs:'Docs', code:'Code', blog:'Blog', commerce:'Shop', reviews:'Reviews', press:'Press Release', health:'Health', recipe:'Recipe', learning:'Learning', ai_slop:'AI Content', other:'Other' };
 const state = {
   no_commerce: true, prefer_official: true, synthesize: false,
   recent: false, provider: 'brave', hasSearched: false,
@@ -212,6 +213,7 @@ function renderResults(results) {
     getTrustSignals(r.score, r.reasons).forEach(sig => {
       meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
     });
+    if (r.source_type && r.source_type !== 'other') meta.appendChild(el('span', 'src-badge src-' + r.source_type, SOURCE_LABELS[r.source_type] || r.source_type));
     if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
     card.appendChild(meta);
     $results.appendChild(card);

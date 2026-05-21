@@ -534,3 +534,25 @@ html.dark .result .title a:visited {
   .chip { font-size: 11.5px; padding: 5px 10px; }
   .result .title a { font-size: 16px; }
 }
+
+/* ---- Source-type badges ---- */
+.src-badge { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 500; border-radius: 10px; letter-spacing: 0.02em; border: 1px solid transparent; }
+.src-news { background: #e7f0ff; color: #1a4480; border-color: #c6d8f5; }
+.src-reference { background: #f0eaff; color: #4a2d8a; border-color: #d8c8f5; }
+.src-wiki_community { background: #fff0e0; color: #8a4e0d; border-color: #f5d5b0; }
+.src-academic { background: #ede7f6; color: #4527a0; border-color: #c5b3e8; }
+.src-gov { background: #e0f2e9; color: #1b5e20; border-color: #a5d6b0; }
+.src-forum { background: #fff4e0; color: #8b5a00; border-color: #ffd9a8; }
+.src-social { background: #fce4ec; color: #880e4f; border-color: #f5b7c8; }
+.src-video { background: #ffebee; color: #b71c1c; border-color: #ffc1c1; }
+.src-docs { background: #e0f7fa; color: #006064; border-color: #a5e6ed; }
+.src-code { background: #eceff1; color: #263238; border-color: #c5cdd1; }
+.src-blog { background: #f3e5f5; color: #6a1b6a; border-color: #d8b8da; }
+.src-commerce { background: #fff8e1; color: #6b5d10; border-color: #f5e6a3; }
+.src-reviews { background: #ffe0b2; color: #7a4f00; border-color: #f5c878; }
+.src-press { background: #fafafa; color: #424242; border-color: #d0d0d0; }
+.src-health { background: #e3f2fd; color: #0d47a1; border-color: #aecbf0; }
+.src-recipe { background: #fff3e0; color: #b34700; border-color: #ffcf8b; }
+.src-learning { background: #e8f5e9; color: #2e7d32; border-color: #aedbb1; }
+.src-ai_slop { background: #ffcdd2; color: #b71c1c; border-color: #ef9a9a; }
+html.dark .src-badge { filter: brightness(0.85); }
