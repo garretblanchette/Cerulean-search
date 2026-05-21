@@ -297,3 +297,62 @@ Object.entries(SOURCE_LABELS).forEach(([key, label]) => {
 });
 $filters.parentNode.insertBefore(row, $filters.nextSibling);
 })();
+
+
+/* ---- commit 6: intent preset buttons ---- */
+(function(){
+const PRESETS = {
+  learn: { label: 'Learn', cats: ['academic', 'reference', 'docs', 'learning', 'wiki_community'] },
+  latest: { label: 'Latest', cats: ['news', 'press'], recent: true },
+  vibe: { label: 'Vibe Check', cats: ['forum', 'social', 'blog', 'video'] },
+  shop: { label: 'Shop', cats: ['commerce', 'reviews'] },
+  primary: { label: 'Primary Sources', cats: ['gov', 'academic'] }
+};
+let activePreset = null;
+function syncFiltersUI() {
+  document.querySelectorAll('.src-chip').forEach(chip => {
+    chip.classList.toggle('active', state.source_types.includes(chip.dataset.cat));
+  });
+  document.querySelectorAll('.chip[data-key="recent"]').forEach(chip => {
+    chip.classList.toggle('active', state.recent);
+  });
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.preset === activePreset);
+  });
+}
+function applyPreset(key) {
+  if (activePreset === key) {
+    state.source_types = [];
+    state.recent = false;
+    activePreset = null;
+  } else {
+    const p = PRESETS[key];
+    state.source_types = p.cats.slice();
+    state.recent = !!p.recent;
+    activePreset = key;
+  }
+  syncFiltersUI();
+  if (window._lastResults) renderResults(window._lastResults);
+}
+const srcRow = document.querySelector('.src-filter-row');
+if (!srcRow) return;
+const presetRow = document.createElement('div');
+presetRow.className = 'preset-row';
+Object.entries(PRESETS).forEach(([key, p]) => {
+  const btn = document.createElement('button');
+  btn.className = 'preset-btn';
+  btn.textContent = p.label;
+  btn.dataset.preset = key;
+  btn.addEventListener('click', () => applyPreset(key));
+  presetRow.appendChild(btn);
+});
+srcRow.parentNode.insertBefore(presetRow, srcRow);
+document.querySelectorAll('.src-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    if (activePreset) {
+      activePreset = null;
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    }
+  });
+});
+})();

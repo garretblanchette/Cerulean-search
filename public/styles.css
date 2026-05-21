@@ -567,3 +567,11 @@ html.dark .src-badge { filter: brightness(0.85); }
 .chip.ai-toggle.active { background: #d44; color: white; border-color: #d44; }
 .filter-note { padding: 6px 0; color: #888; font-size: 12px; font-style: italic; }
 .filters.hidden + .src-filter-row { display: none; }
+
+/* ---- commit 6: intent preset buttons ---- */
+.preset-row { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 64px 4px 24px; margin: 4px auto 0; max-width: 720px; }
+@media (max-width: 600px) { .preset-row { padding: 4px 60px 4px 16px; } }
+.filters.hidden ~ .preset-row, .filters.hidden ~ .src-filter-row { display: none; }
+.preset-btn { padding: 6px 14px; border: 1.5px solid rgba(128,128,128,0.3); border-radius: 18px; background: transparent; cursor: pointer; font-size: 13px; font-weight: 500; color: inherit; font-family: inherit; transition: all 0.15s; }
+.preset-btn:hover { border-color: #0a86b8; }
+.preset-btn.active { background: #0a86b8; color: white; border-color: #0a86b8; }
