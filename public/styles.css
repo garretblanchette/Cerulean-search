@@ -556,3 +556,13 @@ html.dark .result .title a:visited {
 .src-learning { background: #e8f5e9; color: #2e7d32; border-color: #aedbb1; }
 .src-ai_slop { background: #ffcdd2; color: #b71c1c; border-color: #ef9a9a; }
 html.dark .src-badge { filter: brightness(0.85); }
+
+/* ---- commit 5: source-type chips + AI warn badge ---- */
+.src-filter-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px 64px 6px 24px; margin: 4px auto 0; max-width: 720px; }
+@media (max-width: 600px) { .src-filter-row { padding: 6px 60px 6px 16px; } }
+.src-chip { padding: 3px 10px; border: 1px solid rgba(128,128,128,0.25); border-radius: 14px; background: transparent; cursor: pointer; font-size: 11.5px; color: inherit; opacity: 0.7; font-family: inherit; transition: all 0.15s; }
+.src-chip:hover { opacity: 1; }
+.src-chip.active { background: #0a86b8; color: white; border-color: #0a86b8; opacity: 1; }
+.ai-warn-badge { background: #f4a445; color: white; padding: 1px 6px; border-radius: 4px; font-size: 10.5px; font-weight: 500; }
+.chip.ai-toggle.active { background: #d44; color: white; border-color: #d44; }
+.filter-note { padding: 6px 0; color: #888; font-size: 12px; font-style: italic; }

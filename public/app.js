@@ -15,6 +15,7 @@ const state = {
   no_commerce: true, prefer_official: true, synthesize: false,
   recent: false, provider: 'brave', hasSearched: false,
   dark: false,
+source_types: [], hide_ai: true,
 };
 try { state.dark = localStorage.getItem('cerulean-dark') === 'true'; } catch(e) {}
 
@@ -186,8 +187,13 @@ function renderSynthesis(syn) {
   $synth.appendChild(ul);
 }
 
+function filterResults(results) { let f = results || []; if (state.hide_ai) f = f.filter(r => (r.ai_likelihood || 0) < 0.7); if (state.source_types.length) f = f.filter(r => state.source_types.includes(r.source_type)); return f; }
 function renderResults(results) {
+window._lastResults = results;
+const _hiddenCount = (results||[]).length - filterResults(results).length;
+results = filterResults(results);
   if (!$results) return; $results.innerHTML = '';
+if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCount + ' result' + (_hiddenCount===1?'':'s') + ' hidden by filters')); }
   if (!results || !results.length) { $results.appendChild(el('div','no-results','No results found.')); return; }
   results.forEach((r, idx) => {
     const card = el('div', 'result');
@@ -214,6 +220,7 @@ function renderResults(results) {
       meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
     });
     if (r.source_type && r.source_type !== 'other') meta.appendChild(el('span', 'src-badge src-' + r.source_type, SOURCE_LABELS[r.source_type] || r.source_type));
+if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(el('span', 'ai-warn-badge', 'Likely AI'));
     if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
     card.appendChild(meta);
     $results.appendChild(card);
@@ -259,3 +266,34 @@ function debouncedSearch() { clearTimeout(_debounceTimer); _debounceTimer = setT
 $go.addEventListener('click', runSearch);
 $q.addEventListener('keydown', e => { if (e.key==='Enter') debouncedSearch(); });
 $q.focus();
+
+
+/* ---- commit 5: source-type chips + Hide AI toggle ---- */
+(function(){
+if (!$filters) return;
+const aiToggle = el('button', 'chip ai-toggle' + (state.hide_ai?' active':''), 'Hide AI');
+aiToggle.addEventListener('click', () => {
+  state.hide_ai = !state.hide_ai;
+  aiToggle.classList.toggle('active', state.hide_ai);
+  if (window._lastResults) renderResults(window._lastResults);
+});
+$filters.insertBefore(aiToggle, $filters.firstChild);
+const row = document.createElement('div');
+row.className = 'src-filter-row';
+Object.entries(SOURCE_LABELS).forEach(([key, label]) => {
+  if (key === 'other') return;
+  const chip = document.createElement('button');
+  chip.className = 'src-chip';
+  chip.textContent = label;
+  chip.dataset.cat = key;
+  chip.addEventListener('click', () => {
+    const i = state.source_types.indexOf(key);
+    if (i >= 0) state.source_types.splice(i, 1);
+    else state.source_types.push(key);
+    chip.classList.toggle('active');
+    if (window._lastResults) renderResults(window._lastResults);
+  });
+  row.appendChild(chip);
+});
+$filters.parentNode.insertBefore(row, $filters.nextSibling);
+})();
