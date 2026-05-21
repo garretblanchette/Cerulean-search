@@ -32,6 +32,7 @@ class SearchResult(BaseModel):
     source: str = ""
     published: Optional[str] = None  # ISO date or provider string
     domain: str = ""
+    source_type: str = "other"
     score: float = 0.0
     reasons: List[str] = Field(default_factory=list)
 

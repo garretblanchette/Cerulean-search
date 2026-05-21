@@ -11,6 +11,7 @@ import requests
 from duckduckgo_search import DDGS
 
 from models import SearchResult
+from source_categorizer import categorize
 
 _TAG_RE = _re.compile(r"<[^>]+>")
 _WS_RE = _re.compile(r"\s+")
@@ -57,6 +58,7 @@ def brave_search(query: str, count: int = 10) -> List[SearchResult]:
             source="brave",
             published=item.get("age") or None,
             domain=_domain(link),
+            source_type=categorize(link),
         ))
     return out
 
@@ -101,6 +103,7 @@ def serper_search(query: str, count: int = 10, prefer_recent_days: Optional[int]
             source="serper",
             published=item.get("date") or None,
             domain=_domain(link),
+            source_type=categorize(link),
         ))
     return out
 
@@ -119,5 +122,6 @@ def ddg_search(query: str, count: int = 10) -> List[SearchResult]:
                 source="ddg",
                 published=None,
                 domain=_domain(link),
+            source_type=categorize(link),
             ))
     return out
