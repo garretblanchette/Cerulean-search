@@ -33,6 +33,7 @@ class SearchResult(BaseModel):
     published: Optional[str] = None  # ISO date or provider string
     domain: str = ""
     source_type: str = "other"
+    ai_likelihood: float = 0.0
     score: float = 0.0
     reasons: List[str] = Field(default_factory=list)
 

@@ -10,6 +10,7 @@ from fastapi.responses import Response
 
 from models import SearchRequest, SearchResponse
 from search_providers import brave_search, serper_search, ddg_search
+from ai_detector import score_results
 from ranking import rerank
 from summarizer import synthesize
 
@@ -45,4 +46,5 @@ def api_search(req: SearchRequest):
             syn = synthesize(ranked, fetch_top_n=req.fetch_top_n, max_bullets=req.max_summary_bullets, max_chars=req.max_summary_chars)
         except Exception:
             syn = []
+    score_results(ranked)
     return SearchResponse(query=req.q, provider=req.provider, results=ranked, synthesis=syn, meta={"count_requested": req.count, "count_returned": len(ranked), "no_commerce": req.no_commerce, "prefer_official": req.prefer_official, "prefer_recent_days": req.prefer_recent_days})
