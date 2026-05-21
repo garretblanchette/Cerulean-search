@@ -566,3 +566,4 @@ html.dark .src-badge { filter: brightness(0.85); }
 .ai-warn-badge { background: #f4a445; color: white; padding: 1px 6px; border-radius: 4px; font-size: 10.5px; font-weight: 500; }
 .chip.ai-toggle.active { background: #d44; color: white; border-color: #d44; }
 .filter-note { padding: 6px 0; color: #888; font-size: 12px; font-style: italic; }
+.filters.hidden + .src-filter-row { display: none; }
