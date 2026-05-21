@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import html as _html
 import os
+import re as _re
 import datetime as _dt
 from typing import List, Dict, Any, Optional
 from urllib.parse import urlparse
@@ -9,6 +11,17 @@ import requests
 from duckduckgo_search import DDGS
 
 from models import SearchResult
+
+_TAG_RE = _re.compile(r"<[^>]+>")
+_WS_RE = _re.compile(r"\s+")
+
+def _strip_html(text):
+    if not text:
+        return ""
+    s = _TAG_RE.sub("", text)
+    s = _html.unescape(s)
+    s = _WS_RE.sub(" ", s).strip()
+    return s
 
 def _domain(url: str) -> str:
     try:
@@ -38,9 +51,9 @@ def brave_search(query: str, count: int = 10) -> List[SearchResult]:
         if not link:
             continue
         out.append(SearchResult(
-            title=item.get("title") or link,
+            title=_strip_html(item.get("title")) or link,
             url=link,
-            snippet=item.get("description") or "",
+            snippet=_strip_html(item.get("description")),
             source="brave",
             published=item.get("age") or None,
             domain=_domain(link),
@@ -82,9 +95,9 @@ def serper_search(query: str, count: int = 10, prefer_recent_days: Optional[int]
         if not link:
             continue
         out.append(SearchResult(
-            title=item.get("title") or link,
+            title=_strip_html(item.get("title")) or link,
             url=link,
-            snippet=item.get("snippet") or "",
+            snippet=_strip_html(item.get("snippet")),
             source="serper",
             published=item.get("date") or None,
             domain=_domain(link),
@@ -100,9 +113,9 @@ def ddg_search(query: str, count: int = 10) -> List[SearchResult]:
             if not link:
                 continue
             out.append(SearchResult(
-                title=item.get("title") or link,
+                title=_strip_html(item.get("title")) or link,
                 url=link,
-                snippet=item.get("body") or "",
+                snippet=_strip_html(item.get("body")),
                 source="ddg",
                 published=None,
                 domain=_domain(link),
