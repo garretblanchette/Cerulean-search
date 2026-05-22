@@ -74,7 +74,7 @@
     },
     "editorial-process": {
       term: "Editorial process",
-      def: "The chain of people and checks a piece of writing goes through. Newsrooms do it hierarchically: reporter, editor, fact-checker, lawyer, publisher. Wikipedia does it communally: anyone edits, watchers revert, talk pages argue, admins escalate. Both are editorial processes. What separates published work from one author posting unreviewed."
+      def: "The chain of checks a piece of writing goes through. Newsrooms do it hierarchically: editor, fact-checker, publisher. Wikipedia does it communally: edits, reverts, talk pages. Both are editorial processes."
     }
   };
 
