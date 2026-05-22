@@ -9,7 +9,7 @@ body.page { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; font-fami
 .page-main article p, .page-main article li { font-size: 15px; line-height: 1.7; color: var(--body); }
 .page-main article ul { padding-left: 22px; margin-bottom: 16px; }
 .page-main article a { color: var(--cerulean); }
-.page-main article strong { font-weight: 600; color: var(--ink); }
+.page-main article strong { font-weight: 600; color: var(--cerulean); }
 .page-main article code { background: var(--surface); padding: 1px 5px; border-radius: 3px; font-size: 13.5px; color: var(--ink); border: 1px solid var(--line); }
 .page-footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .page-footer a { color: var(--muted); text-decoration: none; }
