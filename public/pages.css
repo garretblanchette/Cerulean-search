@@ -6,7 +6,8 @@ body.page { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; font-fami
 .page-nav a:hover { color: var(--cerulean); }
 .page-main article h1 { font-size: 30px; margin-bottom: 24px; color: var(--cerulean); }
 .page-main article h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: var(--cerulean); }
-.page-main article p, .page-main article li { font-size: 15px; line-height: 1.7; color: var(--body); }
+.page-main article p { font-size: 15px; line-height: 1.7; color: var(--body); margin: 0 0 18px; }
+.page-main article li { font-size: 15px; line-height: 1.7; color: var(--body); margin: 0 0 6px; }
 .page-main article ul { padding-left: 22px; margin-bottom: 16px; }
 .page-main article a { color: var(--cerulean); }
 .page-main article strong { font-weight: 600; color: var(--cerulean); }
