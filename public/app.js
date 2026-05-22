@@ -37,6 +37,7 @@ const $instant = document.getElementById('instant-answer');
 /* ---- Dark Mode ---- */
 function applyDark(on) {
   document.documentElement.classList.toggle('dark', on);
+  document.documentElement.classList.toggle('light-forced', !on);
   state.dark = on;
   try { localStorage.setItem('cerulean-dark', on); } catch(e) {}
   if ($darkBtn) $darkBtn.textContent = on ? '\u2600\uFE0F' : '\uD83C\uDF19';
