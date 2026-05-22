@@ -4,8 +4,8 @@ body.page { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; font-fami
 .page-nav { display: flex; gap: 16px; font-size: 13px; }
 .page-nav a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
 .page-nav a:hover { color: var(--cerulean); }
-.page-main article h1 { font-size: 30px; margin-bottom: 24px; color: var(--ink); }
-.page-main article h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: var(--ink); }
+.page-main article h1 { font-size: 30px; margin-bottom: 24px; color: var(--cerulean); }
+.page-main article h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: var(--cerulean); }
 .page-main article p, .page-main article li { font-size: 15px; line-height: 1.7; color: var(--body); }
 .page-main article ul { padding-left: 22px; margin-bottom: 16px; }
 .page-main article a { color: var(--cerulean); }
@@ -16,6 +16,6 @@ body.page { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; font-fami
 .page-footer a:hover { color: var(--cerulean); }
 @media (max-width: 600px) { body.page { padding: 24px 16px 48px; } .page-header { flex-direction: column; gap: 14px; align-items: flex-start; } .page-nav { flex-wrap: wrap; gap: 12px; } .page-main article h1 { font-size: 26px; } }
 
-.page-dark-toggle { position: fixed; top: 20px; right: 20px; width: 38px; height: 38px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); color: var(--ink); cursor: pointer; font-size: 18px; line-height: 1; display: flex; align-items: center; justify-content: center; z-index: 100; transition: background 0.2s, transform 0.15s; font-family: inherit; padding: 0; }
-.page-dark-toggle:hover { background: var(--cerulean); color: white; transform: scale(1.05); }
-@media (max-width: 600px) { .page-dark-toggle { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 16px; } }
+.page-dark-toggle { width: 36px; height: 36px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); color: var(--ink); cursor: pointer; font-size: 18px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.15s, border-color 0.15s; font-family: inherit; padding: 0; margin-left: 12px; flex-shrink: 0; }
+.page-dark-toggle:hover { border-color: var(--cerulean); transform: scale(1.05); }
+
