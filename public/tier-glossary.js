@@ -22,8 +22,8 @@
   });
 
   window.cerulean.addGlossaryTerm('tier-fair', {
-    title: '\ud83e\udd14 Fair',
-    body: "Clears the floor but the ranking score is low. Either a tangential match, or relevance offset by commerce or tracking penalties. Worth a second look before trusting."
+    title: '\ud83d\ude10 Fair',
+    body: "Mid-tier ranking score. Basic relevance, no official-source bonus, no penalty signals triggered. The classifier doesn't have anything stronger to say either way."
   });
 
   // Source-type badges (10 categories, text only).

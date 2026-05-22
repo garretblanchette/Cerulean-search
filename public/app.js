@@ -11,7 +11,7 @@ function el(tag, cls, text) {
 }
 
 const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', shopping:'Shopping', video:'Video', health:'Health', ai_slop:'AI Content' };
-const TIER_TERMS = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83e\udd14'} };
+const TIER_TERMS = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83d\ude10'} };
 const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', shopping:'src-shopping', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
