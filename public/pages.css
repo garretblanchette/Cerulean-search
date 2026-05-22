@@ -15,3 +15,7 @@ body.page { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; font-fami
 .page-footer a { color: var(--muted); text-decoration: none; }
 .page-footer a:hover { color: var(--cerulean); }
 @media (max-width: 600px) { body.page { padding: 24px 16px 48px; } .page-header { flex-direction: column; gap: 14px; align-items: flex-start; } .page-nav { flex-wrap: wrap; gap: 12px; } .page-main article h1 { font-size: 26px; } }
+
+.page-dark-toggle { position: fixed; top: 20px; right: 20px; width: 38px; height: 38px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); color: var(--ink); cursor: pointer; font-size: 18px; line-height: 1; display: flex; align-items: center; justify-content: center; z-index: 100; transition: background 0.2s, transform 0.15s; font-family: inherit; padding: 0; }
+.page-dark-toggle:hover { background: var(--cerulean); color: white; transform: scale(1.05); }
+@media (max-width: 600px) { .page-dark-toggle { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 16px; } }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy - Cerulean</title><meta name="description" content="Cerulean is not a privacy product. Here is what is and is not logged."><script>try{if(localStorage.getItem("cerulean-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}</script><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/pages.css"></head>
 <body class="page">
-<header class="page-header"><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Manifesto</a></nav></header>
+<header class="page-header"><button id="dark-toggle" class="page-dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">☾</button><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Manifesto</a></nav></header>
 <main class="page-main"><article>
 <h1>Privacy</h1>
 <p>Cerulean is not a privacy product. If privacy is your top priority, use <a href="https://duckduckgo.com">DuckDuckGo</a> or <a href="https://kagi.com">Kagi</a>.</p>
@@ -17,4 +17,19 @@
 <p>The site is hosted on Vercel, which has its own privacy policy. The code is open source - you can self-host if you would rather not trust this deployment.</p>
 </article></main>
 <footer class="page-footer"><a href="/">Search</a> | <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a> | Ad-free, AI-tagged search</footer>
+<script>
+(function(){
+  var btn = document.getElementById('dark-toggle');
+  if (!btn) return;
+  function syncIcon(){
+    btn.textContent = document.documentElement.classList.contains('dark') ? '☼' : '☾';
+  }
+  syncIcon();
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    try { localStorage.setItem('cerulean-dark', isDark ? 'true' : 'false'); } catch(e){}
+    syncIcon();
+  });
+})();
+</script>
 </body></html>
