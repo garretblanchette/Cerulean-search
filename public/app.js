@@ -10,7 +10,7 @@ function el(tag, cls, text) {
   return e;
 }
 
-const SOURCE_LABELS = { news:'News', reference:'Reference', wiki_community:'Fan Wiki', academic:'Academic', gov:'Official', forum:'Forum', social:'Social', video:'Video', docs:'Docs', code:'Code', blog:'Blog', commerce:'Shop', reviews:'Reviews', press:'Press Release', health:'Health', recipe:'Recipe', learning:'Learning', ai_slop:'AI Content', other:'Other' };
+const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', shopping:'Shopping', video:'Video', health:'Health', ai_slop:'AI Content' };
 const state = {
   no_commerce: true, prefer_official: true, synthesize: false,
   recent: false, provider: 'brave', hasSearched: false,

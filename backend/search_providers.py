@@ -35,6 +35,7 @@ def brave_search(query: str, count: int = 10) -> List[SearchResult]:
     key = os.environ.get("BRAVE_SEARCH_API_KEY", "").strip()
     if not key:
         raise RuntimeError("BRAVE_SEARCH_API_KEY not set")
+    count = min(count, 20)  # Brave API caps at 20
 
     url = "https://api.search.brave.com/res/v1/web/search"
     headers = {

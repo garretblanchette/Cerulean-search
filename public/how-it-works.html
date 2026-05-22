@@ -6,7 +6,7 @@
 <h1>How It Works</h1>
 <p>Cerulean is a wrapper around real search providers (currently Brave Search, Serper, and DuckDuckGo). It does not crawl the web itself - that is prohibitively expensive for an indie project. What it adds on top:</p>
 <h2>Source-type classification</h2>
-<p>Every result gets tagged with one of 19 categories: news, reference, academic, gov, forum, social, video, docs, code, blog, commerce, reviews, press, health, recipe, learning, wiki_community, ai_slop, other. The classification is rule-based - a domain list mapping ~220 well-known sites to categories. Unknown domains default to Other.</p>
+<p>Every result gets tagged with one of 10 categories: news, reference, academic, gov, community, docs, shopping, video, health, ai_slop, other. See the About page for what each category includes. The classification is rule-based - a domain list mapping ~220 well-known sites to categories. Unknown domains default to Other.</p>
 <h2>AI-likelihood scoring</h2>
 <p>Each result gets a 0.0-1.0 score estimating the probability the page is AI-generated content. Based on title and snippet only (no destination-page fetch):</p>
 <ul><li>Domain blocklist (known content farms - auto +0.7)</li><li>Title patterns (Top 10, Ultimate Guide, Discover)</li><li>LLM-tell phrases (delve into, navigate the complexities, in today's fast-paced)</li><li>Em-dash density</li><li>Absence of dates or named entities</li></ul>
@@ -18,6 +18,16 @@
 <p>Results do not depend on who you are, where you are, or what you have searched before. Two people running the same query get the same results.</p>
 <h2>What it does not do</h2>
 <ul><li>Page-level AI fraction estimation (roadmap)</li><li>Bias scoring on news outlets</li><li>Original-source vs. aggregator detection</li><li>User accounts, history, saved searches</li></ul>
+<h2>About the Highlights chip</h2>
+<p>The Highlights chip is <strong>extractive</strong> &mdash; it pulls representative sentences from result snippets and shows them as bullets. No language model is involved. Off by default. The intent is triage across sources, not replacement of them. This is the deliberate counterpoint to Google's AI Overview.</p>
+
+<h2>Known limitations</h2>
+<ul>
+<li><strong>Video search</strong> is rough. The Video category badges YouTube/Vimeo results that happen to appear in normal text search, but Cerulean does not yet call provider-specific video endpoints, so dedicated video queries return thin results.</li>
+<li><strong>Image search</strong> is not implemented. Use Google or DuckDuckGo for images.</li>
+<li><strong>Brave provider</strong> caps results at 20 per query (provider limit). Serper and DDG can return up to 50.</li>
+</ul>
+
 </article></main>
 <footer class="page-footer"><a href="/">Search</a> | <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a> | Ad-free, AI-tagged search</footer>
 </body></html>

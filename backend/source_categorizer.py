@@ -201,10 +201,15 @@ def categorize(url: str) -> str:
 
 # Badge labels for UI display
 LABELS = {
-    "news": "News", "reference": "Reference", "wiki_community": "Fan Wiki",
-    "academic": "Academic", "gov": "Official", "forum": "Forum",
-    "social": "Social", "video": "Video", "docs": "Docs", "code": "Code",
-    "blog": "Blog", "commerce": "Shop", "reviews": "Reviews",
-    "press": "Press Release", "health": "Health", "recipe": "Recipe",
-    "learning": "Learning", "ai_slop": "AI Content", "other": "Other",
+    'news': 'News',
+    'reference': 'Reference',
+    'academic': 'Academic',
+    'gov': 'Official',
+    'community': 'Community',
+    'docs': 'Docs',
+    'shopping': 'Shopping',
+    'video': 'Video',
+    'health': 'Health',
+    'ai_slop': 'AI Content',
+    'other': 'Other',
 }

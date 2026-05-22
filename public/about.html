@@ -9,6 +9,30 @@
 <p>This is a hobby. No ads. No profit motive. No data collection beyond what the server logs by default. No accounts.</p>
 <p>Built by <a href="https://github.com/garretblanchette">Garret Blanchette</a> in Palm Springs, California. Code at <a href="https://github.com/garretblanchette/Cerulean-search">github.com/garretblanchette/Cerulean-search</a>.</p>
 <p>Cerulean was started as an experiment in what someone with no prior development experience could build. The code, the site, and this about page were written in collaboration with Claude &mdash; Anthropic's Claude Opus 4.7 model, doing its best imitation of Garret's voice. That feels apt for a project this transparent about how it works.</p>
+<h2>How are search results categorized?</h2>
+<p>Every result is tagged with one of 10 categories based on the domain. The classification is a rule-based lookup, not ML, and it errs on the side of broad buckets so you can filter without getting lost in subcategories:</p>
+<ul>
+<li><strong>News</strong> &mdash; major news outlets, wire services, press releases</li>
+<li><strong>Reference</strong> &mdash; Wikipedia, dictionaries, encyclopedias, recipe sites, general factual references</li>
+<li><strong>Academic</strong> &mdash; .edu domains, scholarly publishers, peer-reviewed paper hosts</li>
+<li><strong>Official</strong> &mdash; .gov, .mil, and official institutional sources</li>
+<li><strong>Community</strong> &mdash; forums, social platforms, blogs, fan wikis &mdash; anywhere people are talking</li>
+<li><strong>Docs</strong> &mdash; technical documentation, tutorials, code hosts, programming learning sites</li>
+<li><strong>Shopping</strong> &mdash; commerce sites, product listings, review aggregators</li>
+<li><strong>Video</strong> &mdash; YouTube, Vimeo, video platforms</li>
+<li><strong>Health</strong> &mdash; medical references, health information sites</li>
+<li><strong>AI Content</strong> &mdash; pages flagged as likely AI-generated, hidden by default</li>
+</ul>
+<p>Unknown domains fall through to "Other" and get no badge.</p>
+
+<h2>About the search providers</h2>
+<p><strong>Brave</strong> &mdash; independent index. Different results than Google for the same query, with the best privacy posture of the three (no profiling, no tracking). The downside: smaller coverage on long-tail queries, and results are capped at 20 per search. Best default for most use cases.</p>
+<p><strong>Serper</strong> &mdash; thin wrapper around Google's own SERP. Best coverage and ranking quality, especially for obscure queries. The downside: your query is logged by a commercial intermediary before reaching Google, so it is the worst privacy option. Use it when Brave misses what you are looking for.</p>
+<p><strong>DuckDuckGo</strong> &mdash; free fallback, mostly Bing-derived results. Decent for general queries, no API cost. The downside: rate-limited and occasionally returns thin or stale results. Use it when the others fail or when you want a zero-cost option.</p>
+
+<h2>About the Highlights chip</h2>
+<p>The Highlights chip pulls representative sentences from your result snippets and shows them as bullets above the source list. It is extractive &mdash; no language model is involved &mdash; and it is off by default. The point is to help you triage which sources collectively cover the topic, not to replace reading them. This is intentionally different from Google's AI Overview, which generates a synthesized answer and pushes sources below.</p>
+
 </article></main>
 <footer class="page-footer"><a href="/">Search</a> | <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a> | Ad-free, AI-tagged search</footer>
 </body></html>
