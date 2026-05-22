@@ -1,7 +1,8 @@
 // tier-glossary.js
-// Registers quality-tier glossary bubbles for the four classifier labels.
-// Strips the .cer-term underline decoration when nested inside a quality
-// badge pill. Loaded after glossary.js. Depends on window.cerulean.
+// Registers glossary bubbles for quality tiers, source-type badges, and
+// the Likely AI heuristic badge. Strips the .cer-term underline
+// decoration when nested inside a badge pill. Loaded after glossary.js.
+// Depends on window.cerulean.
 
 (function () {
   if (!window.cerulean || typeof window.cerulean.addGlossaryTerm !== 'function') {
@@ -9,29 +10,86 @@
     return;
   }
 
+  // Quality tiers (3, with face emojis).
   window.cerulean.addGlossaryTerm('tier-high-quality', {
     title: '\ud83e\udd13 High quality',
-    body: "Editorial process is visible. Bylines, dates, corrections. Or a primary source: court filings, datasets, official reports. Or an established reference like Wikipedia or MDN. Original content. Real organization or named author behind it."
+    body: "Strong query match plus official-source bonus (.gov, .edu, docs.*, etc.). The ranking score is high. Does not directly measure editorial process or factual accuracy."
   });
 
   window.cerulean.addGlossaryTerm('tier-good', {
     title: '\ud83d\ude0a Good',
-    body: "Most positive signals present, one or two missing. Indie blog with original writing. Smaller publication with light editorial markers. Substantive community thread. Sits between editorial High quality and operational Fair."
+    body: "Solid query relevance, no penalty signals triggered. Mid-tier ranking score. The page is on-topic but has not earned the official-source bonus."
   });
 
   window.cerulean.addGlossaryTerm('tier-fair', {
     title: '\ud83e\udd14 Fair',
-    body: "Clears the legitimacy bar, fails the editorial bar. Real entity, original content, SSL, structured data. No bylined writing, no curation, no original reporting. Often a single-entity homepage that's well-built but not a list or guide."
+    body: "Clears the floor but the ranking score is low. Either a tangential match, or relevance offset by commerce or tracking penalties. Worth a second look before trusting."
   });
 
-  window.cerulean.addGlossaryTerm('tier-padded-generic', {
-    title: '\ud83e\udd28 Padded / Generic',
-    body: "Page structure signals problems. Padded out beyond substance, or templated for keyword coverage, or both. Common shapes: SEO content farm articles, aggregator repackaging, AI-generated bloat, interchangeable keyword shells. Hidden by default unless filters are relaxed. Not necessarily malicious. Often just optimized for ranking rather than for you."
+  // Source-type badges (10 categories, text only).
+  window.cerulean.addGlossaryTerm('src-news', {
+    title: 'News',
+    body: "Mainstream news outlets, newspapers, broadcast sites. Editorial process and bylines typical. Coverage angle and slant vary by outlet."
   });
 
+  window.cerulean.addGlossaryTerm('src-reference', {
+    title: 'Reference',
+    body: "Encyclopedic and definitional sources. Wikipedia, dictionaries, MDN, SEP. Aims for aggregated knowledge rather than original reporting."
+  });
+
+  window.cerulean.addGlossaryTerm('src-academic', {
+    title: 'Academic',
+    body: "Peer-reviewed papers, university research, arxiv preprints. Methodology disclosed. Strongest signal of vetted information when present."
+  });
+
+  window.cerulean.addGlossaryTerm('src-gov', {
+    title: 'Official',
+    body: ".gov, .edu, or canonical project sites. Authoritative on themselves. Not neutral on contested topics where the entity has a stake."
+  });
+
+  window.cerulean.addGlossaryTerm('src-community', {
+    title: 'Community',
+    body: "Forums, Reddit, Stack Overflow, Q&A. Real human discussion. Quality swings wildly. Sometimes the best answer, sometimes the worst."
+  });
+
+  window.cerulean.addGlossaryTerm('src-docs', {
+    title: 'Docs',
+    body: "Software documentation, API references, technical specs. Authoritative for the product being documented. Usually accurate on factual matters."
+  });
+
+  window.cerulean.addGlossaryTerm('src-shopping', {
+    title: 'Shopping',
+    body: "Product pages and e-commerce listings. Commercial intent. Reviews may be filtered by the platform. Treat ratings skeptically."
+  });
+
+  window.cerulean.addGlossaryTerm('src-video', {
+    title: 'Video',
+    body: "YouTube and other video hosts. Content quality unpredictable. Better for tutorials and demonstrations than for written research."
+  });
+
+  window.cerulean.addGlossaryTerm('src-health', {
+    title: 'Health',
+    body: "Medical and health-information sites. Quality varies wildly. Confirm with primary sources or licensed practitioners for clinical decisions."
+  });
+
+  window.cerulean.addGlossaryTerm('src-ai-slop', {
+    title: 'AI Content',
+    body: "Page shows strong signals of AI generation. Could be wholly synthetic or AI-assisted. Cross-check facts before relying on it."
+  });
+
+  // Likely AI heuristic badge.
+  window.cerulean.addGlossaryTerm('likely-ai', {
+    title: 'Likely AI',
+    body: "Heuristic estimate that this page is significantly AI-generated. Imperfect signal. Technical writing and structured prose can trigger false positives."
+  });
+
+  // Strip default cer-term underline decoration inside any badge.
   var style = document.createElement('style');
   style.setAttribute('data-tier-glossary', 'true');
   style.textContent = [
+    '.trust-badge .cer-term,',
+    '.src-badge .cer-term,',
+    '.ai-warn-badge .cer-term,',
     '.quality-badge .cer-term,',
     '.tier-badge .cer-term,',
     '.badge-quality .cer-term,',
@@ -41,6 +99,9 @@
     '  cursor: help;',
     '  color: inherit;',
     '}',
+    '.trust-badge .cer-term:focus-visible,',
+    '.src-badge .cer-term:focus-visible,',
+    '.ai-warn-badge .cer-term:focus-visible,',
     '.quality-badge .cer-term:focus-visible,',
     '.tier-badge .cer-term:focus-visible,',
     '.badge-quality .cer-term:focus-visible,',

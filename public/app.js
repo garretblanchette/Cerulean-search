@@ -11,6 +11,23 @@ function el(tag, cls, text) {
 }
 
 const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', shopping:'Shopping', video:'Video', health:'Health', ai_slop:'AI Content' };
+const TIER_TERMS = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83e\udd14'} };
+const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', shopping:'src-shopping', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
+function trustBadge(cls, term, label, emoji) {
+  const badge = el('span', cls);
+  if (emoji) {
+    const eEl = el('span', null);
+    eEl.setAttribute('aria-hidden', 'true');
+    eEl.textContent = emoji + ' ';
+    badge.appendChild(eEl);
+  }
+  const t = el('span', 'cer-term');
+  t.setAttribute('data-term', term);
+  t.setAttribute('tabindex', '0');
+  t.textContent = label;
+  badge.appendChild(t);
+  return badge;
+}
 const state = {
   no_commerce: true, prefer_official: true, synthesize: false,
   recent: false, provider: 'brave', hasSearched: false,
@@ -218,14 +235,24 @@ if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCoun
     if (r.snippet) card.appendChild(el('div', 'snippet', r.snippet));
     const meta = el('div', 'meta-row');
     getTrustSignals(r.score, r.reasons).forEach(sig => {
-      meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
+      const tm = TIER_TERMS[sig.label];
+      if (tm) meta.appendChild(trustBadge('trust-badge ' + sig.cls, tm.term, sig.label, tm.emoji));
+      else meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
     });
-    if (r.source_type && r.source_type !== 'other') meta.appendChild(el('span', 'src-badge src-' + r.source_type, SOURCE_LABELS[r.source_type] || r.source_type));
-if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(el('span', 'ai-warn-badge', 'Likely AI'));
+    if (r.source_type && r.source_type !== 'other') {
+      const _stTerm = SOURCE_TERMS[r.source_type];
+      const _stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
+      if (_stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, _stTerm, _stLabel, null));
+      else meta.appendChild(el('span', 'src-badge src-' + r.source_type, _stLabel));
+    }
+if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 'likely-ai', 'Likely AI', null));
     if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
     card.appendChild(meta);
     $results.appendChild(card);
   });
+  if (window.cerulean && typeof window.cerulean.refreshGlossary === 'function') {
+    window.cerulean.refreshGlossary();
+  }
 }
 
 /* ======== SEARCH ======== */
