@@ -26,8 +26,8 @@ from dataclasses import dataclass, field
 from typing import Any
 from urllib.parse import urlparse
 
-from .intent_classifier import IntentResult, Intent
-from .intent_lexicons import (
+from intent_classifier import IntentResult, Intent
+from intent_lexicons import (
     CATEGORY_NOUNS_PLURAL,
     CATEGORY_NOUNS_SINGULAR,
     EDITORIAL_DOMAINS,

@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 
-from .intent_lexicons import (
+from intent_lexicons import (
     CATEGORY_NOUNS_PLURAL,
     CATEGORY_NOUNS_SINGULAR,
     ENTITY_QUALIFIERS,
