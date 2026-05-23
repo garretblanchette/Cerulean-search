@@ -10,9 +10,9 @@ function el(tag, cls, text) {
   return e;
 }
 
-const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', shopping:'Shopping', video:'Video', health:'Health', ai_slop:'AI Content' };
+const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
 const TIER_TERMS = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83d\ude10'} };
-const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', shopping:'src-shopping', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
+const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
   if (emoji) {
@@ -178,7 +178,6 @@ function getTrustSignals(score, reasons) {
   const s = [];
   for (const r of (reasons || [])) {
     if (r.startsWith('official:')) s.push({label:'Official source', cls:'trust-good'});
-    else if (r.startsWith('commerce:')) s.push({label:'Commercial', cls:'trust-warn'});
     else if (r.startsWith('tracking:')) s.push({label:'Has trackers', cls:'trust-warn'});
     else if (r.startsWith('blocklisted:')) s.push({label:'Blocked', cls:'trust-bad'});
   }
@@ -208,7 +207,13 @@ function renderSynthesis(syn) {
 function filterResults(results) { let f = results || []; if (state.hide_ai) f = f.filter(r => (r.ai_likelihood || 0) < 0.7); if (state.source_types.length) f = f.filter(r => state.source_types.includes(r.source_type)); return f; }
 function renderResults(results) {
 window._lastResults = results;
-const _hiddenCount = (results||[]).length - filterResults(results).length;
+// Cache-migration shim: legacy 'shopping' source_type maps to 'commercial'
+// before any filtering or rendering. Cheap to keep indefinitely as a safety net.
+results = (results || []).map(r => {
+  if (r && r.source_type === 'shopping') r.source_type = 'commercial';
+  return r;
+});
+const _hiddenCount = results.length - filterResults(results).length;
 results = filterResults(results);
   if (!$results) return; $results.innerHTML = '';
 if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCount + ' result' + (_hiddenCount===1?'':'s') + ' hidden by filters')); }
@@ -244,6 +249,11 @@ if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCoun
       const _stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
       if (_stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, _stTerm, _stLabel, null));
       else meta.appendChild(el('span', 'src-badge src-' + r.source_type, _stLabel));
+    }
+    // Secondary 'Commercial' pill: commercial intent flagged on a non-commercial source-type.
+    // Dedup: skip if source_type itself is 'commercial' (already shown above).
+    if (r.source_type !== 'commercial' && Array.isArray(r.reasons) && r.reasons.some(x => String(x).startsWith('commerce:'))) {
+      meta.appendChild(trustBadge('src-badge src-commercial src-secondary', 'src-commercial', 'Commercial', null));
     }
 if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 'likely-ai', 'Likely AI', null));
     if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
