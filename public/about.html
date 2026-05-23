@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About - Cerulean</title><meta name="description" content="Cerulean is a small indie search engine built on library science principles."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About - Cerulean</title><meta name="description" content="A small indie search engine built on library science principles. Hobby project. Promoting source literacy, not gatekeeping it."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"></head>
 <body class="page">
 <header class="page-header"><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Mission Statement</a></nav><button id="page-dark-btn" class="page-dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button></header>
 <main class="page-main"><article>
 
 <h1>About</h1>
 
-<p>Cerulean is a small indie search engine. Built in a weekend in February 2026, maintained quietly since.</p>
+<p class="motto">A small indie search engine built on library science principles. Run as a hobby out of Palm Springs.</p>
 
-<p>It is not trying to replace Google. It is trying to demonstrate that library science principles can be operationalized at search scale by an indie project, and to be the search engine its builder actually wants to use.</p>
+<h2>Origin</h2>
 
-<p>This is a hobby. No ads. No profit motive. No data collection beyond what the server logs by default. No accounts.</p>
+<p><strong>Built in a weekend in February 2026, maintained quietly since.</strong> Cerulean started as an experiment in what someone with no prior development experience could build, working with Claude (Anthropic's Claude Opus 4.7 model, doing its best imitation of the author's voice). The code, the site, and this page were all written that way. That feels apt for a project this transparent about how it works.</p>
 
-<p>Built by <a href="https://github.com/garretblanchette">Garret Blanchette</a> in Palm Springs, California. Code at <a href="https://github.com/garretblanchette/Cerulean-search">github.com/garretblanchette/Cerulean-search</a>.</p>
+<p>Built by <a href="https://github.com/garretblanchette">Garret Blanchette</a>. Source code on <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a>. The project has no commercial structure: no ads, no profit motive, no accounts, no data collection beyond what the server logs by default. A hobby that runs in public.</p>
 
-<p>Cerulean was started as an experiment in what someone with no prior development experience could build. The code, the site, and this about page were written in collaboration with Claude, Anthropic's Claude Opus 4.7 model, doing its best imitation of Garret's voice. That feels apt for a project this transparent about how it works.</p>
+<h2>What it's for</h2>
+
+<p><strong>Source literacy, not gatekeeping.</strong> The library science tradition Cerulean draws on is a teaching tradition before it is anything else. The classification framework is meant to be visible and learnable, not specialist credentialing. The point of surfacing source-role and source-type tags is to make the structural distinctions students are already taught to look for legible inside a search box. A high schooler researching their first paper should be able to read the tags and use them. So should a graduate student. So should a reference librarian working outside their licensed databases.</p>
+
+<p>This means no paywall, no professional edition, no required login. The <a href="/methodology.html">methodology</a> is documented in full, the bundled domain index is public and challengeable, and the source is on GitHub. If the project ever comes under commercial pressure to enclose part of it, that pressure should be visible in this paragraph.</p>
 
 <h2>How results are classified</h2>
 
-<p>Every classified result gets tagged on two axes: source role (primary, secondary, tertiary) and source type (journalism, academic, indie, commercial, and others). The framework, the three-tier classifier pipeline, and the honest limits are documented on the <a href="/methodology.html">Methodology</a> page.</p>
+<p>Every classified result is tagged on two axes: source role (primary, secondary, tertiary) and source type (journalism, academic, indie, commercial, and several others). The framework, the three-tier classifier pipeline, and the honest limits are documented on the <a href="/methodology.html">methodology page</a>.</p>
 
 <p><strong>Current production state.</strong> Source-type tags are live. Source-role tags are rolling out. The methodology page describes the target system in full and is updated as production catches up.</p>
 
 <h2>Search providers</h2>
 
-<p><strong>Brave.</strong> Independent index. Different results than Google for the same query, with the best privacy posture of the three (no profiling, no tracking). Smaller coverage on long-tail queries, and results are capped at 20 per search. Best default for most use cases.</p>
+<p>Cerulean is a metasearch wrapper. It does not crawl the web itself; it queries three commercial APIs and classifies what comes back. The wrapper architecture is honest about the dependency: if any provider changes terms, the corresponding source goes dark, and the site says so.</p>
 
-<p><strong>Serper.</strong> Thin wrapper around Google's own SERP. Best coverage and ranking quality, especially for obscure queries. Your query is logged by a commercial intermediary before reaching Google, so it is the worst privacy option. Use it when Brave misses what you are looking for.</p>
+<p><strong>Brave.</strong> Independent index. Best privacy posture of the three: no profiling, no tracking. Smaller coverage on long-tail queries, capped at 20 results per search. Best default for most use cases.</p>
 
-<p><strong>DuckDuckGo.</strong> Free fallback, mostly Bing-derived results. Decent for general queries, no API cost. Rate-limited and occasionally returns thin or stale results. Use it when the others fail or when you want a zero-cost option.</p>
+<p><strong>Serper.</strong> Thin wrapper around Google's own SERP. Best coverage and ranking quality, especially for obscure queries. The query is logged by a commercial intermediary before reaching Google, so it is the worst privacy option. Use when Brave misses what you are looking for.</p>
+
+<p><strong>DuckDuckGo.</strong> Free fallback, mostly Bing-derived results. Decent for general queries, no API cost. Rate-limited and occasionally returns thin or stale results. Use when the others fail or when you want a zero-cost option.</p>
 
 <h2>Top sentences</h2>
 
-<p>Top sentences pulls representative sentences from result snippets and shows them as bullets above the source list. Extractive. No language model involved. Off by default. The point is to help you triage which sources collectively cover the topic, not to replace reading them. This is intentionally different from Google's AI Overview, which generates a synthesized answer and pushes sources below.</p>
+<p><strong>Extractive, not generative.</strong> Top sentences pulls representative sentences directly from result snippets and shows them as bullets above the source list. No language model is involved. The point is to help triage which sources collectively cover the topic, not to replace reading them. Intentionally different from Google's AI Overview, which generates a synthesized answer and pushes sources below it. Off by default.</p>
 
 <h2>The AI-content filter</h2>
 
-<p>The AI-content filter is a heuristic estimate, not a verdict. It looks at signal patterns in titles and snippets that correlate with machine-generated text. It has no access to the full page, no model trained on the specific generator that produced any given result, and no way to confirm authorship. Treat the tag as a flag, not a fact.</p>
+<p><strong>A heuristic estimate, not a verdict.</strong> The filter looks at signal patterns in titles and snippets that correlate with machine-generated text. It has no access to the full page, no model trained on the specific generator that produced any given result, and no way to confirm authorship. The tag is a flag, not a fact.</p>
 
-<p><strong>How it fits the two-axis taxonomy.</strong> The filter is one structural signal feeding the "SEO farm" and "aggregator" source-type classifications. False positives on legitimate technical or formulaic writing cost the user very little. False negatives cost more, especially against well-resourced bot-farm content, commercial astroturfing, and state-sponsored operations that do not announce themselves. The higher-order defense is the one search has always relied on: independent human scrutiny of the source you land on.</p>
+<p><strong>How it fits the two-axis taxonomy.</strong> The filter is one structural signal feeding the SEO farm and aggregator source-type classifications. False positives on legitimate technical or formulaic writing cost the reader very little. False negatives cost more, especially against well-resourced bot-farm content, commercial astroturfing, and state-sponsored operations that do not announce themselves. The higher-order defense is the one search has always relied on: independent human scrutiny of the source landed on.</p>
 
 </article></main>
 <footer class="page-footer"><a href="/">Search</a> | <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a> | <a href="/methodology.html">Methodology</a> | Source-classified search</footer>
