@@ -1,50 +1,59 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mission Statement - Cerulean</title><meta name="description" content="Why Cerulean exists. Search lost the source-type distinctions library science had spent a century building."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"><link rel="stylesheet" href="/glossary.css?v=2"><script src="/glossary.js?v=4" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mission Statement - Cerulean</title><meta name="description" content="What Cerulean is and where it fits in a research workflow. Library science principles applied to the open web."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"><link rel="stylesheet" href="/glossary.css?v=2"><script src="/glossary.js?v=4" defer></script></head>
 <body class="page">
 <header class="page-header"><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Mission Statement</a></nav><button id="page-dark-btn" class="page-dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button></header>
 <main class="page-main"><article>
 
 <h1>Mission Statement</h1>
 
-<p>Search broke. Gradually, over fifteen years.</p>
+<p class="motto">Library science, applied to the open web.</p>
 
-<p><strong>Relevance ranking erased source-type distinctions.</strong> A search engine optimizing for click-through could put a SEO listicle, a peer-reviewed journal article, and a Wikipedia entry side by side, as long as all three contained the query terms. The structural signals a research librarian would foreground (who produced this, how close to the original evidence, with what editorial process) disappeared from the result page. The user was expected to do the source evaluation after the click. In practice most users did not.</p>
+<h2>What Cerulean is</h2>
 
-<p><strong>Then ads accelerated the collapse.</strong> Every major search engine learned that the most profitable result was not the best answer; it was the one that paid to be there. An entire industry, SEO and content marketing, exists to game the result at the top. Fine when ads are rare and labeled. Not fine when sponsored content outnumbers organic results, when labels shrink each year, and when whole categories (shopping, local, news) become pay-to-play.</p>
+<p><strong>An indie metasearch engine built on library science principles.</strong> Cerulean wraps the Brave, Serper, and DuckDuckGo search APIs and classifies every result by source role (how close to the original evidence) and source type (what kind of entity produced it). The classification is the product. The metasearch is the substrate. The full system, the three-tier classifier pipeline, and the honest limits live on the <a href="/methodology.html">methodology page</a>.</p>
 
-<p><strong>Then AI replaced the act of searching.</strong> Google's response to ChatGPT was to put AI-generated summaries above every result, replacing the act of searching with the act of accepting an answer. At the same time, the open web filled with AI-generated content farms designed to rank well and serve more ads. The summaries are unreliable. The pages they are built from, now widely called AI slop, are increasingly unreadable. Source evaluation became impossible because the sources themselves were being hidden, blended, or fabricated.</p>
+<h2>The lineage</h2>
 
-<p><strong>What was lost.</strong> Before Google won, AskJeeves and its peers treated a query as a starting point for research, not a request for an authoritative answer. You typed a question. You got a list of pages to read. You decided which to trust. The model assumed the user was an investigator.</p>
+<p><strong>Source evaluation predates the web.</strong> Library and information science has spent more than a century building frameworks for distinguishing kinds of sources, evaluating authority, and tracing claims back toward original evidence. The ACRL Framework for Information Literacy. The CRAAP test. The BEAM framework. The foundational primary-secondary-tertiary distinction that dates to nineteenth-century historiography. None of it is novel.</p>
 
-<p>AskJeeves launched in 1996, before Google went public. IAC bought it for $1.85 billion in 2005, dropped the Jeeves name in 2006, scaled back search in 2010, and shut down the search engine entirely on May 1, 2026. The farewell read: "Every great search must come to an end." The original idea, that the web could answer a question typed in natural language, was inherited by AI chatbots, the opposite kind of product. The thing Cerulean is trying to be more like just died.</p>
+<p><strong>What is novel is applying it to web search at scale.</strong> Relevance ranking collapsed source-type distinctions because it didn't need them. A search engine optimizing for click-through can put a SEO listicle, a peer-reviewed article, and a Wikipedia entry side by side as long as all three contain the query terms. Cerulean restores the distinctions by tagging each result on two axes and surfacing the tags to the reader.</p>
 
-<p>Then the query stopped being yours. Autocomplete narrows what you can type. "Did you mean" rewrites what you asked. Semantic interpretation flattens precise technical language into common phrasing, because common phrasing matches more ad inventory. Each layer is sold as helpful, another tweak to the algorithm. The cumulative effect is that precise language, the primary tool of research, stops working.</p>
+<h2>The model of the reader</h2>
 
-<p>Cerulean takes the query you typed.</p>
+<p><strong>Cerulean assumes the reader is an investigator.</strong> The patron at a reference desk. The graduate student running down a citation. The journalist verifying a quote. The analyst evaluating a vendor claim. The model is not "someone who wants an authoritative answer." It is "someone who wants to know what kinds of sources are available so they can decide what to trust." Librarians have always held this model of their patrons. Cerulean holds it for its users.</p>
 
-<p><strong>And then it does what a research librarian would do.</strong> Library and information science has spent more than a century building frameworks for distinguishing kinds of sources: the ACRL Framework, the CRAAP test, the BEAM framework, the primary-secondary-tertiary distinction that dates to nineteenth-century historiography. None of it is novel. What is novel is applying it to web search at scale, and surfacing the results to the user instead of hiding them behind relevance ranking.</p>
+<p>This was the model the early web held too. AskJeeves launched in 1996, before Google went public. You typed a question. You got a list of pages to read. You decided which to trust. AskJeeves shut down on May 1, 2026; the farewell read: "Every great search must come to an end." AI chatbots inherited the natural-language premise but inverted the model, replacing the reading-and-deciding step with a synthesized answer. Cerulean keeps the model AI search abandoned.</p>
 
-<p>Cerulean tags every classified result on two axes: source role (how close to the original evidence) and source type (what kind of entity produced it). The <a href="/methodology.html">methodology page</a> documents the full system, the three-tier classifier pipeline, and the honest limits.</p>
+<h2>Where Cerulean fits</h2>
 
-<p>The pitch is structural, not ideological:</p>
+<p><strong>Cerulean is not a replacement for JSTOR, ProQuest, or EBSCO.</strong> Those databases hold the formal academic literature, with metadata, authority controls, and licensing infrastructure that general web search cannot match. For peer-reviewed work within their coverage, they will always be the right tool.</p>
+
+<p><strong>But none of them index the open web.</strong> The grey literature. The indie technical blog with the cleaner explanation than the textbook. The government report not yet archived in a formal database. The small-press journalism. The working draft on a researcher's institutional page. The IndieWeb post that does the field's clearest synthesis. The conference talk write-up. The standards body's working notes. All of that is invisible to the academic databases and visible to Cerulean.</p>
+
+<p><strong>The use case is complement, not replacement.</strong> A research librarian's workflow already includes both formal database queries and open-web reconnaissance. Cerulean is the open-web side of that workflow done with the same source-evaluation discipline the databases assume. Even for the master librarian, it opens avenues that don't exist in a formal database capacity, while preserving the structural signals their training has taught them to look for.</p>
+
+<p>For the patron, the student, the journalist, or the analyst without database access, Cerulean carries the same discipline into the only territory available to them.</p>
+
+<h2>What Cerulean does, structurally</h2>
+
 <ul>
+<li><strong>Source-role and source-type tags on every classified result.</strong> Visible before the click, not after. Role tags use the library science taxonomy: primary, secondary, tertiary. Type tags name the producer: journalism, academic, indie, commercial, primary-source publisher, reference, community, aggregator, SEO farm.</li>
 <li><strong>No ads.</strong> Ever. Not commercial placement, not sponsored content, not recommended results.</li>
 <li><strong>No AI summary.</strong> The methodology is the opposite of synthesis: preserve provenance, surface authority signals, trust the reader to evaluate. AI search blends sources and hides them. Cerulean tags them and shows them.</li>
-<li><strong>Source-role and source-type tags on every classified result.</strong> Visible upfront so you can choose what you are looking at before you click.</li>
-<li><strong>The query you typed.</strong> No autocomplete, no rewriting, no semantic flattening.</li>
+<li><strong>The query you typed.</strong> No autocomplete narrowing what you can ask, no "did you mean" rewriting what you asked, no semantic flattening of precise technical language into common phrasing.</li>
 </ul>
 
-<p><strong>Text only.</strong> Image search and video search are out of scope. Both are dominated by AI-generated content and AI-recommended ranking, with no result-level provenance. A text page can be read, its domain judged, its citations checked. An image or video requires you to view it before you can evaluate it, and even then deepfakes and AI generation make verification fundamentally harder than reading a page.</p>
+<h2>Scope</h2>
 
-<p>Dedicated image and video endpoints stay out of scope until result-level provenance is solvable for non-text assets: a working asset-level AI detector, or durable watermark and signature standards at meaningful coverage. Neither exists today. If they do later, the calculus changes. Until then, no.</p>
+<p><strong>Text only.</strong> Image search and video search are out of scope. Both are dominated by AI-generated content and AI-recommended ranking, with no result-level provenance. A text page can be read, its domain judged, its citations checked. An image or video requires you to view it before you can evaluate it, and deepfakes and generative tools make verification fundamentally harder than reading a page.</p>
 
-<p>Video and image links that appear organically in text results, a YouTube clip that genuinely answers a how-to query, a relevant image embedded in an article, are not removed. They are tagged and ranked alongside everything else. What is excluded is a dedicated surface that scrapes video and image platforms as primary sources.</p>
+<p>Dedicated image and video endpoints stay out of scope until result-level provenance is solvable for non-text assets: a working asset-level detector, or durable watermark and signature standards at meaningful coverage. Neither exists today. Image and video links that appear organically inside text results, a YouTube clip that genuinely answers a how-to query or a relevant image embedded in an article, are tagged and ranked alongside everything else.</p>
 
-<p><strong>Why humans.</strong> Trust in a source isn't authority. It's the editorial process: visible, ongoing scrutiny. Citations you can follow, edit histories you can read, peer review, comment threads, the long tail of people who care enough to argue about a typo. Wikipedia has more of that loop than Britannica does. AI-generated content has none of it. Editorial process is one of the structural signals the library science tradition has always used to evaluate authority, and it is one of the signals Cerulean classifies on.</p>
+<h2>What Cerulean is not</h2>
 
-<p>Cerulean is not better than Google at everything. It is better at exactly one thing: showing you what kind of source you are looking at before you click, by a methodology a research librarian would recognize, with no commercial incentive to lie to you.</p>
+<p><strong>Not better than Google at everything.</strong> Commercial queries, hyperlocal search, shopping triage, "what time does the post office close." Google wins those. Cerulean is better at exactly one thing: showing the reader what kind of source they are looking at before they click, by a methodology a research librarian would recognize, with no commercial incentive to distort the result.</p>
 
-<p>If you want what Google used to be, ten blue links, no commentary, this is closer to that.</p>
+<p>For research, reference work, investigative reporting, and anything where source provenance matters more than convenience, this is closer to what general web search used to be, before relevance ranking flattened the source-type distinctions and AI synthesis hid the sources entirely.</p>
 
 <p class="motto"><strong>Tag the source. Trust the reader.</strong></p>
 
