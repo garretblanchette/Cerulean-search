@@ -1,0 +1,5702 @@
+[
+  {
+    "query": "who wrote the magna carta",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests whether reference tertiary (Wikipedia, Britannica) outranks primary repository hosts (British Library digitization) on an authorship question."
+  },
+  {
+    "query": "when was the constitution ratified",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (NARA, archives.gov) vs reference tertiary on a date-anchored gov question."
+  },
+  {
+    "query": "declaration of independence text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (gov archives) ranking on an explicit full-text ask."
+  },
+  {
+    "query": "periodic table elements list",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (IUPAC) vs reference vs commercial chemistry sites."
+  },
+  {
+    "query": "einstein theory of relativity paper",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary (1905 papers, Annalen archive) vs reference summary."
+  },
+  {
+    "query": "darwin origin of species text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host (Project Gutenberg, darwin-online) vs aggregator vs reference."
+  },
+  {
+    "query": "shakespeare hamlet full text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary text host (folger, MIT) vs aggregator (sparknotes, shmoop)."
+  },
+  {
+    "query": "iliad full text english translation",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-text academic host vs aggregator vs commercial book retailer."
+  },
+  {
+    "query": "nasa apollo 11 mission report",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (nasa.gov) on a clear gov primary ask."
+  },
+  {
+    "query": "nuremberg trials transcripts",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (avalon project, IMT archive) vs reference summary."
+  },
+  {
+    "query": "federalist papers text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests gov/academic primary host (loc.gov, avalon) vs reference encyclopedia."
+  },
+  {
+    "query": "plato republic full text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary text host (Perseus, MIT classics) vs aggregator."
+  },
+  {
+    "query": "einstein famous equation explanation",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary vs academic secondary vs SEO physics-explainer farm."
+  },
+  {
+    "query": "mendel pea experiments",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary (translated paper) vs reference vs textbook excerpt."
+  },
+  {
+    "query": "who wrote the wealth of nations",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary ranking on a simple authorship question."
+  },
+  {
+    "query": "dna double helix discovery paper",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary (Watson Crick 1953 Nature) vs reference summary."
+  },
+  {
+    "query": "mlk i have a dream speech text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host (King estate, archives) vs aggregator vs reference."
+  },
+  {
+    "query": "lincoln gettysburg address text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (loc.gov) vs reference vs aggregator."
+  },
+  {
+    "query": "roe v wade decision text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (supreme court, justia) vs reference summary."
+  },
+  {
+    "query": "brown v board of education text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests court opinion primary host vs reference summary on a landmark case."
+  },
+  {
+    "query": "miranda v arizona decision",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary court text vs reference vs legal-SEO."
+  },
+  {
+    "query": "marbury v madison text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary court text (oyez, justia) vs reference."
+  },
+  {
+    "query": "dred scott decision text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary court text vs reference vs history-SEO."
+  },
+  {
+    "query": "emancipation proclamation text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (NARA) vs reference summary."
+  },
+  {
+    "query": "universal declaration of human rights text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (un.org) vs reference summary."
+  },
+  {
+    "query": "geneva convention text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (ICRC) vs reference summary."
+  },
+  {
+    "query": "nuremberg code text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host (HHS, academic) vs reference summary."
+  },
+  {
+    "query": "hippocratic oath original text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host vs reference vs medical-society commercial."
+  },
+  {
+    "query": "articles of confederation text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (NARA, avalon) vs reference."
+  },
+  {
+    "query": "magna carta full text english",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary host (British Library) vs reference vs aggregator translation site."
+  },
+  {
+    "query": "code of hammurabi text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic primary (Louvre, Yale avalon) vs reference summary."
+  },
+  {
+    "query": "ten commandments biblical text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host (biblical-text sites) vs reference vs religious commercial."
+  },
+  {
+    "query": "art of war sun tzu text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host vs aggregator vs commercial book retailer."
+  },
+  {
+    "query": "galileo dialogue concerning two world systems",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary text host (academic) vs reference vs commercial."
+  },
+  {
+    "query": "einstein 1905 papers list",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic listing (annus mirabilis) vs reference tertiary."
+  },
+  {
+    "query": "crick watson nature paper 1953",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests academic publisher primary (nature.com archive) vs reference summary."
+  },
+  {
+    "query": "who discovered penicillin",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary vs academic biographical vs history-SEO."
+  },
+  {
+    "query": "when did rome fall",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary (Wikipedia) vs academic secondary on a contested-date question."
+  },
+  {
+    "query": "who invented the telephone",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary on a contested invention attribution (Bell vs Meucci)."
+  },
+  {
+    "query": "who wrote on liberty",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary ranking on a simple authorship question."
+  },
+  {
+    "query": "who wrote leviathan",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary ranking on a simple authorship question."
+  },
+  {
+    "query": "who wrote the prince",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary ranking on a simple authorship question."
+  },
+  {
+    "query": "when was the printing press invented",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary vs history-SEO on a date question."
+  },
+  {
+    "query": "who painted the sistine chapel",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary on a well-known art question."
+  },
+  {
+    "query": "michelangelo david sculpture",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests museum primary (Accademia) vs reference vs commercial art-print."
+  },
+  {
+    "query": "mona lisa current location",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests museum primary (Louvre) vs reference summary."
+  },
+  {
+    "query": "who wrote the divine comedy",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary on a simple authorship question."
+  },
+  {
+    "query": "who wrote beowulf",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests reference tertiary vs academic secondary on a contested-authorship question."
+  },
+  {
+    "query": "weber protestant ethic full text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (university hosts, archive.org) vs commercial book retailer vs aggregator."
+  },
+  {
+    "query": "foucault discipline and punish",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher (Routledge, Vintage) primary vs SEP reference vs aggregator."
+  },
+  {
+    "query": "derrida deconstruction explained",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic secondary (SEP, IEP) vs reference vs philosophy-SEO."
+  },
+  {
+    "query": "nietzsche genealogy of morals",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs commercial book retailer vs aggregator."
+  },
+  {
+    "query": "kant categorical imperative original text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (Groundwork) vs SEP secondary vs reference tertiary."
+  },
+  {
+    "query": "heidegger being and time english",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs SEP secondary vs aggregator."
+  },
+  {
+    "query": "wittgenstein tractatus text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP secondary vs aggregator."
+  },
+  {
+    "query": "wittgenstein philosophical investigations",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs SEP secondary vs commercial book retailer."
+  },
+  {
+    "query": "arendt origins of totalitarianism",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "simone de beauvoir second sex",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs feminist academic secondary vs commercial."
+  },
+  {
+    "query": "butler gender trouble",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs academic review vs SEP."
+  },
+  {
+    "query": "said orientalism book",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs academic critique vs reference."
+  },
+  {
+    "query": "fukuyama end of history",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs journal critique vs reference."
+  },
+  {
+    "query": "huntington clash of civilizations",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs Foreign Affairs primary vs reference."
+  },
+  {
+    "query": "piketty capital in 21st century",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Harvard UP primary vs journal review vs journalism."
+  },
+  {
+    "query": "graeber debt 5000 years",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Melville House primary vs journal review vs reference."
+  },
+  {
+    "query": "zinn peoples history of united states",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic critique vs popular reference."
+  },
+  {
+    "query": "tocqueville democracy in america",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host (loc.gov, Gutenberg) vs commercial vs aggregator."
+  },
+  {
+    "query": "machiavelli discourses on livy",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP secondary vs aggregator."
+  },
+  {
+    "query": "spinoza ethics text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP secondary vs aggregator."
+  },
+  {
+    "query": "descartes meditations",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs reference."
+  },
+  {
+    "query": "rousseau social contract text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs aggregator."
+  },
+  {
+    "query": "locke second treatise government",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs reference."
+  },
+  {
+    "query": "mill on liberty original text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs aggregator."
+  },
+  {
+    "query": "bentham panopticon writings",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs reference."
+  },
+  {
+    "query": "marx capital volume 1 text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests marxists.org primary vs academic publisher vs SEP."
+  },
+  {
+    "query": "engels condition of working class",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests primary text host vs academic publisher vs reference."
+  },
+  {
+    "query": "hayek road to serfdom",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Chicago UP primary vs Mises Institute commercial-advocacy vs reference."
+  },
+  {
+    "query": "keynes general theory text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs reference vs commercial."
+  },
+  {
+    "query": "friedman capitalism and freedom",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Chicago UP primary vs think-tank secondary vs reference."
+  },
+  {
+    "query": "galbraith affluent society",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "veblen theory of leisure class",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs reference."
+  },
+  {
+    "query": "polanyi great transformation",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "schumpeter capitalism socialism democracy",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "coase nature of the firm paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests JSTOR/academic publisher primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "arrow impossibility theorem paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "nash equilibrium original paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests PNAS primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "shannon information theory paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Bell Labs/academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "turing computing machinery intelligence",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Mind/academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "von neumann game theory",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "kuhn structure of scientific revolutions",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Chicago UP primary vs SEP secondary vs reference."
+  },
+  {
+    "query": "popper logic of scientific discovery",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs SEP vs reference."
+  },
+  {
+    "query": "feyerabend against method",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs SEP vs reference."
+  },
+  {
+    "query": "lakatos research programmes",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs SEP secondary vs reference."
+  },
+  {
+    "query": "quine two dogmas of empiricism",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (Philosophical Review) vs SEP secondary."
+  },
+  {
+    "query": "rawls theory of justice",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Harvard UP primary vs SEP secondary vs reference."
+  },
+  {
+    "query": "nozick anarchy state utopia",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs SEP vs reference."
+  },
+  {
+    "query": "sandel justice book",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs Harvard course site primary vs commercial."
+  },
+  {
+    "query": "nussbaum capabilities approach",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs SEP secondary vs reference."
+  },
+  {
+    "query": "sen development as freedom",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs Nobel committee primary vs reference."
+  },
+  {
+    "query": "krugman international economics papers",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs NYT column vs reference."
+  },
+  {
+    "query": "acemoglu why nations fail",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs journalism."
+  },
+  {
+    "query": "ostrom governing the commons",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Cambridge UP primary vs Nobel committee vs reference."
+  },
+  {
+    "query": "modigliani miller theorem paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests AER primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "black scholes option pricing paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests JPE primary vs textbook secondary vs commercial finance."
+  },
+  {
+    "query": "fama efficient market hypothesis",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests JoF primary vs textbook secondary vs commercial finance."
+  },
+  {
+    "query": "kahneman thinking fast and slow",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs popular reference."
+  },
+  {
+    "query": "tversky kahneman prospect theory paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Econometrica primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "milgram obedience experiment paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "zimbardo stanford prison experiment paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs critique secondary vs reference."
+  },
+  {
+    "query": "asch conformity experiment paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "bandura bobo doll experiment paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (JASP) vs textbook secondary vs reference."
+  },
+  {
+    "query": "skinner operant conditioning original",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook vs reference."
+  },
+  {
+    "query": "pavlov classical conditioning paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (translation) vs textbook vs reference."
+  },
+  {
+    "query": "freud interpretation of dreams text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs psychoanalytic-society vs reference."
+  },
+  {
+    "query": "jung archetypes original writings",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic secondary vs reference."
+  },
+  {
+    "query": "piaget cognitive development theory",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook vs reference."
+  },
+  {
+    "query": "vygotsky zone of proximal development",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (translation) vs textbook vs reference."
+  },
+  {
+    "query": "bowlby attachment theory original",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs textbook vs reference."
+  },
+  {
+    "query": "ainsworth strange situation paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook secondary vs reference."
+  },
+  {
+    "query": "seligman learned helplessness paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook vs reference."
+  },
+  {
+    "query": "csikszentmihalyi flow original paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs popular reference."
+  },
+  {
+    "query": "baumeister ego depletion paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs replication-critique academic vs reference."
+  },
+  {
+    "query": "dweck mindset research papers",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (Stanford pubs) vs popular secondary vs reference."
+  },
+  {
+    "query": "duckworth grit research papers",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs popular secondary vs reference."
+  },
+  {
+    "query": "mischel marshmallow experiment paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs replication-critique vs reference."
+  },
+  {
+    "query": "festinger cognitive dissonance theory",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs textbook vs reference."
+  },
+  {
+    "query": "henrich weird people in the world",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Nature primary vs publisher book primary vs reference."
+  },
+  {
+    "query": "bordwell film theory writings",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs blog primary (bordwell blog) vs reference."
+  },
+  {
+    "query": "mulvey visual pleasure narrative cinema",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Screen journal primary vs academic secondary vs reference."
+  },
+  {
+    "query": "benjamin work of art reproduction",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP secondary vs reference."
+  },
+  {
+    "query": "adorno horkheimer culture industry",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text host vs SEP vs reference."
+  },
+  {
+    "query": "mcluhan medium is the message",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic secondary vs reference."
+  },
+  {
+    "query": "innis empire and communications",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic secondary vs reference."
+  },
+  {
+    "query": "anderson imagined communities",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Verso primary vs academic review vs reference."
+  },
+  {
+    "query": "hobsbawm invention of tradition",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Cambridge UP primary vs academic review vs reference."
+  },
+  {
+    "query": "braudel mediterranean world",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs Annales-school secondary vs reference."
+  },
+  {
+    "query": "ginzburg cheese and worms",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "natalie zemon davis martin guerre",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic critique vs journalism review."
+  },
+  {
+    "query": "eric foner reconstruction history",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs popular reference."
+  },
+  {
+    "query": "william cronon nature metropolis",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Norton primary vs academic review vs reference."
+  },
+  {
+    "query": "donald worster dust bowl",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Oxford UP primary vs academic review vs reference."
+  },
+  {
+    "query": "richard white middle ground",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Cambridge UP primary vs academic review vs reference."
+  },
+  {
+    "query": "james scott seeing like a state",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Yale UP primary vs academic review vs reference."
+  },
+  {
+    "query": "fanon wretched of the earth",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic secondary vs reference."
+  },
+  {
+    "query": "dubois souls of black folk text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests primary text host (Gutenberg, Bartleby) vs academic secondary vs reference."
+  },
+  {
+    "query": "ida b wells anti-lynching writings",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests primary text archive (UChicago, Documenting the South) vs reference."
+  },
+  {
+    "query": "frederick douglass narrative text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests primary text archive vs academic secondary vs reference."
+  },
+  {
+    "query": "malcolm x speeches archive",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests primary archive (malcolmx.com, academic) vs aggregator vs reference."
+  },
+  {
+    "query": "james baldwin fire next time",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic essay secondary vs reference."
+  },
+  {
+    "query": "ralph ellison invisible man analysis academic",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher secondary vs aggregator (sparknotes) vs reference."
+  },
+  {
+    "query": "zora neale hurston anthropology papers",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary archive vs popular secondary vs reference."
+  },
+  {
+    "query": "cornel west race matters",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests publisher primary vs academic review vs reference."
+  },
+  {
+    "query": "ta-nehisi coates between the world and me reception academic",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic review secondary vs journalism review vs reference."
+  },
+  {
+    "query": "michelle alexander new jim crow scholarly response",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic review/response secondary vs popular journalism."
+  },
+  {
+    "query": "khalil muhammad condemnation of blackness",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Harvard UP primary vs academic review vs reference."
+  },
+  {
+    "query": "ibram kendi how to be antiracist scholarly review",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic review secondary vs popular journalism vs commercial."
+  },
+  {
+    "query": "afropessimism academic theory",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs SEP-style secondary vs blog discussion."
+  },
+  {
+    "query": "annales school historiography",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs reference summary vs textbook."
+  },
+  {
+    "query": "subaltern studies founding texts",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher primary vs SEP secondary vs reference."
+  },
+  {
+    "query": "microhistory carlo ginzburg method",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary essay vs textbook secondary vs reference."
+  },
+  {
+    "query": "history from below origins thompson",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary essay vs textbook vs reference."
+  },
+  {
+    "query": "E.P. thompson making of english working class",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests Penguin primary vs academic review vs reference."
+  },
+  {
+    "query": "eric williams capitalism and slavery",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests UNC Press primary vs academic review vs reference."
+  },
+  {
+    "query": "are the dead sea scrolls authentic",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests museum primary, academic secondary, and journalism on a contested-authenticity question with active forgery cases."
+  },
+  {
+    "query": "who really wrote shakespeare",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Mixed-domain query. Tests academic mainstream vs anti-Stratfordian advocacy sites vs reference."
+  },
+  {
+    "query": "did jesus exist historical evidence",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic biblical scholarship vs religious commercial vs apologetics-blog mix."
+  },
+  {
+    "query": "holocaust death toll primary sources",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests museum primary (USHMM, Yad Vashem) and academic secondary vs denialist advocacy contamination."
+  },
+  {
+    "query": "was alexander the great gay scholarly",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic secondary vs popular history-SEO on a contested-interpretation question."
+  },
+  {
+    "query": "mongol conquest death toll real numbers",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic secondary (specialist historians) vs popular reference on a wildly-cited statistic."
+  },
+  {
+    "query": "how many died in great leap forward",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic secondary (Dikotter, Yang) vs Chinese state primary vs Western journalism."
+  },
+  {
+    "query": "armenian genocide death toll scholarly",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic secondary vs Turkish state primary vs advocacy organizations."
+  },
+  {
+    "query": "did mlk plagiarize dissertation",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic primary (BU committee report) vs journalism secondary vs hagiography."
+  },
+  {
+    "query": "was sacagawea kidnapped or guide",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic ethnohistory vs popular reference on a contested-narrative question."
+  },
+  {
+    "query": "did pocahontas really save john smith",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests primary source (Smith's accounts) vs academic secondary vs popular reference."
+  },
+  {
+    "query": "who really discovered america pre-columbian",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic archaeology vs alternative-history aggregators."
+  },
+  {
+    "query": "did vikings reach america evidence",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests Parks Canada primary (L'Anse aux Meadows) vs academic secondary vs reference."
+  },
+  {
+    "query": "did egyptians build pyramids slaves vs workers",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic archaeology (Lehner, Hawass) vs older reference vs popular conspiracy."
+  },
+  {
+    "query": "did stonewall actually start with a brick",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests primary accounts (oral histories, NYPL archive) vs activist reference vs journalism."
+  },
+  {
+    "query": "emmett till accuser confession",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic primary (Tyson book), journalism, and counter-claim journalism on a contested-recantation question."
+  },
+  {
+    "query": "did fdr know about pearl harbor",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests primary declassified records vs academic secondary vs conspiracy aggregators."
+  },
+  {
+    "query": "did truman need to drop atomic bomb scholarly",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests academic secondary (Bernstein, Hasegawa) vs popular reference vs revisionist debate."
+  },
+  {
+    "query": "rosenberg case fair scholarly review",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests declassified Venona primary vs academic secondary vs partisan secondary."
+  },
+  {
+    "query": "mccarthy era evidence reassessment",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests Venona primary vs academic secondary (Haynes, Klehr) vs popular reference."
+  },
+  {
+    "query": "cia mkultra evidence declassified",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests primary declassified docs (CIA reading room, NSA archive) vs journalism vs conspiracy SEO."
+  },
+  {
+    "query": "cointelpro evidence primary documents",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests FBI primary (vault.fbi.gov) vs academic secondary vs activist reference."
+  },
+  {
+    "query": "operation paperclip nazi scientists evidence",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests NARA primary vs academic secondary vs popular reference."
+  },
+  {
+    "query": "tuskegee experiment primary documents",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests CDC/HHS primary vs academic secondary vs popular reference."
+  },
+  {
+    "query": "operation northwoods declassified",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests NSA archive primary vs journalism vs conspiracy aggregator."
+  },
+  {
+    "query": "gulf of tonkin incident reassessment",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests NSA primary (declassified) vs academic secondary vs popular reference."
+  },
+  {
+    "query": "iraq wmd intelligence assessment",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests SSCI primary report vs academic secondary vs journalism retrospective."
+  },
+  {
+    "query": "cia torture report primary text",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Tests SSCI primary (declassified executive summary) vs journalism vs reference."
+  },
+  {
+    "query": "trump tariff announcement today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests freshness ranking and journalism vs gov primary (whitehouse.gov, USTR) on a current-events query."
+  },
+  {
+    "query": "supreme court latest ruling",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests freshness + court primary (supremecourt.gov) vs journalism."
+  },
+  {
+    "query": "fed interest rate decision",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests federalreserve.gov primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "unemployment rate latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests bls.gov primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "inflation rate latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests bls.gov primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "cpi report latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests bls.gov primary vs commercial finance vs SEO regurgitation."
+  },
+  {
+    "query": "gdp growth latest quarter",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests bea.gov primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "stock market today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial finance primary (exchange sites) vs journalism vs SEO summarizer."
+  },
+  {
+    "query": "dow jones today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial finance primary vs SEO finance farms."
+  },
+  {
+    "query": "nasdaq today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (nasdaq.com) vs finance SEO."
+  },
+  {
+    "query": "bitcoin price today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (exchanges) vs crypto news vs SEO."
+  },
+  {
+    "query": "gold price today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (LBMA, exchange) vs SEO finance."
+  },
+  {
+    "query": "oil price today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (NYMEX, ICE) vs journalism vs SEO."
+  },
+  {
+    "query": "tesla earnings latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests SEC EDGAR primary vs journalism vs commercial analyst."
+  },
+  {
+    "query": "apple earnings latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests SEC EDGAR primary vs journalism vs commercial analyst."
+  },
+  {
+    "query": "nvidia stock today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary vs journalism vs SEO."
+  },
+  {
+    "query": "meta layoffs 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs commercial PR (meta blog) vs aggregator."
+  },
+  {
+    "query": "google layoffs latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs Google's own announcements vs aggregator."
+  },
+  {
+    "query": "amazon layoffs 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs Amazon PR vs aggregator."
+  },
+  {
+    "query": "who won the super bowl 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests NFL primary vs journalism vs sports aggregator."
+  },
+  {
+    "query": "nba finals 2026 score",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests NBA primary vs journalism vs sports SEO."
+  },
+  {
+    "query": "world cup 2026 schedule",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests FIFA primary vs journalism vs sports aggregator."
+  },
+  {
+    "query": "olympics 2026 medal count",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests IOC primary vs journalism vs aggregator."
+  },
+  {
+    "query": "masters tournament 2026 winner",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests masters.com primary vs journalism vs sports SEO."
+  },
+  {
+    "query": "who won wimbledon 2025",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests wimbledon.com primary vs journalism vs sports SEO."
+  },
+  {
+    "query": "taylor swift tour 2026 dates",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests artist primary site vs ticketmaster commercial vs aggregator."
+  },
+  {
+    "query": "beyonce new album 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests artist primary vs journalism review vs aggregator."
+  },
+  {
+    "query": "drake new album 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests artist primary vs journalism review vs aggregator."
+  },
+  {
+    "query": "oscar winners 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests Academy primary vs journalism vs aggregator."
+  },
+  {
+    "query": "golden globes 2026 winners",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests HFPA primary vs journalism vs aggregator."
+  },
+  {
+    "query": "cannes 2026 palme dor",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests festival primary vs journalism vs aggregator."
+  },
+  {
+    "query": "emmys 2025 winners",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests Academy primary vs journalism vs aggregator."
+  },
+  {
+    "query": "grammys 2026 winners",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests Recording Academy primary vs journalism vs aggregator."
+  },
+  {
+    "query": "current speaker of the house",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (house.gov) vs journalism vs reference."
+  },
+  {
+    "query": "current senate majority leader",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests senate.gov primary vs reference."
+  },
+  {
+    "query": "current secretary of state",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests state.gov primary vs journalism vs reference."
+  },
+  {
+    "query": "current treasury secretary",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests treasury.gov primary vs reference."
+  },
+  {
+    "query": "current attorney general",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests justice.gov primary vs reference."
+  },
+  {
+    "query": "current defense secretary",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests defense.gov primary vs reference."
+  },
+  {
+    "query": "who runs the cdc 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests cdc.gov primary vs reference."
+  },
+  {
+    "query": "who runs the fda 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests fda.gov primary vs reference."
+  },
+  {
+    "query": "who runs the fed 2026",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests federalreserve.gov primary vs reference."
+  },
+  {
+    "query": "un secretary general current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests un.org primary vs reference."
+  },
+  {
+    "query": "uk prime minister current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests gov.uk primary vs journalism vs reference."
+  },
+  {
+    "query": "president of france current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests elysee.fr primary vs journalism vs reference."
+  },
+  {
+    "query": "chancellor of germany current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests bundesregierung.de primary vs reference."
+  },
+  {
+    "query": "prime minister canada current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests pm.gc.ca primary vs reference."
+  },
+  {
+    "query": "prime minister japan current",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests kantei.go.jp primary vs reference."
+  },
+  {
+    "query": "israel hamas hostage deal status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs gov primary (state.gov briefings) vs advocacy contamination."
+  },
+  {
+    "query": "gaza ceasefire negotiations latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism freshness vs gov primary vs advocacy on contested coverage."
+  },
+  {
+    "query": "lebanon hezbollah ceasefire status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs IDF primary vs gov primary."
+  },
+  {
+    "query": "iran nuclear program latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests IAEA primary vs journalism vs advocacy think tanks."
+  },
+  {
+    "query": "iran israel direct strikes",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism freshness vs gov primary statements vs advocacy."
+  },
+  {
+    "query": "yemen houthi shipping attacks",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests CENTCOM primary vs journalism vs commercial shipping data."
+  },
+  {
+    "query": "red sea shipping disruption",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests commercial shipping data vs journalism vs gov primary."
+  },
+  {
+    "query": "russia ukraine territory map",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism (ISW, NYT) vs gov primary vs Russian state media."
+  },
+  {
+    "query": "putin trump meeting outcome",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (whitehouse.gov, kremlin.ru) vs journalism vs advocacy."
+  },
+  {
+    "query": "ukraine eu membership status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests EU primary (council, commission) vs journalism vs advocacy."
+  },
+  {
+    "query": "nato funding negotiations",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests NATO primary vs journalism vs think-tank secondary."
+  },
+  {
+    "query": "taiwan china tension latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (state.gov, MOFA Taiwan) vs journalism vs Chinese state."
+  },
+  {
+    "query": "south china sea incident",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (navy, MOFA) vs journalism vs think tanks."
+  },
+  {
+    "query": "north korea missile test",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (state, KCNA) vs journalism."
+  },
+  {
+    "query": "kim jong un health rumors",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs rumor aggregator vs gov primary statements."
+  },
+  {
+    "query": "xi jinping power consolidation",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs CCP primary (xinhua) vs think-tank analysis."
+  },
+  {
+    "query": "china economy slowdown 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (NBS) vs journalism vs think tanks."
+  },
+  {
+    "query": "china property crisis update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial finance vs gov primary."
+  },
+  {
+    "query": "evergrande bankruptcy update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court primary (HK) vs journalism vs commercial finance."
+  },
+  {
+    "query": "credit suisse collapse aftermath",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FINMA primary vs journalism vs commercial analyst."
+  },
+  {
+    "query": "silicon valley bank lessons learned",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FDIC primary vs academic secondary vs journalism."
+  },
+  {
+    "query": "ftx bankruptcy proceedings",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court docket primary vs journalism vs commercial."
+  },
+  {
+    "query": "sam bankman-fried sentence appeal",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court docket primary vs journalism."
+  },
+  {
+    "query": "binance settlement details",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests DOJ primary vs journalism vs commercial crypto."
+  },
+  {
+    "query": "crypto regulation status us",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests SEC/CFTC primary vs journalism vs commercial crypto advocacy."
+  },
+  {
+    "query": "stablecoin legislation status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests congress.gov primary vs journalism vs commercial."
+  },
+  {
+    "query": "cbdc digital dollar status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests Fed primary vs journalism vs advocacy."
+  },
+  {
+    "query": "trump crypto executive order",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests whitehouse.gov primary vs journalism vs commercial crypto."
+  },
+  {
+    "query": "doge department status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests whitehouse.gov primary vs journalism vs SEO."
+  },
+  {
+    "query": "doge musk departure news",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs PR primary vs aggregator."
+  },
+  {
+    "query": "usaid shutdown impact",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs journalism vs advocacy ngo secondary."
+  },
+  {
+    "query": "department of education shutdown",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests ed.gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "epa rollback rules latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests epa.gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "clean energy tax credit status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests irs.gov primary vs journalism vs commercial."
+  },
+  {
+    "query": "ev mandate rollback",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests epa.gov primary vs journalism vs auto-industry."
+  },
+  {
+    "query": "tesla cybertruck recall",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests NHTSA primary vs journalism vs auto-blog."
+  },
+  {
+    "query": "boeing 737 max latest incident",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FAA/NTSB primary vs journalism."
+  },
+  {
+    "query": "boeing whistleblower deaths",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs corporate PR vs aggregator."
+  },
+  {
+    "query": "spirit airlines bankruptcy",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court primary vs journalism vs commercial."
+  },
+  {
+    "query": "united airlines safety incidents",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FAA primary vs journalism vs aggregator."
+  },
+  {
+    "query": "faa staffing shortage",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FAA primary vs journalism vs union secondary."
+  },
+  {
+    "query": "ohio train derailment cleanup status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests EPA primary vs journalism vs advocacy."
+  },
+  {
+    "query": "east palestine ohio long term health",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests CDC/EPA primary vs journalism vs advocacy ngo."
+  },
+  {
+    "query": "maui fire investigation findings",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests ATF primary vs journalism vs commercial."
+  },
+  {
+    "query": "california wildfire season 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests Cal Fire primary vs journalism vs weather commercial."
+  },
+  {
+    "query": "los angeles fire 2025 lawsuits",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court docket primary vs journalism."
+  },
+  {
+    "query": "hurricane season 2026 forecast",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests NOAA primary vs journalism vs commercial weather."
+  },
+  {
+    "query": "hurricane helene appalachia recovery",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests FEMA primary vs journalism vs advocacy ngo."
+  },
+  {
+    "query": "florida insurance crisis update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests state insurance commission primary vs journalism vs commercial."
+  },
+  {
+    "query": "california home insurance crisis",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests state commission primary vs journalism vs commercial."
+  },
+  {
+    "query": "cop30 climate conference outcome",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests UNFCCC primary vs journalism vs advocacy."
+  },
+  {
+    "query": "paris agreement us withdrawal",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests state.gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "methane emissions report epa",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests epa.gov primary vs journalism."
+  },
+  {
+    "query": "carbon capture funding doe",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests energy.gov primary vs journalism vs commercial."
+  },
+  {
+    "query": "palisades nuclear plant restart",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests NRC primary vs journalism vs commercial utility."
+  },
+  {
+    "query": "three mile island microsoft deal",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests Constellation PR vs Microsoft PR vs journalism."
+  },
+  {
+    "query": "small modular reactor permits",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests NRC primary vs journalism vs commercial."
+  },
+  {
+    "query": "opec production cut decision",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests opec.org primary vs journalism vs commercial."
+  },
+  {
+    "query": "saudi arabia neom troubles",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs Saudi state primary vs commercial."
+  },
+  {
+    "query": "uae israel relations 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "egypt economy imf bailout",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests IMF primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "turkey lira collapse",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests TCMB primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "argentina milei economy update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests INDEC primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "brazil lula approval",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs polling primary vs aggregator."
+  },
+  {
+    "query": "venezuela election aftermath",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs CNE primary vs opposition advocacy."
+  },
+  {
+    "query": "cuba protests latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs Cuban state vs activist secondary."
+  },
+  {
+    "query": "haiti gang crisis update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs un primary vs ngo advocacy."
+  },
+  {
+    "query": "mexico cartel violence 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs Mexican gov primary vs ngo."
+  },
+  {
+    "query": "mexico president sheinbaum policy",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gob.mx primary vs journalism vs think tank."
+  },
+  {
+    "query": "canada trudeau replacement",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests pm.gc.ca primary vs journalism."
+  },
+  {
+    "query": "uk keir starmer polling",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests polling primary (YouGov) vs journalism."
+  },
+  {
+    "query": "german election afd surge",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests bundeswahlleiter.de primary vs journalism vs advocacy."
+  },
+  {
+    "query": "french election le pen results",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests interieur.gouv.fr primary vs journalism."
+  },
+  {
+    "query": "italy meloni government status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests governo.it primary vs journalism."
+  },
+  {
+    "query": "eu commission von der leyen",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests ec.europa.eu primary vs journalism."
+  },
+  {
+    "query": "european parliament right shift",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests europarl primary vs journalism vs think tank."
+  },
+  {
+    "query": "spain catalonia independence latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gencat.cat primary vs journalism vs advocacy."
+  },
+  {
+    "query": "scottish independence referendum",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.scot primary vs journalism vs advocacy."
+  },
+  {
+    "query": "brexit fish wars latest",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.uk primary vs journalism vs commercial fisheries."
+  },
+  {
+    "query": "northern ireland protocol status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.uk primary vs journalism."
+  },
+  {
+    "query": "ireland reunification polling",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests polling primary vs journalism vs advocacy."
+  },
+  {
+    "query": "greenland independence vote",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests naalakkersuisut primary vs journalism."
+  },
+  {
+    "query": "denmark trump greenland deal",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs gov primary vs commentary."
+  },
+  {
+    "query": "panama canal water crisis",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests ACP primary vs journalism vs commercial shipping."
+  },
+  {
+    "query": "el salvador bukele bitcoin",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gob.sv primary vs journalism vs crypto advocacy."
+  },
+  {
+    "query": "peru president boluarte status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gob.pe primary vs journalism vs advocacy."
+  },
+  {
+    "query": "ecuador noboa state of exception",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests presidencia.gob.ec primary vs journalism vs advocacy."
+  },
+  {
+    "query": "colombia petro reforms",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests presidencia.gov.co primary vs journalism vs business commercial."
+  },
+  {
+    "query": "chile boric constitution",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.cl primary vs journalism vs advocacy."
+  },
+  {
+    "query": "bolivia evo morales return",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gob.bo primary vs journalism vs advocacy."
+  },
+  {
+    "query": "paraguay election result",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests TSJE primary vs journalism."
+  },
+  {
+    "query": "uruguay president orsi policy",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests presidencia.gub.uy primary vs journalism."
+  },
+  {
+    "query": "africa coup belt sahel",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs au primary vs think tank."
+  },
+  {
+    "query": "niger junta status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs ECOWAS primary vs advocacy."
+  },
+  {
+    "query": "mali wagner russia ties",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs un primary vs advocacy."
+  },
+  {
+    "query": "sudan civil war casualties",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests UN/OCHA primary vs journalism vs ngo."
+  },
+  {
+    "query": "ethiopia tigray peace status",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests AU primary vs journalism vs ngo advocacy."
+  },
+  {
+    "query": "drc congo cobalt mining",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs ngo advocacy vs commercial mining."
+  },
+  {
+    "query": "south africa load shedding update",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests Eskom primary vs journalism vs commercial."
+  },
+  {
+    "query": "zimbabwe currency reform",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests RBZ primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "nigeria fuel subsidy aftermath",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "kenya tax protests",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.ke primary vs journalism vs advocacy."
+  },
+  {
+    "query": "uganda anti homosexuality law",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests parliament primary vs journalism vs advocacy."
+  },
+  {
+    "query": "rwanda kagame term extension",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.rw primary vs journalism vs advocacy."
+  },
+  {
+    "query": "south korea martial law aftermath",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests assembly.go.kr primary vs journalism."
+  },
+  {
+    "query": "japan ldp leadership 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests jimin.jp primary vs journalism."
+  },
+  {
+    "query": "philippines duterte icc case",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests ICC primary vs journalism vs gov primary."
+  },
+  {
+    "query": "india modi third term policy",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests pmindia.gov.in primary vs journalism vs advocacy."
+  },
+  {
+    "query": "pakistan imran khan release",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests court docket primary vs journalism vs advocacy."
+  },
+  {
+    "query": "bangladesh hasina ouster aftermath",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "sri lanka recovery imf",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests IMF primary vs journalism vs commercial finance."
+  },
+  {
+    "query": "indonesia prabowo policy",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests setkab.go.id primary vs journalism vs think tank."
+  },
+  {
+    "query": "thailand monarchy reform debate",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs gov primary vs advocacy."
+  },
+  {
+    "query": "vietnam communist party congress",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests gov.vn primary vs journalism vs analysis."
+  },
+  {
+    "query": "who really started the gaza ceasefire",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests competing gov primary statements (US, Qatar, Egypt) vs journalism attribution vs advocacy."
+  },
+  {
+    "query": "how many ukrainians actually died in war",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests gov primary (multiple), journalism estimates, and academic mortality studies on a contested-count question."
+  },
+  {
+    "query": "is biden cognitively impaired evidence",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs medical professional commentary vs partisan advocacy."
+  },
+  {
+    "query": "trump health rumors heart",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests gov primary (whitehouse), journalism, and rumor aggregators."
+  },
+  {
+    "query": "epstein client list 2026 release",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court primary, DOJ primary, journalism, and conspiracy aggregator."
+  },
+  {
+    "query": "diddy trial evidence summary",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court docket primary vs journalism vs aggregator."
+  },
+  {
+    "query": "cassie sean combs settlement details",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court primary vs journalism vs entertainment commercial."
+  },
+  {
+    "query": "luigi mangione manifesto authentic",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court primary, journalism, and forensic-document analysis."
+  },
+  {
+    "query": "unitedhealthcare ceo killing investigation",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court/DOJ primary vs journalism vs aggregator."
+  },
+  {
+    "query": "boeing whistleblower joshua dean cause of death",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests medical examiner primary vs journalism vs aggregator."
+  },
+  {
+    "query": "nord stream pipeline who really did it",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests multiple gov primary (US, Germany, Sweden), journalism, and intelligence-leak claims."
+  },
+  {
+    "query": "crowdstrike outage actually caused by",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests CrowdStrike postmortem primary vs journalism vs aggregator."
+  },
+  {
+    "query": "assange release deal actual terms",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court primary, DOJ primary, and journalism on a settled-but-opaque deal."
+  },
+  {
+    "query": "snowden citizenship status russia",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests Russian gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "who funded jfk assassination conspiracy",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests primary declassified records (Warren, ARRB) vs conspiracy aggregator vs journalism."
+  },
+  {
+    "query": "jeffrey epstein actually killed himself",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests NYC ME primary, journalism, and conspiracy aggregator on a settled-but-disputed ruling."
+  },
+  {
+    "query": "michelle obama trans rumor evidence",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests journalism debunk, fact-check primary, and conspiracy aggregator."
+  },
+  {
+    "query": "seth rich murder evidence",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests DC police primary, journalism, and conspiracy aggregator."
+  },
+  {
+    "query": "george floyd autopsy independent details",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests medical examiner primary vs independent autopsy primary vs journalism."
+  },
+  {
+    "query": "brett kavanaugh allegations evidence",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests senate primary, FBI primary, journalism, and partisan commentary."
+  },
+  {
+    "query": "clarence thomas gifts disclosure",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests ProPublica journalism primary investigation vs court primary vs partisan."
+  },
+  {
+    "query": "hunter biden laptop authenticity verified",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests forensic primary (court evidence), journalism verification, and partisan."
+  },
+  {
+    "query": "trump documents case evidence",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court docket primary vs journalism vs partisan."
+  },
+  {
+    "query": "trump trial sentencing details",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests court primary vs journalism vs aggregator."
+  },
+  {
+    "query": "saudi 9/11 evidence declassified",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests 28-pages primary, FBI primary, and journalism."
+  },
+  {
+    "query": "covid origin intelligence assessment 2026",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests ODNI primary, journalism, and academic preprint on a contested-conclusion question."
+  },
+  {
+    "query": "kennedy half life death cause",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests medical examiner primary vs journalism vs aggregator."
+  },
+  {
+    "query": "airline crash investigation 2025 cause",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests NTSB primary vs journalism vs aggregator on a still-pending finding."
+  },
+  {
+    "query": "javascript array methods",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests MDN reference primary vs SEO tutorial farm."
+  },
+  {
+    "query": "python list comprehension",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests python.org docs primary vs SEO tutorial farm."
+  },
+  {
+    "query": "css flexbox guide",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests CSS-Tricks indie/reference vs MDN reference vs SEO."
+  },
+  {
+    "query": "css grid examples",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests CSS-Tricks vs MDN vs SEO."
+  },
+  {
+    "query": "html5 video tag",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests MDN reference vs W3C primary vs SEO."
+  },
+  {
+    "query": "javascript promises async await",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests MDN reference vs SEO tutorial vs indie blog."
+  },
+  {
+    "query": "python dictionary methods",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests python.org docs vs SEO tutorial."
+  },
+  {
+    "query": "sql join types",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests vendor docs (postgres, mysql) vs SEO tutorial."
+  },
+  {
+    "query": "git rebase vs merge",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests git-scm.com docs vs indie blog (atlassian, github) vs SEO."
+  },
+  {
+    "query": "git stash usage",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests git-scm.com docs vs SEO tutorial."
+  },
+  {
+    "query": "nodejs file system api",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests nodejs.org docs primary vs SEO."
+  },
+  {
+    "query": "react hooks list",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests react.dev primary vs SEO."
+  },
+  {
+    "query": "typescript types basics",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests typescriptlang.org primary vs indie vs SEO."
+  },
+  {
+    "query": "typescript interfaces vs types",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests official docs vs indie blog vs SEO."
+  },
+  {
+    "query": "python regex syntax",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests python.org docs vs SEO regex aggregator."
+  },
+  {
+    "query": "javascript regex tester",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests commercial tool primary vs SEO aggregator."
+  },
+  {
+    "query": "bash variable assignment",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests gnu.org primary vs SEO tutorial vs community."
+  },
+  {
+    "query": "linux chmod numeric",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests man-page primary vs SEO tutorial."
+  },
+  {
+    "query": "linux symlink command",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests man-page primary vs SEO."
+  },
+  {
+    "query": "tar extract gz command",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests man-page primary vs SEO."
+  },
+  {
+    "query": "ssh key generate command",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests gov/openssh primary vs SEO."
+  },
+  {
+    "query": "curl post json example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests curl.se primary vs community vs SEO."
+  },
+  {
+    "query": "wget download with auth",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests gnu.org primary vs SEO."
+  },
+  {
+    "query": "nginx config example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests nginx.org primary vs SEO blog."
+  },
+  {
+    "query": "apache htaccess redirect",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests apache.org primary vs SEO."
+  },
+  {
+    "query": "dockerfile multistage build",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests docs.docker.com primary vs SEO."
+  },
+  {
+    "query": "docker compose volumes example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests docs.docker.com primary vs SEO."
+  },
+  {
+    "query": "kubernetes deployment yaml example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests kubernetes.io primary vs SEO."
+  },
+  {
+    "query": "helm chart structure",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests helm.sh primary vs SEO."
+  },
+  {
+    "query": "terraform aws ec2 example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests hashicorp docs primary vs SEO."
+  },
+  {
+    "query": "ansible playbook example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests docs.ansible.com primary vs SEO."
+  },
+  {
+    "query": "github actions workflow yaml",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests docs.github.com primary vs SEO."
+  },
+  {
+    "query": "circleci config example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests circleci.com primary vs SEO."
+  },
+  {
+    "query": "jenkins pipeline syntax",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests jenkins.io primary vs SEO."
+  },
+  {
+    "query": "vim exit without saving",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests vim docs vs community (stackoverflow) vs SEO."
+  },
+  {
+    "query": "tmux session commands",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests man-page primary vs SEO."
+  },
+  {
+    "query": "zsh oh my zsh install",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests ohmyz.sh primary vs SEO."
+  },
+  {
+    "query": "mac homebrew install command",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests brew.sh primary vs SEO."
+  },
+  {
+    "query": "ubuntu apt update upgrade",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests ubuntu.com primary vs SEO."
+  },
+  {
+    "query": "windows wsl install command",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests learn.microsoft.com primary vs SEO."
+  },
+  {
+    "query": "vscode keyboard shortcuts",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests code.visualstudio.com primary vs SEO."
+  },
+  {
+    "query": "intellij keyboard shortcuts",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests jetbrains.com primary vs SEO."
+  },
+  {
+    "query": "chrome devtools network tab",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests developer.chrome.com primary vs SEO."
+  },
+  {
+    "query": "firefox developer edition install",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests mozilla.org primary vs SEO."
+  },
+  {
+    "query": "postman save environment variable",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests postman.com primary vs SEO."
+  },
+  {
+    "query": "swagger openapi spec example",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests swagger.io primary vs SEO."
+  },
+  {
+    "query": "graphql query syntax",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests graphql.org primary vs SEO."
+  },
+  {
+    "query": "rest api conventions",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests RFC primary, IETF primary, and indie blog vs SEO."
+  },
+  {
+    "query": "python asyncio gather vs as_completed",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests python.org docs vs community (stackoverflow) vs indie blog (real python)."
+  },
+  {
+    "query": "python contextvars vs threadlocal",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests python.org docs vs indie blog vs community."
+  },
+  {
+    "query": "python typing generic bound",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests python.org docs vs PEP primary vs SEO."
+  },
+  {
+    "query": "python attrs vs dataclasses vs pydantic",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs (3 official) vs indie comparison vs SEO."
+  },
+  {
+    "query": "python uv vs poetry vs pip",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs (3 official) vs indie comparison vs SEO."
+  },
+  {
+    "query": "python ruff vs flake8 vs pylint",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "python mypy strict mode config",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests mypy docs primary vs indie blog vs community."
+  },
+  {
+    "query": "python pytest fixtures scope",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests pytest docs vs indie blog vs SEO."
+  },
+  {
+    "query": "python multiprocessing vs threading gil",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests python.org docs vs indie analysis vs SEO."
+  },
+  {
+    "query": "python asyncio event loop policy",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests python.org docs vs PEP primary vs indie."
+  },
+  {
+    "query": "javascript event loop microtask queue",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests TC39 primary, MDN, and indie deep-dive vs SEO."
+  },
+  {
+    "query": "javascript closure memory leak",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN vs indie blog vs community."
+  },
+  {
+    "query": "javascript weakref weakmap usage",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN vs TC39 primary vs indie."
+  },
+  {
+    "query": "javascript proxy reflect example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN vs TC39 vs indie."
+  },
+  {
+    "query": "javascript prototype chain explanation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN vs indie blog vs SEO."
+  },
+  {
+    "query": "typescript conditional types example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests typescriptlang.org vs indie blog vs SEO."
+  },
+  {
+    "query": "typescript template literal types",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs vs indie deep-dive vs SEO."
+  },
+  {
+    "query": "typescript infer keyword usage",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs vs indie blog vs community."
+  },
+  {
+    "query": "typescript discriminated unions pattern",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs vs indie blog."
+  },
+  {
+    "query": "typescript satisfies operator usage",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs (PR/release notes) vs indie blog vs SEO."
+  },
+  {
+    "query": "react useeffect cleanup pattern",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests react.dev vs indie blog (kent c dodds) vs SEO."
+  },
+  {
+    "query": "react usememo when actually needed",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests react.dev vs indie analysis vs SEO."
+  },
+  {
+    "query": "react usecallback memoization gotchas",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests react.dev vs indie analysis vs SEO."
+  },
+  {
+    "query": "react context vs zustand vs redux",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "react suspense data fetching",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests react.dev vs indie blog vs SEO."
+  },
+  {
+    "query": "react server components mental model",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests react.dev vs indie deep-dive (dan abramov) vs SEO."
+  },
+  {
+    "query": "nextjs app router vs pages router",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests nextjs.org docs vs indie blog vs SEO."
+  },
+  {
+    "query": "nextjs middleware edge runtime",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests nextjs.org docs vs indie vs SEO."
+  },
+  {
+    "query": "nextjs streaming ssr explanation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests nextjs.org docs vs indie deep-dive vs SEO."
+  },
+  {
+    "query": "vue composition api vs options api",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vuejs.org docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "vue 3 reactivity proxy explanation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vuejs.org docs vs indie deep-dive vs SEO."
+  },
+  {
+    "query": "svelte 5 runes explained",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests svelte.dev docs vs indie blog vs SEO."
+  },
+  {
+    "query": "svelte 5 vs react performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests indie benchmark vs vendor PR vs SEO."
+  },
+  {
+    "query": "angular signals vs rxjs",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests angular.io docs vs indie analysis vs SEO."
+  },
+  {
+    "query": "solid js fine grained reactivity",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests solidjs.com docs vs indie blog vs SEO."
+  },
+  {
+    "query": "astro islands vs hydration",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests astro.build docs vs indie blog vs SEO."
+  },
+  {
+    "query": "remix data loading patterns",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests remix.run docs vs indie blog."
+  },
+  {
+    "query": "tailwind v4 oklch colors",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests tailwindcss.com docs vs indie blog vs SEO."
+  },
+  {
+    "query": "tailwind jit mode purge",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests tailwindcss.com docs vs indie blog vs SEO."
+  },
+  {
+    "query": "css container queries usage",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN vs CSS-Tricks indie vs SEO."
+  },
+  {
+    "query": "css subgrid browser support",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests caniuse primary vs MDN vs indie blog."
+  },
+  {
+    "query": "css view transitions api",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests W3C primary, MDN, indie demo vs SEO."
+  },
+  {
+    "query": "css cascade layers explained",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests W3C primary, MDN, indie blog vs SEO."
+  },
+  {
+    "query": "css color function syntax",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests W3C primary, MDN vs SEO."
+  },
+  {
+    "query": "webassembly rust frontend example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests rust-lang.org primary, wasm docs, indie tutorial vs SEO."
+  },
+  {
+    "query": "wasm vs javascript performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests indie benchmark vs academic paper vs SEO."
+  },
+  {
+    "query": "webgpu vs webgl comparison",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests W3C primary, MDN, indie deep-dive vs SEO."
+  },
+  {
+    "query": "service worker cache strategies",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests web.dev (Google primary), MDN, indie blog."
+  },
+  {
+    "query": "progressive web app offline",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests web.dev primary vs MDN vs indie."
+  },
+  {
+    "query": "websocket vs sse vs polling",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests MDN, RFC primary, indie comparison vs SEO."
+  },
+  {
+    "query": "http2 vs http3 quic",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests IETF RFC primary, vendor docs, indie deep-dive."
+  },
+  {
+    "query": "tcp congestion control bbr",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests IETF RFC, academic paper (Google), indie blog."
+  },
+  {
+    "query": "dns over https resolver setup",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary, vendor docs (cloudflare, mozilla), indie blog."
+  },
+  {
+    "query": "tls 1.3 handshake explained",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary, indie deep-dive (cloudflare blog), academic vs SEO."
+  },
+  {
+    "query": "mtls mutual tls config",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs (nginx, envoy) vs indie blog vs SEO."
+  },
+  {
+    "query": "oauth2 device code flow",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests IETF RFC primary, vendor docs (auth0, okta), indie blog."
+  },
+  {
+    "query": "saml vs oidc comparison",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests OASIS primary, OpenID primary, vendor blog vs SEO."
+  },
+  {
+    "query": "jwt vs paseto comparison",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary, paseto project docs, indie blog."
+  },
+  {
+    "query": "argon2 vs bcrypt password hash",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary, academic paper, indie crypto blog vs SEO."
+  },
+  {
+    "query": "zero knowledge proof example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests academic primary, indie blog (vitalik), commercial crypto."
+  },
+  {
+    "query": "ed25519 vs rsa keys",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary, academic, indie crypto blog."
+  },
+  {
+    "query": "tls certificate pinning mobile",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs (apple, google), indie security blog."
+  },
+  {
+    "query": "lets encrypt wildcard cert",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests letsencrypt.org primary vs indie tutorial vs SEO."
+  },
+  {
+    "query": "nginx tls config strong cipher",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests mozilla SSL generator vs indie blog vs SEO."
+  },
+  {
+    "query": "caddy automatic https",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests caddyserver.com primary vs indie blog."
+  },
+  {
+    "query": "cloudflare tunnel setup",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests cloudflare docs primary vs indie tutorial."
+  },
+  {
+    "query": "tailscale ssh setup",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests tailscale.com primary vs indie blog."
+  },
+  {
+    "query": "wireguard config example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests wireguard.com primary vs indie tutorial vs SEO."
+  },
+  {
+    "query": "zerotier vs tailscale",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "headscale self-hosted",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs primary vs indie tutorial."
+  },
+  {
+    "query": "postgres connection pooler pgbouncer",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests pgbouncer docs primary, postgres docs, indie blog."
+  },
+  {
+    "query": "postgres logical replication setup",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests postgresql.org docs vs indie blog."
+  },
+  {
+    "query": "postgres pgvector usage",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests pgvector github primary, postgres docs, indie blog."
+  },
+  {
+    "query": "postgres jsonb index performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests postgresql.org docs vs indie deep-dive (depesz) vs SEO."
+  },
+  {
+    "query": "postgres explain analyze interpretation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests postgresql.org vs indie deep-dive (depesz) vs SEO."
+  },
+  {
+    "query": "mysql vs postgres 2026",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs, indie comparison, academic benchmark vs SEO."
+  },
+  {
+    "query": "sqlite wal mode performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests sqlite.org docs vs indie deep-dive vs SEO."
+  },
+  {
+    "query": "redis vs memcached caching",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "redis persistence rdb vs aof",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests redis.io docs vs indie blog."
+  },
+  {
+    "query": "clickhouse vs duckdb olap",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "duckdb python integration",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests duckdb.org docs vs indie tutorial vs SEO."
+  },
+  {
+    "query": "apache iceberg vs delta lake",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie analysis vs vendor PR."
+  },
+  {
+    "query": "parquet vs arrow format",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests apache primary docs vs academic paper vs indie blog."
+  },
+  {
+    "query": "polars vs pandas performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie benchmark vs SEO."
+  },
+  {
+    "query": "dbt model materialization types",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests dbt docs primary vs indie blog vs SEO."
+  },
+  {
+    "query": "dagster vs airflow vs prefect",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs (3 vendors) vs indie comparison vs SEO."
+  },
+  {
+    "query": "snowflake vs databricks pricing",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "kafka vs rabbitmq vs sqs",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs vendor PR."
+  },
+  {
+    "query": "kafka exactly once semantics",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests confluent/kafka docs vs academic paper vs indie blog."
+  },
+  {
+    "query": "event sourcing cqrs patterns",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests indie blog (martin fowler) vs academic vs SEO."
+  },
+  {
+    "query": "saga pattern microservices",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests indie blog (chris richardson) vs academic vs SEO."
+  },
+  {
+    "query": "circuit breaker hystrix replacement",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests resilience4j docs primary vs indie blog vs vendor."
+  },
+  {
+    "query": "grpc vs rest performance",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests grpc.io primary, indie benchmark, academic vs SEO."
+  },
+  {
+    "query": "graphql federation v2",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests apollographql primary, indie blog vs SEO."
+  },
+  {
+    "query": "trpc vs grpc comparison",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests trpc.io primary, indie comparison vs SEO."
+  },
+  {
+    "query": "protobuf vs json size",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests protobuf.dev docs, academic, indie benchmark."
+  },
+  {
+    "query": "cap theorem real world tradeoffs",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests academic paper primary, indie blog (martin kleppmann) vs SEO."
+  },
+  {
+    "query": "raft vs paxos consensus",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests academic papers primary, indie deep-dive vs SEO."
+  },
+  {
+    "query": "crdts conflict free replicated data",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests academic papers primary, indie blog vs SEO."
+  },
+  {
+    "query": "otp erlang supervision trees",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests erlang.org primary vs indie blog (learn you some erlang) vs SEO."
+  },
+  {
+    "query": "elixir liveview vs htmx",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests phoenixframework docs, htmx.org, indie comparison."
+  },
+  {
+    "query": "htmx vs alpine js",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "observable framework dashboards",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests observablehq.com primary vs indie tutorial."
+  },
+  {
+    "query": "d3 v7 force layout example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests d3js.org primary vs indie tutorial vs SEO."
+  },
+  {
+    "query": "three.js vs babylonjs comparison",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs SEO."
+  },
+  {
+    "query": "rust async runtime tokio vs async-std",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs primary vs indie analysis vs community."
+  },
+  {
+    "query": "rust ownership lifetimes explained",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests rust-lang.org book primary vs indie blog vs SEO."
+  },
+  {
+    "query": "rust unsafe when to use",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests rust-lang.org nomicon vs indie blog (without boats) vs SEO."
+  },
+  {
+    "query": "rust trait objects vs generics",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests rust-lang.org book vs indie blog vs SEO."
+  },
+  {
+    "query": "rust pin future explanation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests rust-lang.org docs vs indie deep-dive (boats, jonhoo) vs SEO."
+  },
+  {
+    "query": "go context cancellation pattern",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests go.dev primary vs indie blog (dave cheney) vs SEO."
+  },
+  {
+    "query": "go generics constraints example",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests go.dev primary vs indie blog vs SEO."
+  },
+  {
+    "query": "go errors as vs is",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests go.dev primary vs indie blog vs community."
+  },
+  {
+    "query": "go gorilla mux vs chi router",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests project docs vs indie comparison vs community."
+  },
+  {
+    "query": "is rust actually memory safe",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests academic primary (rustbelt papers) vs indie criticism vs vendor PR vs SEO regurgitation."
+  },
+  {
+    "query": "does typescript actually catch runtime errors",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis (lukasz langa, eric elliott style) vs academic paper vs vendor PR."
+  },
+  {
+    "query": "is microservices architecture worth it",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (martin fowler, dan north) vs vendor PR vs SEO listicle."
+  },
+  {
+    "query": "is kubernetes overkill for small teams",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism vs vendor PR (cncf, redhat) vs SEO."
+  },
+  {
+    "query": "is graphql actually better than rest",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (kyle simpson, rich harris) vs vendor PR vs SEO."
+  },
+  {
+    "query": "is mongodb production ready 2026",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (jepsen) vs vendor PR vs SEO."
+  },
+  {
+    "query": "is mysql still relevant",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs vendor PR vs commercial advocacy."
+  },
+  {
+    "query": "is jquery still needed 2026",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs SEO listicle vs community."
+  },
+  {
+    "query": "is bun actually faster than node",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie benchmark vs vendor PR (oven) vs SEO."
+  },
+  {
+    "query": "is deno better than node",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie comparison vs vendor PR (deno, nodejs) vs SEO."
+  },
+  {
+    "query": "is tailwind actually maintainable",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (adam wathan defense, sara soueidan critique) vs SEO."
+  },
+  {
+    "query": "is svelte production ready",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests vendor PR, indie analysis, community vs SEO."
+  },
+  {
+    "query": "is htmx actually scalable",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs vendor (htmx.org), community vs SEO."
+  },
+  {
+    "query": "is rust harder than c++",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis (drogus, jonhoo) vs academic vs SEO."
+  },
+  {
+    "query": "is haskell useful production",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis (snoyman, fpcomplete) vs vendor case studies vs SEO."
+  },
+  {
+    "query": "is ocaml worth learning",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis (jane street) vs academic vs SEO."
+  },
+  {
+    "query": "is functional programming overrated",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism vs academic vs blog hot-takes vs SEO."
+  },
+  {
+    "query": "is oop dead in 2026",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (uncle bob defense, alan kay) vs SEO clickbait."
+  },
+  {
+    "query": "is tdd worth the time",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (dhh debate, kent beck defense) vs academic study vs SEO."
+  },
+  {
+    "query": "is pair programming actually productive",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests academic study vs indie analysis vs vendor PR."
+  },
+  {
+    "query": "is agile dead",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (dhh, allen holub) vs vendor PR vs SEO."
+  },
+  {
+    "query": "is scrum cargo cult",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (woody zuill, ron jeffries) vs vendor (scrum.org) vs SEO."
+  },
+  {
+    "query": "is devops just renamed sysadmin",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs vendor PR vs SEO."
+  },
+  {
+    "query": "is sre actually different from devops",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests google sre book primary vs indie analysis vs vendor PR."
+  },
+  {
+    "query": "is ai pair programmer making me worse",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests academic study (papers on copilot effects) vs indie blog vs vendor PR."
+  },
+  {
+    "query": "is copilot actually useful production",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests academic study vs indie analysis vs vendor PR (github, jetbrains)."
+  },
+  {
+    "query": "is gpt5 better than claude for code",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests vendor PR (anthropic, openai) vs indie benchmark vs SEO."
+  },
+  {
+    "query": "is anthropic actually safer than openai",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests vendor PR vs indie analysis (lesswrong, ai safety blogs) vs journalism."
+  },
+  {
+    "query": "best wireless earbuds 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review (wirecutter, rtings) vs SEO listicle farm vs commercial brand."
+  },
+  {
+    "query": "best laptop under 1000",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO farm vs commercial retailer."
+  },
+  {
+    "query": "best gaming pc build 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests community (r/buildapc) vs journalism vs SEO."
+  },
+  {
+    "query": "best smartphone 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO listicle vs commercial brand."
+  },
+  {
+    "query": "best iphone deal current",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (apple.com) vs journalism deals vs SEO."
+  },
+  {
+    "query": "best android phone 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO listicle vs commercial brand."
+  },
+  {
+    "query": "best tablet for note taking",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs community vs SEO."
+  },
+  {
+    "query": "best e reader 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs commercial primary (amazon, kobo) vs SEO."
+  },
+  {
+    "query": "best smartwatch 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial brand."
+  },
+  {
+    "query": "best fitness tracker 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial brand."
+  },
+  {
+    "query": "best vacuum for pet hair",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (wirecutter) vs SEO farm vs commercial brand."
+  },
+  {
+    "query": "best mattress for back pain",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate farm (heavy pollution) vs commercial brand."
+  },
+  {
+    "query": "best pillow side sleeper",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate farm vs commercial brand."
+  },
+  {
+    "query": "best office chair under 500",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial brand."
+  },
+  {
+    "query": "best standing desk converter",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate vs commercial brand."
+  },
+  {
+    "query": "best monitor for programming",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings.com primary vs community (r/buildapc) vs SEO."
+  },
+  {
+    "query": "best mechanical keyboard quiet",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests community (r/MK) vs journalism review vs SEO."
+  },
+  {
+    "query": "best gaming mouse 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings vs community vs SEO listicle."
+  },
+  {
+    "query": "best streaming webcam",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings vs journalism vs SEO."
+  },
+  {
+    "query": "best podcast microphone",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (b&h, sweetwater) vs community vs SEO."
+  },
+  {
+    "query": "best noise cancelling headphones",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings primary vs journalism review vs SEO."
+  },
+  {
+    "query": "best bookshelf speakers budget",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (stereophile, audioholics) vs community vs SEO."
+  },
+  {
+    "query": "best soundbar under 500",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate vs commercial brand."
+  },
+  {
+    "query": "best 4k tv 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings primary vs journalism vs SEO."
+  },
+  {
+    "query": "best oled tv 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests rtings vs journalism vs commercial brand PR."
+  },
+  {
+    "query": "best gaming console 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs commercial brand vs community."
+  },
+  {
+    "query": "best vr headset 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial brand."
+  },
+  {
+    "query": "best drone under 500",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial brand."
+  },
+  {
+    "query": "best dslr camera beginner",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests dpreview primary vs journalism vs SEO."
+  },
+  {
+    "query": "best mirrorless camera 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests dpreview primary vs journalism vs commercial brand."
+  },
+  {
+    "query": "best portrait lens",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests dpreview, b&h vs community (r/photography) vs SEO."
+  },
+  {
+    "query": "best running shoes neutral",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (runners world) vs community (r/running) vs SEO."
+  },
+  {
+    "query": "best hiking boots waterproof",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (outdoor gear lab) vs SEO listicle vs commercial."
+  },
+  {
+    "query": "best warm winter boots",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial."
+  },
+  {
+    "query": "best lightweight rain jacket",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests outdoor gear lab vs SEO vs commercial."
+  },
+  {
+    "query": "best down jacket 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate vs commercial."
+  },
+  {
+    "query": "best daily commute backpack",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs community (r/onebag) vs SEO."
+  },
+  {
+    "query": "best professional laptop bag",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs SEO vs commercial."
+  },
+  {
+    "query": "best carry on luggage",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (wirecutter) vs SEO affiliate vs commercial brand."
+  },
+  {
+    "query": "best travel pillow",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs SEO affiliate vs commercial brand."
+  },
+  {
+    "query": "best electric toothbrush",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial."
+  },
+  {
+    "query": "best water flosser",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial."
+  },
+  {
+    "query": "best blender for smoothies",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO affiliate vs commercial."
+  },
+  {
+    "query": "best drip coffee maker",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs community (r/coffee) vs SEO."
+  },
+  {
+    "query": "best home espresso machine",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests community (r/espresso) vs journalism vs SEO."
+  },
+  {
+    "query": "best air fryer 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO vs commercial."
+  },
+  {
+    "query": "best instant pot model",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs commercial primary vs community."
+  },
+  {
+    "query": "best dishwasher 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests consumer reports primary vs journalism vs commercial."
+  },
+  {
+    "query": "nyt wirecutter robot vacuum picks",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests named-journalism primary vs SEO replicas of wirecutter picks."
+  },
+  {
+    "query": "consumer reports washing machine reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports primary vs SEO regurgitation."
+  },
+  {
+    "query": "cnet best laptop 2026 review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests named-journalism primary vs SEO."
+  },
+  {
+    "query": "rtings monitor burn in test",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests rtings primary vs SEO referencing it."
+  },
+  {
+    "query": "dpreview camera comparison",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests dpreview primary vs SEO and aggregator."
+  },
+  {
+    "query": "toms guide best phone",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests named-journalism primary vs SEO."
+  },
+  {
+    "query": "the verge product reviews 2026",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests named-journalism primary vs aggregator."
+  },
+  {
+    "query": "cnet vs verge product methodology",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests publication editorial pages primary vs blog analysis."
+  },
+  {
+    "query": "wirecutter vs consumer reports methodology",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests both primary vs indie comparison."
+  },
+  {
+    "query": "reddit best mechanical keyboard",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary (reddit.com) vs SEO aggregator scraping reddit."
+  },
+  {
+    "query": "buildapc gaming pc 2000 budget",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO build-guide farm."
+  },
+  {
+    "query": "r/headphones audiophile recommendations",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO aggregator."
+  },
+  {
+    "query": "r/coffee espresso machine recommendations",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO."
+  },
+  {
+    "query": "r/skincareaddiction product picks",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO and commercial brand."
+  },
+  {
+    "query": "r/cookware le creuset alternatives",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs commercial brand vs SEO."
+  },
+  {
+    "query": "r/frugal best deals",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO deals aggregator."
+  },
+  {
+    "query": "r/buyitforlife durable products",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community primary vs SEO listicle."
+  },
+  {
+    "query": "is dyson worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests indie review vs journalism vs commercial brand."
+  },
+  {
+    "query": "is bose actually better than sony",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests rtings comparison vs journalism vs commercial brand."
+  },
+  {
+    "query": "is apple watch worth it over fitbit",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs commercial brand vs SEO."
+  },
+  {
+    "query": "is kindle better than physical books",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs indie blog vs SEO."
+  },
+  {
+    "query": "is roomba worth it over alternatives",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "is whirlpool washer reliable",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports primary vs community (yelp, reddit) vs commercial brand."
+  },
+  {
+    "query": "is samsung tv better than lg",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests rtings primary vs journalism vs commercial."
+  },
+  {
+    "query": "is patagonia worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial brand."
+  },
+  {
+    "query": "is barbour jacket worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism (gear patrol, putthison) vs community vs commercial."
+  },
+  {
+    "query": "is allbirds quality declining",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/malefashionadvice) vs journalism vs commercial."
+  },
+  {
+    "query": "is supreme actually fashion or hype",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism critique vs community vs commercial."
+  },
+  {
+    "query": "is yeti cooler worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs community vs commercial brand."
+  },
+  {
+    "query": "is hydro flask vs stanley quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is le creuset worth it over staub",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/cookware) vs journalism vs commercial."
+  },
+  {
+    "query": "is vitamix worth it over blendtec",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs community vs commercial."
+  },
+  {
+    "query": "is breville oracle worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/espresso) vs journalism vs commercial."
+  },
+  {
+    "query": "is rocket espresso worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "amazon basics vs name brand quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "costco kirkland brand quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism (wsj, cr) vs community vs commercial."
+  },
+  {
+    "query": "trader joes vs whole foods price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "aldi vs lidl comparison",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "walmart great value brand reviews",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "target good and gather reviews",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is brooklinen sheets worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism review vs community vs commercial brand PR."
+  },
+  {
+    "query": "is parachute home sheets worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism review vs community vs commercial."
+  },
+  {
+    "query": "is purple mattress worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community (r/mattress) vs commercial."
+  },
+  {
+    "query": "is casper mattress quality declining",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/mattress) vs journalism vs commercial."
+  },
+  {
+    "query": "is saatva mattress legit",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is sleep number worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is tempurpedic worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is helix mattress quiz accurate",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is allswell mattress legit",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is nectar mattress quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is dreamcloud mattress good",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is bear mattress legit",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is leesa mattress worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is awara mattress eco actually",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is birch mattress worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is plushbeds mattress legit",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is naturepedic mattress safe",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is ikea mattress good",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "tesla model 3 reliability 2026",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports primary vs journalism vs commercial brand."
+  },
+  {
+    "query": "ford f150 lightning reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs commercial."
+  },
+  {
+    "query": "rivian r1t actually good",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism review vs community (r/rivian) vs commercial."
+  },
+  {
+    "query": "lucid air range real world",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism testing vs community vs commercial."
+  },
+  {
+    "query": "polestar 2 vs tesla model 3",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs commercial vs SEO."
+  },
+  {
+    "query": "byd dolphin us availability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (NHTSA) vs journalism vs commercial."
+  },
+  {
+    "query": "vinfast vf8 reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs commercial."
+  },
+  {
+    "query": "fisker bankruptcy aftermath",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests court primary vs journalism vs commercial."
+  },
+  {
+    "query": "nikola truck status 2026",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests SEC primary vs journalism vs commercial."
+  },
+  {
+    "query": "used tesla buying tips",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/teslamotors) vs journalism vs SEO."
+  },
+  {
+    "query": "ford bronco vs jeep wrangler reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs community."
+  },
+  {
+    "query": "toyota tacoma 2026 review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism review vs commercial vs community."
+  },
+  {
+    "query": "ram 1500 reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs community."
+  },
+  {
+    "query": "chevy silverado ev review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "honda crv vs toyota rav4",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs community vs SEO."
+  },
+  {
+    "query": "mazda cx 5 reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs commercial."
+  },
+  {
+    "query": "subaru outback offroad capability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "kia ev6 vs hyundai ioniq 5",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs commercial vs community."
+  },
+  {
+    "query": "genesis gv70 reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs commercial."
+  },
+  {
+    "query": "lexus rx hybrid review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "acura mdx vs lexus rx",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs commercial vs community."
+  },
+  {
+    "query": "mercedes eqs range real world",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism testing vs commercial brand vs community."
+  },
+  {
+    "query": "bmw i7 vs eqs comparison",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "porsche taycan reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs journalism vs community."
+  },
+  {
+    "query": "ferrari purosangue review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs aggregator."
+  },
+  {
+    "query": "mclaren artura reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism review vs commercial vs aggregator."
+  },
+  {
+    "query": "mazda miata nd reliability",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests consumer reports vs community (r/miata) vs journalism."
+  },
+  {
+    "query": "honda civic type r vs golf r",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs community vs commercial."
+  },
+  {
+    "query": "toyota gr corolla review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "hyundai ioniq 5 n review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "ford mustang gtd review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs SEO."
+  },
+  {
+    "query": "dodge charger ev review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial vs community."
+  },
+  {
+    "query": "is patek philippe worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/watches) vs journalism (hodinkee) vs commercial."
+  },
+  {
+    "query": "is rolex submariner investment",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial brand vs SEO investment-grade."
+  },
+  {
+    "query": "is omega speedmaster better than rolex",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism (hodinkee) vs community vs commercial."
+  },
+  {
+    "query": "is grand seiko worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/watches) vs journalism vs commercial."
+  },
+  {
+    "query": "is tudor better than rolex",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is breitling navitimer dated",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is iwc pilot watch good",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is jaeger lecoultre worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is audemars piguet royal oak overhyped",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism critique vs community vs commercial."
+  },
+  {
+    "query": "is hublot actually quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is panerai worth the price",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is tag heuer monaco worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is zenith el primero good",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is vacheron constantin worth it",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "warby parker vs zenni quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism comparison vs community (r/glasses) vs commercial."
+  },
+  {
+    "query": "away luggage durability long term",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "rimowa vs tumi vs away",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "herman miller aeron vs steelcase leap",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community (r/officechairs) vs commercial."
+  },
+  {
+    "query": "secretlab vs herman miller embody",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "autonomous standing desk vs uplift",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "fully jarvis vs uplift v2",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests community (r/standingdesks) vs journalism vs commercial."
+  },
+  {
+    "query": "monoprice vs lg monitor quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests rtings vs community vs commercial."
+  },
+  {
+    "query": "anker vs ravpower battery quality",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "ugreen vs anker accessories",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is rolex actually investment grade",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism analysis vs commercial speculation vs SEO investment-claim aggregator."
+  },
+  {
+    "query": "is supreme reselling profitable 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community (r/supremeclothing) vs commercial reseller PR."
+  },
+  {
+    "query": "is sneaker reselling actually profitable",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism (complex, hypebeast) vs community (r/sneakers) vs commercial reseller."
+  },
+  {
+    "query": "is amazon counterfeit problem worse 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism (wsj investigation) vs amazon PR vs aggregator complaints."
+  },
+  {
+    "query": "is alibaba safe to buy from",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community (r/aliexpress) vs commercial."
+  },
+  {
+    "query": "is temu actually safe",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs FTC primary vs commercial brand."
+  },
+  {
+    "query": "is shein clothes worth the price",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism (wsj, vox investigations) vs community vs commercial."
+  },
+  {
+    "query": "is wish still scam 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is ebay buyer protection real",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests court cases primary, ebay TOS primary, vs community complaint vs journalism."
+  },
+  {
+    "query": "is poshmark legit for designer",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community (r/poshmark) vs journalism vs commercial."
+  },
+  {
+    "query": "is the realreal authentic luxury",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism (nyt investigation) vs community vs commercial."
+  },
+  {
+    "query": "is fashionphile real luxury",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is grailed safe for high end",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community (r/grailed) vs journalism vs commercial."
+  },
+  {
+    "query": "is stockx authentic on cuts",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism (espn investigation) vs community vs commercial."
+  },
+  {
+    "query": "is goat sneakers authentication good",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is alibaba dropshipping dead 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis (blog, youtube) vs commercial dropship-course vs SEO."
+  },
+  {
+    "query": "is shopify dropshipping still profitable",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs commercial dropship-course vs SEO advocacy."
+  },
+  {
+    "query": "is amazon fba worth it 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests indie analysis vs commercial fba-course vs SEO."
+  },
+  {
+    "query": "is etsy still legit for handmade",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism investigation vs community (r/etsy) vs commercial."
+  },
+  {
+    "query": "is reverb actually best for instruments",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community (r/guitars) vs journalism vs commercial."
+  },
+  {
+    "query": "is craigslist still safe 2026",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community vs aggregator."
+  },
+  {
+    "query": "is offerup safe for high value",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community vs commercial."
+  },
+  {
+    "query": "is mercari payment safe",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is facebook marketplace scam rate",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs community vs aggregator."
+  },
+  {
+    "query": "is nextdoor for sale legit",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is depop authentic luxury",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is vinted better than depop",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests community vs journalism vs commercial."
+  },
+  {
+    "query": "is therealreal authentication failure rate",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism investigation vs community vs commercial."
+  },
+  {
+    "query": "are vaccines safe science",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests cdc.gov primary, academic, and reference vs anti-vaccine advocacy."
+  },
+  {
+    "query": "does climate change exist",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests ipcc primary, academic, and reference vs denial advocacy."
+  },
+  {
+    "query": "is evolution real",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests academic primary vs reference vs creationist advocacy."
+  },
+  {
+    "query": "is the earth round",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests reference and nasa primary vs flat-earth advocacy aggregator."
+  },
+  {
+    "query": "moon landing real evidence",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests nasa primary, academic vs conspiracy aggregator."
+  },
+  {
+    "query": "holocaust death toll",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests museum primary (USHMM) vs academic vs denialist advocacy."
+  },
+  {
+    "query": "slavery in america history",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests academic primary vs reference vs revisionist advocacy."
+  },
+  {
+    "query": "confederate flag meaning",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests academic secondary vs reference vs advocacy (both sides)."
+  },
+  {
+    "query": "abortion rate statistics us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (CDC, guttmacher) vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "gun violence deaths annual",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (CDC, FBI) vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "police shooting statistics race",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (BJS, mapping police violence) vs academic vs advocacy."
+  },
+  {
+    "query": "minimum wage history us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (BLS) vs reference vs advocacy think tanks."
+  },
+  {
+    "query": "inflation causes economic",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests fed primary, academic, vs commercial finance vs advocacy."
+  },
+  {
+    "query": "immigration statistics us border",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (DHS, CBP) vs advocacy vs journalism."
+  },
+  {
+    "query": "crime rates trends 2026",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (FBI, BJS) vs journalism vs advocacy."
+  },
+  {
+    "query": "mass shootings statistics 2026",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (GVA) vs journalism vs advocacy."
+  },
+  {
+    "query": "wage gap statistics men women",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (BLS) vs academic vs advocacy."
+  },
+  {
+    "query": "racial wealth gap statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (Fed) vs academic vs advocacy."
+  },
+  {
+    "query": "teacher pay statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (NCES) vs union advocacy vs journalism."
+  },
+  {
+    "query": "healthcare costs comparison countries",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests OECD primary vs academic vs advocacy."
+  },
+  {
+    "query": "life expectancy us vs other countries",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC, OECD primary vs academic vs journalism."
+  },
+  {
+    "query": "drug overdose statistics 2026",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs journalism vs advocacy."
+  },
+  {
+    "query": "opioid crisis deaths",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs journalism vs advocacy."
+  },
+  {
+    "query": "fentanyl overdose statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs DEA primary vs journalism."
+  },
+  {
+    "query": "school shooting statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests gov primary (FBI, NCES) vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "police brutality cases recent",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests journalism vs advocacy vs aggregator (mappingpoliceviolence)."
+  },
+  {
+    "query": "wrongful conviction statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests innocence project primary vs academic vs journalism."
+  },
+  {
+    "query": "death penalty statistics us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests DPIC primary vs gov primary (BJS) vs advocacy."
+  },
+  {
+    "query": "incarceration rates by country",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests World Prison Brief primary vs advocacy vs journalism."
+  },
+  {
+    "query": "homelessness statistics us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests HUD primary vs advocacy vs journalism."
+  },
+  {
+    "query": "food insecurity statistics us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests USDA primary vs advocacy vs journalism."
+  },
+  {
+    "query": "childhood poverty statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests census primary vs advocacy vs journalism."
+  },
+  {
+    "query": "student loan debt total",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests Fed primary vs commercial finance vs advocacy."
+  },
+  {
+    "query": "tuition increase statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests NCES primary vs commercial vs journalism."
+  },
+  {
+    "query": "medical bankruptcy statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests academic primary vs journalism vs advocacy."
+  },
+  {
+    "query": "uninsured americans statistics",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests census primary vs KFF primary vs journalism."
+  },
+  {
+    "query": "obesity rates trends",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs journalism vs commercial."
+  },
+  {
+    "query": "diabetes rates us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs journalism vs commercial pharma."
+  },
+  {
+    "query": "mental health statistics us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests SAMHSA, CDC primary vs advocacy vs journalism."
+  },
+  {
+    "query": "suicide rates trends 2026",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs advocacy vs journalism."
+  },
+  {
+    "query": "autism rates trends",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "adhd rates trends",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs journalism vs commercial pharma."
+  },
+  {
+    "query": "depression rates millennials",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC, KFF primary vs journalism vs advocacy."
+  },
+  {
+    "query": "anxiety rates gen z",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs academic vs journalism."
+  },
+  {
+    "query": "teen pregnancy rates",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs guttmacher primary vs advocacy."
+  },
+  {
+    "query": "divorce rates us trends",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs academic vs journalism."
+  },
+  {
+    "query": "marriage rates declining",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs academic vs journalism."
+  },
+  {
+    "query": "birth rates declining us",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests CDC primary vs academic vs journalism."
+  },
+  {
+    "query": "were lockdowns effective covid",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic systematic reviews vs gov retrospectives vs advocacy contamination."
+  },
+  {
+    "query": "did masks work covid evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests cochrane primary vs CDC primary vs advocacy vs journalism."
+  },
+  {
+    "query": "did the vaccine prevent transmission covid",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs CDC primary vs advocacy."
+  },
+  {
+    "query": "covid vaccine side effects myocarditis",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests VAERS primary, academic, CDC vs advocacy aggregator."
+  },
+  {
+    "query": "covid origin natural vs lab",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary, ODNI primary vs advocacy vs journalism."
+  },
+  {
+    "query": "fauci emails what they showed",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests primary (FOIA releases) vs journalism vs advocacy spin."
+  },
+  {
+    "query": "cdc covid guidance changes timeline",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests CDC primary archive vs journalism vs advocacy."
+  },
+  {
+    "query": "did social distancing actually work",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs gov retrospective vs advocacy."
+  },
+  {
+    "query": "school closures covid effects children",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "mrna vaccine technology safety",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs CDC vs advocacy."
+  },
+  {
+    "query": "cdc vaccine schedule controversy",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests CDC primary vs advocacy vs journalism."
+  },
+  {
+    "query": "measles outbreak unvaccinated",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests CDC primary vs journalism vs advocacy."
+  },
+  {
+    "query": "autism vaccine debunked study",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests Lancet retraction primary vs academic vs anti-vaccine advocacy."
+  },
+  {
+    "query": "wakefield lancet retraction details",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests Lancet primary vs academic vs advocacy."
+  },
+  {
+    "query": "rfk vaccine views science",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs RFK statements primary vs journalism."
+  },
+  {
+    "query": "fluoride iq study evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs gov primary."
+  },
+  {
+    "query": "raw milk benefits risks",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs advocacy."
+  },
+  {
+    "query": "seed oils inflammation evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs wellness advocacy vs SEO."
+  },
+  {
+    "query": "cholesterol diet relationship",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "saturated fat heart disease",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic systematic reviews vs advocacy (both directions) vs journalism."
+  },
+  {
+    "query": "red meat cancer evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests WHO IARC primary vs academic vs commercial industry."
+  },
+  {
+    "query": "processed food cancer link",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs FDA primary vs advocacy."
+  },
+  {
+    "query": "artificial sweetener risks",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary, WHO primary, academic vs commercial industry."
+  },
+  {
+    "query": "red dye 40 banned reasons",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs advocacy."
+  },
+  {
+    "query": "gmo food safety evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic systematic review vs FDA primary vs advocacy."
+  },
+  {
+    "query": "organic food healthier evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial organic industry vs advocacy."
+  },
+  {
+    "query": "gluten sensitivity real or fake",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "statins side effects controversy",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial pharma vs advocacy."
+  },
+  {
+    "query": "ssris effectiveness depression",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic meta-analysis vs commercial pharma vs advocacy."
+  },
+  {
+    "query": "psychiatric meds long term effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial pharma vs advocacy critique."
+  },
+  {
+    "query": "lobotomies historical assessment",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic medical history vs popular reference vs journalism."
+  },
+  {
+    "query": "ect therapy effectiveness",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "ketamine therapy depression evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial clinic vs journalism."
+  },
+  {
+    "query": "psilocybin therapy fda approval status",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs advocacy."
+  },
+  {
+    "query": "mdma ptsd therapy approval status",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs advocacy."
+  },
+  {
+    "query": "lsd microdosing benefits evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs SEO."
+  },
+  {
+    "query": "cannabis schedule reclassification status",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests DEA primary vs journalism vs advocacy."
+  },
+  {
+    "query": "marijuana effects on adolescent brain",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "alcohol moderate consumption health",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic meta-analysis vs commercial industry vs advocacy."
+  },
+  {
+    "query": "red wine benefits debunked",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial industry vs journalism."
+  },
+  {
+    "query": "blue zones longevity actually",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial brand (blue zones llc) vs journalism critique."
+  },
+  {
+    "query": "intermittent fasting evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial wellness vs journalism."
+  },
+  {
+    "query": "ketogenic diet long term",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial wellness vs advocacy."
+  },
+  {
+    "query": "carnivore diet safety",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (jordan peterson, shawn baker) vs journalism."
+  },
+  {
+    "query": "vegan diet adequate nutrition",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "ozempic long term effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs commercial pharma."
+  },
+  {
+    "query": "weight loss drug side effects 2026",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs journalism."
+  },
+  {
+    "query": "bariatric surgery outcomes",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial clinic vs journalism."
+  },
+  {
+    "query": "body positivity health debate",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "obesity disease or lifestyle",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests AMA primary vs academic vs advocacy."
+  },
+  {
+    "query": "set point theory weight",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "transgender medical care minors evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic systematic reviews vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "puberty blocker long term effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "detransition rates research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "cass review uk transgender care",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests NHS primary report vs academic vs advocacy (both sides)."
+  },
+  {
+    "query": "tavistock clinic closure details",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests NHS primary vs journalism vs advocacy."
+  },
+  {
+    "query": "florida ban gender affirming care",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests fl gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "texas gender care ban",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests tx gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "trans women sports research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "title ix changes 2026",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests ed.gov primary vs journalism vs advocacy."
+  },
+  {
+    "query": "roe v wade overturned effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs journalism vs advocacy."
+  },
+  {
+    "query": "abortion bans state by state",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests guttmacher primary vs gov primary vs advocacy."
+  },
+  {
+    "query": "medication abortion safety",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs advocacy."
+  },
+  {
+    "query": "pregnancy mortality rate increase",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests CDC primary vs academic vs journalism."
+  },
+  {
+    "query": "dobbs decision aftermath",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests court primary vs academic vs journalism."
+  },
+  {
+    "query": "ivf catholic church position",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests vatican primary vs academic theology vs journalism."
+  },
+  {
+    "query": "embryo personhood law",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs academic vs advocacy."
+  },
+  {
+    "query": "surrogacy ethics debate",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "gestational carrier laws",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests gov primary (state by state) vs academic vs commercial agency."
+  },
+  {
+    "query": "egg freezing fertility rates",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial clinic vs journalism."
+  },
+  {
+    "query": "crispr ethics human germline",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs WHO primary vs advocacy."
+  },
+  {
+    "query": "designer babies china case",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs journalism vs advocacy."
+  },
+  {
+    "query": "gene therapy approved treatments 2026",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests FDA primary vs academic vs commercial pharma."
+  },
+  {
+    "query": "mrna cancer vaccines status 2026",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial pharma vs journalism."
+  },
+  {
+    "query": "lab grown meat regulation",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests USDA primary vs commercial vs advocacy."
+  },
+  {
+    "query": "animal testing alternatives",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs commercial."
+  },
+  {
+    "query": "factory farming environmental impact",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs commercial industry."
+  },
+  {
+    "query": "dairy industry environmental impact",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial industry vs advocacy."
+  },
+  {
+    "query": "cattle methane climate",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial industry vs advocacy."
+  },
+  {
+    "query": "is veganism better for environment",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs commercial."
+  },
+  {
+    "query": "carbon footprint individual vs corporate",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "carbon offsets effectiveness",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial offset firms vs journalism investigation."
+  },
+  {
+    "query": "tesla environmental record",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests EPA primary vs commercial PR vs journalism."
+  },
+  {
+    "query": "ev mining cobalt ethics",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests journalism investigation vs ngo advocacy vs commercial industry."
+  },
+  {
+    "query": "lithium mining environment",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs commercial."
+  },
+  {
+    "query": "rare earth mining china dominance",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests gov primary vs journalism vs commercial."
+  },
+  {
+    "query": "nuclear power safety vs renewables",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "fukushima water release safety",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests IAEA primary vs academic vs advocacy."
+  },
+  {
+    "query": "yucca mountain nuclear waste",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests DOE primary vs journalism vs advocacy."
+  },
+  {
+    "query": "small modular reactor risks",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests NRC primary vs academic vs advocacy."
+  },
+  {
+    "query": "fusion ignition breakthrough hype",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (NIF) vs journalism vs commercial PR."
+  },
+  {
+    "query": "iter reactor delayed",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests iter.org primary vs journalism vs academic."
+  },
+  {
+    "query": "helion fusion claims",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests commercial PR vs academic vs journalism."
+  },
+  {
+    "query": "tokamak vs stellarator",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs reference vs SEO."
+  },
+  {
+    "query": "carbon capture realistic",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial PR vs advocacy."
+  },
+  {
+    "query": "direct air capture cost",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial PR vs advocacy."
+  },
+  {
+    "query": "geoengineering ethics",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "solar geoengineering risks",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "cloud seeding effectiveness",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial weather mod vs advocacy."
+  },
+  {
+    "query": "weather modification claims",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs SEO."
+  },
+  {
+    "query": "chemtrails conspiracy science",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs conspiracy aggregator vs journalism debunk."
+  },
+  {
+    "query": "5g health effects studies",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests WHO primary, academic, FCC vs advocacy."
+  },
+  {
+    "query": "wifi cancer evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests WHO IARC primary vs academic vs advocacy."
+  },
+  {
+    "query": "cell phone radiation cancer",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests WHO, NIH primary vs academic vs advocacy."
+  },
+  {
+    "query": "electromagnetic sensitivity research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (mostly null) vs advocacy."
+  },
+  {
+    "query": "blue light damage eyes evidence",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial glasses vs journalism."
+  },
+  {
+    "query": "screen time children effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "social media teen mental health",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (haidt, twenge) vs commercial PR (meta) vs critique."
+  },
+  {
+    "query": "instagram body image research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs internal docs (leaked) vs meta PR."
+  },
+  {
+    "query": "tiktok algorithm effects",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs journalism vs commercial PR."
+  },
+  {
+    "query": "youtube radicalization research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary vs commercial PR vs advocacy."
+  },
+  {
+    "query": "facebook polarization papers",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic primary (nature science papers) vs meta PR vs journalism."
+  },
+  {
+    "query": "twitter musk content moderation",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests journalism vs commercial PR vs advocacy."
+  },
+  {
+    "query": "truth social user metrics",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests SEC primary vs journalism vs commercial."
+  },
+  {
+    "query": "did fauci fund gain of function research",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests NIH primary (FOIA), academic primary, journalism, advocacy claims on a contested-definition question."
+  },
+  {
+    "query": "did cdc lie about covid masks",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC archive primary vs internal communications (FOIA) vs advocacy."
+  },
+  {
+    "query": "did vaccines cause excess deaths",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests gov primary (CDC, ONS) vs academic vs advocacy aggregator (claim untested mainstream)."
+  },
+  {
+    "query": "did remdesivir kill more than save",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary (meta-analyses) vs FDA primary vs advocacy."
+  },
+  {
+    "query": "ivermectin actually works covid evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests cochrane primary, academic vs advocacy aggregator vs journalism."
+  },
+  {
+    "query": "hydroxychloroquine covid evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs advocacy vs journalism."
+  },
+  {
+    "query": "covid death count actually inflated",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC primary, academic vs advocacy critique vs journalism."
+  },
+  {
+    "query": "did pcr tests false positive widespread",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs FDA primary vs advocacy."
+  },
+  {
+    "query": "were ventilators wrong covid treatment",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary retrospective vs journalism vs advocacy."
+  },
+  {
+    "query": "did lockdowns kill more than save",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs advocacy (both sides) vs journalism."
+  },
+  {
+    "query": "excess deaths 2020 2021 causes",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC, ONS primary vs academic vs advocacy speculation."
+  },
+  {
+    "query": "covid lab leak intelligence assessment 2026",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests ODNI primary vs academic vs journalism vs partisan."
+  },
+  {
+    "query": "wuhan lab funding nih documents",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests NIH primary (FOIA) vs journalism vs advocacy."
+  },
+  {
+    "query": "ecohealth alliance grants details",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests NIH primary vs journalism vs advocacy."
+  },
+  {
+    "query": "peter daszak conflict of interest",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism investigation vs primary statements vs advocacy."
+  },
+  {
+    "query": "anthony fauci conflict of interest",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism vs HHS primary disclosures vs advocacy."
+  },
+  {
+    "query": "cdc vaccine injury underreporting",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs VAERS primary vs advocacy claims."
+  },
+  {
+    "query": "vaers database accuracy",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC primary docs on VAERS vs academic vs advocacy."
+  },
+  {
+    "query": "covid vaccine deaths actually attributed",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC primary vs academic vs advocacy aggregator."
+  },
+  {
+    "query": "sudden adult death syndrome covid relationship",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary (null findings mostly) vs advocacy aggregator."
+  },
+  {
+    "query": "died suddenly documentary claims",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism fact-check vs documentary primary vs academic."
+  },
+  {
+    "query": "excess mortality post vaccine evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs advocacy aggregator vs journalism."
+  },
+  {
+    "query": "myocarditis vaccine male teens evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests CDC primary, academic vs advocacy (selective framing)."
+  },
+  {
+    "query": "covid vaccine fertility evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests academic primary vs advocacy aggregator vs journalism."
+  },
+  {
+    "query": "did election fraud actually occur 2020",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests court primary (60+ rulings), gov primary (state SoS) vs partisan advocacy."
+  },
+  {
+    "query": "dominion voting machines lawsuit evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests court docket primary (DE) vs journalism vs partisan advocacy."
+  },
+  {
+    "query": "2000 mules film claims debunked",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism fact-check vs film primary vs partisan advocacy."
+  },
+  {
+    "query": "january 6 committee evidence summary",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests committee primary report vs journalism vs partisan critique."
+  }
+]
