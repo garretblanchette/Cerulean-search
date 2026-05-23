@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Methodology - Cerulean</title><meta name="description" content="How Cerulean classifies search results by source role and source type, using library science principles operationalized at search scale."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Methodology - Cerulean</title><meta name="description" content="How Cerulean classifies search results by source role and source type, using library science principles operationalized at search scale."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"><link rel="stylesheet" href="/glossary.css?v=4"><script src="/glossary.js?v=5" defer></script></head>
 <body class="page">
 <header class="page-header"><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Mission Statement</a></nav><button id="page-dark-btn" class="page-dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button></header>
 <main class="page-main"><article>
@@ -10,13 +10,13 @@
 
 <h2>The lineage</h2>
 
-<p><strong>Source evaluation predates the web.</strong> Library and information science has spent more than a century building frameworks for distinguishing kinds of sources, evaluating authority, and tracing claims back toward original evidence. The Association of College and Research Libraries publishes the ACRL Framework for Information Literacy, which is the current professional standard. The CRAAP test (Currency, Relevance, Authority, Accuracy, and Purpose) is the most widely taught checklist for source evaluation in undergraduate research instruction. The BEAM framework (Background, Exhibit, Argument, and Method) describes how sources function inside a research argument. Underneath all of them sits the foundational distinction between primary, secondary, and tertiary sources, which dates to nineteenth-century historiography.</p>
+<p><strong>Source evaluation predates the web.</strong> Library and information science has spent more than a century building frameworks for distinguishing kinds of sources, evaluating authority, and tracing claims back toward original evidence. The Association of College and Research Libraries publishes the <span class="cer-term" tabindex="0" data-term="acrl-framework">ACRL Framework</span> for <span class="cer-term" tabindex="0" data-term="information-literacy">Information Literacy</span>, which is the current professional standard. The <span class="cer-term" tabindex="0" data-term="craap-test">CRAAP test</span> (Currency, Relevance, Authority, Accuracy, and Purpose) is the most widely taught checklist for source evaluation in undergraduate research instruction. The <span class="cer-term" tabindex="0" data-term="beam-framework">BEAM framework</span> (Background, Exhibit, Argument, and Method) describes how sources function inside a research argument. Underneath all of them sits the foundational distinction between <span class="cer-term" tabindex="0" data-term="primary-source">primary</span>, <span class="cer-term" tabindex="0" data-term="secondary-source">secondary</span>, and <span class="cer-term" tabindex="0" data-term="tertiary-source">tertiary</span> sources, which dates to nineteenth-century historiography.</p>
 
 <p><strong>None of this is novel.</strong> What is novel is applying it to web search at scale, and surfacing the results to the user instead of hiding them behind relevance ranking.</p>
 
 <h2>What web search lost</h2>
 
-<p><strong>Relevance ranking collapsed source-type distinctions because it did not need them.</strong> A search engine optimizing for click-through can put a SEO listicle, a peer-reviewed journal article, and a Wikipedia entry side by side as long as all three contain the query terms. The user is expected to evaluate the sources after the click. In practice most users do not. The structural signals a research librarian would foreground (who produced this, how close to the original evidence, with what editorial process) disappeared from the result page.</p>
+<p><strong>Relevance <span class="cer-term" tabindex="0" data-term="ranking">ranking</span> collapsed source-type distinctions because it did not need them.</strong> A search engine optimizing for click-through can put a <span class="cer-term" tabindex="0" data-term="seo">SEO</span> listicle, a peer-reviewed journal article, and a Wikipedia entry side by side as long as all three contain the query terms. The user is expected to evaluate the sources after the click. In practice most users do not. The structural signals a research librarian would foreground (who produced this, how close to the original evidence, with what editorial process) disappeared from the result page.</p>
 
 <p><strong>This was not malicious.</strong> Relevance ranking is a tractable engineering problem. Source evaluation is a harder one. The engines that won did the tractable thing, and the harder thing waited.</p>
 
@@ -30,7 +30,7 @@
 
 <ul>
 <li><strong>Primary.</strong> Original materials. Court filings, datasets, government raw reports, original interviews, original research articles in scientific journals, eyewitness accounts, raw artifacts, statutes, original creative works, and official communications from the entity in question.</li>
-<li><strong>Secondary.</strong> Analysis or interpretation of primary sources. Most editorial journalism, academic books and review articles, biographies, most textbooks, expert commentary, and analytical pieces.</li>
+<li><strong>Secondary.</strong> Analysis or interpretation of primary sources. Most editorial <span class="cer-term" tabindex="0" data-term="journalism">journalism</span>, <span class="cer-term" tabindex="0" data-term="academic">academic</span> books and review articles, biographies, most textbooks, expert commentary, and analytical pieces.</li>
 <li><strong>Tertiary.</strong> Summaries or syntheses of secondary sources. Encyclopedias, Wikipedia, dictionary entries, listicles, "what is X" guides, AI-generated summaries, and most search snippets.</li>
 </ul>
 
@@ -68,7 +68,7 @@
 
 <p>This is the section information-literate readers want to see, so it sits in the open.</p>
 
-<p><strong>Labels in the bundled index come from a documented pipeline, not from a credentialed human labeler.</strong> Cerulean is an indie project without institutional access to trained library professionals at scale. Pretending otherwise would be worse than being honest. The pipeline does the following:</p>
+<p><strong>Labels in the bundled index come from a documented pipeline, not from a credentialed human labeler.</strong> Cerulean is an <span class="cer-term" tabindex="0" data-term="indie">indie</span> project without institutional access to trained library professionals at scale. Pretending otherwise would be worse than being honest. The pipeline does the following:</p>
 
 <ol>
 <li><strong>Anchor-first.</strong> Entries with a clean upstream anchor (a .gov TLD, a Crossref DOI prefix, an IndieWeb directory listing, a known academic publisher domain) inherit the validated upstream classification. These cases are deterministic, not judgment calls.</li>
@@ -100,7 +100,7 @@
 
 <p><strong>Source role is partially context-dependent.</strong> A 2010 historian writing about the French Revolution is secondary for the Revolution itself and primary for 21st-century historiography. Cerulean classifies at the document level using stable structural defaults, which is correct often enough to be useful, and wrong sometimes. The methodology cannot eliminate that.</p>
 
-<p><strong>Structural signals do not capture semantic context.</strong> A page that looks like editorial journalism by every structural measure can still be a press release with a byline glued on. A page that looks like a SEO farm can be a legitimate small publisher with weak design conventions. The classifier reports its best structural read; it does not verify intent.</p>
+<p><strong>Structural signals do not capture semantic context.</strong> A page that looks like editorial journalism by every structural measure can still be a press release with a byline glued on. A page that looks like a <span class="cer-term" tabindex="0" data-term="seo-farm">SEO farm</span> can be a legitimate small publisher with weak design conventions. The classifier reports its best structural read; it does not verify intent.</p>
 
 <p><strong>The bundled index is not exhaustive.</strong> New domains appear constantly. Long-tail entries fall through to the heuristic classifier, and a fraction of those fall through to "unclassified." Surfacing "unclassified" honestly is better than overclaiming.</p>
 
@@ -108,7 +108,7 @@
 
 <h2>Current rollout status</h2>
 
-<p><strong>In production today: source-type tags.</strong> Results currently display the source-type axis (journalism, academic, indie, commercial, and so on). The legacy classifier underneath uses an earlier taxonomy that is being replaced.</p>
+<p><strong>In production today: source-type tags.</strong> Results currently display the source-type axis (journalism, academic, indie, <span class="cer-term" tabindex="0" data-term="commercial">commercial</span>, and so on). The legacy classifier underneath uses an earlier taxonomy that is being replaced.</p>
 
 <p><strong>Rolling out: source-role tags.</strong> The two-axis system described above is in active development. The bundled index is being rebuilt against the new schema. The heuristic classifier is being extended with role features. Role tags will ship to production when the pipeline meets internal quality gates, not before.</p>
 

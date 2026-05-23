@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About - Cerulean</title><meta name="description" content="A small indie search engine built on library science principles. Hobby project. Promoting source literacy, not gatekeeping it."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About - Cerulean</title><meta name="description" content="A small indie search engine built on library science principles. Hobby project. Promoting source literacy, not gatekeeping it."><script>try{var v=localStorage.getItem("cerulean-dark");if(v==="true")document.documentElement.classList.add("dark");else if(v==="false")document.documentElement.classList.add("light-forced")}catch(e){}</script><link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/pages.css?v=2"><link rel="stylesheet" href="/glossary.css?v=4"><script src="/glossary.js?v=5" defer></script></head>
 <body class="page">
 <header class="page-header"><a href="/" class="page-logo">Cerulean</a><nav class="page-nav"><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/how-it-works.html">How It Works</a><a href="/privacy.html">Privacy</a><a href="/manifesto.html">Mission Statement</a></nav><button id="page-dark-btn" class="page-dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button></header>
 <main class="page-main"><article>
 
 <h1>About</h1>
 
-<p class="motto">A small indie search engine built on library science principles. Run as a hobby out of Palm Springs.</p>
+<p class="motto">A small <span class="cer-term" tabindex="0" data-term="indie">indie</span> search engine built on library science principles. Run as a hobby out of Palm Springs.</p>
 
 <h2>Origin</h2>
 
@@ -22,13 +22,13 @@
 
 <h2>How results are classified</h2>
 
-<p>Every classified result is tagged on two axes: source role (primary, secondary, tertiary) and source type (journalism, academic, indie, commercial, and several others). The framework, the three-tier classifier pipeline, and the honest limits are documented on the <a href="/methodology.html">methodology page</a>.</p>
+<p>Every classified result is tagged on two axes: source role (<span class="cer-term" tabindex="0" data-term="primary-source">primary</span>, <span class="cer-term" tabindex="0" data-term="secondary-source">secondary</span>, <span class="cer-term" tabindex="0" data-term="tertiary-source">tertiary</span>) and source type (<span class="cer-term" tabindex="0" data-term="journalism">journalism</span>, <span class="cer-term" tabindex="0" data-term="academic">academic</span>, indie, <span class="cer-term" tabindex="0" data-term="commercial">commercial</span>, and several others). The framework, the three-tier classifier pipeline, and the honest limits are documented on the <a href="/methodology.html">methodology page</a>.</p>
 
 <p><strong>Current production state.</strong> Source-type tags are live. Source-role tags are rolling out. The methodology page describes the target system in full and is updated as production catches up.</p>
 
 <h2>Search providers</h2>
 
-<p>Cerulean is a metasearch wrapper. It does not crawl the web itself; it queries three commercial APIs and classifies what comes back. The wrapper architecture is honest about the dependency: if any provider changes terms, the corresponding source goes dark, and the site says so.</p>
+<p>Cerulean is a <span class="cer-term" tabindex="0" data-term="metasearch">metasearch</span> wrapper. It does not crawl the web itself; it queries three commercial APIs and classifies what comes back. The wrapper architecture is honest about the dependency: if any provider changes terms, the corresponding source goes dark, and the site says so.</p>
 
 <p><strong>Brave.</strong> Independent index. Best privacy posture of the three: no profiling, no tracking. Smaller coverage on long-tail queries, capped at 20 results per search. Best default for most use cases.</p>
 
@@ -44,7 +44,7 @@
 
 <p><strong>A heuristic estimate, not a verdict.</strong> The filter looks at signal patterns in titles and snippets that correlate with machine-generated text. It has no access to the full page, no model trained on the specific generator that produced any given result, and no way to confirm authorship. The tag is a flag, not a fact.</p>
 
-<p><strong>How it fits the two-axis taxonomy.</strong> The filter is one structural signal feeding the SEO farm and aggregator source-type classifications. False positives on legitimate technical or formulaic writing cost the reader very little. False negatives cost more, especially against well-resourced bot-farm content, commercial astroturfing, and state-sponsored operations that do not announce themselves. The higher-order defense is the one search has always relied on: independent human scrutiny of the source landed on.</p>
+<p><strong>How it fits the two-axis taxonomy.</strong> The filter is one structural signal feeding the <span class="cer-term" tabindex="0" data-term="seo-farm">SEO farm</span> and <span class="cer-term" tabindex="0" data-term="aggregator">aggregator</span> source-type classifications. False positives on legitimate technical or formulaic writing cost the reader very little. False negatives cost more, especially against well-resourced bot-farm content, commercial astroturfing, and state-sponsored operations that do not announce themselves. The higher-order defense is the one search has always relied on: independent human scrutiny of the source landed on.</p>
 
 </article></main>
 <footer class="page-footer"><a href="/">Search</a> | <a href="https://github.com/garretblanchette/Cerulean-search">GitHub</a> | <a href="/methodology.html">Methodology</a> | Source-classified search</footer>
