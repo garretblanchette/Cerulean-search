@@ -181,3 +181,11 @@
     --cer-cloud-pad-h: 2.5rem;
   }
 }
+
+/* ---- Reversed tail cascade for emoji-prefixed terms (origin on emoji side) ---- */
+.cer-term.cer-tail-left .cer-tail-2 {
+  transform: translateX(-12px);
+}
+.cer-term.cer-tail-left .cer-tail-3 {
+  transform: translateX(-26px);
+}

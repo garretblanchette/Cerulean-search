@@ -168,6 +168,12 @@
     }
     initializedTerms.add(el);
 
+    // Auto-cascade tail left when the term label starts with an emoji
+    // so the bubble origin lands near the emoji rather than past the text.
+    if (/^\p{Extended_Pictographic}/u.test(entry.term || '')) {
+      el.classList.add('cer-tail-left');
+    }
+
     const bubble = document.createElement('span');
     bubble.className = 'cer-bubble';
     bubble.setAttribute('role', 'tooltip');
