@@ -1,0 +1,302 @@
+[
+  {
+    "query": "primary sources french revolution",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests whether primary-source-publisher domains (archives, university digital collections) outrank Wikipedia tertiary and history-SEO secondary."
+  },
+  {
+    "query": "feynman lectures full text",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests whether the authoritative Caltech-hosted primary outranks aggregator and PDF-farm versions."
+  },
+  {
+    "query": "scholarly articles roman britain",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic-source-type detection vs general history reference sites."
+  },
+  {
+    "query": "did adam smith actually say invisible hand",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Quote-verification query. Tests whether primary source (Wealth of Nations text) and academic secondary clarification outrank misattribution aggregators."
+  },
+  {
+    "query": "habermas public sphere book",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic publisher detection vs reference summary; primary text vs tertiary explainer."
+  },
+  {
+    "query": "chevron deference supreme court ruling",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (court opinion text) vs journalism secondary vs legal-SEO."
+  },
+  {
+    "query": "kelsen pure theory of law",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic primary text vs SEP/reference tertiary summary."
+  },
+  {
+    "query": "is the rosetta stone really in the british museum",
+    "category": "research",
+    "difficulty": "hard",
+    "probes": "Mixed-domain query. Tests whether official-museum primary, reference, and journalism (repatriation debate) are surfaced together."
+  },
+  {
+    "query": "civil rights act 1964 text",
+    "category": "research",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (gov statute repository) ranking on a clear primary-source ask."
+  },
+  {
+    "query": "neurips 2025 best paper",
+    "category": "research",
+    "difficulty": "medium",
+    "probes": "Tests academic-publisher primary (proceedings) vs blog secondary vs conference site tertiary."
+  },
+  {
+    "query": "ukraine russia ceasefire latest",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests journalism freshness ranking and primary statements (gov communications) vs aggregator."
+  },
+  {
+    "query": "openai board firing timeline 2023",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism-as-primary (contemporaneous reporting) vs secondary retrospective."
+  },
+  {
+    "query": "claude opus 4.7 release announcement",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests official communications (primary) vs journalism coverage vs SEO regurgitation."
+  },
+  {
+    "query": "did tucker carlson say russia is winning",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Quote-verification with transcript availability. Tests primary (video/transcript) vs journalism (selectively-quoted) vs aggregator."
+  },
+  {
+    "query": "sec coinbase lawsuit outcome",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests primary-source-publisher (SEC filings, court docket) vs journalism."
+  },
+  {
+    "query": "trump indictment status",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests current journalism freshness + primary (court records) vs aggregators."
+  },
+  {
+    "query": "askjeeves shutdown details",
+    "category": "news",
+    "difficulty": "hard",
+    "probes": "Tests primary (company announcement) vs journalism vs retrospective tertiary, for a recent specific event."
+  },
+  {
+    "query": "fed rate decision march 2026",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests primary-source-publisher (Fed press release) vs journalism vs commercial finance sites."
+  },
+  {
+    "query": "supreme court decision today",
+    "category": "news",
+    "difficulty": "easy",
+    "probes": "Tests journalism freshness and primary (court opinion text) for time-sensitive query."
+  },
+  {
+    "query": "rfk jr hhs confirmation",
+    "category": "news",
+    "difficulty": "medium",
+    "probes": "Tests journalism + primary gov communications vs advocacy-source contamination."
+  },
+  {
+    "query": "python asyncio tutorial",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests official docs (primary) vs indie tech blog (secondary) vs SEO content farm."
+  },
+  {
+    "query": "rust borrow checker e0382",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs (primary) vs community (Stack Overflow) for specific error code."
+  },
+  {
+    "query": "is mongodb actually acid",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests vendor commercial vs community vs independent technical analysis on a contested vendor claim."
+  },
+  {
+    "query": "react server components vs server actions",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests official docs primary vs indie analysis vs SEO regurgitation for fast-moving topic."
+  },
+  {
+    "query": "linux find command examples",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests reference (man pages, MDN-equivalents) vs community vs SEO farm output for common technical query."
+  },
+  {
+    "query": "postgres vacuum analyze when",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests official docs vs community operational advice."
+  },
+  {
+    "query": "whats wrong with langchain",
+    "category": "technical",
+    "difficulty": "hard",
+    "probes": "Tests indie criticism (blog posts) vs community vs vendor commercial; opinion-heavy technical query."
+  },
+  {
+    "query": "oauth pkce flow implementation",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests RFC primary vs reference vs indie/community implementations."
+  },
+  {
+    "query": "docker compose v2 syntax",
+    "category": "technical",
+    "difficulty": "easy",
+    "probes": "Tests official docs primary on a versioned-syntax query."
+  },
+  {
+    "query": "kubernetes pod stuck terminating",
+    "category": "technical",
+    "difficulty": "medium",
+    "probes": "Tests community (Stack Overflow, GitHub issues) vs SEO troubleshooting farms."
+  },
+  {
+    "query": "best mechanical keyboard 2026",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism (review sites with editorial process) vs SEO content farm vs commercial primary."
+  },
+  {
+    "query": "wirecutter espresso machine",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests whether the named journalism source ranks above SEO replicas and aggregators of its picks."
+  },
+  {
+    "query": "honest fitbit charge 6 review",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests indie review (blogs, community) vs commercial vs SEO; 'honest' modifier signals user wants non-commercial."
+  },
+  {
+    "query": "is allbirds going out of business",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests journalism + SEC primary (filings) vs aggregator clickbait for a financial-status query."
+  },
+  {
+    "query": "amazon electronics return policy",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests commercial primary (the corporate site) ranking on a direct policy query."
+  },
+  {
+    "query": "tesla model y vs mach-e cost",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests journalism + commercial primary (manufacturer sites) vs SEO comparison farms."
+  },
+  {
+    "query": "where to buy authentic le creuset not counterfeit",
+    "category": "commercial",
+    "difficulty": "hard",
+    "probes": "Tests commercial primary (brand site) vs aggregator marketplace listings vs community advice on counterfeits."
+  },
+  {
+    "query": "rei vs llbean return policy",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests commercial primary (both brand sites) for a policy comparison query."
+  },
+  {
+    "query": "best running shoes wide feet",
+    "category": "commercial",
+    "difficulty": "easy",
+    "probes": "Tests journalism review vs SEO farm vs commercial primary on a high-SEO-pollution query."
+  },
+  {
+    "query": "starlink availability check",
+    "category": "commercial",
+    "difficulty": "medium",
+    "probes": "Tests commercial primary (service availability tool) vs journalism vs community reports."
+  },
+  {
+    "query": "is flouride in water dangerous",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Common-typo realistic query. Tests academic + reference (mainstream consensus) vs SEO advocacy + conspiracy aggregators."
+  },
+  {
+    "query": "covid 19 lab leak evidence",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism + academic vs indie/advocacy vs SEO conspiracy on a topic where scientific and political consensus diverge."
+  },
+  {
+    "query": "ivermectin covid efficacy",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic (peer-reviewed primary/secondary) vs SEO advocacy outlets on a medical-political topic."
+  },
+  {
+    "query": "climate change human caused consensus",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests academic + reference (settled scientific consensus) vs advocacy-source contamination."
+  },
+  {
+    "query": "did epstein kill himself",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests journalism + primary (official reports) vs conspiracy SEO and aggregators on a high-noise topic."
+  },
+  {
+    "query": "trans athletes in sports research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic research primary/secondary vs advocacy organizations (both sides) vs journalism."
+  },
+  {
+    "query": "second amendment original meaning",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests primary historical sources + academic secondary vs advocacy commentary."
+  },
+  {
+    "query": "ukrainian biolabs us funded",
+    "category": "controversial",
+    "difficulty": "hard",
+    "probes": "Tests gov primary + journalism debunking vs propaganda/state-media sources vs SEO conspiracy."
+  },
+  {
+    "query": "voter id laws effects research",
+    "category": "controversial",
+    "difficulty": "medium",
+    "probes": "Tests academic research vs advocacy think tanks (both sides) vs journalism."
+  },
+  {
+    "query": "gun deaths statistics 2025",
+    "category": "controversial",
+    "difficulty": "easy",
+    "probes": "Tests primary-source-publisher (CDC/FBI) vs advocacy organizations citing the same data differently."
+  }
+]
