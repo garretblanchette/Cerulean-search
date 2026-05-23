@@ -283,6 +283,10 @@ _EDITORIAL_BOOST_STRENGTH = 0.45  # max additive boost (LIST)
 _QUALITY_SCORE_KEY = "quality_score"
 _RERANK_SCORE_KEY = "rerank_score"
 _RERANK_FEATURES_KEY = "rerank_features"
+_NEVER_ENTITY_SOURCE_TYPES = frozenset({
+    "Community", "Reference", "Academic", "News",
+    "Docs", "Health", "Video", "AI Content",
+})
 
 
 def _base_score(result: dict[str, Any], index: int) -> float:
@@ -301,6 +305,15 @@ def _base_score(result: dict[str, Any], index: int) -> float:
 # List-intent reranker (Layers 2 + 3)
 # ----------------------------------------------------------------------
 
+
+def _is_entity_homepage(result, features):
+    st=result.get("source_type") or ""
+    if st in _NEVER_ENTITY_SOURCE_TYPES: return False
+    if features.domain_is_known_editorial or features.domain_is_known_aggregator or features.domain_is_official_tourism: return False
+    if not features.url_at_root: return False
+    if features.domain_contains_location or features.domain_contains_category: return True
+    if features.title_matches_entity_pattern and not features.title_matches_editorial_pattern: return True
+    return features.snippet_entity_signals >= 2
 def rerank_for_list_intent(
     results: list[dict[str, Any]],
     intent: IntentResult,
@@ -356,8 +369,7 @@ def rerank_for_list_intent(
                     "url_root": features.url_at_root,
                 },
             }
-        # Filter out entity homepages on LIST queries
-        if features.entity_homepage_score >= 0.5:
+        if _is_entity_homepage(r, features):
             continue
 
         annotated.append((new_score, idx, out))
