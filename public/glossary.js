@@ -1,8 +1,8 @@
 /* ==========================================================================
    Cerulean Glossary Tooltips
    --------------------------------------------------------------------------
-   Wraps inline terms marked with .cer-term[data-term="..."] with an
-   oblong comic-bubble tooltip on hover/tap/focus.
+   Wraps inline terms marked with .cer-term[data-term="..."] with a
+   terminal-style tooltip panel on hover/tap/focus.
 
    Pairs with glossary.css.
 
@@ -13,7 +13,7 @@
 
    To add a term at runtime (after DOMContentLoaded):
      window.cerulean.addGlossaryTerm('key', { term: 'Label', def: 'Definition' });
-     window.cerulean.refreshGlossary();   // re-scan the DOM for new .cer-term elements
+     window.cerulean.refreshGlossary();
    ========================================================================== */
 
 (function() {
@@ -21,138 +21,141 @@
 
   // ==========================================================================
   // GLOSSARY ENTRIES
-  // Edit, add, or remove terms here.
+  // Edit, add, or remove terms here. Organized by category for clarity;
+  // ordering doesn't affect behavior.
   // ==========================================================================
   const CER_GLOSSARY = {
+
+    // ---- Source roles (the primary classification axis) ----
+
+    "primary-source": {
+      term: "primary source",
+      def: "The original document, dataset, or record. The court filing itself, not the news article about it. The scientific paper, not the press release describing it."
+    },
+    "secondary-source": {
+      term: "secondary source",
+      def: "Analysis or interpretation of primary sources. Most editorial journalism, academic books and review articles, biographies, expert commentary. A reporter writing about a court ruling, not the ruling itself."
+    },
+    "tertiary-source": {
+      term: "tertiary source",
+      def: "A summary or synthesis of secondary sources. Encyclopedias, Wikipedia, dictionary entries, listicles, 'what is X' guides. Useful for orientation, not for verification."
+    },
+
+    // ---- Source types (the entity-producing-it axis) ----
+
+    "journalism": {
+      term: "journalism",
+      def: "Content produced with an editorial process: visible bylines, fact-checking, corrections published when errors surface. Distinguished from commercial content masquerading as news."
+    },
+    "academic": {
+      term: "academic",
+      def: "Content from research institutions, academic publishers, or peer-reviewed venues. Universities, journals, working papers. Carries its own editorial process (peer review) distinct from journalism."
+    },
+    "reference": {
+      term: "reference",
+      def: "Encyclopedic works that synthesize existing knowledge into structured entries. Wikipedia, MDN, Stanford Encyclopedia of Philosophy. Almost always tertiary in role."
+    },
+    "indie": {
+      term: "indie",
+      def: "Personal sites built by individuals, not companies. Blogs, neocities, github.io pages, IndieWeb participants. Made because someone wanted to make it, not because anyone paid them to."
+    },
+    "community": {
+      term: "community",
+      def: "Forums, comment threads, collective discussion spaces. Reddit, Hacker News, Stack Overflow. The signal is people arguing in public, which is its own kind of editorial process."
+    },
+    "commercial": {
+      term: "commercial",
+      def: "Corporate sites, product pages, marketing materials. A company describing its own product is commercial; a journalist describing the same product is journalism. The distinction is who is paying."
+    },
+    "primary-source-publisher": {
+      term: "primary-source publisher",
+      def: "An entity that hosts raw primary materials: government data portals, court databases, academic journals, statute repositories. Hosts the source itself, not analysis of it."
+    },
+    "aggregator": {
+      term: "aggregator",
+      def: "A site that does not create original content. Collects content from elsewhere and republishes or links to it. Often ranks above the original source it is aggregating."
+    },
+    "seo-farm": {
+      term: "SEO farm",
+      def: "Sites that exist to rank in search results, not to inform readers. AI-generated content, thin affiliates, listicle factories. The signal is the absence of any reason for the content to exist besides ranking."
+    },
+
+    // ---- Methodology vocabulary ----
+
+    "editorial-process": {
+      term: "editorial process",
+      def: "The chain of checks a piece of writing goes through. Newsrooms do it hierarchically: editor, fact-checker, publisher. Wikipedia does it communally: edits, reverts, talk pages. Both are editorial processes."
+    },
+    "acrl-framework": {
+      term: "ACRL Framework",
+      def: "The Association of College and Research Libraries' Framework for Information Literacy. The current professional standard for teaching source evaluation in higher education."
+    },
+    "craap-test": {
+      term: "CRAAP test",
+      def: "Currency, Relevance, Authority, Accuracy, Purpose. A widely taught checklist for evaluating sources, especially in undergraduate research. Easier to teach than the ACRL Framework, less nuanced."
+    },
+    "beam-framework": {
+      term: "BEAM framework",
+      def: "Background, Exhibit, Argument, Method. Joseph Bizup's framework for how sources function inside a research argument, not just what they are. A source's role depends on how the writer uses it."
+    },
+    "information-literacy": {
+      term: "information literacy",
+      def: "The ability to find, evaluate, and use information responsibly. The library science discipline that produces frameworks like ACRL, CRAAP, and BEAM. The thing Cerulean operationalizes at search scale."
+    },
+
+    // ---- Search and web vocabulary ----
+
     "seo": {
       term: "SEO",
       def: "Search Engine Optimization. The industry of structuring websites to rank higher in Google's results. Multibillion-dollar in scale. The reason recipe sites have 2000 words of personal history before the recipe."
     },
     "ranking": {
-      term: "Ranking",
+      term: "ranking",
       def: "Where a result shows up in search results. Page 1, position 1 is the top hit. The thing the entire SEO industry exists to manipulate."
     },
     "algorithm": {
-      term: "Algorithm",
+      term: "algorithm",
       def: "The ranking system a search engine uses to decide which results to show and in what order. Updated constantly. Closely guarded. The thing SEO firms reverse-engineer for a living."
     },
     "content-farm": {
-      term: "Content farm",
+      term: "content farm",
       def: "A website that publishes huge volumes of low-quality articles engineered to rank in search results. Made for Google, not readers. Increasingly AI-generated. Monetized by ads or affiliate links."
     },
     "ai-slop": {
       term: "AI slop",
-      def: "The flood of AI-generated content that's hit the web since 2023. Articles, recipes, reviews, news summaries, all generated by language models and published at scale. Often says nothing in a lot of words."
-    },
-    "primary-source": {
-      term: "Primary source",
-      def: "The original document, dataset, or record. The court filing itself, not the news article about it. The scientific paper, not the press release describing it."
+      def: "The flood of AI-generated content that has hit the web since 2023. Articles, recipes, reviews, news summaries, all generated by language models and published at scale. Often says nothing in a lot of words."
     },
     "small-web": {
-      term: "Small web",
+      term: "small web",
       def: "The part of the internet built by individuals instead of companies. Personal blogs, hobby sites, project pages, small forums. Made because someone wanted to make it. Mostly invisible in modern search."
     },
     "content-marketing": {
-      term: "Content marketing",
+      term: "content marketing",
       def: "Articles, videos, or guides published by a company to attract customers. The 'blog' section of a corporate website. Looks like journalism, functions as advertising."
     },
-    "aggregator": {
-      term: "Aggregator",
-      def: "A site that doesn't create original content. Collects content from elsewhere and republishes or links to it. Often ranks above the original source it's aggregating."
-    },
     "metasearch": {
-      term: "Metasearch engine",
-      def: "A search engine that doesn't have its own index. Sends your query to other search engines like Google, Bing, Brave, or DuckDuckGo, then combines their results. Cerulean is one."
+      term: "metasearch engine",
+      def: "A search engine that does not have its own index. Sends your query to other search engines like Google, Bing, Brave, or DuckDuckGo, then combines their results. Cerulean is one."
     },
     "self-hosted": {
-      term: "Self-hosted",
+      term: "self-hosted",
       def: "Software you run on your own server instead of using someone else's service. Maximum control and privacy, maximum maintenance burden."
     },
     "index": {
-      term: "Index",
-      def: "The database a search engine builds by crawling the web. Google has one. Bing has one. Most indie search engines don't — they use someone else's."
-    },
-    "editorial-process": {
-      term: "Editorial process",
-      def: "The chain of checks a piece of writing goes through. Newsrooms do it hierarchically: editor, fact-checker, publisher. Wikipedia does it communally: edits, reverts, talk pages. Both are editorial processes."
+      term: "index",
+      def: "The database a search engine builds by crawling the web. Google has one. Bing has one. Most indie search engines do not; they use someone else's."
     }
   };
 
   // ==========================================================================
-  // CLOUD GENERATOR
-  // Builds oblong cloud SVG paths with seeded irregularity per term.
+  // RULE STRING
+  // The horizontal divider between the prompt and definition. Built once
+  // from box-drawing characters so it scales with the panel width visually.
   // ==========================================================================
-
-  function hashString(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = ((hash << 5) - hash) + str.charCodeAt(i);
-      hash |= 0;
-    }
-    return Math.abs(hash);
-  }
-
-  function seededRandom(seed) {
-    let s = seed % 233280;
-    return function() {
-      s = (s * 9301 + 49297) % 233280;
-      return s / 233280;
-    };
-  }
-
-  function generateOblongCloud(seed, params) {
-    const { numBumps, rx, ry, bumpHeight, jitter = 0 } = params;
-    const cx = 220, cy = 140;
-    const rand = seededRandom(seed);
-    const startOffset = rand() * 2 * Math.PI;
-
-    const points = [];
-    for (let i = 0; i < numBumps; i++) {
-      const angle = startOffset + (i / numBumps) * 2 * Math.PI;
-      const rJitX = (rand() * 2 - 1) * jitter;
-      const rJitY = (rand() * 2 - 1) * jitter;
-      points.push({
-        x: cx + (rx + rJitX) * Math.cos(angle),
-        y: cy + (ry + rJitY) * Math.sin(angle)
-      });
-    }
-
-    let path = 'M ' + points[0].x.toFixed(1) + ',' + points[0].y.toFixed(1);
-
-    for (let i = 0; i < numBumps; i++) {
-      const p1 = points[i];
-      const p2 = points[(i + 1) % numBumps];
-      const midAngle = startOffset + ((i + 0.5) / numBumps) * 2 * Math.PI;
-      const bumpHJ = bumpHeight + (rand() * 2 - 1) * jitter * 0.6;
-      const apexX = cx + (rx + bumpHJ) * Math.cos(midAngle);
-      const apexY = cy + (ry + bumpHJ) * Math.sin(midAngle);
-      const chordMidX = (p1.x + p2.x) / 2;
-      const chordMidY = (p1.y + p2.y) / 2;
-      const ctrlX = 2 * apexX - chordMidX;
-      const ctrlY = 2 * apexY - chordMidY;
-      path += ' Q ' + ctrlX.toFixed(1) + ',' + ctrlY.toFixed(1)
-            + ' '   + p2.x.toFixed(1)  + ',' + p2.y.toFixed(1);
-    }
-
-    return path + ' Z';
-  }
-
-  const CLOUD_PROFILES = [
-    { numBumps: 12, rx: 195, ry: 115, bumpHeight: 24, jitter: 4 },
-    { numBumps: 10, rx: 200, ry: 112, bumpHeight: 32, jitter: 6 },
-    { numBumps: 14, rx: 192, ry: 118, bumpHeight: 18, jitter: 3 },
-    { numBumps: 11, rx: 198, ry: 116, bumpHeight: 26, jitter: 9 }
-  ];
-
-  function pickCloudPath(key) {
-    const baseHash = hashString(key);
-    const profileIndex = baseHash % CLOUD_PROFILES.length;
-    return generateOblongCloud(baseHash + profileIndex, CLOUD_PROFILES[profileIndex]);
-  }
+  const RULE = '\u2500'.repeat(24);
 
   // ==========================================================================
   // INITIALIZATION
-  // Tracks already-initialized elements so refreshGlossary() can be idempotent.
   // ==========================================================================
 
   const initializedTerms = new WeakSet();
@@ -168,32 +171,22 @@
     }
     initializedTerms.add(el);
 
-    // Auto-cascade tail left when the term label starts with an emoji
-    // so the bubble origin lands near the emoji rather than past the text.
-    if (/^\p{Extended_Pictographic}/u.test(entry.term || '')) {
-      el.classList.add('cer-tail-left');
-    }
-
     const bubble = document.createElement('span');
     bubble.className = 'cer-bubble';
     bubble.setAttribute('role', 'tooltip');
 
-    const pathData = pickCloudPath(key);
     bubble.innerHTML =
-      '<svg class="cer-bubble-cloud" viewBox="0 0 440 280" preserveAspectRatio="none" aria-hidden="true">' +
-        '<path d="' + pathData + '" />' +
-      '</svg>' +
-      '<span class="cer-bubble-text">' +
-        '<span class="cer-bubble-term">' + entry.term + '</span>: ' + entry.def +
-      '</span>' +
-      '<span class="cer-bubble-tail cer-tail-1"></span>' +
-      '<span class="cer-bubble-tail cer-tail-2"></span>' +
-      '<span class="cer-bubble-tail cer-tail-3"></span>';
+      '<span class="cer-bubble-content">' +
+        '<span class="cer-bubble-prompt">&gt; <span class="cer-bubble-term">' + entry.term + '</span></span>' +
+        '<span class="cer-bubble-rule">' + RULE + '</span>' +
+        '<span class="cer-bubble-def">' + entry.def + '<span class="cer-bubble-cursor"></span></span>' +
+      '</span>';
+
     el.appendChild(bubble);
 
     const checkFlip = function() {
       const rect = el.getBoundingClientRect();
-      el.classList.toggle('cer-flip', rect.top < 240);
+      el.classList.toggle('cer-flip', rect.top < 200);
     };
 
     el.addEventListener('mouseenter', checkFlip);
