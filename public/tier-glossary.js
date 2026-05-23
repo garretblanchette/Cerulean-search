@@ -12,75 +12,75 @@
 
   // Quality tiers (3, with face emojis).
   window.cerulean.addGlossaryTerm('tier-high-quality', {
-    title: '\ud83e\udd13 High quality',
-    body: "Strong query match plus official-source bonus (.gov, .edu, docs.*, etc.). The ranking score is high. Does not directly measure editorial process or factual accuracy."
+    term: '\ud83e\udd13 High quality',
+    def: "Strong query match plus official-source bonus (.gov, .edu, docs.*, etc.). The ranking score is high. Does not directly measure editorial process or factual accuracy."
   });
 
   window.cerulean.addGlossaryTerm('tier-good', {
-    title: '\ud83d\ude0a Good',
-    body: "Solid query relevance, no penalty signals triggered. Mid-tier ranking score. The page is on-topic but has not earned the official-source bonus."
+    term: '\ud83d\ude0a Good',
+    def: "Solid query relevance, no penalty signals triggered. Mid-tier ranking score. The page is on-topic but has not earned the official-source bonus."
   });
 
   window.cerulean.addGlossaryTerm('tier-fair', {
-    title: '\ud83d\ude10 Fair',
-    body: "Mid-tier ranking score. Basic relevance, no official-source bonus, no penalty signals triggered. The classifier doesn't have anything stronger to say either way."
+    term: '\ud83d\ude10 Fair',
+    def: "Mid-tier ranking score. Basic relevance, no official-source bonus, no penalty signals triggered. The classifier doesn't have anything stronger to say either way."
   });
 
   // Source-type badges (10 categories, text only).
   window.cerulean.addGlossaryTerm('src-news', {
-    title: 'News',
-    body: "Mainstream news outlets, newspapers, broadcast sites. Editorial process and bylines typical. Coverage angle and slant vary by outlet."
+    term: 'News',
+    def: "Mainstream news outlets, newspapers, broadcast sites. Editorial process and bylines typical. Coverage angle and slant vary by outlet."
   });
 
   window.cerulean.addGlossaryTerm('src-reference', {
-    title: 'Reference',
-    body: "Encyclopedic and definitional sources. Wikipedia, dictionaries, MDN, SEP. Aims for aggregated knowledge rather than original reporting."
+    term: 'Reference',
+    def: "Encyclopedic and definitional sources. Wikipedia, dictionaries, MDN, SEP. Aims for aggregated knowledge rather than original reporting."
   });
 
   window.cerulean.addGlossaryTerm('src-academic', {
-    title: 'Academic',
-    body: "Peer-reviewed papers, university research, arxiv preprints. Methodology disclosed. Strongest signal of vetted information when present."
+    term: 'Academic',
+    def: "Peer-reviewed papers, university research, arxiv preprints. Methodology disclosed. Strongest signal of vetted information when present."
   });
 
   window.cerulean.addGlossaryTerm('src-gov', {
-    title: 'Official',
-    body: ".gov, .edu, or canonical project sites. Authoritative on themselves. Not neutral on contested topics where the entity has a stake."
+    term: 'Official',
+    def: ".gov, .edu, or canonical project sites. Authoritative on themselves. Not neutral on contested topics where the entity has a stake."
   });
 
   window.cerulean.addGlossaryTerm('src-community', {
-    title: 'Community',
-    body: "Forums, Reddit, Stack Overflow, Q&A. Real human discussion. Quality swings wildly. Sometimes the best answer, sometimes the worst."
+    term: 'Community',
+    def: "Forums, Reddit, Stack Overflow, Q&A. Real human discussion. Quality swings wildly. Sometimes the best answer, sometimes the worst."
   });
 
   window.cerulean.addGlossaryTerm('src-docs', {
-    title: 'Docs',
-    body: "Software documentation, API references, technical specs. Authoritative for the product being documented. Usually accurate on factual matters."
+    term: 'Docs',
+    def: "Software documentation, API references, technical specs. Authoritative for the product being documented. Usually accurate on factual matters."
   });
 
   window.cerulean.addGlossaryTerm('src-shopping', {
-    title: 'Shopping',
-    body: "Product pages and e-commerce listings. Commercial intent. Reviews may be filtered by the platform. Treat ratings skeptically."
+    term: 'Shopping',
+    def: "Product pages and e-commerce listings. Commercial intent. Reviews may be filtered by the platform. Treat ratings skeptically."
   });
 
   window.cerulean.addGlossaryTerm('src-video', {
-    title: 'Video',
-    body: "YouTube and other video hosts. Content quality unpredictable. Better for tutorials and demonstrations than for written research."
+    term: 'Video',
+    def: "YouTube and other video hosts. Content quality unpredictable. Better for tutorials and demonstrations than for written research."
   });
 
   window.cerulean.addGlossaryTerm('src-health', {
-    title: 'Health',
-    body: "Medical and health-information sites. Quality varies wildly. Confirm with primary sources or licensed practitioners for clinical decisions."
+    term: 'Health',
+    def: "Medical and health-information sites. Quality varies wildly. Confirm with primary sources or licensed practitioners for clinical decisions."
   });
 
   window.cerulean.addGlossaryTerm('src-ai-slop', {
-    title: 'AI Content',
-    body: "Page shows strong signals of AI generation. Could be wholly synthetic or AI-assisted. Cross-check facts before relying on it."
+    term: 'AI Content',
+    def: "Page shows strong signals of AI generation. Could be wholly synthetic or AI-assisted. Cross-check facts before relying on it."
   });
 
   // Likely AI heuristic badge.
   window.cerulean.addGlossaryTerm('likely-ai', {
-    title: 'Likely AI',
-    body: "Heuristic estimate that this page is significantly AI-generated. Imperfect signal. Technical writing and structured prose can trigger false positives."
+    term: 'Likely AI',
+    def: "Heuristic estimate that this page is significantly AI-generated. Imperfect signal. Technical writing and structured prose can trigger false positives."
   });
 
   // Strip default cer-term underline decoration inside any badge.
