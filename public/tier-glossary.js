@@ -57,9 +57,9 @@
     def: "Software documentation, API references, technical specs. Authoritative for the product being documented. Usually accurate on factual matters."
   });
 
-  window.cerulean.addGlossaryTerm('src-shopping', {
-    term: 'Shopping',
-    def: "Product pages and e-commerce listings. Commercial intent. Reviews may be filtered by the platform. Treat ratings skeptically."
+  window.cerulean.addGlossaryTerm('src-commercial', {
+    term: 'Commercial',
+    def: "Pages with commercial intent. Includes retailers, product listings, review aggregators, and any page whose primary motive is selling. Appears as a secondary pill on pages whose source-type is something else (e.g. a community board operating commercially). Treat ratings and recommendations skeptically; the incentive favors selling, not informing."
   });
 
   window.cerulean.addGlossaryTerm('src-video', {
