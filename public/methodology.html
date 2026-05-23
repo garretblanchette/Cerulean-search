@@ -79,6 +79,23 @@
 
 <p><strong>This is not the classical library science benchmark methodology.</strong> Classical methodology uses trained labelers applying criteria manually against a gold-standard set. Cerulean uses a documented LLM pipeline anchored on validated upstream sources, with audit surfaces and a public correction channel. The choice is appropriate for an indie project that cannot field trained labelers, and the audit surfaces compensate for the absence of credentialed review. The defense is not "we did the classical thing." It is "we did something different, here is exactly what, here is how to verify it, and here is how to challenge it."</p>
 
+<h2>How the benchmark works</h2>
+
+<p><strong>The benchmark suite that gates production release is also LLM-graded.</strong> The same honesty principle that applies to the bundled index applies here: hand-labeling at the required scale is not feasible for an indie project, and the alternative is to be explicit about what the benchmark is and what it tells you.</p>
+
+<p>The pipeline:</p>
+
+<ol>
+<li><strong>Query generation.</strong> An LLM produces the query set, distributed across research, news, technical, commercial, and controversial categories. The generator prompt selects for queries that probe the classifier's decision boundaries (queries where role and type assignment are non-trivial), not just easy cases. The prompt is published and the generated query set is git-versioned.</li>
+<li><strong>Label generation.</strong> A separate prompt, with deliberately heavier compute (chain-of-thought reasoning, multi-pass deliberation, self-critique, possibly a different model than the Tier 3 classifier) produces expected role and type distributions for the top 10 results of each query. The deliberation gap between the labeler and the runtime classifier is the operational substitute for human review: the benchmark asks whether the fast runtime classifier can match the output of a slower, more deliberate LLM applying the same criteria.</li>
+<li><strong>Scoring.</strong> The classifier runs against each query through real search providers. Its output distribution is compared to the labeler's expected distribution. A query passes if the actual distribution falls within the constraint bounds the labeler defined. Accuracy per axis is reported.</li>
+<li><strong>Reporting.</strong> Accuracy numbers are published on this page when the benchmark runs. Production release of new classifier features requires 85% role accuracy and 90% type accuracy.</li>
+</ol>
+
+<p><strong>Circularity is the honest concern.</strong> If the labeler LLM and the Tier 3 classifier share a substrate, the benchmark partially measures an LLM against an LLM. The mitigations: different prompting between labeler and classifier; possibly a different model; deliberately heavier deliberation for the labeler. These narrow the circularity without eliminating it. The benchmark tells you whether the fast classifier can replicate careful LLM reasoning. It does not tell you whether either matches the judgment of a trained library professional.</p>
+
+<p><strong>Why this is acceptable for an indie project.</strong> A hand-labeled benchmark by trained labelers is the classical methodology and the stronger one. It is also out of reach for a hobby project. The alternatives are: ship without a benchmark (worse), ship with a thin benchmark (worse), or ship with a documented LLM-graded benchmark and be explicit about the limits (this). The benchmark is reproducible. The prompts are public. The query set and label set are public. Anyone can rerun it, propose corrections, or run their own benchmark with stricter labelers.</p>
+
 <h2>Honest limits</h2>
 
 <p><strong>Source role is partially context-dependent.</strong> A 2010 historian writing about the French Revolution is secondary for the Revolution itself and primary for 21st-century historiography. Cerulean classifies at the document level using stable structural defaults, which is correct often enough to be useful, and wrong sometimes. The methodology cannot eliminate that.</p>
