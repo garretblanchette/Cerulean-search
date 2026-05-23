@@ -11,7 +11,7 @@ function el(tag, cls, text) {
 }
 
 const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Forum', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
-const TIER_TERMS   = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83d\ude10'} };
+const TIER_TERMS   = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Low confidence': {term:'tier-fair', emoji:'\ud83d\ude10'} };
 const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
 
 function trustBadge(cls, term, label, emoji) {
@@ -254,7 +254,7 @@ function getTrustSignals(score, reasons) {
   }
   if (score >= 0.7)      s.unshift({label:'High quality', cls:'trust-good'});
   else if (score >= 0.4) s.unshift({label:'Good',          cls:'trust-ok'});
-  else if (score >= 0)   s.unshift({label:'Fair',          cls:'trust-muted'});
+  else if (score >= 0)   s.unshift({label:'Low confidence',          cls:'trust-muted'});
   return s;
 }
 

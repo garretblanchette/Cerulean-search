@@ -22,7 +22,7 @@
   });
 
   window.cerulean.addGlossaryTerm('tier-fair', {
-    term: '\ud83d\ude10 Fair',
+    term: '\ud83d\ude10 Low confidence',
     def: "Mid-tier ranking score. Basic relevance, no official-source bonus, no penalty signals triggered. The classifier doesn't have anything stronger to say either way."
   });
 
