@@ -1,6 +1,6 @@
 /* ============================================
-   Cerulean Search — App Logic v0.3.0
-   Instant answers, trust indicators, dark mode
+   Cerulean Search — App Logic v0.4.0
+   Segmented mode, summarize, source-type filters
    ============================================ */
 
 function el(tag, cls, text) {
@@ -10,13 +10,14 @@ function el(tag, cls, text) {
   return e;
 }
 
-const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Community', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
-const TIER_TERMS = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83d\ude10'} };
+const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Forum', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
+const TIER_TERMS   = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Fair': {term:'tier-fair', emoji:'\ud83d\ude10'} };
 const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
+
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
   if (emoji) {
-    const eEl = el('span', null);
+    const eEl = el('span');
     eEl.setAttribute('aria-hidden', 'true');
     eEl.textContent = emoji + ' ';
     badge.appendChild(eEl);
@@ -28,21 +29,32 @@ function trustBadge(cls, term, label, emoji) {
   badge.appendChild(t);
   return badge;
 }
-const state = {
-  no_commerce: true, prefer_official: true, synthesize: false,
-  recent: false, provider: 'brave', hasSearched: false,
-  dark: false,
-source_types: [], hide_ai: true,
+
+/* ---- State (single source of truth) ---- */
+const LS = {
+  read(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
 };
-try { state.dark = localStorage.getItem('cerulean-dark') === 'true'; } catch(e) {}
 
-let _lastSearchTime = 0, _searchInFlight = false, _debounceTimer = null;
-const SEARCH_COOLDOWN_MS = 2000, DEBOUNCE_MS = 400;
+const state = {
+  mode:         LS.read('cer.mode', 'boost'),        // 'boost' | 'unfiltered'
+  summarize:    LS.read('cer.summarize', false),
+  provider:     LS.read('cer.provider', 'brave'),
+  sourceTypes:  LS.read('cer.sourceTypes', []),      // array of source_type keys
+  // Dark uses the legacy `cerulean-dark` key as raw string for compat with
+  // cornerstone pages, which read/write the same key with values 'true'/'false'.
+  dark:         (function(){ try { const v = localStorage.getItem('cerulean-dark'); if (v === 'true') return true; if (v === 'false') return false; return null; } catch(e) { return null; } })(),
+  hasSearched:  false,
+  lastResults:  null,
+};
 
+/* ---- DOM refs ---- */
 const $q = document.getElementById('q');
 const $go = document.getElementById('go');
 const $app = document.getElementById('app');
-const $filters = document.getElementById('filters');
+const $controls = document.getElementById('controls');
+const $sourceFilters = document.getElementById('source-filters');
+const $overflowBtn = document.getElementById('overflow-btn');
 const $status = document.getElementById('status');
 const $synth = document.getElementById('synthesis');
 const $results = document.getElementById('results');
@@ -51,40 +63,104 @@ const $homeBtn = document.getElementById('home-btn');
 const $darkBtn = document.getElementById('dark-toggle');
 const $instant = document.getElementById('instant-answer');
 
+let _lastSearchTime = 0, _searchInFlight = false, _debounceTimer = null;
+const SEARCH_COOLDOWN_MS = 2000, DEBOUNCE_MS = 400;
+
 /* ---- Dark Mode ---- */
 function applyDark(on) {
-  document.documentElement.classList.toggle('dark', on);
-  document.documentElement.classList.toggle('light-forced', !on);
+  document.documentElement.classList.toggle('dark', on === true);
+  document.documentElement.classList.toggle('light-forced', on === false);
   state.dark = on;
-  try { localStorage.setItem('cerulean-dark', on); } catch(e) {}
-  if ($darkBtn) $darkBtn.textContent = on ? '\u2600\uFE0F' : '\uD83C\uDF19';
+  try { localStorage.setItem('cerulean-dark', on === true ? 'true' : 'false'); } catch(e) {}
+  if ($darkBtn) $darkBtn.textContent = on === true ? '\u2600\uFE0F' : '\uD83C\uDF19';
 }
-applyDark(state.dark);
-if ($darkBtn) $darkBtn.addEventListener('click', () => applyDark(!state.dark));
+applyDark(state.dark === null ? false : state.dark);
+if ($darkBtn) $darkBtn.addEventListener('click', () => applyDark(!(state.dark === true)));
 
-/* ---- Chips ---- */
-document.querySelectorAll('.chip[data-key]').forEach(chip => {
+/* ---- Segmented control (mode) ---- */
+function setMode(mode) {
+  state.mode = mode;
+  LS.write('cer.mode', mode);
+  document.querySelectorAll('.seg-btn').forEach(b => {
+    const active = b.dataset.mode === mode;
+    b.classList.toggle('active', active);
+    b.setAttribute('aria-checked', active ? 'true' : 'false');
+  });
+  if (state.hasSearched) runSearch();
+}
+document.querySelectorAll('.seg-btn').forEach(b => {
+  b.addEventListener('click', () => setMode(b.dataset.mode));
+});
+setMode(state.mode);
+
+/* ---- Summarize chip ---- */
+const $summarizeChip = document.getElementById('chip-summarize');
+function setSummarize(on) {
+  state.summarize = on;
+  LS.write('cer.summarize', on);
+  $summarizeChip.classList.toggle('active', on);
+  $summarizeChip.setAttribute('aria-pressed', on ? 'true' : 'false');
+  if (state.lastResults) renderResults(state.lastResults);
+  if (state.hasSearched) runSearch();
+}
+$summarizeChip.addEventListener('click', () => setSummarize(!state.summarize));
+$summarizeChip.classList.toggle('active', state.summarize);
+$summarizeChip.setAttribute('aria-pressed', state.summarize ? 'true' : 'false');
+
+/* ---- Provider ---- */
+if ($provider) {
+  $provider.value = state.provider;
+  $provider.addEventListener('change', () => {
+    state.provider = $provider.value;
+    LS.write('cer.provider', state.provider);
+    if (state.hasSearched) runSearch();
+  });
+}
+
+/* ---- Overflow + source-type filters ---- */
+function setOverflow(open) {
+  $sourceFilters.hidden = !open;
+  $overflowBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  $overflowBtn.classList.toggle('active', open);
+}
+$overflowBtn.addEventListener('click', () => {
+  setOverflow($sourceFilters.hidden);
+});
+
+document.querySelectorAll('.src-chip').forEach(chip => {
+  const key = chip.dataset.src;
+  const active = state.sourceTypes.includes(key);
+  chip.classList.toggle('active', active);
+  chip.setAttribute('aria-pressed', active ? 'true' : 'false');
   chip.addEventListener('click', () => {
-    const key = chip.dataset.key;
-    state[key] = !state[key];
-    chip.classList.toggle('active', state[key]);
+    const i = state.sourceTypes.indexOf(key);
+    if (i >= 0) state.sourceTypes.splice(i, 1);
+    else state.sourceTypes.push(key);
+    LS.write('cer.sourceTypes', state.sourceTypes);
+    const on = i < 0;
+    chip.classList.toggle('active', on);
+    chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (state.lastResults) renderResults(state.lastResults);
   });
 });
-if ($provider) $provider.addEventListener('change', () => { state.provider = $provider.value; });
 
-/* ---- Home ---- */
+/* If any source types are persisted active, auto-open the overflow panel */
+if (state.sourceTypes.length > 0) setOverflow(true);
+
+/* ---- Home button ---- */
 if ($homeBtn) $homeBtn.addEventListener('click', () => {
   $app.classList.remove('has-results'); $app.classList.add('landing');
   $results.innerHTML = ''; $synth.innerHTML = '';
   $synth.classList.add('hidden'); $status.classList.add('hidden'); $status.textContent = '';
   if ($instant) { $instant.innerHTML = ''; $instant.classList.add('hidden'); }
-  $q.value = ''; $q.focus(); state.hasSearched = false;
+  $q.value = ''; $q.focus(); state.hasSearched = false; state.lastResults = null;
 });
 
-/* ---- Layout ---- */
+/* ---- Layout transitions ---- */
 function enterResultsMode() {
   $app.classList.remove('landing'); $app.classList.add('has-results');
-  $filters.classList.remove('hidden'); state.hasSearched = true;
+  $controls.classList.remove('hidden');
+  state.hasSearched = true;
 }
 function setStatus(text, searching) {
   if (!$status) return;
@@ -98,13 +174,12 @@ function setStatus(text, searching) {
 function tryInstantAnswer(query) {
   if (!$instant) return;
   $instant.innerHTML = ''; $instant.classList.add('hidden');
-  const q = query.trim();
-  const ql = q.toLowerCase();
-  const math = tryMath(ql);
+  const q = query.trim().toLowerCase();
+  const math = tryMath(q);
   if (math !== null) { showInstant('Calculator', math, '\uD83D\uDD22'); return; }
-  const conv = tryConversion(ql);
+  const conv = tryConversion(q);
   if (conv !== null) { showInstant('Conversion', conv, '\uD83D\uDCCF'); return; }
-  const color = tryColor(ql);
+  const color = tryColor(q);
   if (color !== null) { showInstantHTML('Color', color, '\uD83C\uDFA8'); return; }
 }
 
@@ -118,7 +193,6 @@ function showInstant(label, text, icon) {
   card.appendChild(el('div', 'instant-body', text));
   $instant.appendChild(card);
 }
-
 function showInstantHTML(label, html, icon) {
   $instant.innerHTML = ''; $instant.classList.remove('hidden');
   const card = el('div', 'instant-card');
@@ -131,7 +205,6 @@ function showInstantHTML(label, html, icon) {
   card.appendChild(body);
   $instant.appendChild(card);
 }
-
 function tryMath(q) {
   let expr = q.replace(/^(what is|what's|calculate|compute|eval|solve)\s+/i, '')
               .replace(/[=?]/g, '').replace(/x/g, '*').replace(/\u00f7/g, '/').replace(/\^/g, '**').trim();
@@ -146,7 +219,6 @@ function tryMath(q) {
   } catch(e) {}
   return null;
 }
-
 function tryConversion(q) {
   const m = q.match(/^([\d.]+)\s*(km|mi|miles?|kg|lbs?|pounds?|\u00b0?[cf]|celsius|fahrenheit|cm|inches?|in|ft|feet|m|meters?|oz|grams?|g|liters?|l|gallons?|gal)\s+(?:to|in|as)\s+(km|mi|miles?|kg|lbs?|pounds?|\u00b0?[cf]|celsius|fahrenheit|cm|inches?|in|ft|feet|m|meters?|oz|grams?|g|liters?|l|gallons?|gal)$/i);
   if (!m) return null;
@@ -165,14 +237,13 @@ function tryConversion(q) {
   if (!fn) return null;
   return val + ' ' + m[2] + ' = ' + parseFloat(fn(val).toFixed(4)) + ' ' + m[3];
 }
-
 function tryColor(q) {
   const m = q.match(/^(?:color|colour|hex)\s*(#[0-9a-f]{3,8}|rgb\(.+?\))$/i);
   if (!m) return null;
   return '<div style="display:flex;align-items:center;gap:12px"><div style="width:48px;height:48px;border-radius:8px;background:'+m[1]+';border:1px solid rgba(128,128,128,0.3)"></div><code style="font-size:16px">'+m[1]+'</code></div>';
 }
 
-/* ======== TRUST INDICATORS ======== */
+/* ======== TRUST SIGNALS ======== */
 
 function getTrustSignals(score, reasons) {
   const s = [];
@@ -181,9 +252,9 @@ function getTrustSignals(score, reasons) {
     else if (r.startsWith('tracking:')) s.push({label:'Has trackers', cls:'trust-warn'});
     else if (r.startsWith('blocklisted:')) s.push({label:'Blocked', cls:'trust-bad'});
   }
-  if (score >= 0.7) s.unshift({label:'High quality', cls:'trust-good'});
-  else if (score >= 0.4) s.unshift({label:'Good', cls:'trust-ok'});
-  else if (score >= 0) s.unshift({label:'Fair', cls:'trust-muted'});
+  if (score >= 0.7)      s.unshift({label:'High quality', cls:'trust-good'});
+  else if (score >= 0.4) s.unshift({label:'Good',          cls:'trust-ok'});
+  else if (score >= 0)   s.unshift({label:'Fair',          cls:'trust-muted'});
   return s;
 }
 
@@ -204,23 +275,44 @@ function renderSynthesis(syn) {
   $synth.appendChild(ul);
 }
 
-function filterResults(results) { let f = results || []; if (state.hide_ai) f = f.filter(r => (r.ai_likelihood || 0) < 0.7); if (state.source_types.length) f = f.filter(r => state.source_types.includes(r.source_type)); return f; }
+function filterResults(results) {
+  let f = results || [];
+  // Always hide high-confidence AI content (filter is on by default, no chip).
+  f = f.filter(r => (r.ai_likelihood || 0) < 0.7);
+  if (state.sourceTypes.length) {
+    f = f.filter(r => state.sourceTypes.includes(r.source_type));
+  }
+  return f;
+}
+
 function renderResults(results) {
-window._lastResults = results;
-// Cache-migration shim: legacy 'shopping' source_type maps to 'commercial'
-// before any filtering or rendering. Cheap to keep indefinitely as a safety net.
-results = (results || []).map(r => {
-  if (r && r.source_type === 'shopping') r.source_type = 'commercial';
-  return r;
-});
-const _hiddenCount = results.length - filterResults(results).length;
-results = filterResults(results);
-  if (!$results) return; $results.innerHTML = '';
-if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCount + ' result' + (_hiddenCount===1?'':'s') + ' hidden by filters')); }
-  if (!results || !results.length) { $results.appendChild(el('div','no-results','No results found.')); return; }
+  state.lastResults = results;
+
+  // Cache-migration: legacy 'shopping' → 'commercial'
+  results = (results || []).map(r => {
+    if (r && r.source_type === 'shopping') r.source_type = 'commercial';
+    return r;
+  });
+
+  const total = results.length;
+  results = filterResults(results);
+  const hidden = total - results.length;
+
+  if (!$results) return;
+  $results.innerHTML = '';
+
+  if (hidden > 0) {
+    $results.appendChild(el('div', 'filter-note', hidden + ' result' + (hidden===1?'':'s') + ' hidden by filters'));
+  }
+  if (!results.length) {
+    $results.appendChild(el('div', 'no-results', 'No results found.'));
+    return;
+  }
+
   results.forEach((r, idx) => {
     const card = el('div', 'result');
     card.style.animationDelay = (idx * 0.04) + 's';
+
     const citeRow = el('div', 'cite-url');
     const favicon = document.createElement('img');
     favicon.className = 'favicon';
@@ -231,13 +323,24 @@ if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCoun
     citeRow.appendChild(favicon);
     citeRow.appendChild(document.createTextNode(r.domain));
     card.appendChild(citeRow);
+
     const title = el('div', 'title');
     const a = document.createElement('a');
     a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
     a.textContent = r.title;
     title.appendChild(a);
     card.appendChild(title);
+
     if (r.snippet) card.appendChild(el('div', 'snippet', r.snippet));
+
+    // Topic callout (only when Summarize is on and backend returned a topic)
+    if (state.summarize && r.topic) {
+      const topic = el('div', 'topic-callout');
+      topic.appendChild(el('span', 'topic-label', 'Topic'));
+      topic.appendChild(el('span', 'topic-body', r.topic));
+      card.appendChild(topic);
+    }
+
     const meta = el('div', 'meta-row');
     getTrustSignals(r.score, r.reasons).forEach(sig => {
       const tm = TIER_TERMS[sig.label];
@@ -245,21 +348,21 @@ if (_hiddenCount > 0) { $results.appendChild(el('div','filter-note', _hiddenCoun
       else meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
     });
     if (r.source_type && r.source_type !== 'other') {
-      const _stTerm = SOURCE_TERMS[r.source_type];
-      const _stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
-      if (_stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, _stTerm, _stLabel, null));
-      else meta.appendChild(el('span', 'src-badge src-' + r.source_type, _stLabel));
+      const stTerm = SOURCE_TERMS[r.source_type];
+      const stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
+      if (stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, stTerm, stLabel, null));
+      else meta.appendChild(el('span', 'src-badge src-' + r.source_type, stLabel));
     }
-    // Secondary 'Commercial' pill: commercial intent flagged on a non-commercial source-type.
-    // Dedup: skip if source_type itself is 'commercial' (already shown above).
     if (r.source_type !== 'commercial' && Array.isArray(r.reasons) && r.reasons.some(x => String(x).startsWith('commerce:'))) {
       meta.appendChild(trustBadge('src-badge src-commercial src-secondary', 'src-commercial', 'Commercial', null));
     }
-if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 'likely-ai', 'Likely AI', null));
+    if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 'likely-ai', 'Likely AI', null));
     if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
     card.appendChild(meta);
+
     $results.appendChild(card);
   });
+
   if (window.cerulean && typeof window.cerulean.refreshGlossary === 'function') {
     window.cerulean.refreshGlossary();
   }
@@ -268,129 +371,58 @@ if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 
 /* ======== SEARCH ======== */
 
 async function runSearch() {
-  const q = ($q||{}).value||'';
+  const q = ($q || {}).value || '';
   if (!q.trim()) return;
   if (_searchInFlight) return;
-  const now = Date.now(), elapsed = now - _lastSearchTime;
-  if (elapsed < SEARCH_COOLDOWN_MS) { setStatus('Please wait...', false); return; }
+  const now = Date.now();
+  if (now - _lastSearchTime < SEARCH_COOLDOWN_MS) { setStatus('Please wait...', false); return; }
   _searchInFlight = true; _lastSearchTime = now;
-  if (!state.hasSearched) $filters.classList.remove('hidden');
+
+  if (!state.hasSearched) $controls.classList.remove('hidden');
   enterResultsMode();
   tryInstantAnswer(q);
   setStatus('Searching\u2026', true);
+
+  const boost = state.mode === 'boost';
   const payload = {
-    q: q.trim(), provider: state.provider, count: 10,
-    no_commerce: state.no_commerce, prefer_official: state.prefer_official,
-    prefer_recent_days: state.recent ? 30 : null,
+    q: q.trim(),
+    provider: state.provider,
+    count: 10,
+    // Quality Boost mode applies official-source preference and commerce demotion.
+    // Unfiltered mode passes through with relevance + dedup + tracking penalty only.
+    no_commerce: boost,
+    prefer_official: boost,
+    quality_boost: boost,
+    prefer_recent_days: null,
     block_domains: [], allow_domains: [],
-    synthesize: state.synthesize, fetch_top_n: state.synthesize ? 3 : 0,
+    // Backend uses `synthesize` for the topic generation pipeline.
+    synthesize: state.summarize,
+    fetch_top_n: state.summarize ? 3 : 0,
   };
+
   try {
     const res = await fetch('/api/search', {
-      method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload),
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
     });
     if (res.status === 429) { setStatus('Too many searches \u2014 please wait', false); return; }
-    if (!res.ok) { setStatus('Error: '+res.status, false); renderResults([]); return; }
+    if (!res.ok) { setStatus('Error: ' + res.status, false); renderResults([]); return; }
     const data = await res.json();
     const cached = data.meta && data.meta.cached;
     setStatus(data.results.length + ' results' + (cached ? ' \u00b7 instant' : ''), false);
     renderSynthesis(data.synthesis);
     renderResults(data.results);
-  } catch(e) { setStatus('Error: request failed', false); renderResults([]); console.error(e); }
-  finally { _searchInFlight = false; }
+  } catch (e) {
+    setStatus('Error: request failed', false);
+    renderResults([]);
+    console.error(e);
+  } finally {
+    _searchInFlight = false;
+  }
 }
 
 function debouncedSearch() { clearTimeout(_debounceTimer); _debounceTimer = setTimeout(runSearch, DEBOUNCE_MS); }
 $go.addEventListener('click', runSearch);
-$q.addEventListener('keydown', e => { if (e.key==='Enter') debouncedSearch(); });
+$q.addEventListener('keydown', e => { if (e.key === 'Enter') debouncedSearch(); });
 $q.focus();
-
-
-/* ---- commit 5: source-type chips + Hide AI toggle ---- */
-(function(){
-if (!$filters) return;
-const aiToggle = el('button', 'chip ai-toggle' + (state.hide_ai?' active':''), 'Hide AI');
-aiToggle.addEventListener('click', () => {
-  state.hide_ai = !state.hide_ai;
-  aiToggle.classList.toggle('active', state.hide_ai);
-  if (window._lastResults) renderResults(window._lastResults);
-});
-$filters.insertBefore(aiToggle, $filters.firstChild);
-const row = document.createElement('div');
-row.className = 'src-filter-row';
-Object.entries(SOURCE_LABELS).forEach(([key, label]) => {
-  if (key === 'other') return;
-  const chip = document.createElement('button');
-  chip.className = 'src-chip';
-  chip.textContent = label;
-  chip.dataset.cat = key;
-  chip.addEventListener('click', () => {
-    const i = state.source_types.indexOf(key);
-    if (i >= 0) state.source_types.splice(i, 1);
-    else state.source_types.push(key);
-    chip.classList.toggle('active');
-    if (window._lastResults) renderResults(window._lastResults);
-  });
-  row.appendChild(chip);
-});
-$filters.parentNode.insertBefore(row, $filters.nextSibling);
-})();
-
-
-/* ---- commit 6: intent preset buttons ---- */
-(function(){
-const PRESETS = {
-  learn: { label: 'Learn', cats: ['academic', 'reference', 'docs', 'learning', 'wiki_community'] },
-  latest: { label: 'Latest', cats: ['news', 'press'], recent: true },
-  vibe: { label: 'Vibe Check', cats: ['forum', 'social', 'blog', 'video'] },
-  shop: { label: 'Shop', cats: ['commerce', 'reviews'] },
-  primary: { label: 'Primary Sources', cats: ['gov', 'academic'] }
-};
-let activePreset = null;
-function syncFiltersUI() {
-  document.querySelectorAll('.src-chip').forEach(chip => {
-    chip.classList.toggle('active', state.source_types.includes(chip.dataset.cat));
-  });
-  document.querySelectorAll('.chip[data-key="recent"]').forEach(chip => {
-    chip.classList.toggle('active', state.recent);
-  });
-  document.querySelectorAll('.preset-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.preset === activePreset);
-  });
-}
-function applyPreset(key) {
-  if (activePreset === key) {
-    state.source_types = [];
-    state.recent = false;
-    activePreset = null;
-  } else {
-    const p = PRESETS[key];
-    state.source_types = p.cats.slice();
-    state.recent = !!p.recent;
-    activePreset = key;
-  }
-  syncFiltersUI();
-  if (window._lastResults) renderResults(window._lastResults);
-}
-const srcRow = document.querySelector('.src-filter-row');
-if (!srcRow) return;
-const presetRow = document.createElement('div');
-presetRow.className = 'preset-row';
-Object.entries(PRESETS).forEach(([key, p]) => {
-  const btn = document.createElement('button');
-  btn.className = 'preset-btn';
-  btn.textContent = p.label;
-  btn.dataset.preset = key;
-  btn.addEventListener('click', () => applyPreset(key));
-  presetRow.appendChild(btn);
-});
-srcRow.parentNode.insertBefore(presetRow, srcRow);
-document.querySelectorAll('.src-chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    if (activePreset) {
-      activePreset = null;
-      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-    }
-  });
-});
-})();
