@@ -314,6 +314,16 @@ def _is_entity_homepage(result, features):
     if features.domain_contains_location or features.domain_contains_category: return True
     if features.title_matches_entity_pattern and not features.title_matches_editorial_pattern: return True
     return features.snippet_entity_signals >= 2
+
+
+def _count_entity_cluster(
+    features_list: list[ResultFeatures],
+    threshold: float = 0.5,
+) -> int:
+    """Count results with entity_homepage_score >= threshold. Gates hide behavior."""
+    return sum(1 for f in features_list if f.entity_homepage_score >= threshold)
+
+
 def rerank_for_list_intent(
     results: list[dict[str, Any]],
     intent: IntentResult,
@@ -332,10 +342,14 @@ def rerank_for_list_intent(
     if intent.intent is not Intent.LIST:
         return results  # No-op for non-list intent
 
+    all_features = [extract_features(r, intent) for r in results]
+    cluster_size = _count_entity_cluster(all_features, threshold=0.5)
+    should_hide_entities = cluster_size >= 3
+
     annotated: list[tuple[float, int, dict[str, Any]]] = []
 
     for idx, r in enumerate(results):
-        features = extract_features(r, intent)
+        features = all_features[idx]
         base = _base_score(r, idx)
 
         # Entity penalty: multiplicative
@@ -369,7 +383,7 @@ def rerank_for_list_intent(
                     "url_root": features.url_at_root,
                 },
             }
-        if _is_entity_homepage(r, features):
+        if should_hide_entities and _is_entity_homepage(r, features):
             continue
 
         annotated.append((new_score, idx, out))
