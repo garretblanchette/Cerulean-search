@@ -13,6 +13,7 @@ from search_providers import brave_search, serper_search, ddg_search
 from ai_detector import score_results
 from ranking import rerank
 from summarizer import synthesize
+from topic_extractor import extract_topic
 from intent_classifier import classify, Intent
 from list_intent_reranker import rerank as intent_rerank
 from ambiguity_detector import detect_ambiguity
@@ -73,6 +74,21 @@ def api_search(req: SearchRequest):
         [{"source_type": r.source_type} for r in ranked]
     )
 
+    # Source-type filter (applied after ranking, before summarization).
+    # Empty list = no filter. Set membership lets the UI multi-select.
+    if req.source_types:
+        allowed = set(req.source_types)
+        ranked = [r for r in ranked if r.source_type in allowed]
+
+    # Topic descriptors: cheap, no body fetch. Populated only when summarize=on.
+    # Frontend renders Topic callout only when topic is non-null.
+    if req.synthesize:
+        for r in ranked:
+            try:
+                r.topic = extract_topic(r.title, r.snippet)
+            except Exception:
+                r.topic = None
+
     syn = []
     if req.synthesize:
         try:
@@ -80,4 +96,20 @@ def api_search(req: SearchRequest):
         except Exception:
             syn = []
     score_results(ranked)
-    return SearchResponse(query=req.q, provider=req.provider, results=ranked, synthesis=syn, meta={"count_requested": req.count, "count_returned": len(ranked), "no_commerce": req.no_commerce, "prefer_official": req.prefer_official, "prefer_recent_days": req.prefer_recent_days, "intent": intent.to_dict(), "ambiguity": ambiguity.to_dict()})
+    return SearchResponse(
+        query=req.q,
+        provider=req.provider,
+        results=ranked,
+        synthesis=syn,
+        meta={
+            "count_requested": req.count,
+            "count_returned": len(ranked),
+            "no_commerce": req.no_commerce,
+            "prefer_official": req.prefer_official,
+            "quality_boost": req.quality_boost,
+            "source_types": req.source_types,
+            "prefer_recent_days": req.prefer_recent_days,
+            "intent": intent.to_dict(),
+            "ambiguity": ambiguity.to_dict(),
+        },
+    )

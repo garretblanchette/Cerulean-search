@@ -27,6 +27,22 @@ _COMMERCE_DOMAINS = {
 _OFFICIAL_TLDS = {".gov", ".edu"}
 _OFFICIAL_HOST_HINTS = ("docs.", "developer.", "api.", "support.", "help.", "standards", "ietf", "w3.org")
 
+# Source types that get a quality boost when quality_boost=True.
+# These are editorial / vetted sources that the wrapper layer should promote
+# over equally-relevant commercial or unknown content.
+_EDITORIAL_SOURCE_TYPES = {
+    "academic":  0.20,
+    "gov":       0.18,
+    "reference": 0.15,
+    "news":      0.10,
+    "docs":      0.10,
+}
+# Source types that get demoted when quality_boost=True.
+_DEMOTED_SOURCE_TYPES = {
+    "ai_slop":    -0.40,
+    "commercial": -0.15,
+}
+
 def _tokenize(s: str) -> List[str]:
     s = s.lower()
     s = re.sub(r"[^a-z0-9\s]", " ", s)
@@ -102,6 +118,10 @@ def rerank(req: SearchRequest, results: List[SearchResult]) -> List[SearchResult
     for r in uniq:
         domain_counts[r.domain] = domain_counts.get(r.domain, 0) + 1
 
+    # Quality Boost gates the opinionated overlays. When off, only baseline
+    # signals (relevance, dedup, tracking) apply.
+    boost = getattr(req, "quality_boost", True)
+
     scored: List[SearchResult] = []
     for r in uniq:
         reasons: List[str] = []
@@ -112,22 +132,33 @@ def rerank(req: SearchRequest, results: List[SearchResult]) -> List[SearchResult
         if rel > 0.0:
             reasons.append(f"relevance:{rel:.2f}")
 
-        # Prefer official sources
-        if req.prefer_official and _officialish(r.domain):
+        # Prefer official sources (only when Quality Boost active)
+        if boost and req.prefer_official and _officialish(r.domain):
             score += 0.25
             reasons.append("official:+0.25")
 
-        # Demote commerce/affiliate material when requested
-        if req.no_commerce and _commercialish(str(r.url), r.title, r.snippet):
+        # Demote commerce/affiliate material (only when Quality Boost active)
+        if boost and req.no_commerce and _commercialish(str(r.url), r.title, r.snippet):
             score -= 0.35
             reasons.append("commerce:-0.35")
 
-        # Tracking penalty
+        # Editorial source-type lift (only when Quality Boost active)
+        if boost:
+            lift = _EDITORIAL_SOURCE_TYPES.get(r.source_type)
+            if lift:
+                score += lift
+                reasons.append(f"editorial:+{lift:.2f}")
+            penalty = _DEMOTED_SOURCE_TYPES.get(r.source_type)
+            if penalty:
+                score += penalty
+                reasons.append(f"low-quality:{penalty:.2f}")
+
+        # Tracking penalty (always on)
         if _has_tracking(str(r.url)):
             score -= 0.10
             reasons.append("tracking:-0.10")
 
-        # Domain repetition penalty
+        # Domain repetition penalty (always on)
         if domain_counts.get(r.domain, 0) > 2:
             score -= 0.05 * (domain_counts[r.domain] - 2)
             reasons.append("dupdomain:-")

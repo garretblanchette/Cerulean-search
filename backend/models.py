@@ -15,6 +15,16 @@ class SearchRequest(BaseModel):
     prefer_official: bool = True
     prefer_recent_days: Optional[int] = Field(None, ge=1, le=3650)
 
+    # Quality Boost: when True, applies editorial source-type boost on top of
+    # the no_commerce / prefer_official overlays. When False, the rerank pass
+    # still applies relevance + dedup + tracking penalties, but skips the
+    # opinionated quality lifts.
+    quality_boost: bool = True
+
+    # Source-type filter (applied post-rerank). Empty list = no filter.
+    # Values map to source_categorizer outputs: news, academic, gov, community, ...
+    source_types: List[str] = Field(default_factory=list)
+
     # Domain filters
     block_domains: List[str] = Field(default_factory=list)
     allow_domains: List[str] = Field(default_factory=list)
@@ -36,6 +46,9 @@ class SearchResult(BaseModel):
     ai_likelihood: float = 0.0
     score: float = 0.0
     reasons: List[str] = Field(default_factory=list)
+    # Topic descriptor populated when summarize=True. Describes what the page is
+    # about rather than what it says. Short noun-phrase or definitional clause.
+    topic: Optional[str] = None
 
 class SynthesisBullet(BaseModel):
     text: str
