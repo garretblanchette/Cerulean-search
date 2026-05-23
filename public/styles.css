@@ -549,6 +549,8 @@ html.dark .result .title a:visited {
 .src-code { background: #eceff1; color: #263238; border-color: #c5cdd1; }
 .src-blog { background: #f3e5f5; color: #6a1b6a; border-color: #d8b8da; }
 .src-commerce { background: #fff8e1; color: #6b5d10; border-color: #f5e6a3; }
+.src-commercial { background: #fff8e1; color: #6b5d10; border-color: #f5e6a3; }
+.src-secondary { opacity: 0.78; }
 .src-reviews { background: #ffe0b2; color: #7a4f00; border-color: #f5c878; }
 .src-press { background: #fafafa; color: #424242; border-color: #d0d0d0; }
 .src-health { background: #e3f2fd; color: #0d47a1; border-color: #aecbf0; }
