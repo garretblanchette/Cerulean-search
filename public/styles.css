@@ -123,11 +123,33 @@ body {
 .wordmark {
   font-size: 56px; font-weight: 600; letter-spacing: -1.5px;
   color: var(--cerulean); user-select: none;
+  display: inline-flex; align-items: center;
 }
 .wordmark span { display: inline-block; animation: letterPop 0.5s var(--ease) both; }
 .wm-c{animation-delay:0.02s}.wm-e{animation-delay:0.05s}.wm-r{animation-delay:0.08s}
 .wm-u{animation-delay:0.11s}.wm-l{animation-delay:0.14s}.wm-e2{animation-delay:0.17s}
 .wm-a{animation-delay:0.20s}.wm-n{animation-delay:0.23s}
+
+/* Landing wordmark mark: orange magnifying glass as the final beat */
+.wm-glass {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  color: var(--orange);
+  animation: letterPop 0.5s var(--ease) 0.27s both;
+}
+.wm-glass svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+/* Results-header mini lockup mark */
+.mini-glass {
+  color: var(--orange);
+  margin-bottom: -1px;
+  flex-shrink: 0;
+}
 
 @keyframes letterPop { 0%{opacity:0;transform:translateY(12px) scale(0.9)} 100%{opacity:1;transform:translateY(0) scale(1)} }
 @keyframes fadeUp    { 0%{opacity:0;transform:translateY(16px)} 100%{opacity:1;transform:translateY(0)} }
@@ -142,7 +164,10 @@ body {
   background: var(--bg);
   position: sticky; top: 0; z-index: 100;
 }
-.home-btn { background: none; border: none; cursor: pointer; padding: 4px 0; }
+.home-btn {
+  background: none; border: none; cursor: pointer; padding: 4px 0;
+  display: inline-flex; align-items: center; gap: 5px;
+}
 .mini-wordmark {
   font-family: var(--font); font-size: 22px; font-weight: 600;
   color: var(--cerulean); letter-spacing: -0.5px;
@@ -554,6 +579,8 @@ html.dark .src-badge { filter: brightness(0.85); }
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   .wordmark { font-size: 40px; }
+  .wm-glass { margin-left: 6px; }
+  .wm-glass svg { width: 32px; height: 32px; }
   .search-bar { border-radius: 18px; }
   .app.has-results .main { padding: 0 60px 60px 16px; }
 
