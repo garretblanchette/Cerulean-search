@@ -1,48 +1,35 @@
 /* ==========================================================================
    Cerulean Glossary Tooltips
    --------------------------------------------------------------------------
-   Drop-in styles for the source-type-classification glossary bubble system.
-   Wraps any inline term marked with .cer-term[data-term="..."] with a
-   hover/tap-activated comic-bubble tooltip.
+   Hover/tap-activated terminal-panel tooltips for inline glossary terms
+   marked with .cer-term[data-term="..."]. VT323 monospace, Matrix CRT
+   styling at the Max intensity (panel halo + ambient gradient + dim
+   scanlines + tight 2-layer text glow + brighter base color + glowing
+   cursor pulse).
 
-   Pairs with glossary.js. Pairs with self-hosted Comic Sans MS in /fonts/.
-
-   The variables below have safe defaults but should be overridden in your
-   global stylesheet if your design tokens differ.
+   Pairs with glossary.js. Self-contained: VT323 loads via @import below.
    ========================================================================== */
 
-/* ---- Self-hosted Comic Sans MS ---- */
-@font-face {
-  font-family: 'Comic Sans MS';
-  src: url('/fonts/ComicSansMS.woff2') format('woff2'),
-       url('/fonts/ComicSansMS.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Comic Sans MS';
-  src: url('/fonts/ComicSansMS-Bold.woff2') format('woff2'),
-       url('/fonts/ComicSansMS-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* ---- Theming variables (override in your global :root if needed) ---- */
 :root {
-  --cer-bubble-fill: #0d2840;       /* bubble interior background */
-  --cer-bubble-stroke: #1b4f72;     /* cloud outline + tail outline */
-  --cer-bubble-text: #e6edf3;       /* bubble body text */
-  --cer-bubble-term: #5dade2;       /* bolded term label */
-  --cer-term-underline: rgba(139, 155, 171, 0.45);
+  --cer-mx-bg: #000;
+  --cer-mx-text: #4dff80;
+  --cer-mx-text-bright: #88ffaa;
+  --cer-mx-border: rgba(51, 255, 102, 0.85);
+  --cer-mx-glow-1: rgba(77, 255, 128, 0.9);
+  --cer-mx-glow-2: rgba(77, 255, 128, 0.5);
+  --cer-mx-panel-glow-1: rgba(51, 255, 102, 0.35);
+  --cer-mx-panel-glow-2: rgba(51, 255, 102, 0.15);
+  --cer-mx-ambient: rgba(51, 255, 102, 0.08);
+  --cer-mx-ambient-mid: rgba(51, 255, 102, 0.03);
+  --cer-mx-scanline: rgba(0, 0, 0, 0.15);
 
-  --cer-font-comic: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive;
+  --cer-term-underline: rgba(127, 156, 196, 0.7);
+  --cer-term-hover: var(--cer-mx-text);
 
-  /* How far the cloud SVG extends beyond the text container.
-     The cloud must be larger than the text or geometry breaks. */
-  --cer-cloud-pad-v: 2.75rem;
-  --cer-cloud-pad-h: 3.25rem;
+  --cer-bubble-max-w: 290px;
 }
 
 /* ---- Inline term marker ---- */
@@ -50,34 +37,52 @@
   position: relative;
   display: inline;
   color: inherit;
-  border-bottom: 1px dashed var(--cer-term-underline);
   cursor: help;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  text-decoration: underline dashed;
+  text-decoration-color: var(--cer-term-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
   -webkit-tap-highlight-color: transparent;
 }
-
 .cer-term:hover,
 .cer-term:focus-visible {
-  color: var(--cer-bubble-term);
-  border-bottom-color: var(--cer-bubble-term);
+  color: var(--cer-term-hover);
+  text-decoration-color: var(--cer-term-hover);
   outline: none;
 }
 
-/* ---- Bubble container (sized to text + tight padding) ---- */
+/* ---- Terminal panel container ---- */
 .cer-bubble {
   position: absolute;
   z-index: 100;
-  bottom: calc(100% + 7rem);
+  bottom: calc(100% + 0.6rem);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  width: calc(90vw - 5rem);
-  max-width: 290px;
+  width: calc(90vw - 4rem);
+  max-width: var(--cer-bubble-max-w);
   cursor: auto;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
-}
 
+  background:
+    radial-gradient(
+      ellipse at center,
+      var(--cer-mx-ambient) 0%,
+      var(--cer-mx-ambient-mid) 50%,
+      transparent 100%
+    ),
+    var(--cer-mx-bg);
+  border: 1px solid var(--cer-mx-border);
+  padding: 0.95rem 1.05rem 0.8rem;
+  box-shadow:
+    0 0 36px var(--cer-mx-panel-glow-1),
+    0 0 80px var(--cer-mx-panel-glow-2);
+  overflow: hidden;
+  isolation: isolate;
+  text-align: left;
+}
 .cer-term:hover .cer-bubble,
 .cer-term:focus-visible .cer-bubble,
 .cer-term.is-active .cer-bubble {
@@ -86,106 +91,88 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* ---- Cloud SVG (extends beyond the text container on all sides) ---- */
-.cer-bubble-cloud {
+/* ---- Dim scanlines overlay ---- */
+.cer-bubble::before {
+  content: '';
   position: absolute;
-  top: calc(var(--cer-cloud-pad-v) * -1);
-  right: calc(var(--cer-cloud-pad-h) * -1);
-  bottom: calc(var(--cer-cloud-pad-v) * -1);
-  left: calc(var(--cer-cloud-pad-h) * -1);
-  z-index: 0;
-  overflow: visible;
+  inset: 0;
   pointer-events: none;
-  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 2px,
+    var(--cer-mx-scanline) 2px,
+    var(--cer-mx-scanline) 3px
+  );
+  z-index: 3;
 }
 
-.cer-bubble-cloud path {
-  fill: var(--cer-bubble-fill);
-  stroke: var(--cer-bubble-stroke);
-  stroke-width: 3;
-  vector-effect: non-scaling-stroke;
-  stroke-linejoin: round;
-}
-
-/* ---- Bubble text content ---- */
-.cer-bubble-text {
+/* ---- Terminal text content ---- */
+.cer-bubble-content {
   position: relative;
-  z-index: 1;
-  display: block;
-  padding: 1.15rem 1.35rem;
-  font-family: var(--cer-font-comic);
-  font-size: 0.95rem;
+  z-index: 2;
+  font-family: 'VT323', 'Lucida Console', monospace;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.4;
-  color: var(--cer-bubble-text);
-  text-align: center;
-  text-wrap: balance;
-  hyphens: none;
-  letter-spacing: 0.005em;
+  line-height: 1.25;
+  color: var(--cer-mx-text);
+  white-space: normal;
+  overflow-wrap: break-word;
+  display: block;
+}
+.cer-bubble-content,
+.cer-bubble-content * {
+  text-shadow:
+    0 0 1px var(--cer-mx-glow-1),
+    0 0 2px var(--cer-mx-glow-2);
 }
 
+.cer-bubble-prompt {
+  display: block;
+  margin-bottom: 0.25rem;
+}
 .cer-bubble-term {
-  font-family: var(--cer-font-comic);
-  font-weight: 700;
-  color: var(--cer-bubble-term);
+  color: var(--cer-mx-text-bright);
+}
+.cer-bubble-rule {
+  display: block;
+  margin: 0.25rem 0 0.45rem;
+  opacity: 0.55;
+  letter-spacing: 0;
+}
+.cer-bubble-def {
+  display: block;
+  margin: 0;
+  text-wrap: pretty;
+}
+.cer-bubble-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 0.15em;
+  vertical-align: text-bottom;
+  background: var(--cer-mx-text-bright);
+  box-shadow:
+    0 0 6px var(--cer-mx-glow-2),
+    0 0 12px var(--cer-mx-panel-glow-2);
+  animation: cer-blink 1.1s steps(2) infinite;
+}
+@keyframes cer-blink {
+  50% { background: transparent; box-shadow: none; }
 }
 
-/* ---- Trailing cascading tail ---- */
-.cer-bubble-tail {
-  position: absolute;
-  background: var(--cer-bubble-fill);
-  border: 3px solid var(--cer-bubble-stroke);
-  border-radius: 50%;
-  z-index: 1;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
-
-.cer-tail-1 {
-  width: 22px; height: 22px;
-  bottom: calc(var(--cer-cloud-pad-v) * -1 - 24px);
-  left: 50%; transform: translateX(-50%);
-}
-.cer-tail-2 {
-  width: 14px; height: 14px;
-  bottom: calc(var(--cer-cloud-pad-v) * -1 - 50px);
-  left: 50%; transform: translateX(12px);
-}
-.cer-tail-3 {
-  width: 8px; height: 8px;
-  bottom: calc(var(--cer-cloud-pad-v) * -1 - 68px);
-  left: 50%; transform: translateX(26px);
-}
-
-/* ---- Flipped orientation (bubble below term when near viewport top) ---- */
+/* ---- Flipped orientation (panel below term when near viewport top) ---- */
 .cer-term.cer-flip .cer-bubble {
   bottom: auto;
-  top: calc(100% + 7rem);
-}
-.cer-term.cer-flip .cer-tail-1 {
-  bottom: auto;
-  top: calc(var(--cer-cloud-pad-v) * -1 - 24px);
-}
-.cer-term.cer-flip .cer-tail-2 {
-  bottom: auto;
-  top: calc(var(--cer-cloud-pad-v) * -1 - 50px);
-}
-.cer-term.cer-flip .cer-tail-3 {
-  bottom: auto;
-  top: calc(var(--cer-cloud-pad-v) * -1 - 68px);
+  top: calc(100% + 0.6rem);
 }
 
-/* ---- Mobile: shrink cloud extensions so bumps don't clip the viewport ---- */
+/* ---- Mobile: slightly tighter padding and font ---- */
 @media (max-width: 480px) {
-  :root {
-    --cer-cloud-pad-v: 2.25rem;
-    --cer-cloud-pad-h: 2.5rem;
+  .cer-bubble {
+    padding: 0.85rem 0.95rem 0.7rem;
   }
-}
-
-/* ---- Reversed tail cascade for emoji-prefixed terms (origin on emoji side) ---- */
-.cer-term.cer-tail-left .cer-tail-2 {
-  transform: translateX(-12px);
-}
-.cer-term.cer-tail-left .cer-tail-3 {
-  transform: translateX(-26px);
+  .cer-bubble-content {
+    font-size: 1.15rem;
+  }
 }
