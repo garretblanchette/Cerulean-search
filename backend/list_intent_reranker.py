@@ -343,7 +343,7 @@ def rerank_for_list_intent(
         return results  # No-op for non-list intent
 
     all_features = [extract_features(r, intent) for r in results]
-    cluster_size = _count_entity_cluster(all_features, threshold=0.5)
+    cluster_size = _count_entity_cluster(all_features, threshold=0.3)
     should_hide_entities = cluster_size >= 3
 
     annotated: list[tuple[float, int, dict[str, Any]]] = []
