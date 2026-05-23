@@ -356,6 +356,10 @@ def rerank_for_list_intent(
                     "url_root": features.url_at_root,
                 },
             }
+        # Filter out entity homepages on LIST queries
+        if features.entity_homepage_score >= 0.5:
+            continue
+
         annotated.append((new_score, idx, out))
 
     # Sort by new score descending. Stable on ties via original index.
