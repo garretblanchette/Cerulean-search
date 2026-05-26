@@ -1,0 +1,249 @@
+[
+  {
+    "input": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests whether primary-source-publisher domains (archives, university digital collections) outrank Wikipedia tertiary and history-SEO secondary."
+    },
+    "label": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is explicitly looking for original materials, documents, or direct accounts from the French Revolution period (roughly 1789-1799). They are not seeking summaries, analyses, or modern interpretations, but rather the raw historical evidence itself or authoritative portals to such evidence. The intent is deeply academic and historical research-oriented.",
+        "ideal_sources": "Ideal sources would include digitized archives of historical documents (e.g., letters, decrees, speeches, pamphlets, newspapers from the era), university library special collections, government archives, academic projects dedicated to digitizing and presenting primary sources, and possibly museums with relevant artifacts. Scholarly articles or books that compile or provide direct access to primary sources would also be highly relevant.",
+        "first_pass": "Given the explicit 'primary sources' in the query, the role distribution should heavily favor PRIMARY. I expect at least 60% of results to be primary sources or direct gateways to them. Secondary sources might appear if they are academic discussions *about* primary sources or highly curated collections with some analysis. Tertiary sources should be minimal. For types, 'PRIMARY_SOURCE_PUBLISHER' (archives, libraries) and 'ACADEMIC' (universities, scholarly projects) should dominate, as these are the authoritative custodians of such materials. 'REFERENCE' might appear for lists of sources, but 'JOURNALISM', 'INDIE', 'COMMUNITY', 'COMMERCIAL' (unless a specific historical publisher), 'AGGREGATOR', and 'SEO_FARM' are unlikely to provide the authoritative primary sources sought.",
+        "self_critique": "The 'primary_min' of 60% seems appropriate given the directness of the query. While some results might be secondary (e.g., an academic article analyzing a primary source collection), the core intent is unambiguous. The overlap between 'PRIMARY_SOURCE_PUBLISHER' and 'ACADEMIC' types is natural, as many academic institutions function as primary source publishers. The combined minimums for these two types (40% + 30% = 70%) align well with the expected high percentage of primary role results. I've kept other types very low or at zero, as they generally lack the authority or focus required for this specific historical research query.",
+        "revision_notes": "No significant revisions from the first pass. The initial assessment holds strong. The query is very specific, leading to clear expectations for source roles and types. The constraints are conservative but reflect strong conviction based on the query's explicit nature."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 60,
+          "primary_max": 100,
+          "secondary_min": 0,
+          "secondary_max": 30,
+          "tertiary_min": 0,
+          "tertiary_max": 10,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 40,
+          "primary_source_publisher_max": 80,
+          "journalism_min": 0,
+          "journalism_max": 0,
+          "academic_min": 30,
+          "academic_max": 70,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 0,
+          "indie_max": 0,
+          "community_min": 0,
+          "community_max": 0,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 0,
+          "seo_farm_min": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests whether the authoritative Caltech-hosted primary outranks aggregator and PDF-farm versions."
+    },
+    "label": {
+      "query": "feynman lectures full text",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "The user is looking for the complete, authoritative digital version of 'The Feynman Lectures on Physics'. This implies a desire for the original content, not summaries, discussions, or physical copies.",
+        "ideal_sources": "The ideal sources would be the official website hosted by Caltech (the originating institution), or other reputable academic publishers or digital archives that have licensed or officially host the full text.",
+        "first_pass": "The Feynman Lectures are a foundational textbook, which synthesizes existing physics knowledge for educational purposes. This aligns with a SECONDARY role. The primary host is an academic institution (Caltech), so ACADEMIC type is expected to dominate. Some commercial sites might sell physical copies, but the 'full text' query implies digital access. Reference sites might link to it but not host the full text.",
+        "self_critique": "The classification of the lectures themselves as SECONDARY seems robust, as they are a pedagogical synthesis rather than original research (PRIMARY) or a summary of secondary sources (TERTIARY). For source type, 'ACADEMIC' is the strongest fit for Caltech's official site. While Caltech is the 'primary source' of the lectures, 'PRIMARY_SOURCE_PUBLISHER' is typically reserved for raw data, journals, or statutes, and 'ACADEMIC' better describes a university hosting its educational content. Commercial sites selling physical books or licensed digital versions might appear, but the emphasis on 'full text' suggests free online access is preferred, limiting their prevalence. Aggregators or SEO farms are highly unlikely to host the authoritative full text due to copyright and content quality expectations.",
+        "revision_notes": "Confirmed SECONDARY role for the content. Confirmed ACADEMIC type for the primary host. Set conservative maximums for COMMERCIAL and REFERENCE to account for potential but less ideal results. Explicitly set AGGREGATOR and SEO_FARM max to 0 due to the nature of the content and the user's implied need for authoritative, complete text."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": null,
+          "primary_max": null,
+          "secondary_min": 80,
+          "secondary_max": 100,
+          "tertiary_min": null,
+          "tertiary_max": 10,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": null,
+          "primary_source_publisher_max": null,
+          "journalism_min": null,
+          "journalism_max": null,
+          "academic_min": 70,
+          "academic_max": 100,
+          "reference_min": null,
+          "reference_max": 10,
+          "indie_min": null,
+          "indie_max": null,
+          "community_min": null,
+          "community_max": null,
+          "commercial_min": null,
+          "commercial_max": 20,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-source-type detection vs general history reference sites."
+    },
+    "label": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is explicitly looking for academic research papers, journal articles, or scholarly analyses pertaining to Roman Britain. The term 'scholarly articles' indicates a strong preference for peer-reviewed, in-depth, and authoritative academic content, rather than general information, news, or commercial content.",
+        "ideal_sources": "Ideal sources would be academic journals, university presses, institutional repositories, and reputable academic databases specializing in history, archaeology, and classics. These sources typically host peer-reviewed articles, monographs, and research papers.",
+        "first_pass": "For source role, 'scholarly articles' are almost universally secondary, as they analyze and interpret primary sources or existing secondary scholarship. Primary would be the raw evidence itself (e.g., an archaeological report's raw data, an ancient text), which an article interprets. Tertiary sources (summaries for general audiences) are antithetical to 'scholarly articles'. For source type, 'ACADEMIC' should be overwhelmingly dominant, as the query directly asks for 'scholarly articles'. Other types like 'JOURNALISM', 'REFERENCE', 'COMMERCIAL', 'SEO_FARM', 'AGGREGATOR', 'INDIE', or 'COMMUNITY' are largely inappropriate for this specific query.",
+        "self_critique": "Upon reflection, the 'PRIMARY' role for 'scholarly articles' is highly unlikely, if not impossible. An article, by its nature, is an analysis or interpretation, making it secondary. Even an article reporting new archaeological findings is an interpretation of primary data, not the raw data itself. Therefore, the expectation for PRIMARY should be 0%. Similarly, 'TERTIARY' is also inappropriate; scholarly articles are the *basis* for tertiary summaries, not the summaries themselves. A comprehensive review article is still a secondary analysis of existing scholarship, not a simple synthesis for a general audience. The 'ACADEMIC' type should be even more dominant, reflecting the very specific and unambiguous nature of the query. Other types should be minimized or entirely excluded.",
+        "revision_notes": "Adjusted 'PRIMARY' and 'TERTIARY' role percentages to 0%, as scholarly articles are fundamentally secondary analyses. Increased the lower bound for 'SECONDARY' role and 'ACADEMIC' type to reflect the strong user intent. Minimized or eliminated other types, as they do not align with the explicit request for 'scholarly articles'."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 0,
+          "secondary_min": 90,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 0,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 5,
+          "journalism_min": 0,
+          "journalism_max": 5,
+          "academic_min": 90,
+          "academic_max": 100,
+          "reference_min": 0,
+          "reference_max": 0,
+          "indie_min": 0,
+          "indie_max": 0,
+          "community_min": 0,
+          "community_max": 0,
+          "commercial_min": 0,
+          "commercial_max": 0,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Quote-verification query. Tests whether primary source (Wealth of Nations text) and academic secondary clarification outrank misattribution aggregators."
+    },
+    "label": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is seeking to verify the attribution and contextual usage of the phrase 'invisible hand' in Adam Smith's original writings. This is a factual, historical, and academic inquiry, aiming to confirm or debunk a common understanding, rather than simply define the concept. The emphasis is on 'actually say' and implies a need for authoritative evidence.",
+        "ideal_sources": "Ideal sources would include direct access to Adam Smith's original works (e.g., 'The Wealth of Nations', 'The Theory of Moral Sentiments') to allow for direct verification. Crucially, scholarly articles, academic books, and university resources that analyze Smith's texts, discuss the frequency and context of the phrase, and address common misinterpretations would be highly relevant. Reputable encyclopedic entries (e.g., Stanford Encyclopedia of Philosophy, Wikipedia, Britannica) would also serve as valuable tertiary sources for a concise, authoritative overview.",
+        "first_pass": "My initial thought was to prioritize primary sources (Smith's actual texts) for direct verification, alongside academic secondary sources for analysis. I also considered tertiary reference sources important for quick answers. I expected journalism to be less relevant and commercial/community/SEO sources to be largely irrelevant.",
+        "self_critique": "While primary sources are essential, the query 'did he *actually* say' implies a need for *analysis* and *interpretation* of those primary sources, not just the sources themselves. Many academic secondary sources directly address this specific question by quoting Smith, providing context, and discussing the phrase's historical reception. Therefore, secondary sources, particularly from academic institutions, will likely form the core of the top results. The presence of primary texts is still important for ultimate verification, but the analytical aspect of the query elevates the role of secondary sources. Journalism might occasionally cover such historical debunking, but it's unlikely to be a primary authoritative source for this specific academic query.",
+        "revision_notes": "I've adjusted the expected role distribution to reflect a stronger emphasis on SECONDARY sources, as the query demands analysis and interpretation of primary texts. PRIMARY sources remain important for direct evidence. TERTIARY sources provide valuable summaries. For types, ACADEMIC sources are expected to dominate, followed by REFERENCE and some PRIMARY_SOURCE_PUBLISHER. Other types like JOURNALISM, INDIE, COMMUNITY, COMMERCIAL, AGGREGATOR, and SEO_FARM are expected to be minimal or absent due to their lack of authority for this specific academic verification task."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 20,
+          "journalism_min": null,
+          "journalism_max": 10,
+          "academic_min": 50,
+          "academic_max": 80,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": null,
+          "indie_max": 0,
+          "community_min": null,
+          "community_max": 0,
+          "commercial_min": null,
+          "commercial_max": 0,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic publisher detection vs reference summary; primary text vs tertiary explainer."
+    },
+    "label": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is looking for information about J\u00fcrgen Habermas's concept of the public sphere, specifically related to his seminal work, 'The Structural Transformation of the Public Sphere'. The query implies a desire to find the book itself, as well as academic discussions and explanations of its content and significance.",
+        "ideal_sources": "Ideal sources would include the book's publisher page, academic reviews and analyses of the book, scholarly articles discussing the public sphere concept, and high-quality reference entries (like encyclopedias) explaining Habermas's work. Direct access to the text or excerpts would also be highly relevant.",
+        "first_pass": "For roles, I expect a mix: PRIMARY for the book itself or direct excerpts/publisher information; SECONDARY for academic analyses, reviews, and interpretations; and TERTIARY for encyclopedic summaries. For types, ACADEMIC and REFERENCE sources should dominate, with some PRIMARY_SOURCE_PUBLISHER (the book's publisher) and a small presence of COMMERCIAL (book retailers). JOURNALISM, AGGREGATOR, SEO_FARM, and COMMUNITY are highly unlikely to be relevant for this specific academic query.",
+        "self_critique": "The primary interpretation of 'habermas public sphere book' is 'The Structural Transformation of the Public Sphere'. While Habermas wrote other books, and the public sphere is discussed broadly, this specific phrasing strongly points to the seminal work. The distinction between PRIMARY_SOURCE_PUBLISHER (the entity publishing the original book) and ACADEMIC (institutions/journals providing secondary analysis) is important and maintained. Commercial sites (book retailers) are likely to appear but should not dominate. The conviction that non-academic/reference types like journalism, aggregators, or SEO farms will be absent or minimal remains strong due to the niche academic nature of the query.",
+        "revision_notes": "The initial ranges and classifications hold up well under self-critique. The distribution reflects the academic nature of the query, prioritizing direct sources, scholarly analysis, and authoritative summaries. No significant adjustments to the proposed percentages are needed, as the ranges provide sufficient flexibility while maintaining strong convictions about the overall distribution."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 20,
+          "secondary_min": 50,
+          "secondary_max": 70,
+          "tertiary_min": 20,
+          "tertiary_max": 30,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 20,
+          "journalism_min": null,
+          "journalism_max": 0,
+          "academic_min": 40,
+          "academic_max": 60,
+          "reference_min": 20,
+          "reference_max": 30,
+          "indie_min": null,
+          "indie_max": 10,
+          "community_min": null,
+          "community_max": 0,
+          "commercial_min": 10,
+          "commercial_max": 20,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  }
+]
