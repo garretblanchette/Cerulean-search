@@ -1,13 +1,40 @@
-# regenerate_labels.py - generate benchmark labels from actual Serper results
-# Labeler is Gemini Flash (heavier than the Flash-Lite classifier).
-# Bounds are set as labeler's actual classification distribution +/- TOLERANCE_PCT.
+# regenerate_labels.py - Tier 1 + LLM labeler, generates labels from actual Serper results
 import os, json, asyncio, httpx, sys, shutil
+
+sys.path.insert(0, "backend")
+from source_categorizer import categorize  # noqa: E402
 
 GEMINI_KEY = os.environ["BENCHMARK_LABELER_API_KEY"]
 SERPER_KEY = os.environ["SERPER_API_KEY"]
-LABELER_MODEL = "gemini-2.5-flash"
+LABELER_MODEL = "gemini-2.5-flash-lite"
 SERPER_ENDPOINT = "https://google.serper.dev/search"
 TOLERANCE_PCT = 15
+
+OLD_TYPE_TO_NEW_TYPE = {
+    "news": "JOURNALISM",
+    "reference": "REFERENCE",
+    "academic": "ACADEMIC",
+    "gov": "PRIMARY_SOURCE_PUBLISHER",
+    "community": "COMMUNITY",
+    "docs": "PRIMARY_SOURCE_PUBLISHER",
+    "commercial": "COMMERCIAL",
+    "video": "COMMUNITY",
+    "health": "REFERENCE",
+    "ai_slop": "SEO_FARM",
+    "other": None,
+}
+
+TYPE_TO_DEFAULT_ROLE = {
+    "PRIMARY_SOURCE_PUBLISHER": "PRIMARY",
+    "JOURNALISM": "SECONDARY",
+    "ACADEMIC": "SECONDARY",
+    "REFERENCE": "TERTIARY",
+    "INDIE": "SECONDARY",
+    "COMMUNITY": "SECONDARY",
+    "COMMERCIAL": "TERTIARY",
+    "AGGREGATOR": "TERTIARY",
+    "SEO_FARM": "TERTIARY",
+}
 
 LABELER_PROMPT = """You are the careful, deliberate labeler for a search-result classification benchmark. Take more reasoning time than a fast runtime classifier would.
 
@@ -18,7 +45,7 @@ ROLE (how close to original evidence):
 - UNCLASSIFIED: confidence too low.
 
 TYPE (what kind of entity):
-- PRIMARY_SOURCE_PUBLISHER: government data portals, court databases, journal publishers, statute repositories, raw dataset hosts.
+- PRIMARY_SOURCE_PUBLISHER: government data portals, court databases, journal publishers, statute repositories, raw dataset hosts, official first-party documentation.
 - JOURNALISM: editorial process, byline, original reporting.
 - ACADEMIC: research institutions, academic publishers, peer-reviewed venues.
 - REFERENCE: Wikipedia, MDN, SEP, encyclopedic works.
@@ -29,12 +56,29 @@ TYPE (what kind of entity):
 - SEO_FARM: AI-generated content farms, listicle factories, thin affiliates.
 - UNCLASSIFIED: confidence too low.
 
-Consider URL structure, domain reputation, title/snippet content. Two or more signals must point the same way for a confident label. When uncertain, prefer UNCLASSIFIED over guessing."""
+Examples:
+URL: https://en.wikipedia.org/wiki/Quantum_mechanics -> {"role": "TERTIARY", "type": "REFERENCE"}
+URL: https://www.nytimes.com/2024/03/15/world/politics-shift -> {"role": "SECONDARY", "type": "JOURNALISM"}
+URL: https://arxiv.org/abs/2401.12345 -> {"role": "PRIMARY", "type": "ACADEMIC"}
+URL: https://www.reddit.com/r/programming/comments/abc -> {"role": "SECONDARY", "type": "COMMUNITY"}
+URL: https://www.supremecourt.gov/opinions/24pdf/abc.pdf -> {"role": "PRIMARY", "type": "PRIMARY_SOURCE_PUBLISHER"}
+URL: https://wirecutter.com/reviews/best-espresso-machine -> {"role": "SECONDARY", "type": "JOURNALISM"}
+URL: https://garretblanchette.github.io/notes/post -> {"role": "SECONDARY", "type": "INDIE"}
+
+Consider URL structure, domain reputation, title and snippet content. Two or more signals must point the same way. When uncertain, prefer UNCLASSIFIED over guessing."""
 
 ROLES = ["PRIMARY", "SECONDARY", "TERTIARY", "UNCLASSIFIED"]
 TYPES = ["PRIMARY_SOURCE_PUBLISHER", "JOURNALISM", "ACADEMIC", "REFERENCE", "INDIE", "COMMUNITY", "COMMERCIAL", "AGGREGATOR", "SEO_FARM", "UNCLASSIFIED"]
 ROLE_KEYS = ["primary", "secondary", "tertiary", "unclassified"]
 TYPE_KEYS = ["primary_source_publisher", "journalism", "academic", "reference", "indie", "community", "commercial", "aggregator", "seo_farm", "unclassified"]
+
+
+def tier1_lookup(url):
+    old_type = categorize(url)
+    new_type = OLD_TYPE_TO_NEW_TYPE.get(old_type)
+    if new_type is None:
+        return None, None
+    return TYPE_TO_DEFAULT_ROLE.get(new_type, "UNCLASSIFIED"), new_type
 
 
 async def serper_search(query, client):
@@ -53,12 +97,12 @@ async def serper_search(query, client):
     return []
 
 
-async def label_one(result, sem, client):
+async def llm_label(result, sem, client):
     user_msg = f"URL: {result['url']}\nTITLE: {result['title']}\nSNIPPET: {result['snippet']}\n\nReturn JSON: {{\"role\": \"...\", \"type\": \"...\"}}"
     body = {
         "system_instruction": {"parts": [{"text": LABELER_PROMPT}]},
         "contents": [{"parts": [{"text": user_msg}]}],
-        "generationConfig": {"temperature": 0, "maxOutputTokens": 200, "responseMimeType": "application/json"}
+        "generationConfig": {"temperature": 0, "maxOutputTokens": 200, "responseMimeType": "application/json", "thinkingConfig": {"thinkingBudget": 0}}
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{LABELER_MODEL}:generateContent?key={GEMINI_KEY}"
     async with sem:
@@ -81,6 +125,13 @@ async def label_one(result, sem, client):
                     return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "error": str(e)[:200]}
                 await asyncio.sleep(2 ** attempt)
         return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "error": "exhausted"}
+
+
+async def label_one(result, sem, client):
+    role, type_ = tier1_lookup(result["url"])
+    if role is not None:
+        return {"role": role, "type": type_}
+    return await llm_label(result, sem, client)
 
 
 def distribution(classifications, key):
@@ -123,7 +174,7 @@ async def generate_label(query_item, http, sem):
             "query": query,
             "category": query_item.get("category"),
             "reasoning": {
-                "method": "labeler_classified_actual_serper_results",
+                "method": "tier1_lookup_plus_llm_labeled_actual_serper_results",
                 "tolerance_pct": TOLERANCE_PCT,
                 "labeler_model": LABELER_MODEL,
                 "actual_role_dist": role_dist,
@@ -140,10 +191,8 @@ async def main():
 
     if smoke:
         in_candidates = ["benchmark/queries_smoke.json", "queries_smoke.json"]
-        out_path = None
     elif full:
         in_candidates = ["benchmark/queries.json", "queries.json"]
-        out_path = None
     else:
         raise SystemExit("specify --smoke or --full")
 
@@ -155,25 +204,22 @@ async def main():
     if not q_path:
         raise SystemExit(f"queries file not found in: {in_candidates}")
 
-    # output file path mirrors input
     if smoke:
         out_path = q_path.replace("queries_smoke", "labels_smoke")
     else:
         out_path = q_path.replace("queries.json", "labels.json")
 
-    # back up existing labels file if present
     if os.path.exists(out_path):
-        backup = out_path.replace(".json", "_v1_backup.json")
-        if not os.path.exists(backup):
-            shutil.copy(out_path, backup)
-            print(f"backed up existing {out_path} -> {backup}")
+        backup = out_path.replace(".json", "_prev_backup.json")
+        shutil.copy(out_path, backup)
+        print(f"backed up existing {out_path} -> {backup}")
 
     queries = json.load(open(q_path))
     sem = asyncio.Semaphore(8)
 
     async with httpx.AsyncClient() as http:
         tasks = [generate_label(q, http, sem) for q in queries]
-        print(f"labeling {len(tasks)} queries with model={LABELER_MODEL}, tolerance=+/-{TOLERANCE_PCT}%")
+        print(f"labeling {len(tasks)} queries with tier1 + model={LABELER_MODEL}, tolerance=+/-{TOLERANCE_PCT}%")
         labels = []
         for i, fut in enumerate(asyncio.as_completed(tasks)):
             l = await fut

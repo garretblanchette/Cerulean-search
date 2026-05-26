@@ -1,10 +1,40 @@
-# bench.py - Serper search + Gemini Flash classifier
-import os, json, asyncio, argparse, httpx
+# bench.py - Tier 1 (bundled index) + Tier 3 (LLM) classifier, Serper search, Gemini Flash-Lite for unknowns
+import os, json, asyncio, argparse, httpx, sys
+
+sys.path.insert(0, "backend")
+from source_categorizer import categorize  # noqa: E402
 
 GEMINI_KEY = os.environ["BENCHMARK_LABELER_API_KEY"]
 SERPER_KEY = os.environ["SERPER_API_KEY"]
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.5-flash-lite"
 SERPER_ENDPOINT = "https://google.serper.dev/search"
+
+# Map the existing ten-bucket source_categorizer output to the new two-axis schema.
+OLD_TYPE_TO_NEW_TYPE = {
+    "news": "JOURNALISM",
+    "reference": "REFERENCE",
+    "academic": "ACADEMIC",
+    "gov": "PRIMARY_SOURCE_PUBLISHER",
+    "community": "COMMUNITY",
+    "docs": "PRIMARY_SOURCE_PUBLISHER",
+    "commercial": "COMMERCIAL",
+    "video": "COMMUNITY",
+    "health": "REFERENCE",
+    "ai_slop": "SEO_FARM",
+    "other": None,
+}
+
+TYPE_TO_DEFAULT_ROLE = {
+    "PRIMARY_SOURCE_PUBLISHER": "PRIMARY",
+    "JOURNALISM": "SECONDARY",
+    "ACADEMIC": "SECONDARY",
+    "REFERENCE": "TERTIARY",
+    "INDIE": "SECONDARY",
+    "COMMUNITY": "SECONDARY",
+    "COMMERCIAL": "TERTIARY",
+    "AGGREGATOR": "TERTIARY",
+    "SEO_FARM": "TERTIARY",
+}
 
 CLASSIFIER_PROMPT = """You classify a single search result by source role and source type.
 
@@ -15,7 +45,7 @@ ROLE (how close to original evidence):
 - UNCLASSIFIED: confidence too low.
 
 TYPE (what kind of entity):
-- PRIMARY_SOURCE_PUBLISHER: government data portals, court databases, journal publishers, statute repositories, raw dataset hosts.
+- PRIMARY_SOURCE_PUBLISHER: government data portals, court databases, journal publishers, statute repositories, raw dataset hosts, official first-party documentation.
 - JOURNALISM: editorial process, byline, original reporting.
 - ACADEMIC: research institutions, academic publishers, peer-reviewed venues.
 - REFERENCE: Wikipedia, MDN, SEP, encyclopedic works.
@@ -26,12 +56,30 @@ TYPE (what kind of entity):
 - SEO_FARM: AI-generated content farms, listicle factories, thin affiliates.
 - UNCLASSIFIED: confidence too low.
 
-Two or more signals must point the same way for a confident label."""
+Examples:
+URL: https://en.wikipedia.org/wiki/Quantum_mechanics -> {"role": "TERTIARY", "type": "REFERENCE"}
+URL: https://www.nytimes.com/2024/03/15/world/politics-shift -> {"role": "SECONDARY", "type": "JOURNALISM"}
+URL: https://arxiv.org/abs/2401.12345 -> {"role": "PRIMARY", "type": "ACADEMIC"}
+URL: https://www.reddit.com/r/programming/comments/abc -> {"role": "SECONDARY", "type": "COMMUNITY"}
+URL: https://www.supremecourt.gov/opinions/24pdf/abc.pdf -> {"role": "PRIMARY", "type": "PRIMARY_SOURCE_PUBLISHER"}
+URL: https://wirecutter.com/reviews/best-espresso-machine -> {"role": "SECONDARY", "type": "JOURNALISM"}
+URL: https://garretblanchette.github.io/notes/post -> {"role": "SECONDARY", "type": "INDIE"}
+
+Two or more signals must point the same way for a confident label. When uncertain, prefer UNCLASSIFIED over guessing."""
 
 ROLES = ["PRIMARY", "SECONDARY", "TERTIARY", "UNCLASSIFIED"]
 TYPES = ["PRIMARY_SOURCE_PUBLISHER", "JOURNALISM", "ACADEMIC", "REFERENCE", "INDIE", "COMMUNITY", "COMMERCIAL", "AGGREGATOR", "SEO_FARM", "UNCLASSIFIED"]
 ROLE_KEYS = ["primary", "secondary", "tertiary", "unclassified"]
 TYPE_KEYS = ["primary_source_publisher", "journalism", "academic", "reference", "indie", "community", "commercial", "aggregator", "seo_farm", "unclassified"]
+
+
+def tier1_lookup(url):
+    old_type = categorize(url)
+    new_type = OLD_TYPE_TO_NEW_TYPE.get(old_type)
+    if new_type is None:
+        return None, None, None
+    role = TYPE_TO_DEFAULT_ROLE.get(new_type, "UNCLASSIFIED")
+    return role, new_type, "tier1"
 
 
 async def serper_search(query, client):
@@ -50,7 +98,7 @@ async def serper_search(query, client):
     return []
 
 
-async def classify(result, sem, client):
+async def llm_classify(result, sem, client):
     user_msg = f"URL: {result['url']}\nTITLE: {result['title']}\nSNIPPET: {result['snippet']}\n\nReturn JSON: {{\"role\": \"...\", \"type\": \"...\"}}"
     body = {
         "system_instruction": {"parts": [{"text": CLASSIFIER_PROMPT}]},
@@ -72,12 +120,20 @@ async def classify(result, sem, client):
                 return {
                     "role": str(p.get("role","UNCLASSIFIED")).upper().replace(" ","_"),
                     "type": str(p.get("type","UNCLASSIFIED")).upper().replace(" ","_"),
+                    "source": "tier3",
                 }
             except Exception as e:
                 if attempt == 3:
-                    return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "error": str(e)[:200]}
+                    return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "source": "tier3_error", "error": str(e)[:200]}
                 await asyncio.sleep(2 ** attempt)
-        return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "error": "exhausted"}
+        return {"role": "UNCLASSIFIED", "type": "UNCLASSIFIED", "source": "tier3_exhausted"}
+
+
+async def classify(result, sem, client):
+    role, type_, src = tier1_lookup(result["url"])
+    if role is not None:
+        return {"role": role, "type": type_, "source": src}
+    return await llm_classify(result, sem, client)
 
 
 def distribution(classifications, key):
@@ -114,6 +170,8 @@ async def score_query(item, label, http, classify_sem, search_sem):
         return {"query": query, "error": "no results", "role_pass": False, "type_pass": False}
 
     classifications = await asyncio.gather(*[classify(r, classify_sem, http) for r in results])
+    tier1_count = sum(1 for c in classifications if c.get("source") == "tier1")
+
     role_dist = distribution(classifications, "role")
     type_dist = distribution(classifications, "type")
     role_bounds = label["label"]["expected_top_10"]["role_pct"]
@@ -126,7 +184,7 @@ async def score_query(item, label, http, classify_sem, search_sem):
         "role_dist": role_dist, "type_dist": type_dist,
         "role_pass": role_pass, "type_pass": type_pass,
         "role_failures": role_fail, "type_failures": type_fail,
-        "n_results": len(results),
+        "tier1_count": tier1_count, "n_results": len(results),
     }
 
 
@@ -172,7 +230,7 @@ async def main():
                 continue
             tasks.append(score_query(q, lab, http, classify_sem, search_sem))
 
-        print(f"running {len(tasks)} queries, model={MODEL}, search=serper")
+        print(f"running {len(tasks)} queries, model={MODEL}, search=serper, tier1+tier3")
         results = []
         for i, fut in enumerate(asyncio.as_completed(tasks)):
             r = await fut
@@ -183,9 +241,12 @@ async def main():
     role_pass = sum(1 for r in results if r.get("role_pass"))
     type_pass = sum(1 for r in results if r.get("type_pass"))
     errors = sum(1 for r in results if r.get("error"))
+    total_tier1 = sum(r.get("tier1_count", 0) for r in results)
+    total_results = sum(r.get("n_results", 0) for r in results)
     n = len(results)
     summary = {
         "n": n, "model": MODEL, "errors": errors,
+        "tier1_coverage_pct": (total_tier1 / total_results * 100) if total_results else 0,
         "role_accuracy": role_pass / n if n else 0,
         "type_accuracy": type_pass / n if n else 0,
         "role_gate_hit": (role_pass / n if n else 0) >= 0.85,
@@ -197,6 +258,7 @@ async def main():
 
     print(f"\n=== {n} queries, model={MODEL} ===")
     print(f"errors: {errors}")
+    print(f"tier1 coverage: {summary['tier1_coverage_pct']:.1f}% of {total_results} results")
     print(f"role: {role_pass}/{n} = {summary['role_accuracy']*100:.1f}%  gate 85%  {'HIT' if summary['role_gate_hit'] else 'MISS'}")
     print(f"type: {type_pass}/{n} = {summary['type_accuracy']*100:.1f}%  gate 90%  {'HIT' if summary['type_gate_hit'] else 'MISS'}")
     print(f"written: {out}")
