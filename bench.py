@@ -16,9 +16,11 @@ OLD_TYPE_TO_NEW_TYPE = {
     "academic": "ACADEMIC",
     "gov": "PRIMARY_SOURCE_PUBLISHER",
     "community": "COMMUNITY",
+    "indie": "INDIE",
+    "social": "AGGREGATOR",
     "docs": "PRIMARY_SOURCE_PUBLISHER",
     "commercial": "COMMERCIAL",
-    "video": "COMMUNITY",
+    "video": "AGGREGATOR",
     "health": "REFERENCE",
     "ai_slop": "SEO_FARM",
     "other": None,
@@ -74,13 +76,14 @@ TYPE_KEYS = ["primary_source_publisher", "journalism", "academic", "reference", 
 
 
 def tier1_lookup(url):
-    old_type = categorize(url)
-    new_type = OLD_TYPE_TO_NEW_TYPE.get(old_type)
-    if new_type is None:
+    """Delegates to the canonical librarian-grade classifier (tier1_enhanced)."""
+    import sys; sys.path.insert(0, '.')
+    from tier1_enhanced import tier1 as _t1
+    res = _t1(url)
+    if res is None:
         return None, None, None
-    role = TYPE_TO_DEFAULT_ROLE.get(new_type, "UNCLASSIFIED")
-    return role, new_type, "tier1"
-
+    role, typ, _src = res
+    return role, typ, 'tier1'
 
 async def serper_search(query, client):
     headers = {"X-API-KEY": SERPER_KEY, "Content-Type": "application/json"}

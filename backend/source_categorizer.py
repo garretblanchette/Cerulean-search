@@ -75,11 +75,11 @@ EXACT = {
     "serverfault.com": "community", "askubuntu.com": "community",
     "mathoverflow.net": "community", "quora.com": "community",
     "lobste.rs": "community", "slashdot.org": "community",
-    # ---- social ----
-    "x.com": "community", "twitter.com": "community", "instagram.com": "community",
-    "tiktok.com": "community", "facebook.com": "community", "threads.net": "community",
-    "bsky.app": "community", "mastodon.social": "community", "pinterest.com": "community",
-    "snapchat.com": "community", "tumblr.com": "community", "linkedin.com": "community",
+    # ---- social (authoritative: social media, not generic community) ----
+    "x.com": "social", "twitter.com": "social", "instagram.com": "social",
+    "tiktok.com": "social", "facebook.com": "social", "threads.net": "social",
+    "bsky.app": "social", "mastodon.social": "social", "pinterest.com": "social",
+    "snapchat.com": "social", "tumblr.com": "social", "linkedin.com": "social",
     # ---- video ----
     "youtube.com": "video", "youtu.be": "video", "vimeo.com": "video",
     "twitch.tv": "video", "dailymotion.com": "video", "rumble.com": "video",
@@ -93,9 +93,11 @@ EXACT = {
     "codeberg.org": "docs", "sourceforge.net": "docs", "pypi.org": "docs",
     "npmjs.com": "docs", "crates.io": "docs", "rubygems.org": "docs",
     "hub.docker.com": "docs", "huggingface.co": "docs",
-    # ---- blog ----
-    "medium.com": "community", "substack.com": "community", "ghost.org": "community",
-    "dev.to": "community", "hashnode.com": "community",
+    # ---- indie / personal publishing platforms ----
+    "medium.com": "indie", "substack.com": "indie", "ghost.org": "indie",
+    "dev.to": "indie", "hashnode.com": "indie",
+    "neocities.org": "indie", "bearblog.dev": "indie", "micro.blog": "indie",
+    "write.as": "indie", "mataroa.blog": "indie",
     # ---- commerce ----
     "amazon.com": "commercial", "amazon.co.uk": "commercial", "ebay.com": "commercial",
     "etsy.com": "commercial", "walmart.com": "commercial", "target.com": "commercial",
@@ -148,10 +150,14 @@ SUFFIX = [
     (".ac.jp", "academic"), (".edu.cn", "academic"),
     (".edu", "academic"),
     (".fandom.com", "community"),
-    (".substack.com", "community"), (".medium.com", "community"),
-    (".blogspot.com", "community"), (".wordpress.com", "community"),
-    (".tumblr.com", "community"),
-    (".github.io", "docs"), (".readthedocs.io", "docs"),
+    (".substack.com", "indie"), (".medium.com", "indie"),
+    (".blogspot.com", "indie"), (".wordpress.com", "indie"),
+    (".tumblr.com", "social"),
+    (".github.io", "indie"), (".gitlab.io", "indie"),
+    (".neocities.org", "indie"), (".bearblog.dev", "indie"),
+    (".micro.blog", "indie"), (".write.as", "indie"),
+    (".dreamwidth.org", "indie"), (".mataroa.blog", "indie"),
+    (".readthedocs.io", "docs"),
 ]
 
 TWO_PART_TLDS = {
@@ -207,6 +213,8 @@ LABELS = {
     'gov': 'Official',
     'community': 'Community',
     'docs': 'Docs',
+    'indie': 'Indie',
+    'social': 'Social',
     'commercial': 'Commercial',
     'video': 'Video',
     'health': 'Health',

@@ -1,0 +1,603 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "created": "2026-05-26",
+    "description": "Authority registry for source classification. Curated records for entities where bias_direction, reliability_grade, and claim_authority judgments require deliberate librarian/critical-media-literacy assessment. Domains not in this registry are classified by rules in librarian_classify.py with bias/reliability inferred from category defaults.",
+    "controlled_vocabularies": {
+      "bias_direction": ["left", "center-left", "center", "center-right", "right", "none", "creator-dependent"],
+      "reliability_grade": ["original-research", "news-reporting", "news-analysis", "opinion", "advocacy", "reference", "user-generated", "promotional", "thin-content", "unverified", "fabricated"],
+      "independence_level": ["high", "moderate", "low", "captured", "unknown"]
+    },
+    "single_assessor_limitation": "This registry was curated by a single AI assessor (Claude). Bias_direction and reliability_grade judgments would normally require multi-assessor consensus per TREC and critical-media-literacy best practices. Treat these as first-pass assessments pending human validation."
+  },
+  
+  "entities": {
+    "brennancenter.org": {
+      "id": "brennan-center",
+      "canonical_name": "Brennan Center for Justice (NYU Law)",
+      "type_classification": "ACADEMIC",
+      "type_alternates": ["UNCLASSIFIED"],
+      "bias_direction": "center-left",
+      "reliability_grade": "news-analysis",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors", "NYU Law affiliation"],
+        "independence_level": "moderate",
+        "notes": "501(c)(3) nonprofit; institutional research grade but with documented progressive policy orientation on voting rights, criminal justice, democracy."
+      },
+      "topical_overrides": [
+        {"topic": "voting-rights", "reliability_grade": "advocacy", "note": "Brennan Center's voting rights work is mission-aligned advocacy with research backing"},
+        {"topic": "second-amendment", "reliability_grade": "advocacy", "note": "Gun policy analysis is mission-aligned"}
+      ],
+      "claim_authority": [
+        {"claim_type": "legal-research-methodology", "topic": "constitutional-law", "level": "high"},
+        {"claim_type": "policy-data-and-statistics", "topic": "voting-rights", "level": "high"},
+        {"claim_type": "policy-conclusions-and-recommendations", "topic": "voting-rights", "level": "advocacy"},
+        {"claim_type": "historical-legal-claims", "topic": "second-amendment", "level": "moderate-with-stance"}
+      ],
+      "path_overrides": [
+        {"path_contains": "/analysis-opinion/", "type": "ACADEMIC", "alt_types": ["UNCLASSIFIED", "JOURNALISM"], "reliability_grade": "opinion"}
+      ]
+    },
+    
+    "nraila.org": {
+      "id": "nra-ila",
+      "canonical_name": "NRA Institute for Legislative Action",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "right",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["NRA membership dues", "firearms industry"],
+        "independence_level": "captured",
+        "notes": "Lobbying and political arm of the National Rifle Association; explicitly mission-aligned advocacy for firearms-rights position."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "gun-rights", "level": "high"},
+        {"claim_type": "legal-interpretation", "topic": "second-amendment", "level": "advocacy"},
+        {"claim_type": "historical-claims", "topic": "second-amendment", "level": "advocacy"},
+        {"claim_type": "policy-impact-claims", "topic": "gun-policy", "level": "advocacy"}
+      ]
+    },
+    
+    "ppic.org": {
+      "id": "ppic",
+      "canonical_name": "Public Policy Institute of California",
+      "type_classification": "ACADEMIC",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors"],
+        "independence_level": "high",
+        "notes": "Independent nonpartisan policy research institute; widely cited across the political spectrum."
+      },
+      "claim_authority": [
+        {"claim_type": "policy-research", "topic": "california-policy", "level": "high"},
+        {"claim_type": "survey-data", "topic": "california-public-opinion", "level": "high"},
+        {"claim_type": "policy-analysis", "topic": "us-federal-policy", "level": "moderate"}
+      ]
+    },
+    
+    "pewresearch.org": {
+      "id": "pew-research",
+      "canonical_name": "Pew Research Center",
+      "type_classification": "ACADEMIC",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["Pew Charitable Trusts endowment", "philanthropic foundations"],
+        "independence_level": "high",
+        "notes": "Independent nonpartisan research; explicitly does not take policy positions."
+      },
+      "claim_authority": [
+        {"claim_type": "survey-research", "topic": "us-public-opinion", "level": "high"},
+        {"claim_type": "demographic-data", "topic": "demographics", "level": "high"},
+        {"claim_type": "media-and-technology-research", "topic": "media", "level": "high"}
+      ]
+    },
+    
+    "isdglobal.org": {
+      "id": "isd-global",
+      "canonical_name": "Institute for Strategic Dialogue",
+      "type_classification": "ACADEMIC",
+      "type_alternates": ["UNCLASSIFIED"],
+      "bias_direction": "center-left",
+      "reliability_grade": "news-analysis",
+      "funding_disclosure": {
+        "sources": ["government grants (UK, EU, US State Dept)", "philanthropic foundations"],
+        "independence_level": "moderate",
+        "notes": "International think tank focused on extremism, disinformation, and digital harms. Some funding from governments may shape research priorities."
+      },
+      "claim_authority": [
+        {"claim_type": "extremism-research", "topic": "extremism-online", "level": "high"},
+        {"claim_type": "disinformation-tracking", "topic": "information-operations", "level": "high"},
+        {"claim_type": "policy-recommendations", "topic": "online-harms", "level": "advocacy"}
+      ]
+    },
+    
+    "millercenter.org": {
+      "id": "miller-center",
+      "canonical_name": "Miller Center (University of Virginia)",
+      "type_classification": "ACADEMIC",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["University of Virginia", "philanthropic donors"],
+        "independence_level": "high",
+        "notes": "Nonpartisan affiliated research center; focuses on presidential history and public policy."
+      },
+      "claim_authority": [
+        {"claim_type": "presidential-history", "topic": "us-presidency", "level": "high"},
+        {"claim_type": "policy-archives", "topic": "us-policy-history", "level": "high"}
+      ]
+    },
+    
+    "americanrevolutioninstitute.org": {
+      "id": "ari-cincinnati",
+      "canonical_name": "American Revolution Institute (Society of the Cincinnati)",
+      "type_classification": "ACADEMIC",
+      "type_alternates": ["REFERENCE"],
+      "bias_direction": "center",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["Society of the Cincinnati", "membership dues"],
+        "independence_level": "high",
+        "notes": "Educational arm of the Society of the Cincinnati hereditary organization; scholarly public-history mission."
+      },
+      "claim_authority": [
+        {"claim_type": "historical-scholarship", "topic": "american-revolution", "level": "high"},
+        {"claim_type": "constitutional-history", "topic": "founding-era", "level": "high"}
+      ]
+    },
+    
+    "lieber.westpoint.edu": {
+      "id": "lieber-institute",
+      "canonical_name": "Lieber Institute (West Point)",
+      "type_classification": "ACADEMIC",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["US Military Academy", "federal funding"],
+        "independence_level": "moderate",
+        "notes": "Military-academic institute; scholarly but with institutional alignment to US military positions."
+      },
+      "claim_authority": [
+        {"claim_type": "international-humanitarian-law-analysis", "topic": "law-of-armed-conflict", "level": "high"},
+        {"claim_type": "policy-positions", "topic": "armed-conflict", "level": "moderate-institutional"}
+      ]
+    },
+    
+    "climatecommunication.yale.edu": {
+      "id": "yale-climate-comm",
+      "canonical_name": "Yale Program on Climate Change Communication",
+      "type_classification": "ACADEMIC",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["Yale University", "philanthropic foundations"],
+        "independence_level": "high",
+        "notes": "Academic research program; communicates established climate science consensus."
+      },
+      "claim_authority": [
+        {"claim_type": "climate-communication-research", "topic": "climate-communication", "level": "high"},
+        {"claim_type": "public-opinion-climate", "topic": "climate-public-opinion", "level": "high"}
+      ]
+    },
+    
+    "history.org.uk": {
+      "id": "historical-association-uk",
+      "canonical_name": "Historical Association (UK)",
+      "type_classification": "REFERENCE",
+      "type_alternates": ["ACADEMIC"],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["UK charity registration", "membership"],
+        "independence_level": "high",
+        "notes": "UK educational charity promoting history education."
+      },
+      "claim_authority": [
+        {"claim_type": "historical-education", "topic": "history-pedagogy", "level": "high"},
+        {"claim_type": "historical-overview", "topic": "british-history", "level": "high"}
+      ]
+    },
+    
+    "english-heritage.org.uk": {
+      "id": "english-heritage",
+      "canonical_name": "English Heritage",
+      "type_classification": "REFERENCE",
+      "type_alternates": ["ACADEMIC"],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["UK government heritage funding", "membership", "site admissions"],
+        "independence_level": "high",
+        "notes": "UK heritage charity managing historic sites; curatorial expertise."
+      },
+      "claim_authority": [
+        {"claim_type": "heritage-curation", "topic": "british-heritage-sites", "level": "high"},
+        {"claim_type": "historical-context", "topic": "british-history", "level": "high"}
+      ]
+    },
+    
+    "glaad.org": {
+      "id": "glaad",
+      "canonical_name": "GLAAD",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors", "corporate partnerships"],
+        "independence_level": "low",
+        "notes": "LGBTQ media advocacy organization; mission-aligned advocacy."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "lgbtq-rights", "level": "high"},
+        {"claim_type": "media-monitoring", "topic": "lgbtq-representation", "level": "moderate-with-stance"}
+      ]
+    },
+    
+    "giffords.org": {
+      "id": "giffords",
+      "canonical_name": "Giffords (formerly Americans for Responsible Solutions)",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "center-left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors"],
+        "independence_level": "low",
+        "notes": "Gun safety advocacy organization founded by Rep. Gabby Giffords."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "gun-policy", "level": "high"},
+        {"claim_type": "gun-policy-research", "topic": "gun-policy", "level": "advocacy"}
+      ]
+    },
+    
+    "everytown.org": {
+      "id": "everytown",
+      "canonical_name": "Everytown for Gun Safety",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "center-left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["Michael Bloomberg philanthropy", "philanthropic foundations"],
+        "independence_level": "low",
+        "notes": "Gun safety advocacy organization; significant Bloomberg funding."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "gun-policy", "level": "high"},
+        {"claim_type": "gun-policy-research", "topic": "gun-policy", "level": "advocacy"}
+      ]
+    },
+    
+    "everytownsupportfund.org": {
+      "id": "everytown-support-fund",
+      "canonical_name": "Everytown Support Fund",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "center-left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["Everytown for Gun Safety affiliate"],
+        "independence_level": "low",
+        "notes": "501(c)(3) arm of Everytown; gun safety advocacy."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "gun-policy", "level": "high"},
+        {"claim_type": "gun-violence-data", "topic": "gun-violence", "level": "moderate-with-stance"}
+      ]
+    },
+    
+    "foodandwaterwatch.org": {
+      "id": "food-water-watch",
+      "canonical_name": "Food & Water Watch",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors"],
+        "independence_level": "low",
+        "notes": "Progressive environmental advocacy organization."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "environmental-policy", "level": "high"},
+        {"claim_type": "environmental-research", "topic": "food-water-policy", "level": "advocacy"}
+      ]
+    },
+    
+    "lwv.org": {
+      "id": "lwv",
+      "canonical_name": "League of Women Voters",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "center-left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["membership dues", "philanthropic foundations"],
+        "independence_level": "moderate",
+        "notes": "Civic engagement organization; nonpartisan in name but voter-access positions skew center-left in current US politics."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "voting-access", "level": "high"},
+        {"claim_type": "voter-education", "topic": "elections", "level": "moderate"}
+      ]
+    },
+    
+    "transresearch.org.au": {
+      "id": "trans-research-au",
+      "canonical_name": "Trans Research Australia",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["unclear from public materials"],
+        "independence_level": "unknown",
+        "notes": "Trans-rights advocacy organization."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "trans-rights", "level": "high"},
+        {"claim_type": "research-summary", "topic": "trans-health-and-policy", "level": "advocacy"}
+      ]
+    },
+    
+    "athleteally.org": {
+      "id": "athlete-ally",
+      "canonical_name": "Athlete Ally",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["philanthropic foundations", "individual donors"],
+        "independence_level": "low",
+        "notes": "LGBTQ-in-sports advocacy organization."
+      },
+      "claim_authority": [
+        {"claim_type": "org-stated-position", "topic": "trans-athletes", "level": "high"},
+        {"claim_type": "research-curation", "topic": "trans-athletes", "level": "advocacy"}
+      ]
+    },
+    
+    "everystat.org": {
+      "id": "everystat",
+      "canonical_name": "EveryStat",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "center-left",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["Everytown for Gun Safety affiliate"],
+        "independence_level": "low",
+        "notes": "Gun violence data project affiliated with Everytown."
+      },
+      "claim_authority": [
+        {"claim_type": "gun-violence-statistics", "topic": "gun-violence", "level": "moderate-with-stance"}
+      ]
+    },
+    
+    "historyreclaimed.co.uk": {
+      "id": "history-reclaimed",
+      "canonical_name": "History Reclaimed",
+      "type_classification": "UNCLASSIFIED",
+      "type_alternates": [],
+      "bias_direction": "right",
+      "reliability_grade": "opinion",
+      "funding_disclosure": {
+        "sources": ["unclear from public materials"],
+        "independence_level": "unknown",
+        "notes": "UK history advocacy group; positions itself as defending Western history against revisionism."
+      },
+      "claim_authority": [
+        {"claim_type": "historical-commentary", "topic": "british-and-western-history", "level": "advocacy"}
+      ]
+    },
+    
+    "cancer.org": {
+      "id": "american-cancer-society",
+      "canonical_name": "American Cancer Society",
+      "type_classification": "REFERENCE",
+      "type_alternates": ["ACADEMIC"],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["donations", "fundraising events", "corporate partnerships"],
+        "independence_level": "high",
+        "notes": "Major US cancer-focused health nonprofit; mainstream medical consensus."
+      },
+      "claim_authority": [
+        {"claim_type": "cancer-information", "topic": "cancer", "level": "high"},
+        {"claim_type": "cancer-prevention-guidelines", "topic": "cancer-prevention", "level": "high"}
+      ]
+    },
+    
+    "en.wikipedia.org": {
+      "id": "wikipedia",
+      "canonical_name": "Wikipedia (English)",
+      "type_classification": "REFERENCE",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["Wikimedia Foundation donations"],
+        "independence_level": "high",
+        "notes": "Crowdsourced encyclopedia with NPOV policy; reliability varies by article maturity and contributor engagement."
+      },
+      "claim_authority": [
+        {"claim_type": "encyclopedic-summary", "topic": "general", "level": "high-for-summary-low-for-cutting-edge"},
+        {"claim_type": "citations-to-secondary-sources", "topic": "general", "level": "high"}
+      ]
+    },
+    
+    "archive.org": {
+      "id": "internet-archive",
+      "canonical_name": "Internet Archive",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": ["AGGREGATOR"],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["donations", "grants", "library partnerships"],
+        "independence_level": "high",
+        "notes": "Nonprofit digital library; preservation-mission archivist; some legal disputes around scanned-book lending."
+      },
+      "claim_authority": [
+        {"claim_type": "archived-materials", "topic": "general", "level": "high-for-preservation-not-for-accuracy"},
+        {"claim_type": "wayback-machine-snapshots", "topic": "web-history", "level": "high"}
+      ]
+    },
+    
+    "c-span.org": {
+      "id": "c-span",
+      "canonical_name": "C-SPAN",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "none",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["cable industry consortium"],
+        "independence_level": "high",
+        "notes": "Nonprofit funded by cable TV providers; unedited public affairs recording."
+      },
+      "claim_authority": [
+        {"claim_type": "congressional-recordings", "topic": "us-congress", "level": "high"},
+        {"claim_type": "public-affairs-recordings", "topic": "us-government", "level": "high"}
+      ]
+    },
+    
+    "britishmuseum.org": {
+      "id": "british-museum",
+      "canonical_name": "The British Museum",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["UK government grant-in-aid", "donations", "trading"],
+        "independence_level": "moderate",
+        "notes": "UK national museum; institutional position favors retention of contested artifacts in current location."
+      },
+      "claim_authority": [
+        {"claim_type": "museum-holdings-info", "topic": "museum-collections", "level": "high"},
+        {"claim_type": "artifact-provenance-claims", "topic": "contested-artifacts", "level": "moderate-with-institutional-position"}
+      ]
+    },
+    
+    "federalreserve.gov": {
+      "id": "federal-reserve",
+      "canonical_name": "Federal Reserve System",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "none",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["fees from member banks", "securities holdings"],
+        "independence_level": "high",
+        "notes": "US central bank; congressionally chartered but operationally independent."
+      },
+      "claim_authority": [
+        {"claim_type": "monetary-policy-decisions", "topic": "us-monetary-policy", "level": "high"},
+        {"claim_type": "economic-data-and-research", "topic": "us-economy", "level": "high"}
+      ]
+    },
+    
+    "mid.ru": {
+      "id": "russia-mfa",
+      "canonical_name": "Ministry of Foreign Affairs of the Russian Federation",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "state-actor-russia",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["Russian government"],
+        "independence_level": "captured",
+        "notes": "Russian state foreign ministry communications; reflects state position."
+      },
+      "claim_authority": [
+        {"claim_type": "russian-government-position", "topic": "russian-foreign-policy", "level": "high"},
+        {"claim_type": "factual-claims-about-third-parties", "topic": "geopolitics", "level": "advocacy"}
+      ]
+    },
+    
+    "kremlin.ru": {
+      "id": "kremlin",
+      "canonical_name": "President of Russia (Kremlin Press Office)",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "state-actor-russia",
+      "reliability_grade": "advocacy",
+      "funding_disclosure": {
+        "sources": ["Russian government"],
+        "independence_level": "captured",
+        "notes": "Russian presidential press office; primary record of Putin statements with state-aligned framing."
+      },
+      "claim_authority": [
+        {"claim_type": "putin-statements-verbatim", "topic": "russian-presidency", "level": "high"},
+        {"claim_type": "factual-claims-about-third-parties", "topic": "geopolitics", "level": "advocacy"}
+      ]
+    },
+    
+    "un.org": {
+      "id": "un",
+      "canonical_name": "United Nations",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "none",
+      "reliability_grade": "reference",
+      "funding_disclosure": {
+        "sources": ["member state contributions"],
+        "independence_level": "moderate",
+        "notes": "Intergovernmental organization; reflects member state consensus where possible."
+      },
+      "claim_authority": [
+        {"claim_type": "un-official-positions", "topic": "international-policy", "level": "high"},
+        {"claim_type": "consensus-claims", "topic": "scientific-consensus", "level": "high"}
+      ]
+    },
+    
+    "who.int": {
+      "id": "who",
+      "canonical_name": "World Health Organization",
+      "type_classification": "PRIMARY_SOURCE_PUBLISHER",
+      "type_alternates": [],
+      "bias_direction": "none",
+      "reliability_grade": "original-research",
+      "funding_disclosure": {
+        "sources": ["UN member state contributions", "earmarked donor funding"],
+        "independence_level": "moderate",
+        "notes": "UN specialized agency for public health; some criticism of donor-driven research priorities."
+      },
+      "claim_authority": [
+        {"claim_type": "global-health-data", "topic": "public-health", "level": "high"},
+        {"claim_type": "health-policy-guidance", "topic": "public-health", "level": "high"}
+      ]
+    },
+    
+    "scotusblog.com": {
+      "id": "scotusblog",
+      "canonical_name": "SCOTUSblog",
+      "type_classification": "JOURNALISM",
+      "type_alternates": [],
+      "bias_direction": "center",
+      "reliability_grade": "news-analysis",
+      "funding_disclosure": {
+        "sources": ["independent operation"],
+        "independence_level": "high",
+        "notes": "Specialized Supreme Court journalism; widely cited across legal-political spectrum."
+      },
+      "claim_authority": [
+        {"claim_type": "supreme-court-coverage", "topic": "supreme-court", "level": "high"},
+        {"claim_type": "legal-analysis", "topic": "constitutional-law", "level": "high"}
+      ]
+    }
+  }
+}
