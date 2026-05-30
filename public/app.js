@@ -10,9 +10,9 @@ function el(tag, cls, text) {
   return e;
 }
 
-const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Forum', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
+const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Forum', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content', indie:'Indie', social:'Social' };
 const TIER_TERMS   = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Low confidence': {term:'tier-fair', emoji:'\ud83d\ude10'} };
-const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
+const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop', indie:'src-indie', social:'src-social' };
 // Source role: how close the source sits to original evidence (the journalistic / library-science axis).
 // Derived from source type; primary = original record, secondary = reporting/analysis, tertiary = synthesis.
 const SOURCE_ROLE = {
@@ -26,6 +26,8 @@ const SOURCE_ROLE = {
   reference:  { label:'Tertiary source',  cls:'role-tertiary',  note:'Encyclopedic synthesis of other sources.' },
   health:     { label:'Tertiary source',  cls:'role-tertiary',  note:'Consumer-health synthesis.' },
   ai_slop:    { label:'Tertiary source',  cls:'role-tertiary',  note:'Aggregated or AI-generated synthesis.' },
+  indie:      { label:'Secondary source', cls:'role-secondary', note:'Independent or personal publishing.' },
+  social:     { label:'Secondary source', cls:'role-secondary', note:'Social-media post, profile, or feed.' },
 };
 
 function trustBadge(cls, term, label, emoji) {
