@@ -18,15 +18,15 @@
 
 <p><strong>Relevance <span class="cer-term" tabindex="0" data-term="ranking">ranking</span> collapsed source-type distinctions because it did not need them.</strong> A search engine optimizing for click-through can put a <span class="cer-term" tabindex="0" data-term="seo">SEO</span> listicle, a peer-reviewed journal article, and a Wikipedia entry side by side as long as all three contain the query terms. The user is expected to evaluate the sources after the click. In practice most users do not. The structural signals a research librarian would foreground (who produced this, how close to the original evidence, with what editorial process) disappeared from the result page.</p>
 
-<p><strong>This was not malicious.</strong> Relevance ranking is a tractable engineering problem. Source evaluation is a harder one. The engines that won did the tractable thing, and the harder thing waited.</p>
+<p><strong>This was not malicious.</strong> Relevance ranking is a tractable engineering problem. Source evaluation is a harder one. The engines that won did the tractable thing, and the harder thing waited. Cerulean is an attempt to do the harder thing and put the result back on the page, in front of the click.</p>
 
 <h2>Two axes</h2>
 
 <p>Every classified result on Cerulean gets two tags. The axes are orthogonal, and both are load-bearing.</p>
 
-<h3>Source role</h3>
+<h3>Source role &mdash; the journalistic lens</h3>
 
-<p><strong>How close is the source to the original evidence?</strong></p>
+<p><strong>How close is the source to the original evidence?</strong> This is the axis a journalist or researcher reaches for first. It answers whether you are looking at the record itself, an account of the record, or a synthesis of other people's accounts.</p>
 
 <ul>
 <li><strong>Primary.</strong> Original materials. Court filings, datasets, government raw reports, original interviews, original research articles in scientific journals, eyewitness accounts, raw artifacts, statutes, original creative works, and official communications from the entity in question.</li>
@@ -39,86 +39,69 @@
 <p><strong>What kind of entity produced it?</strong></p>
 
 <ul>
-<li><strong>Primary-source publisher.</strong> Government data portals, court databases, academic journal publishers, statute repositories, and raw dataset hosts.</li>
+<li><strong>Primary-source publisher / Official.</strong> Government data portals, court databases, academic journal publishers, statute repositories, and raw dataset hosts.</li>
 <li><strong>Journalism.</strong> Editorial process, byline, original reporting markers.</li>
 <li><strong>Academic.</strong> Research institutions, academic publishers, and peer-reviewed venues.</li>
 <li><strong>Reference.</strong> Wikipedia, MDN, Stanford Encyclopedia of Philosophy, and other encyclopedic works.</li>
-<li><strong>Indie.</strong> Personal blogs, neocities, github.io, and IndieWeb participants.</li>
+<li><strong>Indie.</strong> Personal blogs, neocities, github.io, IndieWeb participants, and independent publishing platforms (Medium, Substack, and the like).</li>
 <li><strong>Community.</strong> Reddit, Hacker News, Stack Overflow, and other forums for collective discussion.</li>
+<li><strong>Social.</strong> Social-media posts, profiles, and feeds.</li>
 <li><strong>Commercial.</strong> Corporate sites, product pages, and marketing materials.</li>
-<li><strong>Aggregator.</strong> Lyric sites, recipe aggregators, and content repackagers.</li>
+<li><strong>Aggregator.</strong> Lyric sites, recipe aggregators, video hosts, and content repackagers.</li>
 <li><strong>SEO farm.</strong> AI-generated content farms, listicle factories, and thin affiliate sites.</li>
 </ul>
 
 <h3>Why both</h3>
 
-<p><strong>Role answers the research question. Type answers the trust question.</strong> A government site can be primary (raw dataset release), secondary (policy analysis paper), or tertiary ("about this agency" page). Journalism can be primary (original 2008 financial-crisis reporting) or secondary (2015 retrospective). Collapsing both into a single tag loses information that matters at the moment a user decides whether to click.</p>
+<p><strong>Role answers the research question. Type answers the trust question.</strong> A government site can be primary (raw dataset release), secondary (policy analysis paper), or tertiary ("about this agency" page). Journalism can be primary (original 2008 financial-crisis reporting) or secondary (2015 retrospective). Collapsing both into a single tag loses information that matters at the moment a user decides whether to click. On the result page, Cerulean leads with role, then shows type, so the evidentiary structure is the first thing you read.</p>
 
 <h2>How classification works</h2>
 
-<p>Cerulean classifies in three tiers. None of them run an LLM at query time.</p>
+<p>Cerulean classifies in layers, most authoritative first. None of them run an LLM at query time.</p>
 
-<p><strong>Tier 1: bundled index.</strong> A curated JSON file shipped with the deploy, holding domain entries with source-type and stable-default source-role labels. Lookups are sub-millisecond. Source data includes Tranco top sites, Crossref DOI prefixes, the IndieWeb directory, public .gov and .edu lists, Common Crawl frequent domains, and hand-curated additions. The index is git-versioned and publicly auditable in the repository.</p>
+<p><strong>Authority registry.</strong> A curated, library-style authority file: hand-reviewed records for organizations whose classification requires deliberate judgment rather than a domain rule &mdash; advocacy groups, think tanks, official outlets, and the like. Each record carries the entity's canonical name, source type, and the editorial fields described below. When a domain matches the registry, its record wins. The registry is git-versioned and publicly auditable; it is the single source of truth for individual-entity judgment, edited by deliberate curation rather than by patching classifier rules.</p>
 
-<p><strong>Tier 2: heuristic classifier.</strong> For domains not in the bundled index, structural features get extracted at query time: TLD class, URL path patterns, schema.org markup, byline presence, editorial-process markers, citation density, document-type signals, and several others. Classification requires two or more features to co-fire before a strong label is assigned. Otherwise the result falls back to "unclassified."</p>
+<p><strong>Bundled index.</strong> A curated set of domain entries shipped with the deploy, holding source-type and source-role labels. Lookups are sub-millisecond. Source data includes Tranco top sites, Crossref DOI prefixes, the IndieWeb directory, public .gov and .edu lists, known academic publishers, and hand-curated additions. The index grows from real traffic, not from the benchmark.</p>
 
-<p><strong>Tier 3: background batch.</strong> For long-tail unknowns that keep surfacing in real queries, an LLM classifies them in a nightly batch, and the results promote to the bundled index on the next deploy. This is the only place an LLM touches the classification pipeline. It runs offline, on unknowns the structural classifier could not resolve, and never on a query path.</p>
+<p><strong>Structural heuristics.</strong> For domains in neither the registry nor the index, structural features get read at query time: TLD class, subdomain patterns (forum and documentation hosts), URL path patterns, and document-type signals. Genuine forums stay community; personal-publishing platforms read as indie; social hosts read as social; everything unresolved falls back to "unclassified" rather than guessing.</p>
 
-<h2>How labels are generated</h2>
+<p><strong>Document-level role refinement.</strong> Role is not a function of type. Inside several types the role splits by document: an arxiv preprint or a journal's original article is primary, while that journal's review piece is secondary; a government dataset is primary, while its press release reads as the agency reporting on itself; an encyclopedia entry is tertiary, while a curated library guide is secondary. The classifier reads the URL path and structural markers to make this call instead of stamping one role per type. This refinement is what lifts role accuracy past the ceiling a type-only scheme can reach.</p>
 
-<p>This is the section information-literate readers want to see, so it sits in the open.</p>
-
-<p><strong>Labels in the bundled index come from a documented pipeline, not from a credentialed human labeler.</strong> Cerulean is an <span class="cer-term" tabindex="0" data-term="indie">indie</span> project without institutional access to trained library professionals at scale. Pretending otherwise would be worse than being honest. The pipeline does the following:</p>
-
-<ol>
-<li><strong>Anchor-first.</strong> Entries with a clean upstream anchor (a .gov TLD, a Crossref DOI prefix, an IndieWeb directory listing, a known academic publisher domain) inherit the validated upstream classification. These cases are deterministic, not judgment calls.</li>
-<li><strong>LLM for the no-anchor remainder.</strong> Domains without a clean anchor get classified by an LLM using a published prompt that operationalizes the criteria defined above. The model is asked to apply the documented role and type definitions, cite the structural signals it relied on, and return "unclassified" when confidence is too low.</li>
-<li><strong>Every label cites its anchor.</strong> Each entry records what drove the classification: TLD, Crossref prefix, IndieWeb listing, structural-signal pattern, or "no anchor, model judgment." Users can filter by confidence in the result UI, and auditors can see exactly which entries rest on which kind of evidence.</li>
-<li><strong>Reproducibility.</strong> Given the published prompt, model version, and seed, classifications are deterministic. Anyone can rerun the pipeline against the index and verify the labels independently. This is a stronger guarantee than hand-labeling, which is not reproducible at all.</li>
-</ol>
-
-<p><strong>This is not the classical library science benchmark methodology.</strong> Classical methodology uses trained labelers applying criteria manually against a gold-standard set. Cerulean uses a documented LLM pipeline anchored on validated upstream sources, with audit surfaces and a public correction channel. The choice is appropriate for an indie project that cannot field trained labelers, and the audit surfaces compensate for the absence of credentialed review. The defense is not "we did the classical thing." It is "we did something different, here is exactly what, here is how to verify it, and here is how to challenge it."</p>
+<p><strong>Tier 3: background batch.</strong> For long-tail unknowns that keep surfacing in real queries, an LLM classifies them in an offline batch, and the results promote to the bundled index on the next deploy. This is the only place an LLM touches the classification pipeline. It runs offline, on unknowns the deterministic layers could not resolve, and never on a query path.</p>
 
 <h2>How the benchmark works</h2>
 
-<p><strong>The benchmark suite that gates production release is also LLM-graded.</strong> The same honesty principle that applies to the bundled index applies here: hand-labeling at the required scale is not feasible for an indie project, and the alternative is to be explicit about what the benchmark is and what it tells you.</p>
+<p>Cerulean is benchmarked two ways, and the numbers are published here, with their limits, rather than rounded up.</p>
 
-<p>The pipeline:</p>
+<p><strong>URL-level accuracy against a gold set.</strong> A curated gold set of real search results carries a reviewed source role and type for every URL. The classifier is scored against it per axis. Because two source classes are genuinely contestable &mdash; whether a social-media host is a community or an aggregator, whether an independent platform is indie or commercial &mdash; those are carved into a separate, reported segment so they neither inflate nor drag the core number. The core confidence interval is the shipping gate.</p>
 
-<ol>
-<li><strong>Query generation.</strong> An LLM produces the query set, distributed across research, news, technical, commercial, and controversial categories. The generator prompt selects for queries that probe the classifier's decision boundaries (queries where role and type assignment are non-trivial), not just easy cases. The prompt is published and the generated query set is git-versioned. The current benchmark contains 1000 queries, 200 per category.</li>
-<li><strong>Label generation.</strong> A separate prompt, with deliberately heavier compute (chain-of-thought reasoning, multi-pass deliberation, self-critique, possibly a different model than the Tier 3 classifier) produces expected role and type distributions for the top 10 results of each query. The deliberation gap between the labeler and the runtime classifier is the operational substitute for human review: the benchmark asks whether the fast runtime classifier can match the output of a slower, more deliberate LLM applying the same criteria.</li>
-<li><strong>Scoring.</strong> The classifier runs against each query through real search providers. Its output distribution is compared to the labeler's expected distribution. A query passes if the actual distribution falls within the constraint bounds the labeler defined. Accuracy per axis is reported.</li>
-<li><strong>Reporting.</strong> Accuracy numbers are published on this page when the benchmark runs. Production release of new classifier features requires 85% role accuracy and 90% type accuracy.</li>
-</ol>
+<p><strong>Distribution-bound query benchmark.</strong> A separate suite generates queries across research, news, technical, commercial, and controversial intents, and checks whether the classifier produces a sensible role/type distribution over each query's top results, not just per-URL correctness. The query set and the prompts are git-versioned.</p>
 
-<p><strong>Circularity is the honest concern.</strong> If the labeler LLM and the Tier 3 classifier share a substrate, the benchmark partially measures an LLM against an LLM. The mitigations: different prompting between labeler and classifier; possibly a different model; deliberately heavier deliberation for the labeler. These narrow the circularity without eliminating it. The benchmark tells you whether the fast classifier can replicate careful LLM reasoning. It does not tell you whether either matches the judgment of a trained library professional.</p>
-
-<p><strong>Why this is acceptable for an indie project.</strong> A hand-labeled benchmark by trained labelers is the classical methodology and the stronger one. It is also out of reach for a hobby project. The alternatives are: ship without a benchmark (worse), ship with a thin benchmark (worse), or ship with a documented LLM-graded benchmark and be explicit about the limits (this). The benchmark is reproducible. The prompts are public. The query set and label set are public. Anyone can rerun it, propose corrections, or run their own benchmark with stricter labelers.</p>
+<p><strong>What the current numbers say.</strong> On the gold set, the core classifier reaches roughly 90&ndash;96% on type and the low-to-mid 90s on role after the document-level refinement, with social and indie reported separately. That headline is the ceiling on this particular gold set, not a field guarantee &mdash; see the limits below. The durable, generalizable result is the role accuracy, which holds up when the gold-seeded domain lists are stripped away; the type number leans partly on a curated index that should grow from live traffic.</p>
 
 <h2>Honest limits</h2>
 
-<p><strong>Source role is partially context-dependent.</strong> A 2010 historian writing about the French Revolution is secondary for the Revolution itself and primary for 21st-century historiography. Cerulean classifies at the document level using stable structural defaults, which is correct often enough to be useful, and wrong sometimes. The methodology cannot eliminate that.</p>
+<p><strong>The gold set is single-assessor.</strong> The reference labels were produced by one assessor following a documented protocol. Library-science and information-retrieval practice want multiple independent assessors with a measured agreement statistic (Cohen's Kappa or Krippendorff's alpha) before benchmark numbers carry full weight. Cerulean's gold set does not have that yet. The headline accuracy is best read as a ceiling on this set, to be re-validated against independent labels.</p>
+
+<p><strong>Source role is partially context-dependent.</strong> A 2010 historian writing about the French Revolution is secondary for the Revolution itself and primary for 21st-century historiography. Cerulean classifies at the document level using structural defaults, which is correct often enough to be useful, and wrong sometimes. The methodology cannot eliminate that.</p>
 
 <p><strong>Structural signals do not capture semantic context.</strong> A page that looks like editorial journalism by every structural measure can still be a press release with a byline glued on. A page that looks like a <span class="cer-term" tabindex="0" data-term="seo-farm">SEO farm</span> can be a legitimate small publisher with weak design conventions. The classifier reports its best structural read; it does not verify intent.</p>
 
-<p><strong>The bundled index is not exhaustive.</strong> New domains appear constantly. Long-tail entries fall through to the heuristic classifier, and a fraction of those fall through to "unclassified." Surfacing "unclassified" honestly is better than overclaiming.</p>
-
-<p><strong>The LLM in the pipeline carries its own biases.</strong> Models trained on internet-scale text reflect their training data's view of what counts as authoritative. The pipeline mitigates this by anchoring labels on upstream validated sources wherever possible, by publishing the prompt and the model version, and by keeping corrections public and versioned. It does not eliminate the bias. Readers who want to inspect the prompt and rerun the classification can.</p>
+<p><strong>The index is not exhaustive.</strong> New domains appear constantly. Long-tail entries fall through to the heuristics, and a fraction of those fall through to "unclassified." Surfacing "unclassified" honestly is better than overclaiming.</p>
 
 <h2>Current rollout status</h2>
 
-<p><strong>In production today: source role and source type.</strong> Every classified result now carries both axes &mdash; a source-role tag (primary, secondary, or tertiary: how close the source sits to original evidence) and a source-type tag (journalism, academic, official, forum, <span class="cer-term" tabindex="0" data-term="commercial">commercial</span>, and so on). The role tag is the journalistic lens. It answers whether you are looking at an original record, reporting and analysis of it, or a synthesis of other people&rsquo;s work, before you click.</p>
+<p><strong>Live today: source role and source type.</strong> Every classified result carries both axes. The result page leads with the source-role tag (primary, secondary, or tertiary), then the source type. Role is the journalistic lens: it tells you whether you are looking at an original record, reporting and analysis of it, or a synthesis of other people's work, before you click.</p>
 
-<p><strong>How role is assigned.</strong> The production classifier derives role from the source type and document structure. An official publisher or original research reads as primary; reporting, commentary, and discussion read as secondary; encyclopedic and aggregated synthesis reads as tertiary. A document-level layer (URL path and markers) sharpens the call where role varies within a type &mdash; a journal&rsquo;s original article versus its review, a government dataset versus its press release.</p>
+<p><strong>Rolling into the live path: the full classifier.</strong> The authority registry and the document-level role refinement described above are implemented and benchmarked in the classification pipeline, and are being promoted into the production query path. As that lands, the role shown on each result moves from a structural default toward the path-aware call the benchmark measures.</p>
 
-<p><strong>Rolling out next: editorial assessment.</strong> Bias direction, reliability grade, and funding independence are modeled in the benchmark gold set and the authority registry today, and will surface as result facets once the single-assessor labeling limitation is resolved with independent review.</p>
+<p><strong>Rolling out next: editorial assessment.</strong> Bias direction, reliability grade, and funding independence are modeled today in the gold set and the authority registry as facets orthogonal to role and type. They will surface as result facets once the single-assessor limitation is resolved with independent review. The point of keeping them orthogonal is that two sources can share a role and type and still differ in stance &mdash; an issue-advocacy think tank and a peer-reviewed lab both produce research-shaped documents, and the stance axis is where that difference belongs, not the type taxonomy.</p>
 
 <h2>How to challenge a classification</h2>
 
-<p><strong>The bundled index is public and versioned.</strong> It lives in the project repository on GitHub at <a href="https://github.com/garretblanchette/Cerulean-search">github.com/garretblanchette/Cerulean-search</a>. Anyone can read it, audit it, and propose corrections.</p>
+<p><strong>The registry and index are public and versioned.</strong> They live in the project repository on GitHub at <a href="https://github.com/garretblanchette/Cerulean-search">github.com/garretblanchette/Cerulean-search</a>. Anyone can read them, audit them, and propose corrections.</p>
 
-<p><strong>To challenge a label,</strong> open a GitHub issue against the repository describing the domain, the current label, the proposed label, and the reasoning. Corrections are reviewed, batched, and folded into the next index version. Egregious misclassifications get fixed faster than minor disagreements. Disagreements about edge cases are documented in the issue and left visible, even if the label does not change, so that future readers can see the reasoning.</p>
+<p><strong>To challenge a label,</strong> open a GitHub issue against the repository describing the domain, the current label, the proposed label, and the reasoning. Corrections are reviewed, batched, and folded into the next version. Egregious misclassifications get fixed faster than minor disagreements. Disagreements about edge cases are documented in the issue and left visible, even if the label does not change, so future readers can see the reasoning.</p>
 
 <p><strong>Rate-limiting and trust weighting will be added before any in-app flag UI ships,</strong> to prevent mass-flagging abuse. This page will be updated when that happens.</p>
 
@@ -130,9 +113,7 @@
 (function(){
   var btn = document.getElementById('page-dark-btn');
   if (!btn) return;
-  function syncIcon(){
-    btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-  }
+  function syncIcon(){ btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙'; }
   syncIcon();
   btn.addEventListener('click', function(){
     var isDark = !document.documentElement.classList.contains('dark');
