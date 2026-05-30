@@ -31,7 +31,9 @@ INDEX_EXPANSION = {
     **{d: "REFERENCE" for d in ["adamsmithworks.org","ballotpedia.org","constitutioncenter.org","ebsco.com","investopedia.com","ncsl.org","oauth.net","oyez.org","usafacts.org"]},
     **{d: "PRIMARY_SOURCE_PUBLISHER" for d in ["ietf.org","gunviolencearchive.org","manhattanda.org","justia.com"]},
     **{d: "AGGREGATOR" for d in ["broadbandmap.com","broadbandnow.com","inmyarea.com","paperdigest.org","truecar.com"]},
-    **{d: "SEO_FARM" for d in ["highspeedinternet.com","linuxtoday.com","tecmint.com","thegadgetflow.com","worldpopulationreview.com"]},
+    **{d: "SEO_FARM" for d in ["highspeedinternet.com","linuxtoday.com","tecmint.com","thegadgetflow.com","worldpopulationreview.com","geeksforgeeks.org"]},
+    **{d: "ACADEMIC" for d in ["pmc.ncbi.nlm.nih.gov","pubmed.ncbi.nlm.nih.gov","ncbi.nlm.nih.gov","science.org","academia.edu"]},
+    **{d: "REFERENCE" for d in ["law.cornell.edu","plato.stanford.edu","goodreads.com"]},
 }
 PREPRINT = ("arxiv.org", "biorxiv.org", "medrxiv.org", "ssrn.com")
 FORUM_PREFIXES = ("community.", "discourse.", "talk.", "devforum.", "forum.")
@@ -49,7 +51,7 @@ def _host(u): return (urlparse(u).hostname or "").replace("www.", "").lower()
 def _path(u): return (urlparse(u).path or "").lower()
 
 # Types whose role splits within the type and needs document-level signals.
-ROLE_REFINED = ("ACADEMIC", "PRIMARY_SOURCE_PUBLISHER", "COMMERCIAL", "REFERENCE")
+ROLE_REFINED = ("ACADEMIC", "PRIMARY_SOURCE_PUBLISHER", "COMMERCIAL", "REFERENCE", "UNCLASSIFIED")
 
 def _role_for(t, u):
     """Document-level role: primary/secondary/tertiary from path signals, not type alone."""
@@ -57,13 +59,17 @@ def _role_for(t, u):
     if t == "ACADEMIC":
         if any(h == d or h.endswith("." + d) for d in PREPRINT) or "/abs/" in p:
             return "PRIMARY"
-        # an actual journal article / DOI is the primary research artifact
-        if any(s in p for s in ("/doi/", "/articles/", "/article/", "/stable/", "/journals/", "/full/", "/pmc")):
+        # an actual research artifact (article, book, paper, conference) is primary
+        if any(x in p for x in ("/doi/", "/articles/", "/article/", "/stable/", "/journals/",
+                                "/full/", "/pmc", "/content/", "/book", "/uploads", ".pdf",
+                                "/online-archive", "/virtual")):
             return "PRIMARY"
-        # think-tank "research"/"our-work" pages are secondary analysis
+        if any(x in h for x in ("pubmed", "feynmanlectures", "neurips.cc")):
+            return "PRIMARY"
+        # think-tank "research"/"our-work"/"news" pages are secondary analysis
         return "SECONDARY"
     if t == "PRIMARY_SOURCE_PUBLISHER":
-        return "SECONDARY" if ("/news/" in p or "/press" in p) else "PRIMARY"
+        return "PRIMARY"   # official communication from the entity, incl. press/transcripts
     if t == "COMMERCIAL":
         if "/blog" in p:
             return "SECONDARY"  # commentary
@@ -71,11 +77,13 @@ def _role_for(t, u):
             return "PRIMARY"   # entity's own product/docs = official communication
         return "SECONDARY"
     if t == "REFERENCE":
-        if "/wiki" in p or "/wex" in p:
+        if any(x in p for x in ("/wiki", "/wex", "/entries", "/research-starters", "/terms")):
             return "TERTIARY"
         if "man7.org" in h or "/man-pages" in p or "/docs" in p or h.endswith("oauth.net"):
             return "PRIMARY"   # specs / man pages
         return "SECONDARY"
+    if t == "UNCLASSIFIED":
+        return "SECONDARY"   # issue-advocacy orgs produce secondary analysis
     return TYPE_TO_DEFAULT_ROLE.get(t, "SECONDARY")
 
 def _match(h, d): return h == d or h.endswith("." + d)
@@ -83,6 +91,7 @@ def _match(h, d): return h == d or h.endswith("." + d)
 def tier1(url):
     """Returns (role, type, source) or None to defer to Tier 3."""
     h = _host(url)
+    p = _path(url)
     for d, t in REGISTRY.items():
         if _match(h, d):
             return (_role_for(t, url), t, "registry")
@@ -90,6 +99,12 @@ def tier1(url):
         if _match(h, d):
             return (_role_for(t, url), t, "index")
     if any(h.startswith(p) for p in FORUM_PREFIXES):
+        return ("SECONDARY", "COMMUNITY", "heuristic")
+    if h.startswith("libguides.") or h.startswith("library.") or ".libguides." in h or "/c.php" in p or (h.endswith(".gov") and "/education" in p) or h.split(".")[0] == "guides":
+        return ("SECONDARY", "REFERENCE", "heuristic")
+    if h in ("github.com", "gist.github.com") and len([x for x in p.split("/") if x]) >= 2 and "/blob" not in p:
+        return ("SECONDARY", "COMMUNITY", "heuristic")
+    if h.startswith("users.") or h.startswith("discuss.") or p.startswith("/posts"):
         return ("SECONDARY", "COMMUNITY", "heuristic")
     ot = categorize(url)
     nt = OLD_TYPE_TO_NEW_TYPE.get(ot)
