@@ -108,11 +108,11 @@
 
 <h2>Current rollout status</h2>
 
-<p><strong>In production today: source-type tags.</strong> Results currently display the source-type axis (journalism, academic, indie, <span class="cer-term" tabindex="0" data-term="commercial">commercial</span>, and so on). The legacy classifier underneath uses an earlier taxonomy that is being replaced.</p>
+<p><strong>In production today: source role and source type.</strong> Every classified result now carries both axes &mdash; a source-role tag (primary, secondary, or tertiary: how close the source sits to original evidence) and a source-type tag (journalism, academic, official, forum, <span class="cer-term" tabindex="0" data-term="commercial">commercial</span>, and so on). The role tag is the journalistic lens. It answers whether you are looking at an original record, reporting and analysis of it, or a synthesis of other people&rsquo;s work, before you click.</p>
 
-<p><strong>Rolling out: source-role tags.</strong> The two-axis system described above is in active development. The bundled index is being rebuilt against the new schema. The heuristic classifier is being extended with role features. Role tags will ship to production when the pipeline meets internal quality gates, not before.</p>
+<p><strong>How role is assigned.</strong> The production classifier derives role from the source type and document structure. An official publisher or original research reads as primary; reporting, commentary, and discussion read as secondary; encyclopedic and aggregated synthesis reads as tertiary. A document-level layer (URL path and markers) sharpens the call where role varies within a type &mdash; a journal&rsquo;s original article versus its review, a government dataset versus its press release.</p>
 
-<p>This page documents the target system. It will be updated when production catches up to it.</p>
+<p><strong>Rolling out next: editorial assessment.</strong> Bias direction, reliability grade, and funding independence are modeled in the benchmark gold set and the authority registry today, and will surface as result facets once the single-assessor labeling limitation is resolved with independent review.</p>
 
 <h2>How to challenge a classification</h2>
 

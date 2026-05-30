@@ -13,6 +13,20 @@ function el(tag, cls, text) {
 const SOURCE_LABELS = { news:'News', reference:'Reference', academic:'Academic', gov:'Official', community:'Forum', docs:'Docs', commercial:'Commercial', video:'Video', health:'Health', ai_slop:'AI Content' };
 const TIER_TERMS   = { 'High quality': {term:'tier-high-quality', emoji:'\ud83e\udd13'}, 'Good': {term:'tier-good', emoji:'\ud83d\ude0a'}, 'Low confidence': {term:'tier-fair', emoji:'\ud83d\ude10'} };
 const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src-academic', gov:'src-gov', community:'src-community', docs:'src-docs', commercial:'src-commercial', video:'src-video', health:'src-health', ai_slop:'src-ai-slop' };
+// Source role: how close the source sits to original evidence (the journalistic / library-science axis).
+// Derived from source type; primary = original record, secondary = reporting/analysis, tertiary = synthesis.
+const SOURCE_ROLE = {
+  gov:        { label:'Primary source',   cls:'role-primary',   note:'Original record or official communication from the entity itself.' },
+  academic:   { label:'Primary source',   cls:'role-primary',   note:'Original research or scholarship.' },
+  docs:       { label:'Primary source',   cls:'role-primary',   note:'Official documentation from the source.' },
+  news:       { label:'Secondary source', cls:'role-secondary', note:'Reporting and analysis of events the author did not originate.' },
+  community:  { label:'Secondary source', cls:'role-secondary', note:'Discussion and commentary.' },
+  video:      { label:'Secondary source', cls:'role-secondary', note:'Creator coverage or commentary.' },
+  commercial: { label:'Secondary source', cls:'role-secondary', note:'Vendor or product material.' },
+  reference:  { label:'Tertiary source',  cls:'role-tertiary',  note:'Encyclopedic synthesis of other sources.' },
+  health:     { label:'Tertiary source',  cls:'role-tertiary',  note:'Consumer-health synthesis.' },
+  ai_slop:    { label:'Tertiary source',  cls:'role-tertiary',  note:'Aggregated or AI-generated synthesis.' },
+};
 
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
@@ -342,17 +356,25 @@ function renderResults(results) {
     }
 
     const meta = el('div', 'meta-row');
-    getTrustSignals(r.score, r.reasons).forEach(sig => {
-      const tm = TIER_TERMS[sig.label];
-      if (tm) meta.appendChild(trustBadge('trust-badge ' + sig.cls, tm.term, sig.label, tm.emoji));
-      else meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
-    });
+    // Lead with source classification — the journalistic angle: role first, then type.
+    const role = SOURCE_ROLE[r.source_type];
+    if (role) {
+      const rb = el('span', 'role-badge ' + role.cls, role.label);
+      rb.title = role.note;
+      meta.appendChild(rb);
+    }
     if (r.source_type && r.source_type !== 'other') {
       const stTerm = SOURCE_TERMS[r.source_type];
       const stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
       if (stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, stTerm, stLabel, null));
       else meta.appendChild(el('span', 'src-badge src-' + r.source_type, stLabel));
     }
+    // Quality signal, secondary to the source classification.
+    getTrustSignals(r.score, r.reasons).forEach(sig => {
+      const tm = TIER_TERMS[sig.label];
+      if (tm) meta.appendChild(trustBadge('trust-badge ' + sig.cls, tm.term, sig.label, tm.emoji));
+      else meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
+    });
     if (r.source_type !== 'commercial' && Array.isArray(r.reasons) && r.reasons.some(x => String(x).startsWith('commerce:'))) {
       meta.appendChild(trustBadge('src-badge src-commercial src-secondary', 'src-commercial', 'Commercial', null));
     }
