@@ -1,0 +1,2544 @@
+[
+  {
+    "input": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests whether primary-source-publisher domains (archives, university digital collections) outrank Wikipedia tertiary and history-SEO secondary."
+    },
+    "label": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is explicitly looking for original materials, documents, or direct accounts from the French Revolution period (roughly 1789-1799). They are not seeking summaries, analyses, or modern interpretations, but rather the raw historical evidence itself or authoritative portals to such evidence. The intent is deeply academic and historical research-oriented.",
+        "ideal_sources": "Ideal sources would include digitized archives of historical documents (e.g., letters, decrees, speeches, pamphlets, newspapers from the era), university library special collections, government archives, academic projects dedicated to digitizing and presenting primary sources, and possibly museums with relevant artifacts. Scholarly articles or books that compile or provide direct access to primary sources would also be highly relevant.",
+        "first_pass": "Given the explicit 'primary sources' in the query, the role distribution should heavily favor PRIMARY. I expect at least 60% of results to be primary sources or direct gateways to them. Secondary sources might appear if they are academic discussions *about* primary sources or highly curated collections with some analysis. Tertiary sources should be minimal. For types, 'PRIMARY_SOURCE_PUBLISHER' (archives, libraries) and 'ACADEMIC' (universities, scholarly projects) should dominate, as these are the authoritative custodians of such materials. 'REFERENCE' might appear for lists of sources, but 'JOURNALISM', 'INDIE', 'COMMUNITY', 'COMMERCIAL' (unless a specific historical publisher), 'AGGREGATOR', and 'SEO_FARM' are unlikely to provide the authoritative primary sources sought.",
+        "self_critique": "The 'primary_min' of 60% seems appropriate given the directness of the query. While some results might be secondary (e.g., an academic article analyzing a primary source collection), the core intent is unambiguous. The overlap between 'PRIMARY_SOURCE_PUBLISHER' and 'ACADEMIC' types is natural, as many academic institutions function as primary source publishers. The combined minimums for these two types (40% + 30% = 70%) align well with the expected high percentage of primary role results. I've kept other types very low or at zero, as they generally lack the authority or focus required for this specific historical research query.",
+        "revision_notes": "No significant revisions from the first pass. The initial assessment holds strong. The query is very specific, leading to clear expectations for source roles and types. The constraints are conservative but reflect strong conviction based on the query's explicit nature."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 60,
+          "primary_max": 100,
+          "secondary_min": 0,
+          "secondary_max": 30,
+          "tertiary_min": 0,
+          "tertiary_max": 10,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 40,
+          "primary_source_publisher_max": 80,
+          "journalism_min": 0,
+          "journalism_max": 0,
+          "academic_min": 30,
+          "academic_max": 70,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 0,
+          "indie_max": 0,
+          "community_min": 0,
+          "community_max": 0,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 0,
+          "seo_farm_min": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests whether the authoritative Caltech-hosted primary outranks aggregator and PDF-farm versions."
+    },
+    "label": {
+      "query": "feynman lectures full text",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "The user is looking for the complete, authoritative digital version of 'The Feynman Lectures on Physics'. This implies a desire for the original content, not summaries, discussions, or physical copies.",
+        "ideal_sources": "The ideal sources would be the official website hosted by Caltech (the originating institution), or other reputable academic publishers or digital archives that have licensed or officially host the full text.",
+        "first_pass": "The Feynman Lectures are a foundational textbook, which synthesizes existing physics knowledge for educational purposes. This aligns with a SECONDARY role. The primary host is an academic institution (Caltech), so ACADEMIC type is expected to dominate. Some commercial sites might sell physical copies, but the 'full text' query implies digital access. Reference sites might link to it but not host the full text.",
+        "self_critique": "The classification of the lectures themselves as SECONDARY seems robust, as they are a pedagogical synthesis rather than original research (PRIMARY) or a summary of secondary sources (TERTIARY). For source type, 'ACADEMIC' is the strongest fit for Caltech's official site. While Caltech is the 'primary source' of the lectures, 'PRIMARY_SOURCE_PUBLISHER' is typically reserved for raw data, journals, or statutes, and 'ACADEMIC' better describes a university hosting its educational content. Commercial sites selling physical books or licensed digital versions might appear, but the emphasis on 'full text' suggests free online access is preferred, limiting their prevalence. Aggregators or SEO farms are highly unlikely to host the authoritative full text due to copyright and content quality expectations.",
+        "revision_notes": "Confirmed SECONDARY role for the content. Confirmed ACADEMIC type for the primary host. Set conservative maximums for COMMERCIAL and REFERENCE to account for potential but less ideal results. Explicitly set AGGREGATOR and SEO_FARM max to 0 due to the nature of the content and the user's implied need for authoritative, complete text."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": null,
+          "primary_max": null,
+          "secondary_min": 80,
+          "secondary_max": 100,
+          "tertiary_min": null,
+          "tertiary_max": 10,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": null,
+          "primary_source_publisher_max": null,
+          "journalism_min": null,
+          "journalism_max": null,
+          "academic_min": 70,
+          "academic_max": 100,
+          "reference_min": null,
+          "reference_max": 10,
+          "indie_min": null,
+          "indie_max": null,
+          "community_min": null,
+          "community_max": null,
+          "commercial_min": null,
+          "commercial_max": 20,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-source-type detection vs general history reference sites."
+    },
+    "label": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is explicitly looking for academic research papers, journal articles, or scholarly analyses pertaining to Roman Britain. The term 'scholarly articles' indicates a strong preference for peer-reviewed, in-depth, and authoritative academic content, rather than general information, news, or commercial content.",
+        "ideal_sources": "Ideal sources would be academic journals, university presses, institutional repositories, and reputable academic databases specializing in history, archaeology, and classics. These sources typically host peer-reviewed articles, monographs, and research papers.",
+        "first_pass": "For source role, 'scholarly articles' are almost universally secondary, as they analyze and interpret primary sources or existing secondary scholarship. Primary would be the raw evidence itself (e.g., an archaeological report's raw data, an ancient text), which an article interprets. Tertiary sources (summaries for general audiences) are antithetical to 'scholarly articles'. For source type, 'ACADEMIC' should be overwhelmingly dominant, as the query directly asks for 'scholarly articles'. Other types like 'JOURNALISM', 'REFERENCE', 'COMMERCIAL', 'SEO_FARM', 'AGGREGATOR', 'INDIE', or 'COMMUNITY' are largely inappropriate for this specific query.",
+        "self_critique": "Upon reflection, the 'PRIMARY' role for 'scholarly articles' is highly unlikely, if not impossible. An article, by its nature, is an analysis or interpretation, making it secondary. Even an article reporting new archaeological findings is an interpretation of primary data, not the raw data itself. Therefore, the expectation for PRIMARY should be 0%. Similarly, 'TERTIARY' is also inappropriate; scholarly articles are the *basis* for tertiary summaries, not the summaries themselves. A comprehensive review article is still a secondary analysis of existing scholarship, not a simple synthesis for a general audience. The 'ACADEMIC' type should be even more dominant, reflecting the very specific and unambiguous nature of the query. Other types should be minimized or entirely excluded.",
+        "revision_notes": "Adjusted 'PRIMARY' and 'TERTIARY' role percentages to 0%, as scholarly articles are fundamentally secondary analyses. Increased the lower bound for 'SECONDARY' role and 'ACADEMIC' type to reflect the strong user intent. Minimized or eliminated other types, as they do not align with the explicit request for 'scholarly articles'."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 0,
+          "secondary_min": 90,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 0,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 5,
+          "journalism_min": 0,
+          "journalism_max": 5,
+          "academic_min": 90,
+          "academic_max": 100,
+          "reference_min": 0,
+          "reference_max": 0,
+          "indie_min": 0,
+          "indie_max": 0,
+          "community_min": 0,
+          "community_max": 0,
+          "commercial_min": 0,
+          "commercial_max": 0,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Quote-verification query. Tests whether primary source (Wealth of Nations text) and academic secondary clarification outrank misattribution aggregators."
+    },
+    "label": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is seeking to verify the attribution and contextual usage of the phrase 'invisible hand' in Adam Smith's original writings. This is a factual, historical, and academic inquiry, aiming to confirm or debunk a common understanding, rather than simply define the concept. The emphasis is on 'actually say' and implies a need for authoritative evidence.",
+        "ideal_sources": "Ideal sources would include direct access to Adam Smith's original works (e.g., 'The Wealth of Nations', 'The Theory of Moral Sentiments') to allow for direct verification. Crucially, scholarly articles, academic books, and university resources that analyze Smith's texts, discuss the frequency and context of the phrase, and address common misinterpretations would be highly relevant. Reputable encyclopedic entries (e.g., Stanford Encyclopedia of Philosophy, Wikipedia, Britannica) would also serve as valuable tertiary sources for a concise, authoritative overview.",
+        "first_pass": "My initial thought was to prioritize primary sources (Smith's actual texts) for direct verification, alongside academic secondary sources for analysis. I also considered tertiary reference sources important for quick answers. I expected journalism to be less relevant and commercial/community/SEO sources to be largely irrelevant.",
+        "self_critique": "While primary sources are essential, the query 'did he *actually* say' implies a need for *analysis* and *interpretation* of those primary sources, not just the sources themselves. Many academic secondary sources directly address this specific question by quoting Smith, providing context, and discussing the phrase's historical reception. Therefore, secondary sources, particularly from academic institutions, will likely form the core of the top results. The presence of primary texts is still important for ultimate verification, but the analytical aspect of the query elevates the role of secondary sources. Journalism might occasionally cover such historical debunking, but it's unlikely to be a primary authoritative source for this specific academic query.",
+        "revision_notes": "I've adjusted the expected role distribution to reflect a stronger emphasis on SECONDARY sources, as the query demands analysis and interpretation of primary texts. PRIMARY sources remain important for direct evidence. TERTIARY sources provide valuable summaries. For types, ACADEMIC sources are expected to dominate, followed by REFERENCE and some PRIMARY_SOURCE_PUBLISHER. Other types like JOURNALISM, INDIE, COMMUNITY, COMMERCIAL, AGGREGATOR, and SEO_FARM are expected to be minimal or absent due to their lack of authority for this specific academic verification task."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 20,
+          "journalism_min": null,
+          "journalism_max": 10,
+          "academic_min": 50,
+          "academic_max": 80,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": null,
+          "indie_max": 0,
+          "community_min": null,
+          "community_max": 0,
+          "commercial_min": null,
+          "commercial_max": 0,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic publisher detection vs reference summary; primary text vs tertiary explainer."
+    },
+    "label": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "The user is looking for information about J\u00fcrgen Habermas's concept of the public sphere, specifically related to his seminal work, 'The Structural Transformation of the Public Sphere'. The query implies a desire to find the book itself, as well as academic discussions and explanations of its content and significance.",
+        "ideal_sources": "Ideal sources would include the book's publisher page, academic reviews and analyses of the book, scholarly articles discussing the public sphere concept, and high-quality reference entries (like encyclopedias) explaining Habermas's work. Direct access to the text or excerpts would also be highly relevant.",
+        "first_pass": "For roles, I expect a mix: PRIMARY for the book itself or direct excerpts/publisher information; SECONDARY for academic analyses, reviews, and interpretations; and TERTIARY for encyclopedic summaries. For types, ACADEMIC and REFERENCE sources should dominate, with some PRIMARY_SOURCE_PUBLISHER (the book's publisher) and a small presence of COMMERCIAL (book retailers). JOURNALISM, AGGREGATOR, SEO_FARM, and COMMUNITY are highly unlikely to be relevant for this specific academic query.",
+        "self_critique": "The primary interpretation of 'habermas public sphere book' is 'The Structural Transformation of the Public Sphere'. While Habermas wrote other books, and the public sphere is discussed broadly, this specific phrasing strongly points to the seminal work. The distinction between PRIMARY_SOURCE_PUBLISHER (the entity publishing the original book) and ACADEMIC (institutions/journals providing secondary analysis) is important and maintained. Commercial sites (book retailers) are likely to appear but should not dominate. The conviction that non-academic/reference types like journalism, aggregators, or SEO farms will be absent or minimal remains strong due to the niche academic nature of the query.",
+        "revision_notes": "The initial ranges and classifications hold up well under self-critique. The distribution reflects the academic nature of the query, prioritizing direct sources, scholarly analysis, and authoritative summaries. No significant adjustments to the proposed percentages are needed, as the ranges provide sufficient flexibility while maintaining strong convictions about the overall distribution."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 20,
+          "secondary_min": 50,
+          "secondary_max": 70,
+          "tertiary_min": 20,
+          "tertiary_max": 30,
+          "unclassified_max": 0
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 20,
+          "journalism_min": null,
+          "journalism_max": 0,
+          "academic_min": 40,
+          "academic_max": 60,
+          "reference_min": 20,
+          "reference_max": 30,
+          "indie_min": null,
+          "indie_max": 10,
+          "community_min": null,
+          "community_max": 0,
+          "commercial_min": 10,
+          "commercial_max": 20,
+          "aggregator_max": 0,
+          "seo_farm_max": 0,
+          "unclassified_max": 0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (court opinion text) vs journalism secondary vs legal-SEO."
+    },
+    "label": {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "User is looking for the specific court opinion overturning Chevron (Loper Bright Enterprises v. Raimondo, 2024) and its analysis. The query phrasing 'supreme court ruling' signals an interest in primary court text and contemporaneous reporting on it.",
+        "ideal_sources": "Supreme Court opinion text primary (supremecourt.gov), other federal court databases primary, journalism (legal news + mainstream), academic legal commentary, legal-SEO commercial firm pages.",
+        "first_pass": "Primary court opinion + journalism dominant. Some legal-SEO from firms competing for attention on landmark rulings.",
+        "self_critique": "The primary court document is canonical here. Commercial law firm content is real but should not dominate; secondary academic commentary is real but takes longer to publish than the journalism wave.",
+        "revision_notes": "Primary elevated, journalism real, commercial capped, SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 0,
+          "academic_max": 20,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic primary text vs SEP/reference tertiary summary."
+    },
+    "label": {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "Foundational legal-philosophy text lookup. User wants Kelsen's primary work (Reine Rechtslehre) or scholarly analyses of it.",
+        "ideal_sources": "Academic primary (university press editions, JSTOR, Wikisource), Stanford Encyclopedia of Philosophy tertiary, indie academic blogs, reference.",
+        "first_pass": "Academic dominant. SEP and reference real for orientation. Limited SEO since the topic is academic.",
+        "self_critique": "Kelsen's text is academic primary, secondary academic commentary is heavy. Tertiary SEP entry is canonical and should appear.",
+        "revision_notes": "Academic + reference elevated."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 20,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 40,
+          "academic_max": 70,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Mixed-domain query. Tests whether official-museum primary, reference, and journalism (repatriation debate) are surfaced together."
+    },
+    "label": {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "Mixed-intent query: factual location question, plus implicit interest in the repatriation debate (Egypt's claims). User wants both museum-primary confirmation and the contested journalism context.",
+        "ideal_sources": "British Museum primary, Egyptian Ministry of Antiquities primary, journalism on repatriation debate, reference (Wikipedia, Britannica), academic Egyptology.",
+        "first_pass": "Primary museum + reference + journalism mixed. Academic minor.",
+        "self_critique": "Reference (Wikipedia, Britannica) is the natural fit for the factual half; journalism handles the contested half.",
+        "revision_notes": "Mixed across primary, reference, journalism."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 0,
+          "academic_max": 20,
+          "reference_min": 20,
+          "reference_max": 40,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (gov statute repository) ranking on a clear primary-source ask."
+    },
+    "label": {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "User wants the primary statute text. This is a textbook primary-source query.",
+        "ideal_sources": "gov statute repositories (govinfo.gov, congress.gov, archives.gov), academic legal databases, reference (Wikipedia for orientation).",
+        "first_pass": "Primary-source-publisher dominant.",
+        "self_critique": "Statute repositories are canonical. Heavy primary expected.",
+        "revision_notes": "Primary 50-80."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 50,
+          "primary_max": 80,
+          "secondary_min": 10,
+          "secondary_max": 40,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 50,
+          "primary_source_publisher_max": 80,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 20,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-publisher primary (proceedings) vs blog secondary vs conference site tertiary."
+    },
+    "label": {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "reasoning": {
+        "user_intent": "User wants the academic primary publication (NeurIPS proceedings) or contemporaneous coverage of which paper won.",
+        "ideal_sources": "neurips.cc primary (proceedings), arXiv preprints primary, academic, indie ML blogs, journalism (TechCrunch, MIT Tech Review).",
+        "first_pass": "Primary + academic dominant. Indie ML blogs real.",
+        "self_critique": "Conference proceedings are the canonical primary. Indie blogs (Jack Clark, Sebastian Raschka) real for analysis.",
+        "revision_notes": "Primary + academic dominant."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness ranking and primary statements (gov communications) vs aggregator."
+    },
+    "label": {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Current-event freshness query. User wants the latest reporting plus primary statements from involved governments.",
+        "ideal_sources": "Journalism (Reuters, AP, BBC, FT), gov primary (state.gov, kremlin.ru, kyiv government), academic/think tank.",
+        "first_pass": "Journalism dominant, primary real.",
+        "self_critique": "Heavy journalism for freshness; primary gov statements supplement.",
+        "revision_notes": "Journalism dominant."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism-as-primary (contemporaneous reporting) vs secondary retrospective."
+    },
+    "label": {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Specific event retrospective. User wants journalism (especially contemporaneous reporting that broke or pieced together the story) and OpenAI/board primary statements.",
+        "ideal_sources": "Journalism (The Information, NYT, WSJ, Bloomberg), OpenAI primary blog, Sam Altman/Adam D'Angelo public statements, indie analysis.",
+        "first_pass": "Journalism dominant. Primary statements real.",
+        "self_critique": "Journalism-as-primary is the right framing; contemporaneous reporting drove the story.",
+        "revision_notes": "Journalism dominant."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests official communications (primary) vs journalism coverage vs SEO regurgitation."
+    },
+    "label": {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Specific product release announcement. User wants the official Anthropic announcement first and journalism coverage second.",
+        "ideal_sources": "anthropic.com primary, journalism (TechCrunch, The Verge, MIT Tech Review), indie AI blogs, SEO regurgitation.",
+        "first_pass": "Primary dominant on a 'release announcement' query.",
+        "self_critique": "Vendor primary is canonical for release announcements. Journalism follows, SEO copy follows that.",
+        "revision_notes": "Primary + journalism dominant. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 20,
+          "journalism_max": 50,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 20,
+          "commercial_max": 40,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Quote-verification with transcript availability. Tests primary (video/transcript) vs journalism (selectively-quoted) vs aggregator."
+    },
+    "label": {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Quote-verification query. User wants either the primary transcript/video or journalism contextualizing the claim. Politically loaded; aggregator and partisan SEO are likely.",
+        "ideal_sources": "Video/transcript primary (Tucker's own site, X clips), journalism quoting in context, partisan aggregator promoting or attacking the framing.",
+        "first_pass": "Journalism dominant. Primary transcripts real. SEO real.",
+        "self_critique": "Primary transcript is canonical for verification. Aggregator-style framing is heavy for political quote queries.",
+        "revision_notes": "Primary + journalism. Aggregator + SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 20,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (SEC filings, court docket) vs journalism."
+    },
+    "label": {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Lawsuit-status lookup. User wants the SEC's primary filings, court docket primary, and journalism coverage of the outcome.",
+        "ideal_sources": "SEC.gov primary, court docket primary, journalism (Bloomberg, Reuters, Coindesk), commercial crypto industry coverage.",
+        "first_pass": "Primary + journalism dominant.",
+        "self_critique": "SEC filings and court docket are canonical primary. Crypto-industry commercial coverage is real.",
+        "revision_notes": "Primary + journalism. Commercial real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "trump indictment status",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests current journalism freshness + primary (court records) vs aggregators."
+    },
+    "label": {
+      "query": "trump indictment status",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Current-status lookup with multiple possible indictments referenced; needs freshness plus primary court records.",
+        "ideal_sources": "Court docket primary (federal, NY, GA), journalism, indie analysis.",
+        "first_pass": "Journalism dominant for freshness. Primary court records real.",
+        "self_critique": "Ambiguous referent (multiple indictments), so journalism aggregation is most useful.",
+        "revision_notes": "Journalism dominant."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Tests primary (company announcement) vs journalism vs retrospective tertiary, for a recent specific event."
+    },
+    "label": {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Specific company-event lookup; recent shutdown news plus retrospective coverage.",
+        "ideal_sources": "Journalism announcements + retrospectives, IAC primary statements, archive.org primary, reference (Wikipedia).",
+        "first_pass": "Journalism dominant. Primary statements real.",
+        "self_critique": "Heavy retrospective and reference content for recognizable defunct services.",
+        "revision_notes": "Journalism + reference."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (Fed press release) vs journalism vs commercial finance sites."
+    },
+    "label": {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Specific Fed decision lookup. User wants the FOMC primary statement plus financial-press coverage.",
+        "ideal_sources": "federalreserve.gov primary, journalism (WSJ, Bloomberg, FT, Reuters), commercial finance sites (CNBC, Yahoo Finance).",
+        "first_pass": "Primary + journalism dominant.",
+        "self_critique": "FOMC release is canonical. Commercial finance press is heavy on Fed coverage.",
+        "revision_notes": "Primary + journalism. Commercial real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "supreme court decision today",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness and primary (court opinion text) for time-sensitive query."
+    },
+    "label": {
+      "query": "supreme court decision today",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Freshness query for the most recent SCOTUS decision. User wants journalism freshness plus the opinion text primary.",
+        "ideal_sources": "supremecourt.gov primary, scotusblog primary (court-adjacent specialist), journalism, reference.",
+        "first_pass": "Primary + journalism dominant.",
+        "self_critique": "SCOTUSblog is a respected court-adjacent specialist; treat as primary-source-publisher or academic edge.",
+        "revision_notes": "Primary + journalism."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism + primary gov communications vs advocacy-source contamination."
+    },
+    "label": {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "reasoning": {
+        "user_intent": "Confirmation-status lookup. Politically charged. User wants journalism plus Senate primary records and HHS primary statements.",
+        "ideal_sources": "senate.gov primary, hhs.gov primary, journalism, advocacy ngo (medical orgs + anti-vax advocacy).",
+        "first_pass": "Primary + journalism + advocacy.",
+        "self_critique": "Heavy advocacy contamination from both sides on confirmation.",
+        "revision_notes": "Journalism dominant. Primary real. Advocacy indie real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs (primary) vs indie tech blog (secondary) vs SEO content farm."
+    },
+    "label": {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Tutorial-style lookup. User wants the official docs and approachable explainers.",
+        "ideal_sources": "python.org docs primary, indie blogs (Real Python, dbader), SEO tutorial farms (GeeksforGeeks, programiz, javatpoint).",
+        "first_pass": "Primary + indie. SEO heavy.",
+        "self_critique": "Standard tutorial query. Heavy SEO.",
+        "revision_notes": "Primary + indie. SEO heavy."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 10,
+          "tertiary_max": 40,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 40,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs (primary) vs community (Stack Overflow) for specific error code."
+    },
+    "label": {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Specific error code lookup. User wants the official error explanation and community solutions.",
+        "ideal_sources": "doc.rust-lang.org error index primary, community (Stack Overflow, users.rust-lang.org), indie blogs.",
+        "first_pass": "Primary + community dominant.",
+        "self_critique": "Rust error index is canonical; community has the practical fixes.",
+        "revision_notes": "Primary + community."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 20,
+          "community_max": 40,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests vendor commercial vs community vs independent technical analysis on a contested vendor claim."
+    },
+    "label": {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Contested vendor claim. User wants independent technical analysis, not just MongoDB's marketing.",
+        "ideal_sources": "Indie deep-dive (Jepsen, Kyle Kingsbury), MongoDB primary docs, community (HN, r/database), academic.",
+        "first_pass": "Indie + primary mixed.",
+        "self_critique": "Jepsen is canonical indie authority on this exact question. Community real.",
+        "revision_notes": "Indie elevated. Primary real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 20,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 30,
+          "indie_max": 60,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests official docs primary vs indie analysis vs SEO regurgitation for fast-moving topic."
+    },
+    "label": {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Comparison + concept lookup for a fast-moving framework feature.",
+        "ideal_sources": "react.dev primary, nextjs.org primary, indie deep-dive blogs (Dan Abramov, Lee Robinson), community.",
+        "first_pass": "Primary + indie dominant.",
+        "self_critique": "Heavy indie deep-dive content on RSC topic.",
+        "revision_notes": "Primary + indie."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 30,
+          "indie_max": 50,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "linux find command examples",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests reference (man pages, MDN-equivalents) vs community vs SEO farm output for common technical query."
+    },
+    "label": {
+      "query": "linux find command examples",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Command-reference + examples lookup. Heavy SEO category.",
+        "ideal_sources": "man-page primary, indie tutorials, SEO content farms, community.",
+        "first_pass": "SEO heavy. Primary real.",
+        "self_critique": "Common-command queries are highly polluted by SEO listicle farms.",
+        "revision_notes": "SEO heavy. Primary + community real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 20,
+          "tertiary_max": 50,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 60,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs vs community operational advice."
+    },
+    "label": {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Operational best-practice question. User wants the official docs and operational community advice.",
+        "ideal_sources": "postgresql.org docs primary, indie deep-dive blogs (depesz, citusdata), community (r/postgresql, dba.stackexchange), commercial managed-postgres content.",
+        "first_pass": "Primary + indie + community.",
+        "self_critique": "Depesz canonical for postgres operational analysis.",
+        "revision_notes": "Primary + indie elevated."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 30,
+          "indie_max": 50,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests indie criticism (blog posts) vs community vs vendor commercial; opinion-heavy technical query."
+    },
+    "label": {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Critical analysis query. User wants indie criticism, not vendor PR.",
+        "ideal_sources": "Indie blogs (Hamel Husain, eugeneyan, octomind, dair-ai), community (HN, r/MachineLearning), langchain primary docs, vendor PR.",
+        "first_pass": "Indie + community dominant.",
+        "self_critique": "Critical-analysis queries favor indie strongly over vendor PR.",
+        "revision_notes": "Indie elevated. Community real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 20,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 40,
+          "indie_max": 70,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests RFC primary vs reference vs indie/community implementations."
+    },
+    "label": {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Protocol implementation lookup. User wants the RFC plus implementation guides.",
+        "ideal_sources": "IETF RFC primary (rfc7636), vendor docs (Auth0, Okta, Microsoft), indie blogs, community.",
+        "first_pass": "Primary + commercial mixed.",
+        "self_critique": "RFC is canonical; vendor implementation docs are heavy but secondary.",
+        "revision_notes": "Primary + commercial."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 50,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 20,
+          "commercial_max": 40,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs primary on a versioned-syntax query."
+    },
+    "label": {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Versioned syntax reference. User wants the official compose spec.",
+        "ideal_sources": "docs.docker.com primary, compose-spec.io primary, indie blogs, github examples.",
+        "first_pass": "Primary dominant.",
+        "self_critique": "Versioned syntax queries strongly favor canonical primary.",
+        "revision_notes": "Primary 30-60."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests community (Stack Overflow, GitHub issues) vs SEO troubleshooting farms."
+    },
+    "label": {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "reasoning": {
+        "user_intent": "Troubleshooting query. User wants community fixes and operational guides.",
+        "ideal_sources": "Community (Stack Overflow, GitHub issues), indie ops blogs, kubernetes.io primary docs, troubleshooting SEO.",
+        "first_pass": "Community + indie dominant.",
+        "self_critique": "Troubleshooting queries heavily favor community.",
+        "revision_notes": "Community elevated. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 0,
+          "journalism_max": 10,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 30,
+          "community_max": 50,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism (review sites with editorial process) vs SEO content farm vs commercial primary."
+    },
+    "label": {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Product recommendation. Specialty community heavy.",
+        "ideal_sources": "Journalism review (rtings, wirecutter, pcgamer), community (r/MechanicalKeyboards, r/MK), SEO listicle farms, commercial brand.",
+        "first_pass": "Journalism + community + SEO.",
+        "self_critique": "Mech keyboard community is canonical for this exact query phrasing.",
+        "revision_notes": "Community + journalism. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 10,
+          "tertiary_max": 40,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 10,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 20,
+          "community_max": 40,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 40,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests whether the named journalism source ranks above SEO replicas and aggregators of its picks."
+    },
+    "label": {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Named-publication query. User explicitly wants Wirecutter's picks.",
+        "ideal_sources": "nytimes.com/wirecutter primary, SEO replicas of Wirecutter picks.",
+        "first_pass": "Journalism dominant (Wirecutter itself).",
+        "self_critique": "Direct named-publication query; canonical journalism source should dominate.",
+        "revision_notes": "Journalism 40-70."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 10,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests indie review (blogs, community) vs commercial vs SEO; 'honest' modifier signals user wants non-commercial."
+    },
+    "label": {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Modifier 'honest' signals user wants indie/community non-commercial review, not Fitbit's marketing.",
+        "ideal_sources": "Indie blogs/reviewers (DC Rainmaker), community (r/fitbit), journalism, SEO.",
+        "first_pass": "Indie + community elevated.",
+        "self_critique": "'Honest' modifier is a strong signal away from commercial.",
+        "revision_notes": "Indie + community elevated."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 10,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 30,
+          "indie_max": 50,
+          "community_min": 20,
+          "community_max": 40,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + SEC primary (filings) vs aggregator clickbait for a financial-status query."
+    },
+    "label": {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Financial-status query. User wants SEC filings primary plus journalism.",
+        "ideal_sources": "SEC EDGAR primary, journalism financial coverage (WSJ, Bloomberg, Retail Dive), aggregator clickbait.",
+        "first_pass": "Primary + journalism dominant. SEO real.",
+        "self_critique": "SEC filings are canonical for public-company financial status. Heavy clickbait around delisting/bankruptcy.",
+        "revision_notes": "Primary + journalism. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests commercial primary (the corporate site) ranking on a direct policy query."
+    },
+    "label": {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Direct corporate-policy query. User wants Amazon's primary policy page.",
+        "ideal_sources": "amazon.com primary, SEO summaries.",
+        "first_pass": "Commercial primary dominant.",
+        "self_critique": "Brand-policy queries strongly favor commercial primary.",
+        "revision_notes": "Commercial 50-80."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 10,
+          "tertiary_max": 40,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 10,
+          "journalism_min": 0,
+          "journalism_max": 20,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 20,
+          "commercial_min": 50,
+          "commercial_max": 80,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests journalism + commercial primary (manufacturer sites) vs SEO comparison farms."
+    },
+    "label": {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Vehicle cost comparison. User wants manufacturer pricing primary plus journalism comparison.",
+        "ideal_sources": "tesla.com primary, ford.com primary, journalism (caranddriver, motortrend), SEO comparison farms.",
+        "first_pass": "Commercial primary + journalism.",
+        "self_critique": "Manufacturer sites are canonical for current pricing.",
+        "revision_notes": "Commercial + journalism. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 30,
+          "commercial_max": 50,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests commercial primary (brand site) vs aggregator marketplace listings vs community advice on counterfeits."
+    },
+    "label": {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Authentication-trust query. User wants brand primary, authorized retailer list, plus community advice on avoiding counterfeits.",
+        "ideal_sources": "lecreuset.com primary, authorized retailer commercial pages, community (r/cookware, r/Cookware), journalism on counterfeit detection.",
+        "first_pass": "Commercial primary + community.",
+        "self_critique": "Brand-primary canonical for authentication. Community real on counterfeit-spotting.",
+        "revision_notes": "Commercial + community real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 30,
+          "community_max": 50,
+          "commercial_min": 30,
+          "commercial_max": 50,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (both brand sites) for a policy comparison query."
+    },
+    "label": {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Direct brand-policy comparison. User wants both brand primary policy pages.",
+        "ideal_sources": "rei.com primary, llbean.com primary, journalism comparison, SEO summary.",
+        "first_pass": "Commercial primary dominant.",
+        "self_critique": "Same shape as Amazon policy query; brand primaries dominate.",
+        "revision_notes": "Commercial elevated."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 40,
+          "commercial_max": 70,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism review vs SEO farm vs commercial primary on a high-SEO-pollution query."
+    },
+    "label": {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Use-case product recommendation. High-SEO-pollution category.",
+        "ideal_sources": "Journalism (Runner's World, wirecutter), community (r/running, r/runningshoegeeks), commercial brand, SEO affiliate.",
+        "first_pass": "Journalism + community + SEO.",
+        "self_critique": "Heavy affiliate SEO pollution typical for this category.",
+        "revision_notes": "SEO heavy. Journalism + community real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 20,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 10,
+          "tertiary_max": 40,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 10,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 10,
+          "commercial_max": 30,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 50,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (service availability tool) vs journalism vs community reports."
+    },
+    "label": {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "reasoning": {
+        "user_intent": "Service availability lookup. User wants the SpaceX/Starlink primary availability tool.",
+        "ideal_sources": "starlink.com primary, journalism, community (r/starlink) user reports, aggregator availability maps.",
+        "first_pass": "Commercial primary dominant.",
+        "self_critique": "Service-availability tools are canonical commercial primary.",
+        "revision_notes": "Commercial elevated. Community real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 0,
+          "academic_max": 0,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 10,
+          "community_max": 30,
+          "commercial_min": 30,
+          "commercial_max": 60,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Common-typo realistic query. Tests academic + reference (mainstream consensus) vs SEO advocacy + conspiracy aggregators."
+    },
+    "label": {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Health-claim safety question. Misspelled 'fluoride' typo common. Mainstream consensus vs advocacy contamination.",
+        "ideal_sources": "CDC primary, EPA primary, ADA primary, academic (NTP monograph), journalism, anti-fluoride aggregator, conspiracy SEO.",
+        "first_pass": "Primary + academic. SEO real.",
+        "self_critique": "Recent NTP monograph adds primary nuance to the question. Heavy advocacy/conspiracy SEO real.",
+        "revision_notes": "Primary + academic. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 0,
+          "reference_max": 20,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + academic vs indie/advocacy vs SEO conspiracy on a topic where scientific and political consensus diverge."
+    },
+    "label": {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Origin evidence lookup. Heavy contestation; multiple US intel assessments differ.",
+        "ideal_sources": "ODNI primary, FBI primary, DOE primary, academic papers, journalism investigation, advocacy.",
+        "first_pass": "Primary + academic + journalism + advocacy.",
+        "self_critique": "Real primary documents from multiple agencies. Heavy advocacy both sides.",
+        "revision_notes": "Primary + academic. Indie real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 20,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic (peer-reviewed primary/secondary) vs SEO advocacy outlets on a medical-political topic."
+    },
+    "label": {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Drug efficacy lookup. Heavy political contestation; mainstream academic vs conspiracy aggregator.",
+        "ideal_sources": "Cochrane primary, NIH primary, academic peer-reviewed, journalism debunking, conspiracy aggregator.",
+        "first_pass": "Academic + primary dominant. SEO real.",
+        "self_critique": "Real academic literature negative. Heavy conspiracy SEO real but structural classification handles.",
+        "revision_notes": "Academic + primary. SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 30,
+          "academic_max": 50,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests academic + reference (settled scientific consensus) vs advocacy-source contamination."
+    },
+    "label": {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Settled-science consensus question. Mainstream consensus + denialist contamination.",
+        "ideal_sources": "IPCC primary, NASA primary, NOAA primary, academic, reference, denialist SEO.",
+        "first_pass": "Primary + academic dominant.",
+        "self_critique": "Heavy reference + primary; denialist SEO capped.",
+        "revision_notes": "Primary + academic + reference."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 10,
+          "tertiary_max": 30,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": 0,
+          "indie_max": 20,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + primary (official reports) vs conspiracy SEO and aggregators on a high-noise topic."
+    },
+    "label": {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Cause-of-death question. Officially suicide; heavily disputed.",
+        "ideal_sources": "NYC ME primary, DOJ OIG report primary, journalism investigations, conspiracy aggregator.",
+        "first_pass": "Primary + journalism dominant.",
+        "self_critique": "Primary documents exist (ME report, DOJ OIG). Conspiracy aggregator heavy but capped.",
+        "revision_notes": "Primary + journalism. Aggregator + SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 20,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research primary/secondary vs advocacy organizations (both sides) vs journalism."
+    },
+    "label": {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Research lookup. Heavy political contestation.",
+        "ideal_sources": "Academic primary studies, IOC/governing-body primary, advocacy (both sides), journalism.",
+        "first_pass": "Academic + advocacy + journalism.",
+        "self_critique": "Heavy advocacy both sides; academic literature real.",
+        "revision_notes": "Academic + indie real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 20,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests primary historical sources + academic secondary vs advocacy commentary."
+    },
+    "label": {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Originalist legal/historical interpretation question.",
+        "ideal_sources": "Primary historical sources (Federalist, ratification debates), academic legal history (Heller scholarship), advocacy think tanks (both sides), journalism.",
+        "first_pass": "Primary + academic + advocacy.",
+        "self_critique": "Heavy advocacy from both sides on this exact question.",
+        "revision_notes": "Primary + academic. Indie real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 20,
+          "primary_max": 40,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 20,
+          "primary_source_publisher_max": 40,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 10,
+          "reference_max": 30,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests gov primary + journalism debunking vs propaganda/state-media sources vs SEO conspiracy."
+    },
+    "label": {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Politically loaded factual question. Propaganda narrative pushed by Russian state media + conspiracy aggregator; mainstream debunking exists.",
+        "ideal_sources": "DTRA primary, state.gov primary, journalism debunking, fact-check primary, state-media propaganda, conspiracy SEO.",
+        "first_pass": "Primary + journalism dominant. SEO + aggregator real.",
+        "self_critique": "Real primary documents about cooperative threat reduction programs exist. Heavy propaganda + conspiracy aggregator real but capped.",
+        "revision_notes": "Primary + journalism. Aggregator + SEO real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 30,
+          "journalism_max": 60,
+          "academic_min": 0,
+          "academic_max": 10,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 10,
+          "indie_max": 30,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 20,
+          "seo_farm_min": 0,
+          "seo_farm_max": 30,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research vs advocacy think tanks (both sides) vs journalism."
+    },
+    "label": {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Policy-effects research lookup. Politically contested.",
+        "ideal_sources": "Academic research (peer-reviewed political science), advocacy think tanks (both sides), journalism, gov primary (Census, state election data).",
+        "first_pass": "Academic + advocacy + journalism.",
+        "self_critique": "Real academic literature exists; advocacy think tanks (Heritage, Brennan Center) heavy.",
+        "revision_notes": "Academic + indie."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 10,
+          "primary_max": 30,
+          "secondary_min": 50,
+          "secondary_max": 80,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 10,
+          "primary_source_publisher_max": 30,
+          "journalism_min": 20,
+          "journalism_max": 40,
+          "academic_min": 20,
+          "academic_max": 40,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (CDC/FBI) vs advocacy organizations citing the same data differently."
+    },
+    "label": {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "reasoning": {
+        "user_intent": "Statistics lookup. Same gov primary data interpreted differently by advocacy on both sides.",
+        "ideal_sources": "CDC primary, FBI UCR primary, Gun Violence Archive primary, journalism, advocacy ngo (both sides).",
+        "first_pass": "Primary dominant.",
+        "self_critique": "Multiple primary sources exist; advocacy citation real.",
+        "revision_notes": "Primary elevated. Indie real."
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 30,
+          "primary_max": 60,
+          "secondary_min": 30,
+          "secondary_max": 60,
+          "tertiary_min": 0,
+          "tertiary_max": 20,
+          "unclassified_max": 10
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 30,
+          "primary_source_publisher_max": 60,
+          "journalism_min": 10,
+          "journalism_max": 30,
+          "academic_min": 0,
+          "academic_max": 20,
+          "reference_min": 0,
+          "reference_max": 10,
+          "indie_min": 20,
+          "indie_max": 40,
+          "community_min": 0,
+          "community_max": 10,
+          "commercial_min": 0,
+          "commercial_max": 10,
+          "aggregator_min": 0,
+          "aggregator_max": 10,
+          "seo_farm_min": 0,
+          "seo_farm_max": 10,
+          "unclassified_max": 10
+        }
+      }
+    }
+  }
+]

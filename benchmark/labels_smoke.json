@@ -1,0 +1,3452 @@
+[
+  {
+    "input": {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Common-typo realistic query. Tests academic + reference (mainstream consensus) vs SEO advocacy + conspiracy aggregators."
+    },
+    "label": {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 70.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 20.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 55,
+          "secondary_max": 85,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 5,
+          "academic_max": 35,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism-as-primary (contemporaneous reporting) vs secondary retrospective."
+    },
+    "label": {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 80.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 70.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 65,
+          "secondary_max": 95,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 55,
+          "journalism_max": 85,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests primary historical sources + academic secondary vs advocacy commentary."
+    },
+    "label": {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 30.0,
+          "SECONDARY": 60.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 40.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 30.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 15,
+          "primary_max": 45,
+          "secondary_min": 45,
+          "secondary_max": 75,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 25,
+          "academic_max": 55,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 15,
+          "commercial_max": 45,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests official docs primary vs indie analysis vs SEO regurgitation for fast-moving topic."
+    },
+    "label": {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 70.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 40.0,
+          "COMMUNITY": 30.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 55,
+          "secondary_max": 85,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 25,
+          "indie_max": 55,
+          "community_min": 15,
+          "community_max": 45,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + academic vs indie/advocacy vs SEO conspiracy on a topic where scientific and political consensus diverge."
+    },
+    "label": {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 50.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 40.0,
+          "JOURNALISM": 10.0,
+          "ACADEMIC": 30.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 35,
+          "primary_max": 65,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 25,
+          "primary_source_publisher_max": 55,
+          "journalism_min": 0,
+          "journalism_max": 25,
+          "academic_min": 15,
+          "academic_max": 45,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (Fed press release) vs journalism vs commercial finance sites."
+    },
+    "label": {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 40.0,
+          "SECONDARY": 60.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 40.0,
+          "JOURNALISM": 20.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 40.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 25,
+          "primary_max": 55,
+          "secondary_min": 45,
+          "secondary_max": 75,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 25,
+          "primary_source_publisher_max": 55,
+          "journalism_min": 5,
+          "journalism_max": 35,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 25,
+          "commercial_max": 55,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests journalism + commercial primary (manufacturer sites) vs SEO comparison farms."
+    },
+    "label": {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 44.44444444444444,
+          "TERTIARY": 55.55555555555556,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 22.22222222222222,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 44.44444444444444,
+          "COMMERCIAL": 33.33333333333333,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 29,
+          "secondary_max": 59,
+          "tertiary_min": 40,
+          "tertiary_max": 70,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 7,
+          "journalism_max": 37,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 29,
+          "community_max": 59,
+          "commercial_min": 18,
+          "commercial_max": 48,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests community (Stack Overflow, GitHub issues) vs SEO troubleshooting farms."
+    },
+    "label": {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 70.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 10.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 30.0,
+          "COMMUNITY": 40.0,
+          "COMMERCIAL": 20.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 55,
+          "secondary_max": 85,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 25,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 15,
+          "indie_max": 45,
+          "community_min": 25,
+          "community_max": 55,
+          "commercial_min": 5,
+          "commercial_max": 35,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests gov primary + journalism debunking vs propaganda/state-media sources vs SEO conspiracy."
+    },
+    "label": {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 50.0,
+          "SECONDARY": 40.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 50.0,
+          "JOURNALISM": 30.0,
+          "ACADEMIC": 10.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 35,
+          "primary_max": 65,
+          "secondary_min": 25,
+          "secondary_max": 55,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 35,
+          "primary_source_publisher_max": 65,
+          "journalism_min": 15,
+          "journalism_max": 45,
+          "academic_min": 0,
+          "academic_max": 25,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism (review sites with editorial process) vs SEO content farm vs commercial primary."
+    },
+    "label": {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 70.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 30.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 55,
+          "tertiary_max": 85,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 15,
+          "journalism_max": 45,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests commercial primary (the corporate site) ranking on a direct policy query."
+    },
+    "label": {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 60.0,
+          "SECONDARY": 10.0,
+          "TERTIARY": 30.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 20.0,
+          "COMMERCIAL": 80.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 45,
+          "primary_max": 75,
+          "secondary_min": 0,
+          "secondary_max": 25,
+          "tertiary_min": 15,
+          "tertiary_max": 45,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 5,
+          "community_max": 35,
+          "commercial_min": 65,
+          "commercial_max": 95,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests academic + reference (settled scientific consensus) vs advocacy-source contamination."
+    },
+    "label": {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 33.33333333333333,
+          "SECONDARY": 44.44444444444444,
+          "TERTIARY": 22.22222222222222,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+          "JOURNALISM": 11.11111111111111,
+          "ACADEMIC": 44.44444444444444,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 22.22222222222222,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 18,
+          "primary_max": 48,
+          "secondary_min": 29,
+          "secondary_max": 59,
+          "tertiary_min": 7,
+          "tertiary_max": 37,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 7,
+          "primary_source_publisher_max": 37,
+          "journalism_min": 0,
+          "journalism_max": 26,
+          "academic_min": 29,
+          "academic_max": 59,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 7,
+          "community_max": 37,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "linux find command examples",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests reference (man pages, MDN-equivalents) vs community vs SEO farm output for common technical query."
+    },
+    "label": {
+      "query": "linux find command examples",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 40.0,
+          "SECONDARY": 0.0,
+          "TERTIARY": 60.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 30.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 20.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 20.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 20.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 25,
+          "primary_max": 55,
+          "secondary_min": 0,
+          "secondary_max": 15,
+          "tertiary_min": 45,
+          "tertiary_max": 75,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 15,
+          "primary_source_publisher_max": 45,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 5,
+          "indie_max": 35,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 5,
+          "commercial_max": 35,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 5,
+          "seo_farm_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests whether primary-source-publisher domains (archives, university digital collections) outrank Wikipedia tertiary and history-SEO secondary."
+    },
+    "label": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 70.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 60.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 30.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 55,
+          "primary_max": 85,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 45,
+          "primary_source_publisher_max": 75,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 15,
+          "academic_max": 45,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-publisher primary (proceedings) vs blog secondary vs conference site tertiary."
+    },
+    "label": {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 30.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 10.0,
+          "ACADEMIC": 20.0,
+          "REFERENCE": 0.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 30.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 20.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 15,
+          "tertiary_max": 45,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 25,
+          "academic_min": 5,
+          "academic_max": 35,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 15,
+          "community_max": 45,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 5,
+          "aggregator_max": 35,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism + primary gov communications vs advocacy-source contamination."
+    },
+    "label": {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 40.0,
+          "SECONDARY": 40.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 40.0,
+          "JOURNALISM": 40.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 25,
+          "primary_max": 55,
+          "secondary_min": 25,
+          "secondary_max": 55,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 25,
+          "primary_source_publisher_max": 55,
+          "journalism_min": 25,
+          "journalism_max": 55,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "trump indictment status",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests current journalism freshness + primary (court records) vs aggregators."
+    },
+    "label": {
+      "query": "trump indictment status",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 30.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 30.0,
+          "JOURNALISM": 40.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 30.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 15,
+          "primary_max": 45,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 15,
+          "primary_source_publisher_max": 45,
+          "journalism_min": 25,
+          "journalism_max": 55,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 15,
+          "reference_max": 45,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests RFC primary vs reference vs indie/community implementations."
+    },
+    "label": {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 40.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 10.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 10.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 60.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 25,
+          "primary_max": 55,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 25,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 45,
+          "commercial_max": 75,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (service availability tool) vs journalism vs community reports."
+    },
+    "label": {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 37.5,
+          "SECONDARY": 25.0,
+          "TERTIARY": 37.5,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 12.5,
+          "COMMUNITY": 12.5,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 12.5,
+          "SEO_FARM": 12.5,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 22,
+          "primary_max": 52,
+          "secondary_min": 10,
+          "secondary_max": 40,
+          "tertiary_min": 22,
+          "tertiary_max": 52,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 27,
+          "community_min": 0,
+          "community_max": 27,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 27,
+          "seo_farm_min": 0,
+          "seo_farm_max": 27,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (court opinion text) vs journalism secondary vs legal-SEO."
+    },
+    "label": {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 10.0,
+          "SECONDARY": 80.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 20.0,
+          "ACADEMIC": 20.0,
+          "REFERENCE": 20.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 25,
+          "secondary_min": 65,
+          "secondary_max": 95,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 5,
+          "journalism_max": 35,
+          "academic_min": 5,
+          "academic_max": 35,
+          "reference_min": 5,
+          "reference_max": 35,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Quote-verification with transcript availability. Tests primary (video/transcript) vs journalism (selectively-quoted) vs aggregator."
+    },
+    "label": {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 10.0,
+          "SECONDARY": 60.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 10.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 10.0,
+          "JOURNALISM": 40.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 20.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 10.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 25,
+          "secondary_min": 45,
+          "secondary_max": 75,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 25
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 25,
+          "journalism_min": 25,
+          "journalism_max": 55,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 5,
+          "commercial_max": 35,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 25
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research primary/secondary vs advocacy organizations (both sides) vs journalism."
+    },
+    "label": {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 60.0,
+          "SECONDARY": 40.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 30.0,
+          "JOURNALISM": 10.0,
+          "ACADEMIC": 20.0,
+          "REFERENCE": 0.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 30.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 45,
+          "primary_max": 75,
+          "secondary_min": 25,
+          "secondary_max": 55,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 15,
+          "primary_source_publisher_max": 45,
+          "journalism_min": 0,
+          "journalism_max": 25,
+          "academic_min": 5,
+          "academic_max": 35,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 15,
+          "commercial_max": 45,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs primary on a versioned-syntax query."
+    },
+    "label": {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 70.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 50.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 30.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 55,
+          "primary_max": 85,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 35,
+          "primary_source_publisher_max": 65,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 15,
+          "commercial_max": 45,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs (primary) vs indie tech blog (secondary) vs SEO content farm."
+    },
+    "label": {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 30.0,
+          "SECONDARY": 40.0,
+          "TERTIARY": 30.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 30.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 10.0,
+          "REFERENCE": 0.0,
+          "INDIE": 20.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 30.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 15,
+          "primary_max": 45,
+          "secondary_min": 25,
+          "secondary_max": 55,
+          "tertiary_min": 15,
+          "tertiary_max": 45,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 15,
+          "primary_source_publisher_max": 45,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 25,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 5,
+          "indie_max": 35,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 15,
+          "commercial_max": 45,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests whether the authoritative Caltech-hosted primary outranks aggregator and PDF-farm versions."
+    },
+    "label": {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 80.0,
+          "SECONDARY": 0.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 30.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 40.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 65,
+          "primary_max": 95,
+          "secondary_min": 0,
+          "secondary_max": 15,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 15,
+          "primary_source_publisher_max": 45,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 25,
+          "academic_max": 55,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs (primary) vs community (Stack Overflow) for specific error code."
+    },
+    "label": {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 60.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 10.0,
+          "REFERENCE": 0.0,
+          "INDIE": 30.0,
+          "COMMUNITY": 50.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 45,
+          "secondary_max": 75,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 25,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 15,
+          "indie_max": 45,
+          "community_min": 35,
+          "community_max": 65,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests indie review (blogs, community) vs commercial vs SEO; 'honest' modifier signals user wants non-commercial."
+    },
+    "label": {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 88.88888888888889,
+          "TERTIARY": 11.11111111111111,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 33.33333333333333,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 11.11111111111111,
+          "COMMERCIAL": 55.55555555555556,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 73,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 26,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 18,
+          "journalism_max": 48,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 26,
+          "commercial_min": 40,
+          "commercial_max": 70,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism review vs SEO farm vs commercial primary on a high-SEO-pollution query."
+    },
+    "label": {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 10.0,
+          "SECONDARY": 20.0,
+          "TERTIARY": 70.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 10.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 10.0,
+          "COMMUNITY": 20.0,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 10.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 25,
+          "secondary_min": 5,
+          "secondary_max": 35,
+          "tertiary_min": 55,
+          "tertiary_max": 85,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 25,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 25,
+          "community_min": 5,
+          "community_max": 35,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Tests primary (company announcement) vs journalism vs retrospective tertiary, for a recent specific event."
+    },
+    "label": {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 55.55555555555556,
+          "TERTIARY": 44.44444444444444,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 55.55555555555556,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 44.44444444444444,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 40,
+          "secondary_max": 70,
+          "tertiary_min": 29,
+          "tertiary_max": 59,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 40,
+          "journalism_max": 70,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 29,
+          "community_max": 59,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Mixed-domain query. Tests whether official-museum primary, reference, and journalism (repatriation debate) are surfaced together."
+    },
+    "label": {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 11.11111111111111,
+          "SECONDARY": 44.44444444444444,
+          "TERTIARY": 44.44444444444444,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 11.11111111111111,
+          "JOURNALISM": 11.11111111111111,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 11.11111111111111,
+          "INDIE": 11.11111111111111,
+          "COMMUNITY": 44.44444444444444,
+          "COMMERCIAL": 11.11111111111111,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 26,
+          "secondary_min": 29,
+          "secondary_max": 59,
+          "tertiary_min": 29,
+          "tertiary_max": 59,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 26,
+          "journalism_min": 0,
+          "journalism_max": 26,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 26,
+          "indie_min": 0,
+          "indie_max": 26,
+          "community_min": 29,
+          "community_max": 59,
+          "commercial_min": 0,
+          "commercial_max": 26,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests vendor commercial vs community vs independent technical analysis on a contested vendor claim."
+    },
+    "label": {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 11.11111111111111,
+          "SECONDARY": 88.88888888888889,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 11.11111111111111,
+          "COMMUNITY": 22.22222222222222,
+          "COMMERCIAL": 66.66666666666666,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 26,
+          "secondary_min": 73,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 26,
+          "community_min": 7,
+          "community_max": 37,
+          "commercial_min": 51,
+          "commercial_max": 81,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-source-type detection vs general history reference sites."
+    },
+    "label": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 50.0,
+          "SECONDARY": 40.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 60.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 35,
+          "primary_max": 65,
+          "secondary_min": 25,
+          "secondary_max": 55,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 45,
+          "academic_max": 75,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research vs advocacy think tanks (both sides) vs journalism."
+    },
+    "label": {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 70.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 70.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 55,
+          "primary_max": 85,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 55,
+          "academic_max": 85,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic (peer-reviewed primary/secondary) vs SEO advocacy outlets on a medical-political topic."
+    },
+    "label": {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 77.77777777777779,
+          "SECONDARY": 22.22222222222222,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 11.11111111111111,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 88.88888888888889,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 62,
+          "primary_max": 92,
+          "secondary_min": 7,
+          "secondary_max": 37,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 26,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 73,
+          "academic_max": 100,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic primary text vs SEP/reference tertiary summary."
+    },
+    "label": {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 55.55555555555556,
+          "SECONDARY": 22.22222222222222,
+          "TERTIARY": 22.22222222222222,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 33.33333333333333,
+          "REFERENCE": 22.22222222222222,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 22.22222222222222,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 40,
+          "primary_max": 70,
+          "secondary_min": 7,
+          "secondary_max": 37,
+          "tertiary_min": 7,
+          "tertiary_max": 37,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 7,
+          "primary_source_publisher_max": 37,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 18,
+          "academic_max": 48,
+          "reference_min": 7,
+          "reference_max": 37,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 7,
+          "commercial_max": 37,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness ranking and primary statements (gov communications) vs aggregator."
+    },
+    "label": {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 77.77777777777779,
+          "TERTIARY": 22.22222222222222,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 77.77777777777779,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 11.11111111111111,
+          "INDIE": 0.0,
+          "COMMUNITY": 11.11111111111111,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 62,
+          "secondary_max": 92,
+          "tertiary_min": 7,
+          "tertiary_max": 37,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 62,
+          "journalism_max": 92,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 26,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 26,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests official communications (primary) vs journalism coverage vs SEO regurgitation."
+    },
+    "label": {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 50.0,
+          "SECONDARY": 30.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 10.0,
+          "JOURNALISM": 20.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 60.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 35,
+          "primary_max": 65,
+          "secondary_min": 15,
+          "secondary_max": 45,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 25,
+          "journalism_min": 5,
+          "journalism_max": 35,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 45,
+          "commercial_max": 75,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + SEC primary (filings) vs aggregator clickbait for a financial-status query."
+    },
+    "label": {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 10.0,
+          "SECONDARY": 60.0,
+          "TERTIARY": 30.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 30.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 25,
+          "secondary_min": 45,
+          "secondary_max": 75,
+          "tertiary_min": 15,
+          "tertiary_max": 45,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 15,
+          "journalism_max": 45,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Quote-verification query. Tests whether primary source (Wealth of Nations text) and academic secondary clarification outrank misattribution aggregators."
+    },
+    "label": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 11.11111111111111,
+          "SECONDARY": 33.33333333333333,
+          "TERTIARY": 55.55555555555556,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 22.22222222222222,
+          "REFERENCE": 33.33333333333333,
+          "INDIE": 0.0,
+          "COMMUNITY": 22.22222222222222,
+          "COMMERCIAL": 22.22222222222222,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 26,
+          "secondary_min": 18,
+          "secondary_max": 48,
+          "tertiary_min": 40,
+          "tertiary_max": 70,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 7,
+          "academic_max": 37,
+          "reference_min": 18,
+          "reference_max": 48,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 7,
+          "community_max": 37,
+          "commercial_min": 7,
+          "commercial_max": 37,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic publisher detection vs reference summary; primary text vs tertiary explainer."
+    },
+    "label": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 70.0,
+          "SECONDARY": 10.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 40.0,
+          "REFERENCE": 20.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 20.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 55,
+          "primary_max": 85,
+          "secondary_min": 0,
+          "secondary_max": 25,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 25,
+          "academic_max": 55,
+          "reference_min": 5,
+          "reference_max": 35,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 5,
+          "commercial_max": 35,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + primary (official reports) vs conspiracy SEO and aggregators on a high-noise topic."
+    },
+    "label": {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 30.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 20.0,
+          "JOURNALISM": 40.0,
+          "ACADEMIC": 10.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 15,
+          "primary_max": 45,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 5,
+          "primary_source_publisher_max": 35,
+          "journalism_min": 25,
+          "journalism_max": 55,
+          "academic_min": 0,
+          "academic_max": 25,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (CDC/FBI) vs advocacy organizations citing the same data differently."
+    },
+    "label": {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 30.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 40.0,
+          "JOURNALISM": 10.0,
+          "ACADEMIC": 20.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 10.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 15,
+          "primary_max": 45,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 25,
+          "primary_source_publisher_max": 55,
+          "journalism_min": 0,
+          "journalism_max": 25,
+          "academic_min": 5,
+          "academic_max": 35,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs vs community operational advice."
+    },
+    "label": {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 22.22222222222222,
+          "SECONDARY": 66.66666666666666,
+          "TERTIARY": 11.11111111111111,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 11.11111111111111,
+          "INDIE": 11.11111111111111,
+          "COMMUNITY": 22.22222222222222,
+          "COMMERCIAL": 33.33333333333333,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 7,
+          "primary_max": 37,
+          "secondary_min": 51,
+          "secondary_max": 81,
+          "tertiary_min": 0,
+          "tertiary_max": 26,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 7,
+          "primary_source_publisher_max": 37,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 26,
+          "indie_min": 0,
+          "indie_max": 26,
+          "community_min": 7,
+          "community_max": 37,
+          "commercial_min": 18,
+          "commercial_max": 48,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (gov statute repository) ranking on a clear primary-source ask."
+    },
+    "label": {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 80.0,
+          "SECONDARY": 10.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 80.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 10.0,
+          "REFERENCE": 10.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 65,
+          "primary_max": 95,
+          "secondary_min": 0,
+          "secondary_max": 25,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 65,
+          "primary_source_publisher_max": 95,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 25,
+          "reference_min": 0,
+          "reference_max": 25,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (both brand sites) for a policy comparison query."
+    },
+    "label": {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 11.11111111111111,
+          "SECONDARY": 77.77777777777779,
+          "TERTIARY": 11.11111111111111,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 33.33333333333333,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 44.44444444444444,
+          "COMMERCIAL": 22.22222222222222,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 26,
+          "secondary_min": 62,
+          "secondary_max": 92,
+          "tertiary_min": 0,
+          "tertiary_max": 26,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 18,
+          "journalism_max": 48,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 29,
+          "community_max": 59,
+          "commercial_min": 7,
+          "commercial_max": 37,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests commercial primary (brand site) vs aggregator marketplace listings vs community advice on counterfeits."
+    },
+    "label": {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 20.0,
+          "SECONDARY": 20.0,
+          "TERTIARY": 50.0,
+          "UNCLASSIFIED": 10.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 30.0,
+          "COMMERCIAL": 50.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 10.0,
+          "UNCLASSIFIED": 10.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 5,
+          "primary_max": 35,
+          "secondary_min": 5,
+          "secondary_max": 35,
+          "tertiary_min": 35,
+          "tertiary_max": 65,
+          "unclassified_min": 0,
+          "unclassified_max": 25
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 15,
+          "community_max": 45,
+          "commercial_min": 35,
+          "commercial_max": 65,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 25
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests indie criticism (blog posts) vs community vs vendor commercial; opinion-heavy technical query."
+    },
+    "label": {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 90.0,
+          "TERTIARY": 10.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 0.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 20.0,
+          "COMMUNITY": 50.0,
+          "COMMERCIAL": 30.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 75,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 25,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 0,
+          "journalism_max": 15,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 5,
+          "indie_max": 35,
+          "community_min": 35,
+          "community_max": 65,
+          "commercial_min": 15,
+          "commercial_max": 45,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "supreme court decision today",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness and primary (court opinion text) for time-sensitive query."
+    },
+    "label": {
+      "query": "supreme court decision today",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 50.0,
+          "SECONDARY": 50.0,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 50.0,
+          "JOURNALISM": 50.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 0.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 35,
+          "primary_max": 65,
+          "secondary_min": 35,
+          "secondary_max": 65,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 35,
+          "primary_source_publisher_max": 65,
+          "journalism_min": 35,
+          "journalism_max": 65,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 0,
+          "commercial_max": 15,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests whether the named journalism source ranks above SEO replicas and aggregators of its picks."
+    },
+    "label": {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 0.0,
+          "SECONDARY": 80.0,
+          "TERTIARY": 20.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 0.0,
+          "JOURNALISM": 80.0,
+          "ACADEMIC": 0.0,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 10.0,
+          "COMMERCIAL": 10.0,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 15,
+          "secondary_min": 65,
+          "secondary_max": 95,
+          "tertiary_min": 5,
+          "tertiary_max": 35,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 15,
+          "journalism_min": 65,
+          "journalism_max": 95,
+          "academic_min": 0,
+          "academic_max": 15,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 25,
+          "commercial_min": 0,
+          "commercial_max": 25,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (SEC filings, court docket) vs journalism."
+    },
+    "label": {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "reasoning": {
+        "method": "labeler_classified_actual_serper_results",
+        "tolerance_pct": 15,
+        "labeler_model": "gemini-2.5-flash-lite",
+        "actual_role_dist": {
+          "PRIMARY": 11.11111111111111,
+          "SECONDARY": 88.88888888888889,
+          "TERTIARY": 0.0,
+          "UNCLASSIFIED": 0.0
+        },
+        "actual_type_dist": {
+          "PRIMARY_SOURCE_PUBLISHER": 11.11111111111111,
+          "JOURNALISM": 33.33333333333333,
+          "ACADEMIC": 11.11111111111111,
+          "REFERENCE": 0.0,
+          "INDIE": 0.0,
+          "COMMUNITY": 0.0,
+          "COMMERCIAL": 44.44444444444444,
+          "AGGREGATOR": 0.0,
+          "SEO_FARM": 0.0,
+          "UNCLASSIFIED": 0.0
+        }
+      },
+      "expected_top_10": {
+        "role_pct": {
+          "primary_min": 0,
+          "primary_max": 26,
+          "secondary_min": 73,
+          "secondary_max": 100,
+          "tertiary_min": 0,
+          "tertiary_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        },
+        "type_pct": {
+          "primary_source_publisher_min": 0,
+          "primary_source_publisher_max": 26,
+          "journalism_min": 18,
+          "journalism_max": 48,
+          "academic_min": 0,
+          "academic_max": 26,
+          "reference_min": 0,
+          "reference_max": 15,
+          "indie_min": 0,
+          "indie_max": 15,
+          "community_min": 0,
+          "community_max": 15,
+          "commercial_min": 29,
+          "commercial_max": 59,
+          "aggregator_min": 0,
+          "aggregator_max": 15,
+          "seo_farm_min": 0,
+          "seo_farm_max": 15,
+          "unclassified_min": 0,
+          "unclassified_max": 15
+        }
+      }
+    }
+  }
+]

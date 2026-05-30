@@ -1,0 +1,1628 @@
+{
+  "summary": {
+    "n": 50,
+    "model": "gemini-2.5-flash-lite",
+    "errors": 0,
+    "tier1_coverage_pct": 60.2910602910603,
+    "role_accuracy": 0.5,
+    "type_accuracy": 0.34,
+    "role_gate_hit": false,
+    "type_gate_hit": false
+  },
+  "per_query": [
+    {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 100.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 60.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 100% > max 95%",
+        "tertiary: 0% < min 5%"
+      ],
+      "type_failures": [
+        "journalism: 60% < min 65%",
+        "community: 40% > max 25%"
+      ],
+      "tier1_count": 10,
+      "n_results": 10
+    },
+    {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 20.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 40.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 80% > max 45%",
+        "tertiary: 20% < min 55%"
+      ],
+      "type_failures": [
+        "community: 40% > max 25%",
+        "commercial: 10% < min 35%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 33.33333333333333,
+        "SECONDARY": 55.55555555555556,
+        "TERTIARY": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 55.55555555555556,
+        "REFERENCE": 11.11111111111111,
+        "INDIE": 0.0,
+        "COMMUNITY": 11.11111111111111,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 33% < min 40%",
+        "secondary: 56% > max 37%"
+      ],
+      "type_failures": [
+        "academic: 56% > max 48%",
+        "commercial: 0% < min 7%"
+      ],
+      "tier1_count": 6,
+      "n_results": 9
+    },
+    {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 20.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 20.0,
+        "COMMERCIAL": 40.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 40.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 70% > max 65%"
+      ],
+      "type_failures": [
+        "community: 30% > max 25%"
+      ],
+      "tier1_count": 7,
+      "n_results": 10
+    },
+    {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 30.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 50.0,
+        "REFERENCE": 20.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 10% < min 65%",
+        "secondary: 60% > max 15%"
+      ],
+      "type_failures": [
+        "primary_source_publisher: 10% < min 15%"
+      ],
+      "tier1_count": 9,
+      "n_results": 10
+    },
+    {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 90.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 60.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "community: 30% > max 25%"
+      ],
+      "tier1_count": 7,
+      "n_results": 10
+    },
+    {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 88.88888888888889,
+        "TERTIARY": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 22.22222222222222,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 55.55555555555556,
+        "COMMERCIAL": 11.11111111111111,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 89% > max 59%",
+        "tertiary: 11% < min 40%"
+      ],
+      "type_failures": [
+        "commercial: 11% < min 18%"
+      ],
+      "tier1_count": 3,
+      "n_results": 9
+    },
+    {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 22.22222222222222,
+        "SECONDARY": 77.77777777777779,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 77.77777777777779,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": true,
+      "role_failures": [
+        "primary: 22% < min 62%",
+        "secondary: 78% > max 37%"
+      ],
+      "type_failures": [],
+      "tier1_count": 9,
+      "n_results": 9
+    },
+    {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 88.88888888888889,
+        "TERTIARY": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 55.55555555555556,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 11.11111111111111,
+        "INDIE": 0.0,
+        "COMMUNITY": 33.33333333333333,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": true,
+      "role_failures": [
+        "secondary: 89% > max 70%",
+        "tertiary: 11% < min 29%"
+      ],
+      "type_failures": [],
+      "tier1_count": 6,
+      "n_results": 9
+    },
+    {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 90.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 20.0,
+        "ACADEMIC": 10.0,
+        "REFERENCE": 0.0,
+        "INDIE": 10.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 90% > max 75%",
+        "tertiary: 0% < min 5%"
+      ],
+      "type_failures": [
+        "journalism: 20% > max 15%",
+        "indie: 10% < min 15%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 20.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 30.0,
+        "ACADEMIC": 10.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "journalism: 30% > max 25%"
+      ],
+      "tier1_count": 2,
+      "n_results": 10
+    },
+    {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 100.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 10.0,
+        "COMMUNITY": 70.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "community: 70% > max 65%",
+        "commercial: 10% < min 15%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 77.77777777777779,
+        "TERTIARY": 22.22222222222222,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 33.33333333333333,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 11.11111111111111,
+        "INDIE": 0.0,
+        "COMMUNITY": 55.55555555555556,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 78% > max 59%",
+        "tertiary: 22% < min 29%"
+      ],
+      "type_failures": [
+        "journalism: 33% > max 26%"
+      ],
+      "tier1_count": 5,
+      "n_results": 9
+    },
+    {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 22.22222222222222,
+        "SECONDARY": 66.66666666666666,
+        "TERTIARY": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 11.11111111111111,
+        "INDIE": 0.0,
+        "COMMUNITY": 33.33333333333333,
+        "COMMERCIAL": 33.33333333333333,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 5,
+      "n_results": 9
+    },
+    {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 30.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 20.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 40.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 60% > max 35%",
+        "tertiary: 30% < min 35%"
+      ],
+      "type_failures": [
+        "journalism: 20% > max 15%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 50.0,
+        "SECONDARY": 40.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 40.0,
+        "JOURNALISM": 30.0,
+        "ACADEMIC": 20.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "journalism: 30% > max 25%",
+        "commercial: 10% < min 15%"
+      ],
+      "tier1_count": 4,
+      "n_results": 10
+    },
+    {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 50.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 20.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 40.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 11.11111111111111,
+        "SECONDARY": 88.88888888888889,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 11.11111111111111,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 55.55555555555556,
+        "COMMERCIAL": 33.33333333333333,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "community: 56% > max 37%",
+        "commercial: 33% < min 51%"
+      ],
+      "tier1_count": 6,
+      "n_results": 9
+    },
+    {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 66.66666666666666,
+        "TERTIARY": 33.33333333333333,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 11.11111111111111,
+        "ACADEMIC": 11.11111111111111,
+        "REFERENCE": 33.33333333333333,
+        "INDIE": 0.0,
+        "COMMUNITY": 44.44444444444444,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 67% > max 48%",
+        "tertiary: 33% < min 40%"
+      ],
+      "type_failures": [
+        "community: 44% > max 37%",
+        "commercial: 0% < min 7%"
+      ],
+      "tier1_count": 7,
+      "n_results": 9
+    },
+    {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 40.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 30.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 50% > max 45%"
+      ],
+      "type_failures": [
+        "community: 40% > max 25%",
+        "commercial: 30% < min 45%"
+      ],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 100.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 44.44444444444444,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 55.55555555555556,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "community: 56% > max 26%",
+        "commercial: 0% < min 40%"
+      ],
+      "tier1_count": 6,
+      "n_results": 9
+    },
+    {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 11.11111111111111,
+        "SECONDARY": 88.88888888888889,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 33.33333333333333,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 55.55555555555556,
+        "COMMERCIAL": 11.11111111111111,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 4,
+      "n_results": 9
+    },
+    {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 60.0,
+        "SECONDARY": 30.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 50.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 30.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 9,
+      "n_results": 10
+    },
+    {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 30.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 50.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 80% > max 75%"
+      ],
+      "type_failures": [
+        "community: 50% > max 25%",
+        "commercial: 0% < min 5%"
+      ],
+      "tier1_count": 8,
+      "n_results": 10
+    },
+    {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 70.0,
+        "SECONDARY": 20.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 70.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 20.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 9,
+      "n_results": 10
+    },
+    {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 20.0,
+        "ACADEMIC": 20.0,
+        "REFERENCE": 20.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "journalism: 20% > max 15%",
+        "academic: 20% < min 25%",
+        "commercial: 0% < min 15%"
+      ],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 70.0,
+        "SECONDARY": 30.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 60.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 20.0,
+        "COMMERCIAL": 20.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 4,
+      "n_results": 10
+    },
+    {
+      "query": "supreme court decision today",
+      "category": "news",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 50.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 50.0,
+        "JOURNALISM": 50.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 3,
+      "n_results": 6
+    },
+    {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 20.0,
+        "COMMUNITY": 60.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "indie: 20% < min 25%",
+        "community: 60% > max 45%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 30.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 30.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 30.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 70% > max 35%",
+        "tertiary: 30% < min 55%"
+      ],
+      "type_failures": [
+        "journalism: 30% > max 25%",
+        "commercial: 30% < min 35%"
+      ],
+      "tier1_count": 3,
+      "n_results": 10
+    },
+    {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 20.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "tertiary: 10% < min 15%"
+      ],
+      "type_failures": [
+        "aggregator: 0% < min 5%"
+      ],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 30.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 40.0,
+        "COMMERCIAL": 20.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 80% > max 75%",
+        "tertiary: 10% < min 15%"
+      ],
+      "type_failures": [
+        "community: 40% > max 25%",
+        "commercial: 20% < min 35%"
+      ],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 40.0,
+        "TERTIARY": 50.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 40.0,
+        "REFERENCE": 40.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 10% < min 55%",
+        "secondary: 40% > max 25%",
+        "tertiary: 50% > max 35%"
+      ],
+      "type_failures": [
+        "primary_source_publisher: 0% < min 5%",
+        "reference: 40% > max 35%"
+      ],
+      "tier1_count": 7,
+      "n_results": 10
+    },
+    {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "difficulty": "hard",
+      "role_dist": {
+        "PRIMARY": 50.0,
+        "SECONDARY": 40.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 50.0,
+        "JOURNALISM": 20.0,
+        "ACADEMIC": 10.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 8,
+      "n_results": 10
+    },
+    {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 22.22222222222222,
+        "SECONDARY": 77.77777777777779,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+        "JOURNALISM": 33.33333333333333,
+        "ACADEMIC": 11.11111111111111,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 11.11111111111111,
+        "COMMERCIAL": 22.22222222222222,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "commercial: 22% < min 29%"
+      ],
+      "tier1_count": 5,
+      "n_results": 9
+    },
+    {
+      "query": "linux find command examples",
+      "category": "technical",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 20.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 10.0,
+        "REFERENCE": 0.0,
+        "INDIE": 10.0,
+        "COMMUNITY": 20.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 20.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": true,
+      "role_failures": [
+        "secondary: 50% > max 15%",
+        "tertiary: 20% < min 45%"
+      ],
+      "type_failures": [],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 80.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 60.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "indie: 0% < min 15%",
+        "community: 60% > max 55%"
+      ],
+      "tier1_count": 6,
+      "n_results": 10
+    },
+    {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 10.0,
+        "SECONDARY": 40.0,
+        "TERTIARY": 50.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 60.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 10% < min 45%",
+        "secondary: 40% > max 25%",
+        "tertiary: 50% > max 45%"
+      ],
+      "type_failures": [
+        "commercial: 60% < min 65%"
+      ],
+      "tier1_count": 7,
+      "n_results": 10
+    },
+    {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 50.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 30% < min 55%",
+        "secondary: 60% > max 45%"
+      ],
+      "type_failures": [
+        "primary_source_publisher: 30% < min 45%",
+        "academic: 50% > max 45%"
+      ],
+      "tier1_count": 8,
+      "n_results": 10
+    },
+    {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 37.5,
+        "SECONDARY": 25.0,
+        "TERTIARY": 37.5,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 12.5,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 12.5,
+        "COMMERCIAL": 62.5,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 12.5,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 1,
+      "n_results": 8
+    },
+    {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 40.0,
+        "ACADEMIC": 10.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "journalism: 40% > max 35%"
+      ],
+      "tier1_count": 4,
+      "n_results": 10
+    },
+    {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 0.0,
+        "SECONDARY": 88.88888888888889,
+        "TERTIARY": 11.11111111111111,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 55.55555555555556,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 11.11111111111111,
+        "INDIE": 0.0,
+        "COMMUNITY": 33.33333333333333,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "journalism: 56% < min 62%",
+        "community: 33% > max 26%"
+      ],
+      "tier1_count": 8,
+      "n_results": 9
+    },
+    {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 33.33333333333333,
+        "SECONDARY": 66.66666666666666,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 22.22222222222222,
+        "JOURNALISM": 11.11111111111111,
+        "ACADEMIC": 44.44444444444444,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 22.22222222222222,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": true,
+      "role_failures": [
+        "secondary: 67% > max 59%",
+        "tertiary: 0% < min 7%"
+      ],
+      "type_failures": [],
+      "tier1_count": 7,
+      "n_results": 9
+    },
+    {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 0.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 90.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "primary: 30% < min 55%",
+        "secondary: 70% > max 45%"
+      ],
+      "type_failures": [
+        "primary_source_publisher: 0% < min 5%",
+        "academic: 90% > max 85%"
+      ],
+      "tier1_count": 5,
+      "n_results": 10
+    },
+    {
+      "query": "trump indictment status",
+      "category": "news",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 20.0,
+        "SECONDARY": 50.0,
+        "TERTIARY": 30.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 20.0,
+        "JOURNALISM": 40.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 30.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 10.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 7,
+      "n_results": 10
+    },
+    {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "difficulty": "easy",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 50.0,
+        "COMMERCIAL": 10.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": false,
+      "role_failures": [
+        "secondary: 70% > max 55%",
+        "tertiary: 0% < min 15%"
+      ],
+      "type_failures": [
+        "indie: 0% < min 5%",
+        "community: 50% > max 25%",
+        "commercial: 10% < min 15%"
+      ],
+      "tier1_count": 8,
+      "n_results": 10
+    },
+    {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 70.0,
+        "TERTIARY": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 50.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 0.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 20.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": false,
+      "type_pass": true,
+      "role_failures": [
+        "secondary: 70% > max 55%",
+        "tertiary: 0% < min 5%"
+      ],
+      "type_failures": [],
+      "tier1_count": 4,
+      "n_results": 10
+    },
+    {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 30.0,
+        "SECONDARY": 60.0,
+        "TERTIARY": 10.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 30.0,
+        "JOURNALISM": 0.0,
+        "ACADEMIC": 0.0,
+        "REFERENCE": 10.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 30.0,
+        "COMMERCIAL": 30.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": false,
+      "role_failures": [],
+      "type_failures": [
+        "primary_source_publisher: 30% > max 25%",
+        "community: 30% > max 25%",
+        "commercial: 30% < min 45%"
+      ],
+      "tier1_count": 2,
+      "n_results": 10
+    },
+    {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "difficulty": "medium",
+      "role_dist": {
+        "PRIMARY": 40.0,
+        "SECONDARY": 40.0,
+        "TERTIARY": 20.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "type_dist": {
+        "PRIMARY_SOURCE_PUBLISHER": 10.0,
+        "JOURNALISM": 10.0,
+        "ACADEMIC": 60.0,
+        "REFERENCE": 20.0,
+        "INDIE": 0.0,
+        "COMMUNITY": 0.0,
+        "COMMERCIAL": 0.0,
+        "AGGREGATOR": 0.0,
+        "SEO_FARM": 0.0,
+        "UNCLASSIFIED": 0.0
+      },
+      "role_pass": true,
+      "type_pass": true,
+      "role_failures": [],
+      "type_failures": [],
+      "tier1_count": 5,
+      "n_results": 10
+    }
+  ]
+}

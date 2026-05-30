@@ -1,0 +1,2932 @@
+[
+  {
+    "input": {
+      "query": "starlink availability check",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (service availability tool) vs journalism vs community reports."
+    },
+    "results": [
+      {
+        "url": "https://starlink.com/map?srsltid=AfmBOorPPnZE-0iwZdkJIDcJ1h_mGNS-B__3m-vN6CdO02-1JcW3_AB9",
+        "title": "Availability Map - Starlink",
+        "snippet": "Flexible Service Plans. Starlink offers flexible service plans everywhere. Check availability by entering your address here."
+      },
+      {
+        "url": "https://starlink.com/support/article/240ac933-68ce-00dd-d8ec-0d5bf5816f3d?srsltid=AfmBOopawF6_2IJFxlsArZRsGHFxnq46-6ioUbb11Hn-ct3cA0Q9nYne",
+        "title": "My region is at capacity or shows as \"sold out\" on the availability ...",
+        "snippet": "Availability for business plans may differ from residential service; you can check on the current availability at your location at starlink.com/business."
+      },
+      {
+        "url": "https://www.inmyarea.com/provider/starlink",
+        "title": "Compare Starlink Plans & Check Availability - In My Area",
+        "snippet": "Compare Starlink prices, plans, and check availability. InMyArea.com is the #1 rated shopping and comparison site for Internet, Cable & Satellite TV, ..."
+      },
+      {
+        "url": "https://www.highspeedinternet.com/resources/starlink-availability",
+        "title": "When Will Starlink Be Available in My Area? | HighSpeedInternet.com",
+        "snippet": "As of June, 2025, Starlink is available throughout most of the United States. There are still a few \u201ccoming soon\u201d areas on the availability map."
+      },
+      {
+        "url": "https://www.reddit.com/r/Starlink/comments/1bv2ch8/starlink_availability_tools/",
+        "title": "Starlink Availability Tools - Reddit",
+        "snippet": "You'll need a mobile (cell) phone. Download the Starlink app and it has a function to check out your location."
+      },
+      {
+        "url": "https://starlink.sx/",
+        "title": "Starlink Coverage Tracker",
+        "snippet": "Starlink Coverage Tracker. This site is not mobile ... No accuracy, service quality, availability, or other related information is implied or guaranteed."
+      },
+      {
+        "url": "https://broadbandnow.com/starlink",
+        "title": "Starlink Internet: Coverage & Availability Map - BroadbandNow",
+        "snippet": "Check Starlink availability by address: powered by Google. Please try again ... Use the zip search and check with Starlink directly to verify availability."
+      },
+      {
+        "url": "https://broadbandmap.com/leo-satellite/starlink/",
+        "title": "Starlink Satellite Internet Availability Map",
+        "snippet": "Starlink Satellite availability map. See where Starlink offers service and check coverage at your address."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "react server components vs server actions",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests official docs primary vs indie analysis vs SEO regurgitation for fast-moving topic."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/nextjs/comments/1d6hd3q/what_the_point_of_server_actions_with_server/",
+        "title": "What the point of server actions with server component : r/nextjs",
+        "snippet": "Point of server actions is to trigger some action, with data or not, on the server, from the client. You can answer with data back to the client again, but ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=zcyDhy3H4Gw",
+        "title": "Next.js Server Component vs Server Action: Use Them Wisely",
+        "snippet": "Learn the key differences and usage patterns of Next.js Server Components and Server Actions. This video will make you understand the ..."
+      },
+      {
+        "url": "https://stackoverflow.com/questions/77847515/nextjs-server-component-vs-server-action",
+        "title": "NextJs: server component vs server action - Stack Overflow",
+        "snippet": "React Server Components are React Components which render on the server. A special kind of Server Actions are form handlers when invoked ..."
+      },
+      {
+        "url": "https://react.dev/reference/rsc/server-functions",
+        "title": "Server Functions - React",
+        "snippet": "If a Server Function is passed to an action prop or called from inside an action then it is a Server Action, but not all Server Functions are Server Actions."
+      },
+      {
+        "url": "https://medium.com/@erickzanetti/server-components-and-server-actions-in-react-19-a-revolution-in-react-architecture-85c75b3531c6",
+        "title": "Server Components and Server Actions in React 19: A Revolution in ...",
+        "snippet": "Server Actions allow you to manage state and interactions directly on the server without needing to create REST or GraphQL endpoints for every ..."
+      },
+      {
+        "url": "https://nextjs.org/docs/app/getting-started/mutating-data",
+        "title": "Getting Started: Mutating Data - Next.js",
+        "snippet": "Good to know: Server Components support progressive enhancement by default, meaning forms that call Server Actions will be submitted even if JavaScript hasn't ..."
+      },
+      {
+        "url": "https://community.vercel.com/t/fetch-vs-server-action-vs-server-component/552",
+        "title": "Fetch vs server action vs server component - Help - Vercel Community",
+        "snippet": "The best way for end performance will always be passing a server component as the fetch will occur on the server near by your DB likely within the same ..."
+      },
+      {
+        "url": "https://dev.to/thebitforge/i-stopped-fighting-react-server-components-heres-what-finally-made-it-4cho",
+        "title": "I Stopped Fighting React Server Components \u2014 Here's What Finally ...",
+        "snippet": "Mistake 4: Confusing Server Actions with Server Components. They're related but separate. Server components fetch and render data. Server ..."
+      },
+      {
+        "url": "https://mayank.co/blog/react-server-components/",
+        "title": "React Server Components: the Good, the Bad, and the Ugly - Mayank",
+        "snippet": "The almost good. With server actions, React now has an official RPC-like way of executing server-side code in response to user interaction (\u201c ..."
+      },
+      {
+        "url": "https://makerkit.dev/blog/tutorials/server-actions-vs-route-handlers",
+        "title": "Server Actions vs Route Handlers: When to Use Each in Next.js",
+        "snippet": "Server Actions are functions you call from React components that run on the server. Route Handlers are traditional HTTP endpoints that any ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "second amendment original meaning",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests primary historical sources + academic secondary vs advocacy commentary."
+    },
+    "results": [
+      {
+        "url": "https://constitutioncenter.org/the-constitution/amendments/amendment-ii/interpretations/99",
+        "title": "Interpretation: The Second Amendment",
+        "snippet": "The Second Amendment originally applied only to the federal government, leaving the states to regulate weapons as they saw fit. Although there is substantial ..."
+      },
+      {
+        "url": "https://constitution.congress.gov/constitution/amendment-2/",
+        "title": "U.S. Constitution - Second Amendment | Library of Congress",
+        "snippet": "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed."
+      },
+      {
+        "url": "https://www.nraila.org/what-is-the-second-amendment-and-how-is-it-defined/",
+        "title": "What Is The Second Amendment And How Is It Defined",
+        "snippet": "The Second Amendment was created by our Founding Fathers with the intent of Americans having the right to bear arms and it would not be infringed upon."
+      },
+      {
+        "url": "https://www.brennancenter.org/our-work/research-reports/how-nra-rewrote-second-amendment",
+        "title": "How the NRA Rewrote the Second Amendment",
+        "snippet": "The Founders never intended to create an unregulated individual right to a gun. Today, millions believe they did. Here's how it happened."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Second_Amendment_to_the_United_States_Constitution",
+        "title": "Second Amendment to the United States Constitution",
+        "snippet": "The Second Amendment (Amendment II) to the United States Constitution protects the right to keep and bear arms. It was ratified on December 15, 1791."
+      },
+      {
+        "url": "https://www.vanholaw.com/blog/2025/may/the-history-and-background-of-the-second-amendme/",
+        "title": "The History and Background of the Second Amendment",
+        "snippet": "The initial version Madison proposed read: \"The right of the people to keep and bear arms shall not be infringed; a well armed and well ..."
+      },
+      {
+        "url": "https://www.reaganlibrary.gov/education/lesson-plans/high-school/constitutional-amendments/constitutional-amendments-amendment-2",
+        "title": "Amendment 2 \u2013 \u201cThe Right to Keep and Bear Arms\u201d",
+        "snippet": "It protects the right of Americans to possess weapons for the protection of themselves, their rights, and their property. Here's the original text: \u201cA well ..."
+      },
+      {
+        "url": "https://www.americanrevolutioninstitute.org/video/a-well-regulated-militia-history-of-the-second-amendment/",
+        "title": "A Well-Regulated Militia: History of the Second Amendment",
+        "snippet": "The American founders understood the right to bear arms as neither an individual nor a collective right, but as a civic right\u2014an obligation citizens owed to the ..."
+      },
+      {
+        "url": "https://www.law.georgetown.edu/constitution-center/constitution/to-keep-and-bear-arms/",
+        "title": "To Keep and Bear Arms",
+        "snippet": "Concluding that the original meaning of the Second Amendment includes the right to bear arms for the purpose of hunting game. Douglas Walker, Jr., Necessary to ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=MKznnT6xH5c",
+        "title": "What did the Second Amendment say?",
+        "snippet": "The Second Amendment reads as follows: a well-regulated militia being necessary to the security of a free state."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "wirecutter espresso machine",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests whether the named journalism source ranks above SEO replicas and aggregators of its picks."
+    },
+    "results": [
+      {
+        "url": "https://www.nytimes.com/wirecutter/reviews/best-espresso-machine-grinder-and-accessories-for-beginners/",
+        "title": "The 4 Best Home Espresso Machines of 2026 | Reviews by Wirecutter",
+        "snippet": "After making (and tasting) dozens of espressos and lattes, we think the Profitec Go is the best machine for both new and skilled espresso ..."
+      },
+      {
+        "url": "https://www.nytimes.com/wirecutter/reviews/gaggia-classic-evo-pro-review/",
+        "title": "Gaggia Classic Evo Pro Review: Good, Easy Espresso at Home",
+        "snippet": "Wirecutter's budget-pick espresso machine helped me find the joy in a new (albeit imperfect) daily ritual."
+      },
+      {
+        "url": "https://www.reddit.com/r/espresso/comments/wto3qu/best_cheap_espresso_machine_for_beginners/",
+        "title": "Best cheap espresso machine for beginners. - Reddit",
+        "snippet": "I saw a the wirecutter article where they recommend an $800 espresso machine for a beginner but i am looking for something cheaper."
+      },
+      {
+        "url": "https://www.wired.com/gallery/best-espresso-machines/",
+        "title": "The Best Espresso Machines for Home Baristas - WIRED",
+        "snippet": "These machines from Fellow, Breville, and Diletta find the best balance between deliciousness and ease of pulling a great shot."
+      },
+      {
+        "url": "https://www.facebook.com/nytimes/posts/after-spending-more-than-120-hours-researching-and-testing-14-home-espresso-mach/709939750988491/",
+        "title": "After spending more than 120 hours researching and testing 14 ...",
+        "snippet": "After spending more than 120 hours researching and testing 14 home espresso machines, Wirecutter found the best espresso machines for most at-home baristas."
+      },
+      {
+        "url": "https://www.nytimes.com/wirecutter/reviews/best-coffee-maker/",
+        "title": "The 9 Best Coffee Makers of 2026 | Reviews by Wirecutter",
+        "snippet": "After making (and tasting) dozens of espressos and lattes, we think the Profitec Go is the best machine for both new and skilled espresso ..."
+      },
+      {
+        "url": "https://www.nytimes.com/wirecutter/blog/making-espresso-at-home/",
+        "title": "Making Espresso at Home Is Kind of a Nightmare | Wirecutter",
+        "snippet": "After making (and tasting) dozens of espressos and lattes, we think the Profitec Go is the best machine for both new and skilled espresso ..."
+      },
+      {
+        "url": "https://www.instagram.com/reel/DAV826ltz_t/?hl=en",
+        "title": "What's your go-to coffee maker? Kitchen editor Marguerite Preston ...",
+        "snippet": "Breville Barista Express: the best beginner machine. Ninja Luxe Caf\u00e9: probably the easiest all-in-one setup. Rocket Espresso: when coffee ..."
+      },
+      {
+        "url": "https://www.nytimes.com/wirecutter/reviews/best-nespresso-machine/",
+        "title": "The 2 Best Nespresso Machine of 2026 | Reviews by Wirecutter",
+        "snippet": "We tested machines compatible with Nespresso pods and recommend the compact Nespresso Essenza Mini because it's quick, convenient, and foolproof to use."
+      },
+      {
+        "url": "https://www.tiktok.com/@wirecutter/video/7305755762255613230",
+        "title": "A cafe-quality latte without leaving the house? Yes, please ... - TikTok",
+        "snippet": "... espresso #coffee #espressomachine\u201d. original sound - NYT Wirecutter ... maker, French press, this espresso machine. Oh, and I have a Chemex ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "feynman lectures full text",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests whether the authoritative Caltech-hosted primary outranks aggregator and PDF-farm versions."
+    },
+    "results": [
+      {
+        "url": "https://www.feynmanlectures.caltech.edu/",
+        "title": "The Feynman Lectures on Physics",
+        "snippet": "A high quality up-to-date copy of Feynman's legendary lectures. This edition has been designed for ease of reading on devices of any size or shape."
+      },
+      {
+        "url": "https://www.feynmanlectures.caltech.edu/I_toc.html",
+        "title": "FLP Vol. I Table of Contents - The Feynman Lectures on Physics",
+        "snippet": "Chapter 1.Atoms in Motion ; Chapter 2.Basic Physics ; Chapter 3.The Relation of Physics to Other Sciences ; Chapter 4."
+      },
+      {
+        "url": "https://www.amazon.com/Feynman-Lectures-Physics-boxed-set/dp/0465023827",
+        "title": "The Feynman Lectures on Physics, boxed set: The New Millennium ...",
+        "snippet": "A comprehensive physics collection covering fundamental Newtonian principles through advanced theories like general relativity and quantum mechanics, offering ..."
+      },
+      {
+        "url": "https://assets.super.so/e745dfd7-232e-47c1-a806-753f45b941ba/files/f02d8a4c-181f-46e7-9dfd-c2c77fb6d106/The_Feynman_Lectures_on_Physics_Vol_II_E.pdf",
+        "title": "[PDF] The Feynman Lectures on Physics, Desktop Edition Volume II",
+        "snippet": "Dr. Feynman won his Nobel Prize for successfully resolving problems with the theory of quantum electrodynamics. He also created a mathematical theory that."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/The_Feynman_Lectures_on_Physics",
+        "title": "The Feynman Lectures on Physics - Wikipedia",
+        "snippet": "The Feynman Lectures on Physics is a physics textbook based on a great number of lectures by Richard Feynman, a Nobel laureate who has sometimes been called ..."
+      },
+      {
+        "url": "https://www.feynmanlectures.caltech.edu/III_01.html",
+        "title": "The Feynman Lectures on Physics Vol. III Ch. 1: Quantum Behavior",
+        "snippet": "\u201cQuantum mechanics\u201d is the description of the behavior of matter and light in all its details and, in particular, of the happenings on an atomic scale."
+      },
+      {
+        "url": "https://www.feynmanlectures.caltech.edu/recordings.html",
+        "title": "The Feynman Lectures Recordings - Caltech",
+        "snippet": "These are the tape recordings of Richard Feynman's 1961-64 Caltech Introductory Physics lectures, which form the basis of the books The Feynman Lectures on ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/Physics/comments/1mb9hv/the_feynman_lectures_on_physics_online_for_free/",
+        "title": "The Feynman Lectures on Physics, Online, For FREE! - Reddit",
+        "snippet": "A high-quality up-to-date version of The Feynman Lectures on Physics available online. One that could be read with a browser so you could study FLP on your ..."
+      },
+      {
+        "url": "https://archive.org/details/feynmanlectureso0003feyn_s7u7",
+        "title": "The Feynman lectures on physics - Internet Archive",
+        "snippet": "3 volumes : 29 cm. T[hese] books [are] based upon a course of lectures in introductory physics given by Prof. R.P. Feynman at the California ..."
+      },
+      {
+        "url": "https://www.academia.edu/79025714/The_Feynman_Lectures_on_Physics_Volume_1",
+        "title": "(PDF) The Feynman Lectures on Physics Volume 1 - Academia.edu",
+        "snippet": "The Feynman LECTURES ON PHYSICS NEW MILLENNIUM EDITION FEYNMAN \u2022LEIGHTON\u2022SANDS VOLUME I Copyright \u00a9 1963, 2006, 2010 by California Institute of Technology, ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "best running shoes wide feet",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism review vs SEO farm vs commercial primary on a high-SEO-pollution query."
+    },
+    "results": [
+      {
+        "url": "https://believeintherun.com/shoe-reviews/best-wide-foot-running-shoes/",
+        "title": "Best Wide Foot Running Shoes for 2026 (So Far) - Believe in the Run",
+        "snippet": "This is a list of almost every wide shoe that I've run in that's currently available. I'll give you the good, the bad, and everything in-between."
+      },
+      {
+        "url": "https://www.reddit.com/r/triathlon/comments/1cpooq5/can_someone_give_me_a_good_brand_of_wide_running/",
+        "title": "Can someone give me a good brand of wide running shoes? - Reddit",
+        "snippet": "New balance will be the most wide friendly, with most models coming in wide or extra wide. Brooks is likely second."
+      },
+      {
+        "url": "https://sixminutemile.com/post/shoe-review-running-shoes-for-women-with-wide-feet/",
+        "title": "Shoe Review: Running Shoes for Women with Wide Feet",
+        "snippet": "I discovered the Saucony Endorphin Speed 3 in Wide in 2022 and it was love at first run. Finally, a fast, comfortable everyday trainer that worked with my ..."
+      },
+      {
+        "url": "https://runrepeat.com/guides/best-wide-running-shoes",
+        "title": "7 Best Running Shoes For Wide Feet in 2026 - RunRepeat",
+        "snippet": "The Topo Atmos is a wide-footed runner's dream with its generous dimensions, cushioned feel, and light yet stable ride."
+      },
+      {
+        "url": "https://www.runnersworld.com/gear/g39135738/best-wide-toebox-running-shoes/",
+        "title": "The 7 Best Running Shoes for Wide Feet and Big Toes",
+        "snippet": "Best Running Shoes for Wide Feet Preview \u00b7 Best Overall: Asics Novablast 5 (Men's/Women's) \u00b7 Best Daily Trainer: Brooks Glycerin 23 (Men's/ ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=WYLQMxhA88Q",
+        "title": "Best Wide Shoes for Walking & Running - YouTube",
+        "snippet": "Discover the best wide and wide toe box shoes for men and women in 2025. In this updated guide, I review four top models with new features, ..."
+      },
+      {
+        "url": "https://www.altrarunning.com/en-us/collections/mens-wide-shoes",
+        "title": "Men's Wide Shoes for All-Day Comfort | Altra Running US",
+        "snippet": "Men's Wide Shoes for Natural Movement and Stability. Experience the freedom of Altra men's wide shoes with a roomy fit and zero drop cushioning."
+      },
+      {
+        "url": "https://www.holabirdsports.com/collections/wide-running-shoes?srsltid=AfmBOorlvUcfXRkFP96y8-pvgr_kiJPdHTyFsMWMLNqAICHIeNajMTgj",
+        "title": "Wide Running Shoes - Holabird Sports",
+        "snippet": "Best running shoes for wide feet with high arches \u00b7 Top Pick: Brooks Ghost 14\u2013 Versatile Swiss-Army Shoe \u00b7 Honorable Mention: Hoka Clifton 8 ..."
+      },
+      {
+        "url": "https://www.facebook.com/groups/runnerslovingrunning/posts/9716453235125693/",
+        "title": "What running shoes are best for wide feet? - Facebook",
+        "snippet": "New balance 880!! So so good, especially for wide feet!|I would highly recommend \ufffcthe Asics Gel Nimbus or Novablast 5."
+      },
+      {
+        "url": "https://www.underarmour.com/en-us/c/shoes/running/wide/?srsltid=AfmBOop1YXPVDo0AsZUFaCCgZoRP6xn7jaM-WIIuQCfLjM7nlZwvPXcH",
+        "title": "Running & Track Shoes - Wide Fit - Under Armour",
+        "snippet": "Our Charged Cushioning\u00ae makes these wide toe box running shoes firm in the heel yet soft in the foot, supporting your feet through trails and other obstacles."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "civil rights act 1964 text",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (gov statute repository) ranking on a clear primary-source ask."
+    },
+    "results": [
+      {
+        "url": "https://www.archives.gov/milestone-documents/civil-rights-act",
+        "title": "Civil Rights Act (1964)",
+        "snippet": "It banned discriminatory practices in employment and ended segregation in public places such as swimming pools, libraries, and public schools."
+      },
+      {
+        "url": "https://www.senate.gov/artandhistory/history/resources/pdf/CivilRightsActOf1964.pdf",
+        "title": "Civil Rights Act of 1964: P.L. 88-352",
+        "snippet": "\"(i) Every person who submits data or evidence shall be entitled to retain or, on payment of lawfully prescribed costs, procure a copy or transcript thereof, ..."
+      },
+      {
+        "url": "https://www.congress.gov/bill/88th-congress/house-bill/7152/text",
+        "title": "Civil Rights Act of 1964 - H.R.7152",
+        "snippet": "88th Congress (1963-1964) All Information (Except Text). There is one version of the bill. Text available as: PDF. Shown Here: Statute at ..."
+      },
+      {
+        "url": "https://www.eeoc.gov/statutes/title-vii-civil-rights-act-1964",
+        "title": "Title VII of the Civil Rights Act of 1964",
+        "snippet": "Title VII prohibits employment discrimination based on race, color, religion, sex and national origin. An Act. To enforce the constitutional right to vote, to ..."
+      },
+      {
+        "url": "https://www.dol.gov/agencies/oasam/regulatory/statutes/title-vi-civil-rights-act-of-1964",
+        "title": "Title VI, Civil Rights Act of 1964",
+        "snippet": "No person in the United States shall, on the ground of race, color, or national origin, be excluded from participation in, be denied the benefits of, or be ..."
+      },
+      {
+        "url": "https://millercenter.org/the-presidency/educational-resources/the-civil-rights-act-of-1964",
+        "title": "The Civil Rights Act of 1964",
+        "snippet": "The Civil Rights Act of 1964 outlawed racial segregation in public accommodations including hotels, restaurants, theaters, and stores, and made employment ..."
+      },
+      {
+        "url": "https://www.justice.gov/crt/fcs/TitleVI",
+        "title": "Title VI of the Civil Rights Act of 1964",
+        "snippet": "It prohibits discrimination on the basis of race, color, and national origin in programs and activities receiving federal financial assistance."
+      },
+      {
+        "url": "https://www.law.cornell.edu/wex/civil_rights_act_of_1964",
+        "title": "Civil Rights Act of 1964 | Wex - Law.Cornell.Edu",
+        "snippet": "Civil Rights Act of 1964 is a federal law that prohibits discrimination on the basis of race, color, national origin, sex (including pregnancy), and religion."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964",
+        "title": "Civil Rights Act of 1964",
+        "snippet": "The Civil Rights Act of 1964 is a landmark civil rights and labor law in the United States that outlaws discrimination based on race, color, religion, sex, ..."
+      },
+      {
+        "url": "https://www.archives.gov/dc/highlights/civil-rights-act",
+        "title": "Civil Rights Act of 1964",
+        "snippet": "The act prohibits discrimination on the basis of race, color, religion, sex, or national origin. Provisions in the law preclude discrimination in employment ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "askjeeves shutdown details",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Tests primary (company announcement) vs journalism vs retrospective tertiary, for a recent specific event."
+    },
+    "results": [
+      {
+        "url": "https://abcnews.com/video/132655769/",
+        "title": "Video 'Ask Jeeves' search engine shuts down - ABC News",
+        "snippet": "'Ask Jeeves' search engine shuts down \u00b7 The famous search engine and question-and-service \"Ask Jeeves\" has shut down after three decades. \u00b7 May 4, ..."
+      },
+      {
+        "url": "https://www.nytimes.com/2026/05/03/business/ask-jeeves-shuts-down-internet-search-engine.html",
+        "title": "So Long Jeeves and Ask.com, Relics of Yesterday's Internet",
+        "snippet": "The pioneering search engine shut down on May 1, after nearly 30 years in operation. Share full article."
+      },
+      {
+        "url": "https://www.reddit.com/r/nostalgia/comments/1t1cog0/ask_jeeves_just_shut_down/",
+        "title": "Ask Jeeves just shut down : r/nostalgia - Reddit",
+        "snippet": "Ask Jeeves shutdown details. Lycos chat features. Ask Jeeves AI ... A Farewell to Ask.com | 25 Years of Curiosity ask jeeves has shutdown."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ask.com",
+        "title": "Ask.com - Wikipedia",
+        "snippet": "In 2006, the company discontinued the \"Jeeves\" branding and relaunched as Ask.com, focusing more directly on competing with major search engines such as Google, ..."
+      },
+      {
+        "url": "https://www.facebook.com/DallasTexasTV/posts/askcom-formerly-ask-jeeves-is-shutting-down-after-nearly-30-years-online-the-onc/1668726355256481/",
+        "title": "Ask.com, formerly Ask Jeeves, is shutting down after nearly 30 years ...",
+        "snippet": "Ask.com, formerly Ask Jeeves, is shutting down after nearly 30 years online \u2014 The once-popular search engine helped shape the early internet."
+      },
+      {
+        "url": "https://techcrunch.com/2026/05/02/farewell-jeeves-ask-com-shuts-down/",
+        "title": "Farewell, Jeeves: Ask.com shuts down - TechCrunch",
+        "snippet": "After 25 years of answering the world's questions, Ask.com officially closed on May 1, 2026.\u201d Nonetheless, the website insists, \u201cJeeves' spirit ..."
+      },
+      {
+        "url": "https://technology.inquirer.net/146530/ask-jeeves-shuts-down-ending-early-conversational-search",
+        "title": "Ask Jeeves shuts down, ending early conversational search",
+        "snippet": "Ask Jeeves, an early search engine that allowed users to ask questions in plain language, shut down on May 1."
+      },
+      {
+        "url": "https://www.instagram.com/reel/DX6hUMfPSZ9/",
+        "title": "Ask.com (previously called Ask Jeeves) shuts down - Instagram",
+        "snippet": "Ask.com, originally launched as Ask Jeeves in 1997, officially closed down operations on May 1, 2026. The parent company IAC announced the ..."
+      },
+      {
+        "url": "https://www.techradar.com/computing/search-engines/ask-jeeves-quietly-shuts-down-after-nearly-three-decades-after-pioneering-conversational-web-search-long-before-chatgpt-and-gemini",
+        "title": "Ask Jeeves quietly shuts down after nearly three decades, after ...",
+        "snippet": "The official end date for Ask Jeeves and Ask.com was May 1, 2026. \"We are deeply grateful to the brilliant engineers, designers, and teams who ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "linux find command examples",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests reference (man pages, MDN-equivalents) vs community vs SEO farm output for common technical query."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/unix/comments/1e652dd/10_example_of_find_command_in_unix_and_linux/",
+        "title": "10 Example of find command in UNIX and Linux - Reddit",
+        "snippet": "This example of the find command will find which are more than 10 days old and size greater than 50K. find . -mtime +10 -size + ..."
+      },
+      {
+        "url": "https://www.redhat.com/en/blog/linux-find-command",
+        "title": "10 ways to use the Linux find command - Red Hat",
+        "snippet": "5. Find files by type. You can display files, directories, symlinks, named pipes, sockets, and more using the -type option."
+      },
+      {
+        "url": "https://www.geeksforgeeks.org/linux-unix/find-command-in-linux-with-examples/",
+        "title": "Find Command in Linux - GeeksforGeeks",
+        "snippet": "find ./gfg -name \"sample.txt\" \u00b7 find [path] [options] [expression] \u00b7 find ./GFG -name sample.txt \u00b7 find ./GFG -name *.txt \u00b7 find ./GFG -name sample."
+      },
+      {
+        "url": "https://gist.github.com/thoroc/9970941",
+        "title": "A collection of Unix/Linux find command examples - GitHub Gist",
+        "snippet": "basic 'find file' commands find / -name foo.txt -type f -print # full command find / -name foo.txt -type f # -print isn't necessary find / -name"
+      },
+      {
+        "url": "https://www.tecmint.com/35-practical-examples-of-linux-find-command/",
+        "title": "35 Practical Examples of Linux Find Command",
+        "snippet": "Part I \u2013 Basic Find Commands for Finding Files with Names \u00b7 1. Find Files Using Name in Current Directory \u00b7 2. Find Files Under Home Directory."
+      },
+      {
+        "url": "https://man7.org/linux/man-pages/man1/find.1.html",
+        "title": "find(1) - Linux manual page - man7.org",
+        "snippet": "The -depth option for example makes find traverse the file system in a depth-first order. ... command line to find like this: find . -name frcode.c locate.c ..."
+      },
+      {
+        "url": "https://servicenow.iu.edu/kb?id=kb_article_view&sysparm_article=KB0022712",
+        "title": "Use the Unix find command to search for files - Knowledge Base",
+        "snippet": "To use the find command, at the Unix prompt, enter: Replace \"pattern\" with a filename or matching expression, such as \"*.txt\"."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=BmPkzi0T8Uw",
+        "title": "Actually \"finding\" things with the FIND command; Linux ... - YouTube",
+        "snippet": "Find is a pretty powerful UNIX command that has a lot of functionality. Unfortunately, this makes it a little difficult to use."
+      },
+      {
+        "url": "https://queirozf.com/entries/linux-find-examples",
+        "title": "Linux find Examples - queirozf.com",
+        "snippet": "Linux find Examples ; Find by partial name \u00b7 $ find . -name \"*foobar*\" ; Find all files with given extension except those in directories starting ..."
+      },
+      {
+        "url": "https://www.linuxtoday.com/developer/35-practical-examples-of-linux-find-command-3/",
+        "title": "35 Practical Examples of Linux Find Command",
+        "snippet": "The find command is used to search and locate the list of files and directories, based on conditions you specify for files that match the ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "neurips 2025 best paper",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-publisher primary (proceedings) vs blog secondary vs conference site tertiary."
+    },
+    "results": [
+      {
+        "url": "https://neurips.cc/virtual/2025/awards_detail",
+        "title": "NeurIPS 2025 Awards",
+        "snippet": "For the very deep VGG-16 model, our detection system has a frame rate of 5fps \u2026 Best Paper (DB track). Artificial Hivemind: The Open-Ended Homogeneity of ..."
+      },
+      {
+        "url": "https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/",
+        "title": "Announcing the NeurIPS 2025 Best Paper Awards",
+        "snippet": "The seven papers highlight advances in diffusion model theory, self-supervised reinforcement learning, attention mechanisms for large language ..."
+      },
+      {
+        "url": "https://huggingface.co/posts/Kseniase/673116238988658",
+        "title": "15 Outstanding Research Papers from NeurIPS 2025 NeurIPS 2025 ...",
+        "snippet": "1. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks \u2192 https://neurips.cc/virtual/2025/loc/san-diego/test-of-time/ ..."
+      },
+      {
+        "url": "https://news.ycombinator.com/item?id=46155701",
+        "title": "NeurIPS 2025 Best Paper Awards - Hacker News",
+        "snippet": "I think my favorite of the bunch is the \"Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model\" paper."
+      },
+      {
+        "url": "https://www.paperdigest.org/2025/11/neurips-2025-papers-highlights/",
+        "title": "Paper Digest: NeurIPS 2025 Papers & Highlights",
+        "snippet": "... 2025). Additionally, you may want to explore our \u201cBest Paper\u201d Digest (NeurIPS), which lists the most influential NeurIPS papers since 1987."
+      },
+      {
+        "url": "https://gonzoml.substack.com/p/neurips-2025-best-papers-in-comics",
+        "title": "NeurIPS 2025 Best Papers in Comics - Gonzo ML",
+        "snippet": "WHY it matters? This work, a NeurIPS 2025 Best Paper Runner-Up, provides a first-principles derivation of scaling laws that is robust to data ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/learnmachinelearning/comments/1pct2ws/chat_with_all_neurips_2025_papers_what_are_your/",
+        "title": "Chat with all NeurIPS 2025 papers. What are your top picks so far?",
+        "snippet": "The sheer volume of papers this year is wild. I found this assistant that indexes the proceedings and lets you ask questions directly to the ..."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/andriyburkov_neurips-2025-best-paper-awards-the-paper-activity-7411139556344901632-RnMw",
+        "title": "NeurIPS 2025 Best Paper: Diffusion Model Memorization Timescales",
+        "snippet": "NeurIPS 2025 Best Paper Awards The paper addresses the following question: why don't diffusion models simply memorize their training data, ..."
+      },
+      {
+        "url": "https://www.alibabacloud.com/blog/alibaba-qwen-wins-%E2%80%9Cneurips-2025-best-paper-award%E2%80%9D-for-breakthrough-in-attention-mechanisms_602708",
+        "title": "Alibaba Qwen Wins \u201cNeurIPS 2025 Best Paper Award\u201d for ...",
+        "snippet": "The winning paper, titled \u201cGated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free\u201d, is the first in the ..."
+      },
+      {
+        "url": "https://eu.36kr.com/en/p/3570970959395720",
+        "title": "NeurIPS 2025 Best Papers Winners Announced - 36\u6c2a",
+        "snippet": "The winners of the best papers at NeurIPS 2025 were announced. A classic work from a decade ago by He Kaiming, Sun Jian, etc. won the award."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "fed rate decision march 2026",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (Fed press release) vs journalism vs commercial finance sites."
+    },
+    "results": [
+      {
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "title": "The Fed - Meeting calendars and information - Federal Reserve",
+        "snippet": "2026 FOMC Meetings ; January. 27-28 \u00b7 Statement on Longer-Run Goals and Monetary Policy Strategy ; March. 17-18* \u00b7 Projection Materials PDF | HTML ; April. 28-29."
+      },
+      {
+        "url": "https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html",
+        "title": "Fed holds rates steady but with highest level of dissent since 1992",
+        "snippet": "Fed holds rates steady but with highest level of dissent since 1992 \u00b7 An unusually divided Federal Reserve held its key interest rate steady."
+      },
+      {
+        "url": "https://am.jpmorgan.com/us/en/asset-management/liq/insights/portfolio-insights/fixed-income/fixed-income-perspectives/fomc-statement-march-2026/",
+        "title": "FOMC Statement: March 2026 | J.P. Morgan Asset Management",
+        "snippet": "The Federal Open Market Committee (FOMC) voted to keep the federal funds rate target range steady at 3.50%\u20133.75%. There was one dissent in favor of a ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=SVrdJINZGIM",
+        "title": "FOMC Introductory Statement, March 18, 2026 - YouTube",
+        "snippet": "... information. FOMC Introductory Statement, March 18, 2026. 10K views \u00b7 2 months ago. DISTRICT OF COLUMBIA ...more. Federal Reserve. 552K."
+      },
+      {
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
+        "title": "Federal Reserve issues FOMC statement",
+        "snippet": "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 3\u20111/2 to 3\u20113/4 percent. In considering ..."
+      },
+      {
+        "url": "https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26mar",
+        "title": "Fed decision in March 2026? Odds & Predictions - Kalshi",
+        "snippet": "If the Federal Reserve does a Hike of 0bps on March 18, 2026, then the market resolves to Yes. Outcome verified from Federal Reserve. This market is mutually ..."
+      },
+      {
+        "url": "https://www.forbes.com/sites/investor-hub/article/fed-meeting-tracker-interest-rate-strategy/",
+        "title": "Fed Meeting Tracker 2026: How Interest Rate Shifts Shape Investor ...",
+        "snippet": "Stay ahead of the 2026 Fed meeting schedule. Discover how projected interest rate shifts impact your portfolio, from stocks to fixed income."
+      },
+      {
+        "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026",
+        "title": "How many Fed rate cuts in 2026? Predictions & Odds | Polymarket",
+        "snippet": "This market will resolve according to the exact amount of cuts of 25 basis points in 2026 by the Fed (including any cuts made during the December meeting)."
+      },
+      {
+        "url": "https://www.schwab.com/learn/story/fomc-meeting",
+        "title": "Powell's Swan Song: Fed Keeps Rates Unchanged - Charles Schwab",
+        "snippet": "As widely expected amid rising oil, rates will remain 3.5% to 3.75%. However, four policymakers dissented. And Fed Chair Powell will stay as governor after ..."
+      },
+      {
+        "url": "https://www.advisorperspectives.com/dshort/updates/2026/04/29/feds-interest-rate-decision-april-29-2026",
+        "title": "Fed's Interest Rate Decision: April 29, 2026 - Advisor Perspectives",
+        "snippet": "The Federal Reserve concluded its third meeting of the year by holding the federal funds rate (FFR) steady in the 3.50%-3.75% range."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "ukrainian biolabs us funded",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests gov primary + journalism debunking vs propaganda/state-media sources vs SEO conspiracy."
+    },
+    "results": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Ukraine_bioweapons_conspiracy_theory",
+        "title": "Ukraine bioweapons conspiracy theory - Wikipedia",
+        "snippet": "In March 2022, during the Russian invasion of Ukraine, Russian officials falsely claimed that public health facilities in Ukraine were \"secret U.S.-funded ..."
+      },
+      {
+        "url": "https://www.bbc.com/news/60711705",
+        "title": "Ukraine war: Fact-checking Russia's biological weapons claims - BBC",
+        "snippet": "Channel One Russian state TV has been showing sites which officials say are being used to develop bioweapons."
+      },
+      {
+        "url": "https://www.dtra.mil/Portals/61/Documents/Factsheets/CRS-Ukraine-Factsheet.pdf?ver=6Ur80qwgyBSZtFLhcHGaEA%3D%3D",
+        "title": "[PDF] Biological Security Engagement in Ukraine: U.S. Cooperation and ...",
+        "snippet": "During its invasion of Ukraine, the Russian government has accused Ukraine of possessing a clandestine biological weapons program with support ..."
+      },
+      {
+        "url": "https://www.npr.org/2022/03/25/1087910880/biological-weapons-far-right-russia-ukraine",
+        "title": "How Russia's false biolab story was echoed by the U.S. far right - NPR",
+        "snippet": "Russia's false claims about the biolabs quickly raised concerns that it might be preparing to attack Ukraine with biological weapons, and laying ..."
+      },
+      {
+        "url": "https://2001-2009.state.gov/documents/organization/95251.pdf",
+        "title": "[PDF] Agreement - state.gov",
+        "snippet": "The Department of Defense of the United States of America (\"U.S.. Department of Defense\") and the Ministry of Health of Ukraine, hereinafter referred to ..."
+      },
+      {
+        "url": "https://www.c-span.org/clip/senate-committee/user-clip-nuland-confirms-existence-of-bio-research-labs-in-ukraine/5005368",
+        "title": "Nuland Confirms Existence of Bio \"research\" Labs in Ukraine",
+        "snippet": "Victoria Nuland Senate testimony of March 7, 2022 confirms existence of biological laboratories in Ukraine."
+      },
+      {
+        "url": "https://lieber.westpoint.edu/russias-allegations-us-biological-warfare-ukraine-part-i/",
+        "title": "Russia's Allegations of U.S. Biological Warfare in Ukraine \u2013 Part I",
+        "snippet": "Russia has accused the United States and Ukraine of collaborating to develop biological weapons in violation of international law."
+      },
+      {
+        "url": "https://mid.ru/en/foreign_policy/international_safety/regprla/1873584",
+        "title": "The Ministry of Foreign Affairs of the Russian Federation",
+        "snippet": "The Outcome Report of the Parliamentary Commission on Investigation into the Circumstances Related to Creation of Biological Laboratories by ..."
+      },
+      {
+        "url": "https://www.war.gov/News/Transcripts/Transcript/article/2963333/senior-defense-official-holds-an-off-camera-press-briefing/",
+        "title": "Senior Defense Official Holds an Off-Camera Press Briefing",
+        "snippet": "So, what I'm going to do is provide an overview of the Biological Weapons Convention and some information regarding the United States, Russia, ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=KBnsuTcfWeQ",
+        "title": "How the Ukraine 'biolabs' conspiracy theory went mainstream",
+        "snippet": "The reason Russia went into Ukraine was to destroy U.S funded biological laboratories."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "postgres vacuum analyze when",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs vs community operational advice."
+    },
+    "results": [
+      {
+        "url": "https://www.postgresql.org/docs/current/sql-vacuum.html",
+        "title": "Documentation: 18: VACUUM - PostgreSQL",
+        "snippet": "When VERBOSE is specified, VACUUM emits progress messages to indicate which table is currently being processed. Various statistics about the tables are printed ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/PostgreSQL/comments/1dmfohx/vacuum_full_analyze_much_better_than_vacuum/",
+        "title": "r/PostgreSQL on Reddit: VACUUM FULL ANALYZE much better ...",
+        "snippet": "VACUUM ANALYZE + REINDEX is a maintenance routine which has much more options and possible time windows to be done in production. VACUUM FULL ..."
+      },
+      {
+        "url": "https://stackoverflow.com/questions/37261697/how-to-efficiently-vacuum-analyze-tables-in-postgres",
+        "title": "How to efficiently vacuum analyze tables in Postgres - Stack Overflow",
+        "snippet": "\"Vacuum Analyze\" is a manual cleanup operation and it is usually done once a week or month, depending on the frequency of update/deletes performed on the ..."
+      },
+      {
+        "url": "https://support.atlassian.com/atlassian-knowledge-base/kb/optimize-and-improve-postgresql-performance-with-vacuum-analyze-and-reindex/",
+        "title": "Optimize and Improve PostgreSQL Performance with VACUUM ...",
+        "snippet": "Learn how to optimize PostgreSQL performance using VACUUM, ANALYZE, and REINDEX commands for efficient database management."
+      },
+      {
+        "url": "https://www.enterprisedb.com/blog/postgresql-vacuum-and-analyze-best-practice-tips",
+        "title": "PostgreSQL VACUUM Guide and Best Practices - EDB",
+        "snippet": "Most database administrations will only use VACUUM ANALYZE after bulk operations to reclaim space or during initial database setup to ensure everything is ..."
+      },
+      {
+        "url": "https://www.cybertec-postgresql.com/en/grant-vacuum-analyze-postgresql-16/",
+        "title": "GRANT VACUUM, ANALYZE in PostgreSQL 16",
+        "snippet": "GRANT VACUUM, ANALYZE can be used to extend the permission to vacuum and analyze tables to any user. This also can be done by granting the user a predefined ..."
+      },
+      {
+        "url": "https://learnomate.org/vacuum-analyze-and-vacuum-full-in-postgresql/",
+        "title": "vacuum ,analyze and vacuum full in postgresql",
+        "snippet": "In PostgreSQL, VACUUM, ANALYZE, and VACUUM FULL are essential maintenance operations that help optimize performance and manage database storage."
+      },
+      {
+        "url": "https://batcat.medium.com/clean-house-clear-mind-keeping-your-postgres-tables-tidy-with-vacuuming-3e13a15b30fe",
+        "title": "Why I Vacuum My Tables Regularly - BatCat - Medium",
+        "snippet": "The Postgres docs say that vacuuming will help \u201cgarbage-collect and optionally analyze a database\u201d. From the many options available, I tend to ..."
+      },
+      {
+        "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/postgresql-maintenance-rds-aurora/manual-vacuum.html",
+        "title": "Vacuuming and analyzing tables manually - AWS Documentation",
+        "snippet": "Best practices for running VACUUM and ANALYZE commands manually on your PostgreSQL databases in Amazon RDS and Aurora."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "is flouride in water dangerous",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Common-typo realistic query. Tests academic + reference (mainstream consensus) vs SEO advocacy + conspiracy aggregators."
+    },
+    "results": [
+      {
+        "url": "https://publichealth.jhu.edu/2024/why-is-fluoride-in-our-water",
+        "title": "Why Is Fluoride in Our Water? | Johns Hopkins",
+        "snippet": "The fluoride in our water has passively protected the oral health of Americans for decades by reducing cavities, tooth decay, and dental health disparities."
+      },
+      {
+        "url": "https://www.cancer.org/cancer/risk-prevention/chemicals/water-fluoridation-and-cancer-risk.html",
+        "title": "Fluoride in Water: Is There a Cancer Risk?",
+        "snippet": "If fluoride exceeds this level, it can cause dental fluorosis in children, a condition that can permanently stain or pit developing teeth. State ..."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6195894/",
+        "title": "The Fluoride Debate: The Pros and Cons of Fluoridation - PMC - NIH",
+        "snippet": "Water might get contaminated with toxic chemicals while being fluoridated. Not all countries provide certificates of analysis and the amounts of contaminants in ..."
+      },
+      {
+        "url": "https://ysph.yale.edu/research/information-sheets/fluoride/",
+        "title": "Fluoride's Impact on Health - Yale School of Public Health",
+        "snippet": "While the benefits of fluoride are clear, prolonged exposure to high levels of fluoride can be harmful to teeth and bones (known as fluorosis), which includes ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/OutOfTheLoop/comments/1gs3iaq/whats_up_with_rfk_claiming_fluoride_in_drinking/",
+        "title": "What's up with RFK claiming fluoride in drinking water is dangerous ...",
+        "snippet": "Answer: No. Like many, many things that are otherwise good for you, fluoride can be toxic in high doses, but you will die of water poisoning ..."
+      },
+      {
+        "url": "https://www.uchealth.org/today/the-truth-about-fluoride-in-water-a-public-health-story-with-colorado-roots/",
+        "title": "The truth about fluoride in water: A public health success ... - UCHealth",
+        "snippet": "In mild cases it can cause white spots or lines and in more moderate to severe cases it can cause yellowing or pitting of the teeth.\u201d Why do ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=6FXGOH08hAM",
+        "title": "Fluoride in Your Water: Is It Really Safe? - YouTube",
+        "snippet": "In this video, we break down everything you need to know about fluoride in your drinking water\u2014from its benefits to the potential risks ..."
+      },
+      {
+        "url": "https://www.cdc.gov/fluoridation/faq/index.html",
+        "title": "Community Water Fluoridation Frequently Asked Questions - CDC",
+        "snippet": "When water fluoride levels exceed 2.0 mg/L, water systems are required to notify customers of the increased potential for dental fluorosis. Less ..."
+      },
+      {
+        "url": "https://www.foodandwaterwatch.org/2020/10/16/fluoride-in-drinking-water-may-be-harming-our-children-we-need-to-address-it/",
+        "title": "Fluoride in Drinking Water May Be Harming Our Children. We Need ...",
+        "snippet": "The data show fluoride consumed from drinking water may have adverse neurological health impacts \u2014 especially among children. It's why Food & ..."
+      },
+      {
+        "url": "https://www.goodrx.com/conditions/dental-care/is-fluoride-in-water-bad-for-you?srsltid=AfmBOoqGeZeDgR8WJgYal3hCnCk_J21ioTeHDkr_-odjcDGMZbaOIpg_",
+        "title": "Is Fluoride in Water Bad for You? What You Need to Know - GoodRx",
+        "snippet": "Drinking fluoridated water is generally safe \u2014 provided the fluoride stays below 1.5 mg per liter of water. Higher levels of fluoride may have ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "scholarly articles roman britain",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic-source-type detection vs general history reference sites."
+    },
+    "results": [
+      {
+        "url": "https://www.tandfonline.com/doi/full/10.1080/14655187.2021.1947064",
+        "title": "Assessing How Representation of the Roman Past Impacts Public ...",
+        "snippet": "This paper explores the public debate resulting from the BBC cartoon of a 'Roman family' in Britain."
+      },
+      {
+        "url": "https://www.history.org.uk/primary/resource/3851/roman-britain-a-brief-history?srsltid=AfmBOopr4rWul1bF3Y_avPoefoUfRSxAeZb_CSdmeh4o7B_eqUnjdLdF",
+        "title": "Roman Britain: a brief history - Historical Association",
+        "snippet": "The Romans stayed in Britain for nearly 400 years, until the last troops left to defend Rome in 410AD. The Romans' great strengths were organisational and ..."
+      },
+      {
+        "url": "https://www.english-heritage.org.uk/learn/story-of-england/romans/",
+        "title": "Roman Britain | English Heritage",
+        "snippet": "Britain was part of the Roman Empire for about four centuries. From the invasion under the emperor Claudius in AD 43 until rule from Rome ended in the early ..."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3097515/",
+        "title": "A new approach to the study of Romanization in Britain - PMC - NIH",
+        "snippet": "This is the first study of Romanization to use the Siler and Gompertz-Makeham models of mortality in order to investigate the health consequences of the 43 AD ..."
+      },
+      {
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/718640",
+        "title": "The Material Fall of Roman Britain, 300\u2013525 CE By Robin Fleming ...",
+        "snippet": "The disappearance of the Roman tax-pay cycle produced a time of dislocation, a loss of skills, and an economic reorientation with profound effects."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Roman_Britain",
+        "title": "Roman Britain - Wikipedia",
+        "snippet": "Roman Britain was the territory that became the Roman province of Britannia after the Roman conquest of Britain, consisting of a large part of the island of ..."
+      },
+      {
+        "url": "https://warwick.ac.uk/fac/arts/classics/warwickclassicsnetwork/romancoventry/resources/diversity/evidence/",
+        "title": "The Evidence for Diversity in Roman Britain - University of Warwick",
+        "snippet": "There is plenty of evidence that the Roman empire was relatively diverse, as might be expected from an empire that encouraged trade and mobility."
+      },
+      {
+        "url": "https://www.arch.cam.ac.uk/news/britains-economy-boomed-after-romans-aldborough-study-reveals",
+        "title": "Britain's economy boomed after the Romans, Aldborough study ...",
+        "snippet": "Their findings, published in the journal Antiquity, confirm that metal production did not collapse immediately after the Romans left Britain."
+      },
+      {
+        "url": "https://durham-repository.worktribe.com/preview/1668465/22020.pdf",
+        "title": "[PDF] The Romans in Britain: Colonisation on an imperial frontier",
+        "snippet": "Introduction. This chapter addresses the means through which the southern and eastern parts of the. British Isles were incorporated into the Roman Empire ..."
+      },
+      {
+        "url": "https://www.cambridge.org/core/journals/antiquity/article/assessing-the-impact-of-roman-occupation-on-england-through-the-developmental-origins-of-health-and-disease-dohad-hypothesis/921B8AB243C77B712498B9D56693EB72",
+        "title": "Assessing the impact of Roman occupation on England through the ...",
+        "snippet": "Consequently, Romano-British research has focused on 'rich' archaeological signatures including elaborate villas and high-status burials, which ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "honest fitbit charge 6 review",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests indie review (blogs, community) vs commercial vs SEO; 'honest' modifier signals user wants non-commercial."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/fitbit/comments/1h2gpy3/would_you_recommend_the_charge_6_in_your/",
+        "title": "Would you recommend the Charge 6? In your experience ... - Reddit",
+        "snippet": "To me, the big selling point is the 7-days battery life and low cost. Worth being off by a handful of heartbeats per day."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ZCPf35R6p7U",
+        "title": "Fitbit Charge 6 Review - My Most Recommended Wearable of 2025",
+        "snippet": "Fitbit Charge 6 Review - My Most Recommended Wearable of 2025 Fitbit Charge 6 - https://amzn.to/4590CeM In this Fitbit Charge 6 review, ..."
+      },
+      {
+        "url": "https://www.sypnotix.com/reviews/fitbit-charge-6-review",
+        "title": "Fitbit Charge 6 Review: So Basically A Pixel Band? - Sypnotix",
+        "snippet": "POSITIVES. \u2713 Price point. A competitively priced fitness tracker that comes with plenty of features. \u2713 Colorful display. Immersive and ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bxJHSOXRWC0",
+        "title": "Fitbit Charge 6 - Six Months Later In-Depth Review - YouTube",
+        "snippet": "The Fitbit Charge 6 came out at the end of 2023, and is about a year and a half old now. Is it still worth it? Ever since Google bought ..."
+      },
+      {
+        "url": "https://www.businessinsider.com/guides/tech/fitbit-charge-6-review",
+        "title": "Fitbit Charge 6 Review: Our Favorite Fitbit Tracker - Business Insider",
+        "snippet": "The Fitbit Charge 6 is an excellent fitness tracker for general use. It boasts reliable data and great value for its class."
+      },
+      {
+        "url": "https://www.techradar.com/health-fitness/fitness-trackers/fitbit-charge-6-review",
+        "title": "Fitbit Charge 6 review: A fun but flawed modern fitness tracker",
+        "snippet": "The Fitbit Charge 6 GPS suffers from serious connectivity issues if the strap is fastened too tightly, and the heart rate accuracy will take a ..."
+      },
+      {
+        "url": "https://www.facebook.com/wired/posts/the-fitbit-charge-6-is-the-best-fitbit-overall-heres-why-along-with-some-honorab/1330793882249534/",
+        "title": "The Fitbit Charge 6 is the best Fitbit overall. Here's why, along with ...",
+        "snippet": "Really Loving My Fitbit Charge 6 and all the features are working now like readiness score and skin temperature and stress management too and I ..."
+      },
+      {
+        "url": "https://thegadgetflow.com/blog/fitbit-charge-6-review/",
+        "title": "Fitbit Charge 6 review: a fitness tracker packed with smarts",
+        "snippet": "What I've found in my review of the Fitbit Charge 6 is that I love the long battery life, sleek design, and handy health-tracking features."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=N1f0-rWcxNE",
+        "title": "REVIEW: Google Fitbit Charge 6 Fitness Tracker in 2025 - Worth It?",
+        "snippet": "Fitbit Charge 6 review and full walkthrough - Google Fitness Activity Tracker Find it here: https://amzn.to/3Y1z6ve OR here (bundle kit): ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "supreme court decision today",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness and primary (court opinion text) for time-sensitive query."
+    },
+    "results": [
+      {
+        "url": "https://www.supremecourt.gov/",
+        "title": "Home - Supreme Court of the United States",
+        "snippet": "Today at the Court - Tuesday, May 26, 2026. The Court will release an order list at 9:30 a.m.; The Supreme Court Building is open to the public from 9 a.m. to ..."
+      },
+      {
+        "url": "https://www.scotusblog.com/",
+        "title": "SCOTUSblog \u2014 Independent news and analysis on the U.S. ...",
+        "snippet": "The Supreme Court and social media \u00b7 Court puts off deciding whether to consider $5 million verdict against Trump \u2013 yet again."
+      },
+      {
+        "url": "https://www.supremecourt.gov/opinions/slipopinion/25",
+        "title": "Opinions of the Court - 2025",
+        "snippet": "The opinions collected here are those issued during October Term 2025 (October 5, 2025, through October 3, 2026). Opinions are posted on the website upon ..."
+      },
+      {
+        "url": "https://www.oyez.org/cases",
+        "title": "2025-2026 Term - Oyez",
+        "snippet": "A case in which the Court will decide whether the Rooker-Feldman doctrine, which prevents parties who lose in state courts from challenging injuries caused by ..."
+      },
+      {
+        "url": "https://apnews.com/hub/us-supreme-court",
+        "title": "U.S. Supreme Court | Latest Updates - AP News",
+        "snippet": "Redistricting battle intensifies in states after US Supreme Court ruling on Voting Rights Act \u00b7 A Supreme Court decision striking down a majority Black ..."
+      },
+      {
+        "url": "https://supreme.justia.com/",
+        "title": "Justia U.S. Supreme Court Center",
+        "snippet": "Justia provides a free collection of all U.S. Supreme Court decisions from 1791 to the present. We also offer opinion summaries, briefs, oral argument audio, ..."
+      },
+      {
+        "url": "https://www.reuters.com/legal/us-supreme-court/",
+        "title": "Legal Supreme Court News | Breaking Stories - Reuters",
+        "snippet": "The U.S. Supreme Court is deciding major cases during its current term involving issues such as voting rights, presidential powers, tariffs, birthright ..."
+      },
+      {
+        "url": "https://www.nbcnews.com/politics/supreme-court",
+        "title": "Supreme Court: SCOTUS Decisions & News on the U.S. Federal Court",
+        "snippet": "Supreme Court faces new criticism for redistricting decision so close to 2026 elections. Recent rulings have triggered a frenzy to redraw congressional maps ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=CmIkcd6DLYI",
+        "title": "Supreme Court set to release major decisions on Fed and citizenship",
+        "snippet": "The Supreme Court is preparing to release key decisions as it nears the end of its term, with major rulings expected on issues including the ..."
+      },
+      {
+        "url": "https://www.supremecourt.gov/opinions/opinions.aspx",
+        "title": "Opinions - Supreme Court of the United States",
+        "snippet": "Each opinion sets out the Court's judgment and its reasoning and may include the majority or principal opinion as well as any concurring or dissenting opinions."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "did adam smith actually say invisible hand",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Quote-verification query. Tests whether primary source (Wealth of Nations text) and academic secondary clarification outrank misattribution aggregators."
+    },
+    "results": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Invisible_hand",
+        "title": "Invisible hand - Wikipedia",
+        "snippet": "In both cases, Adam Smith speaks of an invisible hand, never of the invisible hand. Going far beyond the original intent of Smith's metaphor, twentieth-century ..."
+      },
+      {
+        "url": "https://www.adamsmithworks.org/documents/adam-smith-peter-foster-invisible-hand",
+        "title": "Adam Smith's Invisible Hand",
+        "snippet": "In his book, Head to Head, Harvard's Lester Thurow wrote that \u201cToo often, Adam Smith's 'Invisible Hand' became the hand of a pickpocket.\u201d In ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/explainlikeimfive/comments/1j4hf5j/eli5_what_the_invisible_hand_is_as_described_by/",
+        "title": "ELI5 What The Invisible Hand is as described by Adam Smith - Reddit",
+        "snippet": "Adam Smith used the phrase \"an invisible hand\" (not \"the invisible hand\", and certainly not \"the Invisible Hand\") exactly twice in his writings."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=53rKW8JRYhQ",
+        "title": "Adam Smith's Invisible Hand Theory Explained | Economics - YouTube",
+        "snippet": "The 18th century political economist Adam Smith described self-interest and competition as the \u201cinvisible hand\u201d that guides a market economy ..."
+      },
+      {
+        "url": "https://www.investopedia.com/terms/i/invisiblehand.asp",
+        "title": "Understanding the Invisible Hand in Economics: Key Insights",
+        "snippet": "The invisible hand is a metaphor introduced by Adam Smith that describes how self-interested individuals in free markets can unintentionally benefit society by ..."
+      },
+      {
+        "url": "https://www.quora.com/Why-do-people-often-misunderstand-Adam-Smiths-invisible-hand-as-something-magical-in-the-economy-when-he-was-just-using-it-as-a-metaphor",
+        "title": "Why do people often misunderstand Adam Smith's 'invisible hand ...",
+        "snippet": "The \u201cInvisible Hand\u201d was Adam Smith's mechanism to accommodate chaos theory in economics,. Until the 2008 mortgage crises, Free Market ..."
+      },
+      {
+        "url": "https://www.jstor.org/stable/2117851",
+        "title": "Adam Smith and the Invisible Hand - jstor",
+        "snippet": "Smith's attitude to the invisible hand was ironical on each of the three occasions. The evidence for this view is indirect. Smith makes no other mention of ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=t95gtmUFz_Y",
+        "title": "Adam Smith's Invisible Hand \u2014 and What He Actually Meant",
+        "snippet": "The greatest myth in economic history wasn't created by Adam Smith \u2014 it was created by the people who needed his ... say this is one of the ..."
+      },
+      {
+        "url": "https://www.britannica.com/money/invisible-hand",
+        "title": "Invisible hand | Definition, Economics, Example, & Facts - Britannica",
+        "snippet": "Smith invokes the phrase on two occasions to illustrate how a public benefit may arise from the interactions of individuals who did not intend to bring about ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "ukraine russia ceasefire latest",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests journalism freshness ranking and primary statements (gov communications) vs aggregator."
+    },
+    "results": [
+      {
+        "url": "https://apnews.com/article/trump-russia-ukraine-war-ceasefire-prisoner-swap-007c385a9b81ba81b4b51c1a5b8ace9b",
+        "title": "Trump says Russia and Ukraine have agreed to a 3-day ceasefire",
+        "snippet": "\u201cI am pleased to announce that there will be a THREE DAY CEASEFIRE (May 9th, 10th, and 11th) in the War between Russia and Ukraine,\u201d Trump wrote ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=r5WKoozRbiQ",
+        "title": "Russia-Ukraine ceasefire at risk | US-Iran naval confrontations ...",
+        "snippet": "... News is Australia's trusted news source for the latest news from Australia and across the world. Subscribe to the SBS News YouTube channel ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Peace_negotiations_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)",
+        "title": "Peace negotiations in the Russo-Ukrainian war (2022\u2013present)",
+        "snippet": "Negotiations halted due to disagreements over key points, Russia's proposed veto on Ukraine's defense, doubts about Russia's sincerity, and the Bucha massacre."
+      },
+      {
+        "url": "https://www.bbc.com/news/articles/c202zn5gg0lo",
+        "title": "Trump says Russia and Ukraine to observe three-day ceasefire - BBC",
+        "snippet": "Putin had announced a ceasefire for 8-9 May ahead of Victory Day celebrations on Saturday. Kyiv had earlier called for an indefinite truce, ..."
+      },
+      {
+        "url": "https://www.pbs.org/newshour/world/russia-and-ukraine-accuse-each-other-of-violating-u-s-brokered-three-day-ceasefire",
+        "title": "Russia and Ukraine accuse each other of violating U.S.-brokered ...",
+        "snippet": "Russia and Ukraine swapped accusations of breaking a U.S.-brokered ceasefire on Sunday, with both sides claiming to have suffered casualties ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=W8piqlBdjBs",
+        "title": "Russia, Ukraine agree to Trump-brokered three-day ceasefire",
+        "snippet": "#News #Reuters #Newsfeed #russia #russiaukrainewar #ceasefire Read the story here: https://reut.rs/49adYcf Subscribe: https://reut.rs ..."
+      },
+      {
+        "url": "https://www.nbcnews.com/world/russia-ukraine-news",
+        "title": "Russia-Ukraine War News: Updates, Video from Zelenskyy-Putin ...",
+        "snippet": "Russia also launched several attacks in Ukraine hours before the deadline for Kyiv's ceasefire offer, killing at least 27, Ukrainian officials said."
+      },
+      {
+        "url": "https://www.aljazeera.com/news/2026/5/4/russia-and-ukraine-declare-competing-ceasefires",
+        "title": "Russia and Ukraine declare competing ceasefires | News - Al Jazeera",
+        "snippet": "Russia announced on Monday that its ceasefire would be between May 8-9, when it traditionally marks Victory Day in the Great Patriotic War (as ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=k-E-dCwu5yI",
+        "title": "Russia and Ukraine begin 3-day ceasefire as tensions ... - YouTube",
+        "snippet": "President Trump said Friday that fighting would halt between Russia and Ukraine for three days ... news, as well as profiles of leading figures in ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "covid 19 lab leak evidence",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + academic vs indie/advocacy vs SEO conspiracy on a topic where scientific and political consensus diverge."
+    },
+    "results": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12040609/",
+        "title": "On the Controversies Surrounding the Lab-Leak Theory of COVID-19",
+        "snippet": "The so-called \u201clab-leak theory,\u201d suggesting that a new variant may have accidentally escaped from the Wuhan Institute of Virology (WIV) during serial passage."
+      },
+      {
+        "url": "https://www.whitehouse.gov/lab-leak-true-origins-of-covid-19/",
+        "title": "Lab Leak: The True Origins of Covid-19 - The White House",
+        "snippet": "Covid 19 Origins - Lab Leak THE ORIGIN \u201cThe Proximal Origin of SARS-CoV-2\u201d publication \u2014 which was used repeatedly by public health officials and the."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10117112/",
+        "title": "A Critical Analysis of the Evidence for the SARS-CoV-2 Origin ... - PMC",
+        "snippet": "When humans experience a new, devastating viral infection such as severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), significant challenges arise ..."
+      },
+      {
+        "url": "https://www.who.int/news/item/27-06-2025-who-scientific-advisory-group-issues-report-on-origins-of-covid-19",
+        "title": "WHO Scientific advisory group issues report on origins of COVID-19",
+        "snippet": "The WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO), a panel of 27 independent, international, multidisciplinary ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/COVID-19_lab_leak_theory",
+        "title": "COVID-19 lab leak theory - Wikipedia",
+        "snippet": "The COVID-19 lab leak theory is the hypothesis that SARS-CoV-2, the virus responsible for the COVID-19 pandemic, originated from a laboratory."
+      },
+      {
+        "url": "https://www.science.org/content/article/house-panel-concludes-covid-19-pandemic-came-lab-leak",
+        "title": "House panel concludes that COVID-19 pandemic came from a lab ...",
+        "snippet": "The Republican-led Select Subcommittee on the Coronavirus Pandemic conducted more than 30 interviews, held numerous hearings, often fiery and ..."
+      },
+      {
+        "url": "https://healthcare.utah.edu/press-releases/2021/08/origins-of-covid-19-report-provides-evidence-lab-leak-theory-unlikely",
+        "title": "On the Origins of COVID-19: Report Provides Evidence That Lab ...",
+        "snippet": "Today's COVID-19 pandemic likely began when an infected animal passed the SARS-CoV-2 virus to a human at a live animal market in Wuhan, China."
+      },
+      {
+        "url": "https://journals.asm.org/doi/10.1128/jvi.01240-24",
+        "title": "The harms of promoting the lab leak hypothesis for SARS-CoV-2 ...",
+        "snippet": "Science is humanity's best insurance against threats from nature, but it is a fragile enterprise that must be nourished and protected."
+      },
+      {
+        "url": "https://oversight.house.gov/landing/covid-origins/",
+        "title": "COVID Origins - United States House Committee on Oversight and ...",
+        "snippet": "Mounting evidence points to the virus originating from a leak at the Wuhan Institute of Virology (WIV)."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=yhMQqovIl0w",
+        "title": "COVID-19 Lab Leak Theory: Why It Is Unlikely - YouTube",
+        "snippet": "The so-called lab leak hypothesis which is to say that the virus was created in a laboratory in Wuhan and then spread throughout the city."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "voter id laws effects research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research vs advocacy think tanks (both sides) vs journalism."
+    },
+    "results": [
+      {
+        "url": "https://esra.wisc.edu/wp-content/uploads/sites/1556/2020/11/hajnal.pdf",
+        "title": "[PDF] Strict Voter Identification Laws and Minority Turnout1 Zoltan Hajnal ...",
+        "snippet": "We assume that the greater the share of racial and ethnic minorities in a county, the more voter turnout is driven by racial and ethnic minority turnout. The ..."
+      },
+      {
+        "url": "https://www.brennancenter.org/our-work/research-reports/impact-voter-suppression-communities-color",
+        "title": "The Impact of Voter Suppression on Communities of Color",
+        "snippet": "This analysis catalogs some of the most prominent research findings on the negative impact of voting restrictions on voters of color."
+      },
+      {
+        "url": "https://electionlab.mit.edu/research/voter-identification",
+        "title": "Voter identification | MIT Election Lab",
+        "snippet": "All states have voter identification requirements, ranging from simply announcing one's name to showing an official photo ID card."
+      },
+      {
+        "url": "https://www.povertyactionlab.org/evaluation/effects-voter-id-notification-voter-turnout-united-states",
+        "title": "The Effects of Voter ID Notification on Voter Turnout in the United ...",
+        "snippet": "In the past decade, many states across the United States have adopted voter identification laws. These laws require eligible voters to present proof of identity ..."
+      },
+      {
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2217323120",
+        "title": "Who benefits from voter identification laws? - PNAS",
+        "snippet": "We conclude that voter ID requirements motivate and mobilize supporters of both parties, ultimately mitigating their anticipated effects on election results."
+      },
+      {
+        "url": "https://cdce.umd.edu/feature/new-cdce-survey-shows-millions-lack-id-voter-id-laws-spread-more-states",
+        "title": "New CDCE Survey Shows Millions Lack ID as Voter ID Laws Spread ...",
+        "snippet": "CDCE's work with VoteRiders, Brennan Center, and Public Wise allows us to know more than ever about the impact of voter ID laws. These data illuminate ways ..."
+      },
+      {
+        "url": "https://law.osu.edu/electionlaw/litigation/documents/Veasey8545.pdf",
+        "title": "[PDF] The Disproportionate Impact of Voter-ID Requirements on the ...",
+        "snippet": "We thus expect these groups to be sig- nificantly impacted by Indiana's photo-identification laws. THE INDIANA VOTER-ID LAW. AND THE INDIANA ELECTORATE. Prior ..."
+      },
+      {
+        "url": "https://www.ncsl.org/elections-and-campaigns/voter-id",
+        "title": "Voter ID Laws - National Conference of State Legislatures",
+        "snippet": "Thirty-six states have laws requesting or requiring voters to show some form of identification at the polls."
+      },
+      {
+        "url": "https://ippsr.msu.edu/research/voter-identification-laws-and-suppression-minority-votes",
+        "title": "Voter Identification Laws and the Suppression of Minority Votes",
+        "snippet": "This research explores the effects of voter ID laws on elections. The authors argue that many of the studies which find voter ID has no ..."
+      },
+      {
+        "url": "https://www.lwv.org/blog/whats-so-bad-about-voter-id-laws",
+        "title": "What's So Bad About Voter ID Laws?",
+        "snippet": "While supporters argue that voter photo ID laws are necessary to prevent voter fraud and ensure the integrity of elections, reality tells a ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "whats wrong with langchain",
+      "category": "technical",
+      "difficulty": "hard",
+      "probes": "Tests indie criticism (blog posts) vs community vs vendor commercial; opinion-heavy technical query."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/LangChain/comments/1gmfyi2/why_are_people_hating_langchain_so_much/",
+        "title": "Why are people hating LangChain so much, organisations ... - Reddit",
+        "snippet": "It's bloated and is dangerous in prod as a result, plus there's no established leadership in the project, so features and it's structure are ..."
+      },
+      {
+        "url": "https://news.ycombinator.com/item?id=40739982",
+        "title": "Why we no longer use LangChain for building our AI agents",
+        "snippet": "The mistake of LangChain is that they doubled down on the bad abstraction. They should have been iterating by exploring different approaches to ..."
+      },
+      {
+        "url": "https://minimaxir.com/2023/07/langchain-problem/",
+        "title": "The Problem With LangChain | Max Woolf's Blog",
+        "snippet": "The problem with LangChain is that it makes simple things relatively complex, and with that unnecessary complexity creates a tribalism which hurts the up-and- ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=uR_lvAZFBw0",
+        "title": "Why Top AI Engineers Don't Use LangChain - YouTube",
+        "snippet": "... LangChain after 12 months in production, making their code ... Everything You Thought About Building AI Agents is Wrong. Cole Medin ..."
+      },
+      {
+        "url": "https://shashankguda.medium.com/challenges-criticisms-of-langchain-b26afcef94e7",
+        "title": "Challenges & Criticisms of LangChain | by Shashank Guda - Medium",
+        "snippet": "Key concerns include dependency bloat and complexity, frequent breaking changes and unstable APIs, outdated documentation and guidance gaps, and ..."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/leadgenmanthan_never-use-langchain-in-production-45-of-activity-7367864422226112513-tMI4",
+        "title": "Never Use Langchain in Production | Manthan Patel - LinkedIn",
+        "snippet": "LangChain is a great teaching tool but a terrible production dependency. We've seen the same issues, latency tax, silent failures, brittle ..."
+      },
+      {
+        "url": "https://www.designveloper.com/blog/is-langchain-bad/",
+        "title": "Why Developers Say LangChain Is \"Bad\": An Honest Look at ...",
+        "snippet": "Key developer concerns include dependency bloat and complexity, frequent breaking changes to its APIs, outdated documentation, and ..."
+      },
+      {
+        "url": "https://community.latenode.com/t/why-im-avoiding-langchain-in-2025/39046",
+        "title": "Why I'm avoiding LangChain in 2025 - Latenode Official Community",
+        "snippet": "Langchain's been overengineered since day one. We dropped it early ... Takes 30 minutes to set up what'd take days with traditional coding."
+      },
+      {
+        "url": "https://news.ycombinator.com/item?id=36645575",
+        "title": "Langchain Is Pointless - Hacker News",
+        "snippet": "- There are critiques about Langchain's poor documentation, lack of customizability, and difficulty debugging. The rapid pace of updates is also ..."
+      },
+      {
+        "url": "https://mirascope.com/blog/langchain-sucks",
+        "title": "Does LangChain Suck? What to Use Instead - Mirascope",
+        "snippet": "In this article, we explain why LangChain sucks for production and what you can use instead to reliably build flexible AI applications."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "is allbirds going out of business",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + SEC primary (filings) vs aggregator clickbait for a financial-status query."
+    },
+    "results": [
+      {
+        "url": "https://www.forbes.com/sites/claraludmir/2026/02/05/allbirds-is-closing-all-us-stores-heres-what-went-wrong/",
+        "title": "Allbirds Is Closing All U.S. Stores. Here's What Went Wrong",
+        "snippet": "Once valued at $4 Billion, Allbirds announced it is closing all its U.S. stores. Was the retail strategy a mistake for the DTC brand or is ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/Allbirds/comments/1s901iu/wtf_happened_to_all_birds_how_did_it_go_from_4000/",
+        "title": "r/Allbirds - Wtf happened to All birds. How did it go from ...",
+        "snippet": "... out but I have about 12 pairs of Allbirds and that's all I wear. I ... Business is hard. Sometimes it doesn't work. Will be interesting ..."
+      },
+      {
+        "url": "https://ir.allbirds.com/news-releases/news-release-details/allbirds-streamlines-operations-support-profitable-growth/",
+        "title": "Allbirds Streamlines Operations to Support Profitable Growth",
+        "snippet": "The Company will close its remaining full-price stores in the U.S. by the end of February 2026, enabling Allbirds to dedicate resources toward ..."
+      },
+      {
+        "url": "https://www.instagram.com/reel/DXS6K57CPvN/?hl=en",
+        "title": "The struggling shoe brand Allbirds announced it is exiting ...",
+        "snippet": "The struggling shoe brand Allbirds announced it is exiting the footwear business and re-inventing itself as an artificial intelligence company."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Allbirds",
+        "title": "Allbirds",
+        "snippet": "Allbirds went public on November 3, 2021, but experienced poor sales soon afterwards; executive turnover followed the company through the end of 2024. On April ..."
+      },
+      {
+        "url": "https://gizmodo.com/allbirds-is-getting-out-of-the-shoe-business-and-pivoting-to-ai-infrastructure-2000746830",
+        "title": "Allbirds Is Getting Out of the Shoe Business and Pivoting to ...",
+        "snippet": "Sales have been declining for a couple of years now, and Allbirds announced earlier this year that it would close all of its brick-and-mortar ..."
+      },
+      {
+        "url": "https://chattermill.com/blog/what-went-wrong-at-allbirds",
+        "title": "What went wrong at direct-to-cosumer darling Allbirds",
+        "snippet": "Revenues and profits are down, and their stock is at risk of being delisted from Nasdaq less than three years after a high-profile IPO, which ..."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/kenpucker_what-happened-to-allbirds-activity-7444789073627623424-k8e2",
+        "title": "Allbirds Sold to American Exchange Group for $39M, a 99 ...",
+        "snippet": "Allbirds Sold to American Exchange Group for $39M, a 99% Decline."
+      },
+      {
+        "url": "https://www.retaildive.com/news/allbirds-closing-all-us-stores-two-outlets/810712/",
+        "title": "Allbirds to close all US stores, save 2 outlets",
+        "snippet": "Allbirds will close all of its full-price stores in the U.S. by the end of February, the footwear retailer said in a Wednesday press release. As ..."
+      },
+      {
+        "url": "https://oliverfranklinwallis.substack.com/p/the-tragedy-of-allbirds-or-why-silicon",
+        "title": "The tragedy of Allbirds (or, why Silicon Valley's favourite ...",
+        "snippet": "In 2023, it made a net loss of $152million; in five years its stock price has fallen by 95%. So it didn't exactly come as a surprise when ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "primary sources french revolution",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests whether primary-source-publisher domains (archives, university digital collections) outrank Wikipedia tertiary and history-SEO secondary."
+    },
+    "results": [
+      {
+        "url": "https://alphahistory.com/frenchrevolution/french-revolution-documents/",
+        "title": "French Revolution documents - Alpha History",
+        "snippet": "French Revolution documents ; 1. The Ancien R\u00e9gime ; 2. The push for reform ; 3. The Estates General ; 4. The Paris insurrection ; 5. Remaking the nation."
+      },
+      {
+        "url": "https://library.mcla.edu/frenchrevolution/primarysources",
+        "title": "Primary Sources - French Revolution and Napoleon Seminar",
+        "snippet": "A guide to help you research the French revolution and Napoleon containing links to the best research databases to use, primary and secondary resources, and ..."
+      },
+      {
+        "url": "https://guides.loc.gov/women-in-the-french-revolution/primary-and-secondary-sources",
+        "title": "Primary and Secondary Sources - France: Women in the Revolution",
+        "snippet": "Primary sources are the raw materials of history\u2014original documents and objects that were created at the time under study. They are different from secondary ..."
+      },
+      {
+        "url": "https://libguides.fau.edu/wars-conflicts/french-revolution",
+        "title": "Primary Sources: Wars & Conflicts: French Revolution",
+        "snippet": "The French Revolution was a period of radical political and societal change in France that began with the Estates-General of 1789 and ended with the formation ..."
+      },
+      {
+        "url": "https://guides.library.mun.ca/c.php?g=501835&p=3435420",
+        "title": "Primary Sources : French Revolution - Memorial University Libraries",
+        "snippet": "Includes the Cahiers of 1789, the Decree abolishing Feudalism, the Civil Constitution of the Clergy, the proclamation of the Duke of ..."
+      },
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/french-revolution/",
+        "title": "French Revolution - The National Archives",
+        "snippet": "Looking at primary source material from 1789, including a London newspaper report, together with both official and personal letters sent from Paris, you ..."
+      },
+      {
+        "url": "https://library.pfw.edu/c.php?g=1215990&p=8893597",
+        "title": "HIST 355: Louis XIV-French Revolution: Digital Collections",
+        "snippet": "Selected primary sources compiled by Fordham University. Women of the French Revolution: A Resource Guide This link opens in a new window."
+      },
+      {
+        "url": "https://library.fiu.edu/frenchrevolution/websites",
+        "title": "The French Revolution: Websites - FIU Libraries",
+        "snippet": "On this page, you will find free web resources that contribute to the scholarship on The French Revolution from varied sources."
+      },
+      {
+        "url": "http://www.columbia.edu/~iw6/doc_frv.html",
+        "title": "Documents of the French Revolution",
+        "snippet": "Declaration of the Rights of Man and Citizen in 1789 \u00b7 Decrees of 4 August 1789 \u00b7 Proposal concerning the colonies (March 1790) \u00b7 The Revolution and Slavery: ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/AskHistorians/comments/1kx7q06/what_are_the_best_period_sources_written_about/",
+        "title": "What are the best period sources written about the French revolution?",
+        "snippet": "The French Revolution: A Document Collection (ed. Laura Mason and Tracey Rizzo) is the best collection of English translated primary sources I ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "rfk jr hhs confirmation",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism + primary gov communications vs advocacy-source contamination."
+    },
+    "results": [
+      {
+        "url": "https://www.congress.gov/nomination/119th-congress/11/8",
+        "title": "PN11-8 - Nomination of Robert F. Kennedy Jr. for ... - Congress.gov",
+        "snippet": "PN11-8 \u2014 Robert F. Kennedy Jr. \u2014 Department of Health and Human Services ... 02/13/2025 - Confirmed by the Senate by Yea-Nay Vote. 52 - 48. Record Vote ..."
+      },
+      {
+        "url": "https://www.npr.org/sections/shots-health-news/2025/02/13/nx-s1-5294591/rfk-jr-trump-health-human-services-hhs-vaccines",
+        "title": "Robert F. Kennedy Jr. confirmed as Trump's health secretary - NPR",
+        "snippet": "Robert F. Kennedy Jr. wins confirmation to be President Trump's secretary of the Department of Health and Human Services."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=1sSUi8hysNE",
+        "title": "Robert F. Kennedy Jr.'s second Senate confirmation hearing for ...",
+        "snippet": "President Trump's pick to lead the Department of Health and Human Services, Robert F. Kennedy Jr., testified before the Senate Health, ..."
+      },
+      {
+        "url": "https://www.c-span.org/clip/us-senate/senate-confirms-rfk-jr-as-hhs-secretary-52-48/5153468",
+        "title": "Senate Confirms RFK Jr. As HHS Secretary, 52-48 | Video - C-SPAN",
+        "snippet": "The Senate votes 52-48 to confirm Robert F. Kennedy Jr. as Health and Human Services secretary. Mitch McConnell was the lone Republican joining Democrats in ..."
+      },
+      {
+        "url": "https://ballotpedia.org/Confirmation_process_for_Robert_F._Kennedy_Jr._for_secretary_of_health_and_human_services",
+        "title": "Confirmation process for Robert F. Kennedy Jr. for secretary of ...",
+        "snippet": "The Senate voted 52-48 to confirm Kennedy on February 13, 2025. Summary of Senate vote on Robert F. Kennedy Jr.'s nomination for secretary of health and human ..."
+      },
+      {
+        "url": "https://www.kcra.com/article/kennedy-confirmation-hearings-senate/63599372",
+        "title": "Robert F. Kennedy Jr. HHS confirmation hearing - KCRA",
+        "snippet": "Robert F. Kennedy Jr. faces Senate hearings on his health official nomination, with focus on vaccine views and abortion stance."
+      },
+      {
+        "url": "https://www.fiercehealthcare.com/regulatory/senate-confirms-rfk-jr-head-hhs-52-48-vote",
+        "title": "RFK Jr. sworn in as head of HHS following 52-48 Senate vote",
+        "snippet": "The full Senate voted 52-48 today to confirm Robert F. Kennedy Jr. to lead the Department of Health and Human Services."
+      },
+      {
+        "url": "https://www.risehealth.org/insights-articles/rfk-jr-one-vote-away-from-becoming-hhs-secretary/",
+        "title": "RFK Jr. one vote away from becoming HHS secretary",
+        "snippet": "The 53-47 vote was along party lines, and the approval indicates he will likely be confirmed as President Donald Trump's pick for the top public ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=dgKw5P89NCs",
+        "title": "How RFK Jr. achieved his HHS confirmation after vaccine controversy",
+        "snippet": "The Senate confirmed Robert F. Kennedy Jr. as Secretary of Health and Human Services on Thursday. He faced questions over his past remarks ..."
+      },
+      {
+        "url": "https://www.c-span.org/program/senate-committee/hhs-secretary-nominee-robert-f-kennedy-jr-testifies-at-confirmation-hearing-part-1/654856",
+        "title": "HHS Secretary Nominee Robert F. Kennedy Jr Testifies at ... - C-SPAN",
+        "snippet": "Kennedy Jr Testifies at Confirmation Hearing, Part 1. \"I support the measles vaccine. I support the polio vaccine,\" said Robert F. Kennedy Jr., ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "habermas public sphere book",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic publisher detection vs reference summary; primary text vs tertiary explainer."
+    },
+    "results": [
+      {
+        "url": "https://www.amazon.com/Structural-Transformation-Public-Sphere-Contemporary/dp/0262581086",
+        "title": "The Structural Transformation of the Public Sphere: An Inquiry into a ...",
+        "snippet": "This is J\u00fcrgen Habermas's most concrete historical-sociological book and one of the key contributions to political thought in the postwar period."
+      },
+      {
+        "url": "https://arditiesp.wordpress.com/wp-content/uploads/2015/01/habermas_structural_transf_public_sphere.pdf",
+        "title": "[PDF] Habermas, Junger, The Structural Transformation of the Public ...",
+        "snippet": "Habermas's The Structural Transformation of the Public Sphere contains a number of terms that present problems to the trans- lator. One of these ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/The_Structural_Transformation_of_the_Public_Sphere",
+        "title": "The Structural Transformation of the Public Sphere - Wikipedia",
+        "snippet": "An important contribution to modern understanding of democracy, it is notable for \"transforming media studies into a hard-headed discipline.\" In 2022 Habermas ..."
+      },
+      {
+        "url": "https://www.politybooks.com/bookdetail?book_slug=a-new-structural-transformation-of-the-public-sphere-and-deliberative-politics--9781509558933",
+        "title": "A New Structural Transformation of the Public Sphere and ... - Polity",
+        "snippet": "J\u00fcrgen Habermas's book The Structural Transformation of the Public Sphere, first published in 1962, has long been recognized as one of the most important works ..."
+      },
+      {
+        "url": "https://mitpress.mit.edu/9780262581080/the-structural-transformation-of-the-public-sphere/",
+        "title": "The Structural Transformation of the Public Sphere - MIT Press",
+        "snippet": "This is J\u00fcrgen Habermas's most concrete historical-sociological book and one of the key contributions to political thought in the postwar period."
+      },
+      {
+        "url": "https://opentextbc.ca/mediastudies101/chapter/habermas-public-sphere/",
+        "title": "Habermas' Public Sphere \u2013 Media Studies 101 - BC Open Textbooks",
+        "snippet": "Habermas' definition of a public sphere is the first and founding trigger to classification attempts of the formation of public opinions."
+      },
+      {
+        "url": "https://www.tandfonline.com/doi/full/10.1080/23753234.2023.2248186",
+        "title": "The Structural Transformation of the Public Sphere - Taylor & Francis",
+        "snippet": "The book is a socio-historical investigation of the genesis and evolution of the public sphere, both as a cultural category and a social and political structure ..."
+      },
+      {
+        "url": "https://calhoun.faculty.asu.edu/sites/g/files/litvpz3321/files/publications/articles/habermas_and_the_public_sphere.pdf",
+        "title": "[PDF] Habermas and the Public Sphere edited by Craig Calhoun",
+        "snippet": "One of the pleasures of the conference was in seeing how well the discourse sparked by Habermas's book could integrate themes from these various disciplines and ..."
+      },
+      {
+        "url": "https://www.goodreads.com/en/book/show/235141.The_Structural_Transformation_of_the_Public_Sphere",
+        "title": "The Structural Transformation of the Public Sphere: An Inquiry into a ...",
+        "snippet": "This is J\u00fcrgen Habermas's most concrete historical-sociological book and one of the key contributions to political thought in the postwar period."
+      },
+      {
+        "url": "https://archive.org/details/structuraltransf0000unse",
+        "title": "The structural transformation of the public sphere [electronic resource]",
+        "snippet": "The structural transformation of the public sphere [electronic resource] : an inquiry into a category of bourgeois society. by: Habermas, J\u00fcrgen."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "gun deaths statistics 2025",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (CDC/FBI) vs advocacy organizations citing the same data differently."
+    },
+    "results": [
+      {
+        "url": "https://www.thetrace.org/2025/12/data-shooting-stats-gun-violence-america/",
+        "title": "Gun Violence By The Numbers in 2025 - The Trace",
+        "snippet": "At least 40,000 people were shot in 2025 \u2014 more than 110 people a day across the country. And that doesn't include gun suicides, which have been ..."
+      },
+      {
+        "url": "https://www.pewresearch.org/short-reads/2026/04/28/what-the-data-says-about-gun-deaths-in-the-us/",
+        "title": "What the data says about gun deaths in the US | Pew Research Center",
+        "snippet": "The 44,447 gun deaths in 2024 were the fifth-highest total on record since 1968, trailing only the four previous years. Gun homicides rose ..."
+      },
+      {
+        "url": "https://everytownsupportfund.org/press/everyshots-2025-year-in-review-report-bridges-federal-gun-violence-data-gap-with-comprehensive-ai-driven-analysis-of-38368-incidents-nationwide-2/",
+        "title": "EveryShot's 2025 Year-In-Review Report Bridges Federal Gun ...",
+        "snippet": "EveryShot documented 38,368 incidents of gun violence in the U.S. in 2025, resulting in 13,926 deaths and 21,686 injuries. Among the 50 states, ..."
+      },
+      {
+        "url": "https://www.gunviolencearchive.org/reports/number-of-gun-deaths",
+        "title": "Number of Deaths in 2026 - Gun Violence Archive",
+        "snippet": "Incident ID \u00b7 Incident Date sort ascending \u00b7 State \u00b7 City Or County \u00b7 Address \u00b7 Victims Killed \u00b7 Victims Injured \u00b7 Suspects Killed \u00b7 Suspects Injured ..."
+      },
+      {
+        "url": "https://publichealth.jhu.edu/center-for-gun-violence-solutions/issues/gun-violence-in-the-united-states",
+        "title": "Firearm Violence in the United States",
+        "snippet": "In 2024, 44,447 people died by firearms in the United States \u2014 an average of one death every 12 minutes. 27,593 people died by firearm suicide, 15,364 died by ..."
+      },
+      {
+        "url": "https://giffords.org/analysis/gun-violence-continues-to-drop/",
+        "title": "Gun Violence Continues to Drop - Giffords.org",
+        "snippet": "In 2024, 44,447 Americans lost their lives to gun violence, the fifth-highest number of gun deaths on record. Gun. Suicide."
+      },
+      {
+        "url": "https://usafacts.org/answers/how-many-people-die-from-gun-related-injuries-in-the-us-each-month/country/united-states/",
+        "title": "How many people die from gun-related injuries in the US each month?",
+        "snippet": "The number of gun-related deaths in the US changes each year. Between January and September 2025, an estimated 31,100 people died from gun-related injuries."
+      },
+      {
+        "url": "https://www.cdc.gov/nchs/state-stats/deaths/firearms.html",
+        "title": "Firearm Mortality | Stats of the States - CDC",
+        "snippet": "Deaths by firearm per 100,000 total population (age-adjusted mortality rate). 2.1 - < 8.46; 8.46 - < 14.82; 14.82 - < 21.18; 21.18 - < 27.54"
+      },
+      {
+        "url": "https://worldpopulationreview.com/state-rankings/gun-violence-by-state",
+        "title": "Gun Violence by State 2026 - World Population Review",
+        "snippet": "The U.S. has over 30,000 gun deaths per year. According to the FBI's 2019 Crime in the U.S. report, firearms were used in 73.66% of murders in the United ..."
+      },
+      {
+        "url": "https://everystat.org/",
+        "title": "EveryStat - EveryStat.org",
+        "snippet": "The rate of gun deaths has increased 15% from 2015 to 2024 in the United States. This means that in 2024 there were 8,195 more gun deaths than in 2015. ... In the ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "ivermectin covid efficacy",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic (peer-reviewed primary/secondary) vs SEO advocacy outlets on a medical-political topic."
+    },
+    "results": [
+      {
+        "url": "https://www.fda.gov/consumers/consumer-updates/ivermectin-and-covid-19",
+        "title": "Ivermectin and COVID-19 - FDA",
+        "snippet": "The FDA has determined that currently available clinical trial data do not demonstrate that ivermectin is effective against COVID 19 in humans."
+      },
+      {
+        "url": "https://jamanetwork.com/journals/jama/fullarticle/2801828",
+        "title": "At a Higher Dose and Longer Duration, Ivermectin Still Not Effective ...",
+        "snippet": "A Cochrane meta-analysis of 11 eligible trials examining the efficacy of ivermectin for the treatment of COVID-19 published through April 2022"
+      },
+      {
+        "url": "https://link.springer.com/article/10.1186/s12879-024-09563-y",
+        "title": "Efficacy and safety of oral ivermectin in the treatment of mild to ...",
+        "snippet": "Ivermectin given at 24 mg daily for 5 days in patients with mild to moderate Covid-19, reduced the viral load significantly by Day 10 compared ..."
+      },
+      {
+        "url": "https://www.sciencedirect.com/science/article/pii/S1341321X23003161",
+        "title": "Efficacy and safety of ivermectin in patients with mild COVID-19 in ...",
+        "snippet": "The results show that ivermectin (0.3\u20130.4 mg/kg), as a treatment for patients with mild COVID-19, is ineffective; however, its safety has been confirmed for ..."
+      },
+      {
+        "url": "https://www.phc.ox.ac.uk/news/new-study-shows-ivermectin-lacks-meaningful-benefits-in-covid-19-treatment",
+        "title": "New study shows ivermectin lacks meaningful benefits in COVID-19 ...",
+        "snippet": "However, this study finds that ultimately it is ineffective in altering the outcomes of COVID-19 infection in a largely vaccinated population."
+      },
+      {
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2115869",
+        "title": "Effect of Early Treatment with Ivermectin among Patients with Covid-19",
+        "snippet": "Treatment with ivermectin did not result in a lower incidence of medical admission to a hospital due to progression of Covid-19 or of prolonged emergency ..."
+      },
+      {
+        "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-53702030464-8/fulltext",
+        "title": "The effect of early treatment with ivermectin on viral load, symptoms ...",
+        "snippet": "Ivermectin inhibits the replication of SARS-CoV-2 in vitro at concentrations not readily achievable with currently approved doses. There is limited evidence ..."
+      },
+      {
+        "url": "https://www.kumc.edu/about/news/news-archive/jama-ivermectin-study.html",
+        "title": "Ivermectin shown ineffective in treating COVID-19, according to multi ...",
+        "snippet": "In a study recently published by JAMA, researchers found that ivermectin is ineffective in treating COVID-19 symptoms. Researchers at the ..."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38154616/",
+        "title": "Efficacy and safety of ivermectin in patients with mild COVID-19 in ...",
+        "snippet": "The results show that ivermectin (0.3-0.4 mg/kg), as a treatment for patients with mild COVID-19, is ineffective; however, its safety has been confirmed for ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "amazon electronics return policy",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests commercial primary (the corporate site) ranking on a direct policy query."
+    },
+    "results": [
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+        "title": "Amazon Return Policy - Amazon Customer Service",
+        "snippet": "Most items can be returned for a refund or replacement/exchange within 30 days of delivery as long as they are in original or unused condition."
+      },
+      {
+        "url": "https://www.reddit.com/r/amazonprime/comments/1mqafhb/what_actually_is_amazons_return_policy_im_confused/",
+        "title": "What actually is Amazon's return policy? Im confused - Reddit",
+        "snippet": "According to the amazon, most things fall under this return within 30 days policy. I thought that meant as long as I return it in original ..."
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GMZNGRA9B5PCJB5F",
+        "title": "Non-returnable Items on Amazon - Amazon Customer Service",
+        "snippet": "We don't accept returns for certain items, including digital products, gift cards, and hazardous materials. Devices are non-returnable after 30 days."
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=G6E3B2E8QPHQ88KF",
+        "title": "Return Items You Ordered - Amazon Customer Service",
+        "snippet": "Bring it to the drop-off location with the item that you want to return. You don't have to package your item in a shipping box. Returning electronic devices."
+      },
+      {
+        "url": "https://www.kiplinger.com/article/spending/t050-c011-s001-15-things-you-can-t-return-to-amazon.html",
+        "title": "21 Things You Can't Return to Amazon | Kiplinger",
+        "snippet": "... return using your order number in the Online Return Center. Amazon's return policy for electronics. Amazon can be a stickler about returns of ..."
+      },
+      {
+        "url": "https://www.bogleheads.org/forum/viewtopic.php?t=416099",
+        "title": "Amazon return policy for electronics - Bogleheads.org",
+        "snippet": "On the return policy page it says electronics can only be returned for a full refund if they're either unopened or defective, not otherwise."
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201818950",
+        "title": "Amazon Device Return FAQs - Amazon Customer Service",
+        "snippet": "You can return any Amazon device or accessory you purchased from an Amazon Pop-Up for a full refund within 30 days as long as it's in new condition."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=pgFDdAUIfk8",
+        "title": "How to Return Items on Amazon the Right Way (and Avoid Fees)",
+        "snippet": "Returning items on Amazon doesn't have to be confusing or expensive. In this video, I'll walk you through the correct way to return your ..."
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GNW5VKFXMF72FFMR",
+        "title": "Returns and Refunds - Amazon Customer Service",
+        "snippet": "Amazon Return Policy \u00b7 Check the Status of Your Refund \u00b7 Track Your Return \u00b7 Return Shipping Cost \u00b7 International Returns \u00b7 More about Returns ..."
+      },
+      {
+        "url": "https://www.aboutamazon.com/news/retail/what-happens-to-amazon-returns",
+        "title": "How the returns process works at Amazon",
+        "snippet": "Here is an inside look at what happens after a customer drops off their item for a return, and how Amazon works to maximize reuse and minimize waste."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "claude opus 4.7 release announcement",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests official communications (primary) vs journalism coverage vs SEO regurgitation."
+    },
+    "results": [
+      {
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "title": "Introducing Claude Opus 4.7 - Anthropic",
+        "snippet": "Our latest model, Claude Opus 4.7, is now generally available. Opus 4.7 is a notable improvement on Opus 4.6 in advanced software ..."
+      },
+      {
+        "url": "https://www.anthropic.com/claude/opus",
+        "title": "Claude Opus 4.7 - Anthropic",
+        "snippet": "Announcements \u00b7 NEW. Claude Opus 4.7. Apr 16, 2026 \u00b7 Claude Opus 4.6. Feb 5, 2026. Claude Opus 4.6 is our most capable model to date. \u00b7 Claude Opus 4.5. Nov 24, ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1sn585s/opus_47_released/",
+        "title": "Opus 4.7 Released! : r/ClaudeAI - Reddit",
+        "snippet": "Opus 4.7 Released! ... Oh, it's out! Key highlights: * Better at complex programming tasks: noticeably stronger than Opus 4.6, especially on the ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=YNRIZvbCcvM",
+        "title": "Claude Opus 4.7 in 5 Minutes - YouTube",
+        "snippet": "Anthropic Releases Claude Opus 4.7: Benchmarks, Vision Upgrades ... , and the video covers the announcement, benchmark results, and related ..."
+      },
+      {
+        "url": "https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-7",
+        "title": "What's new in Claude Opus 4.7",
+        "snippet": "Claude Opus 4.7 is our first Claude model with high-resolution image support. Maximum image resolution has increased to 2576px / 3.75MP (increased from our ..."
+      },
+      {
+        "url": "https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/",
+        "title": "Claude Opus 4.7 is generally available - GitHub Changelog",
+        "snippet": "Claude Opus 4.7 will be available to Copilot Pro+, Business, and Enterprise users. You'll be able to select the model in the model picker in:."
+      },
+      {
+        "url": "https://www.reddit.com/r/Anthropic/comments/1slwnjg/claude_opus_47_is_reportedly_dropping_this_week/",
+        "title": "Claude Opus 4.7 is reportedly dropping this week : here's ... - Reddit",
+        "snippet": "Claude Opus 4.7 release date and details. Latest breakthroughs in AI ... Credible news outlets were reporting on 4.7 throughout the week."
+      },
+      {
+        "url": "https://mashable.com/article/anthropic-releases-claude-opus-4-7",
+        "title": "Anthropic releases Claude Opus 4.7: How to try it, benchmarks, safety",
+        "snippet": "Anthropic announced the release of Claude Opus 4.7 on April 16. The new frontier AI model is available now."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=QVJcdfkRpH8",
+        "title": "Claude Opus 4.7 - A New Frontier, in Performance \u2026 and Drama",
+        "snippet": "... Updates 14:03 - Brockman Amodei Rivalry 17:40 - OpenAI vs Anthropic Approach to Code Claude 4.7 Opus Release Notes: https://www.anthropic.com/ ..."
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/",
+        "title": "Introducing Anthropic's Claude Opus 4.7 model in Amazon Bedrock",
+        "snippet": "Today, we're announcing Claude Opus 4.7 in Amazon Bedrock, Anthropic's most intelligent Opus model for advancing performance across coding, long ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "openai board firing timeline 2023",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests journalism-as-primary (contemporaneous reporting) vs secondary retrospective."
+    },
+    "results": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Removal_of_Sam_Altman_from_OpenAI",
+        "title": "Removal of Sam Altman from OpenAI",
+        "snippet": "On November 17, 2023, OpenAI's board of directors ousted co-founder and chief executive Sam Altman. In an official post on the company's website, ..."
+      },
+      {
+        "url": "https://techcrunch.com/2024/01/05/a-timeline-of-sam-altmans-firing-from-openai-and-the-fallout/",
+        "title": "A timeline of Sam Altman's firing from OpenAI",
+        "snippet": "In a dramatic turn of events late Friday, ex-Y Combinator president Sam Altman was fired as CEO of AI startup OpenAI."
+      },
+      {
+        "url": "https://www.axios.com/2023/11/22/openai-microsoft-sam-altman-ceo-chaos-timeline",
+        "title": "OpenAI chaos: A timeline of Sam Altman's firing and return",
+        "snippet": "Here's a timeline of everything we know that happened in OpenAI's c-suite and boardroom this week."
+      },
+      {
+        "url": "https://www.reddit.com/r/OpenAI/comments/1aebr6j/can_you_summarize_the_openai_drama_that_occurred/",
+        "title": "Can you summarize the OpenAI drama that occurred in ...",
+        "snippet": "The OpenAI drama in November 2023 primarily centered around the unexpected firing of Sam Altman, the CEO of OpenAI. Here's a brief summary of the key events."
+      },
+      {
+        "url": "https://www.reuters.com/technology/openai-ouster-microsoft-ai-research-ceo-sam-altmans-tumultuous-weekend-2023-11-20/",
+        "title": "From non-profit roots to for-profit ambitions: the OpenAI saga",
+        "snippet": "2019. OpenAI creates for-profit arm to help raise funds from investors ; Nov. 17, 2023. OpenAI board fires CEO Altman and President Greg Brockman ..."
+      },
+      {
+        "url": "https://abcnews.com/Business/sam-altman-reaches-deal-return-ceo-openai/story?id=105091534",
+        "title": "A timeline of Sam Altman's ouster from OpenAI",
+        "snippet": "Monday, November 20 \u2013 Nearly all 800 employees at OpenAI signed a letter calling for the resignation of the company's board and the return of Altman as CEO. The ..."
+      },
+      {
+        "url": "https://www.facebook.com/slidebean/videos/the-real-reason-openai-fired-its-ceo-part-1openais-board-wasnt-protecting-shareh/1875978703030036/",
+        "title": "The real reason OpenAI fired its CEO. Part 1 ...",
+        "snippet": "The real reason OpenAI fired its CEO. Part 1 OpenAI's board wasn't protecting shareholders. It was protecting a mission."
+      },
+      {
+        "url": "https://thefinanser.com/2023/11/what-actually-happened-at-openai-and-the-sacking-of-sam-altman",
+        "title": "What actually happened at OpenAI and the sacking of Sam ...",
+        "snippet": "Over 95% of OpenAI employees have signed the letter asking the board to resign and leave OpenAI. It seems that Sam Altman & Greg Brockman's ..."
+      },
+      {
+        "url": "https://mashable.com/article/openai-sam-altman-saga-timeline",
+        "title": "Here's a timeline of the OpenAI saga with CEO Sam Altman",
+        "snippet": "Sam Altman went from fired to Microsoft employee to rehired at OpenAI in less than a week. Here's how it all went down."
+      },
+      {
+        "url": "https://www.facebook.com/SearchEngineJournal/posts/explore-the-timeline-of-events-surrounding-openais-decision-to-remove-sam-altman/761774089326377/",
+        "title": "Explore the timeline of events surrounding OpenAI's ...",
+        "snippet": "Explore the timeline of events surrounding OpenAI's decision to remove Sam Altman as CEO, resulting in Microsoft's possible acquisition of ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "oauth pkce flow implementation",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests RFC primary vs reference vs indie/community implementations."
+    },
+    "results": [
+      {
+        "url": "https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+        "title": "Authorization Code Flow with Proof Key for Code Exchange (PKCE)",
+        "snippet": "The PKCE-enhanced Authorization Code Flow introduces a secret created by the calling application that can be verified by the authorization server."
+      },
+      {
+        "url": "https://www.descope.com/learn/post/pkce",
+        "title": "What is PKCE? Flow Examples and How It Works - Descope",
+        "snippet": "Learn how PKCE enhances OAuth by preventing authorization code injection and CSRF attacks. Explore PKCE flows, use cases, ..."
+      },
+      {
+        "url": "https://blog.postman.com/what-is-pkce/",
+        "title": "What Is PKCE? | Postman Blog",
+        "snippet": "Learn what PKCE is and how it enhances the security of authorization code grant flows in OAuth 2.0."
+      },
+      {
+        "url": "https://oauth.net/2/pkce/",
+        "title": "PKCE for OAuth 2.0",
+        "snippet": "PKCE (RFC 7636) is an extension to the Authorization Code flow to prevent CSRF and authorization code injection attacks."
+      },
+      {
+        "url": "https://devforum.okta.com/t/implement-the-oauth-2-0-authorization-code-with-pkce-flow/17124",
+        "title": "Implement the OAuth 2.0 Authorization Code with PKCE Flow",
+        "snippet": "This tutorial shows you how to migrate from the OAuth 2.0 Implicit flow to the more secure Authorization Code with PKCE flow."
+      },
+      {
+        "url": "https://docs.secureauth.com/iam/proof-key-of-code-exchange-pkce",
+        "title": "Proof Key of Code Exchange (PKCE) - SecureAuth Product Docs",
+        "snippet": "Unlike traditional flows, PKCE addresses vulnerabilities where client credentials can't be safely stored, protecting against attacks like code interception."
+      },
+      {
+        "url": "https://medium.com/@sanhdoan/securing-your-oauth-2-0-flow-with-pkce-a-practical-guide-with-go-4cd5ec72044b",
+        "title": "Securing Your OAuth 2.0 Flow with PKCE: A Practical Guide with Go",
+        "snippet": "PKCE is a crucial security enhancement for OAuth 2.0 flows, especially for public clients. This implementation provides a solid foundation for building secure ..."
+      },
+      {
+        "url": "https://datatracker.ietf.org/doc/html/rfc7636",
+        "title": "RFC 7636 - Proof Key for Code Exchange by OAuth Public Clients",
+        "snippet": "This specification describes the attack as well as a technique to mitigate against the threat through the use of Proof Key for Code Exchange (PKCE, pronounced ..."
+      },
+      {
+        "url": "https://curity.io/resources/learn/oauth-pkce/",
+        "title": "What is Proof Key for Code Exchange? - Curity Identity Server",
+        "snippet": "OAuth 2.1 incorporates PKCE and requires or recommends it for all OAuth clients running the code flow - confidential as well as public ones."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=5FrA0UzV1Aw&vl=en",
+        "title": "OAuth is Broken Without This | Meet PKCE - YouTube",
+        "snippet": "If you're building a mobile app, single-page app (SPA), or browser-based tool that uses OAuth \u2014 PKCE is essential. PKCE (Proof Key for Code ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "python asyncio tutorial",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs (primary) vs indie tech blog (secondary) vs SEO content farm."
+    },
+    "results": [
+      {
+        "url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+        "title": "A Conceptual Overview of asyncio \u2014 Python 3.14.5 documentation",
+        "snippet": "This HOWTO article seeks to help you build a sturdy mental model of how asyncio fundamentally works, helping you understand the how and why behind the ..."
+      },
+      {
+        "url": "https://realpython.com/async-io-python/",
+        "title": "Python's asyncio: A Hands-On Walkthrough",
+        "snippet": "Explore how Python asyncio works and when to use it. Follow hands-on examples to build efficient programs with coroutines and awaitable ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=oAkLSJNr5zY",
+        "title": "Complete Guide to Asynchronous Programming with Animations",
+        "snippet": "In this video, we'll be learning all about AsyncIO in Python and how to write asynchronous code using the async/await syntax."
+      },
+      {
+        "url": "https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html",
+        "title": "Python Asyncio Part 1 \u2013 Basic Concepts and Patterns",
+        "snippet": "This post is going to go over the basic concepts behind asyncio without going into implementation details. Some readers will already know this, some won't."
+      },
+      {
+        "url": "https://medium.com/@moraneus/mastering-pythons-asyncio-a-practical-guide-0a673265cf04",
+        "title": "Mastering Python's Asyncio: A Practical Guide | by Moraneus | Medium",
+        "snippet": "This toolkit is Python's answer to writing clean, efficient, and scalable code for concurrent I/O operations."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Qb9s3UiMSTA",
+        "title": "Asyncio in Python - Full Tutorial - YouTube",
+        "snippet": "Asynchronous programming allows our code to be more efficient by doing multiple things at once without any unnecessary waiting. Asyncio is ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/Python/comments/yqrr94/python_asyncio_the_complete_guide/",
+        "title": "Python Asyncio: The Complete Guide - Reddit",
+        "snippet": "Reach out if you ever have any questions! The first few asyncio programs can be a little bumpy until you get used to it. rcterzi. \u2022 4y ago."
+      },
+      {
+        "url": "https://docs.python.org/3/library/asyncio.html",
+        "title": "asyncio \u2014 Asynchronous I/O \u2014 Python 3.14.5 documentation",
+        "snippet": "asyncio is a library to write concurrent code using the async/await syntax. asyncio is used as a foundation for multiple Python asynchronous frameworks."
+      },
+      {
+        "url": "https://www.datacamp.com/tutorial/python-async-programming",
+        "title": "Python Async Programming: The Complete Guide - DataCamp",
+        "snippet": "Speed up your code with Python async programming. A step-by-step guide to asyncio, concurrency, efficient HTTP requests, and database ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=q_yk3oV14hE",
+        "title": "Python AsyncIO Explained in 9 Minutes - YouTube",
+        "snippet": "In this video, we learn about asynchronous programming in Python with AsyncIO as quickly as possible (9 minutes) ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "tesla model y vs mach-e cost",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests journalism + commercial primary (manufacturer sites) vs SEO comparison farms."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/MachE/comments/1feoxg8/mache_vs_tesla_model_y/",
+        "title": "MachE vs Tesla model Y - Reddit",
+        "snippet": "Model Y was about $100 more per MONTH than the Mach-e, same year and miles. I was considering the same two vehicles, and ultimately went with ..."
+      },
+      {
+        "url": "https://www.caranddriver.com/compare/ford-mustang-mach-e-vs-tesla-model-y",
+        "title": "2026 Ford Mustang Mach-E vs. 2026 Tesla Model Y - Car and Driver",
+        "snippet": "Easily compare the 2026 Ford Mustang Mach-E vs. 2026 Tesla Model Y to see how they stack up in pricing, performance, and more."
+      },
+      {
+        "url": "https://myecoauto.com/tesla-model-y-vs-mustang-mach-e-comparison",
+        "title": "Tesla Model Y vs. Mustang Mach-E Comparison - Eco Auto",
+        "snippet": "Tesla Model Y \u00b7 Low, Higher, Approximately $500/year ; Ford Mustang Mach\u2011E \u00b7 Low, Moderate, Approximately $450/year ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3lRbH0n4O-g",
+        "title": "Tesla Model Y vs Ford Mustang Mach-E | Comparison - YouTube",
+        "snippet": "... Mach-E horsepower 09:46 Tesla Model Y horsepower 10:55 Driving impressions 19:18 Safety features 20:15 Pricing About Kelley Blue Book: https ..."
+      },
+      {
+        "url": "https://www.truecar.com/compare/ford-mustang-mach-e-vs-tesla-model-y/",
+        "title": "Ford Mustang Mach-E vs. Tesla Model Y - TrueCar",
+        "snippet": "Starting with price, the Ford Mustang Mach\u2011E is less expensive with a starting MSRP of $39,840 and the similarly equipped Tesla Model Y starts at $46,380."
+      },
+      {
+        "url": "https://www.facebook.com/groups/MustangMachEOwners/posts/1920782905285231/",
+        "title": "Ford Mach E or Tesla Model Y for similar price? - Facebook",
+        "snippet": "For those that have asked Mach-E vs Tesla Y\u2026 we now have both. Short answer is the Mach-E is the better all around vehicle. However, the Tesla's ..."
+      },
+      {
+        "url": "https://www.macheforum.com/mach-e-gt-vs-tesla-model-y-on-816-mile-road-trip/",
+        "title": "Mach-E GT vs Tesla Model Y on an 816 mile road trip | MachEforum",
+        "snippet": "The charging network and the price of the MY are certainly appealing, but the other aspects of the vehicle seem far less so."
+      },
+      {
+        "url": "https://www.motortrend.com/reviews/2026-tesla-model-y-vs-2025-ford-mustang-mach-e-comparison-test-review",
+        "title": "2026 Tesla Model Y vs. 2025 Ford Mustang Mach-E - MotorTrend",
+        "snippet": "Both get you with the options, Ford to the tune of about $11,000 in this case and Tesla for $13,000. Not only is the Mach-E $5,000 cheaper as- ..."
+      },
+      {
+        "url": "https://www.macheclub.com/threads/is-the-mach-e-worth-10-000-more-than-a-tesla-model-y.5661/",
+        "title": "IS THE MACH E WORTH $10000 MORE THAN A TESLA MODEL Y?",
+        "snippet": "Point of information: The Model Y MSRP is $52,990 less Federal Tax Credit of $7,500, to you the buyer $45,490 and delivery within 30 to 45 days ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "climate change human caused consensus",
+      "category": "controversial",
+      "difficulty": "easy",
+      "probes": "Tests academic + reference (settled scientific consensus) vs advocacy-source contamination."
+    },
+    "results": [
+      {
+        "url": "https://science.nasa.gov/climate-change/scientific-consensus/",
+        "title": "Scientific Consensus - NASA Science",
+        "snippet": "Based on well-established evidence, about 97% of climate scientists have concluded that human-caused climate change is happening."
+      },
+      {
+        "url": "https://www.reddit.com/r/climatechange/comments/1c1nbry/question_about_the_97_consensus_on_climate_change/",
+        "title": "Question about the 97% consensus on Climate Change - Reddit",
+        "snippet": "You are correct as more than 99.9% of peer-reviewed scientific papers agree that climate change is mainly caused by humans, according to a ..."
+      },
+      {
+        "url": "https://news.cornell.edu/stories/2021/10/more-999-studies-agree-humans-caused-climate-change",
+        "title": "More than 99.9% of studies agree: Humans caused climate change",
+        "snippet": "More than 99.9% of peer-reviewed scientific papers agree that climate change is mainly caused by humans, according to a new survey of 88,125 ..."
+      },
+      {
+        "url": "https://iopscience.iop.org/article/10.1088/1748-9326/ac2966",
+        "title": "Greater than 99% consensus on human caused climate change in ...",
+        "snippet": "the scientific consensus on human-caused contemporary climate change\u2014expressed as a proportion of the total publications\u2014exceeds 99% in the peer ..."
+      },
+      {
+        "url": "https://www.un.org/en/climatechange/science/mythbusters",
+        "title": "Myth Busters - the United Nations",
+        "snippet": "A 2021 study found a greater than 99 per cent consensus on human-induced climate change in the peer-reviewed scientific literature (reviewed by experts in the ..."
+      },
+      {
+        "url": "https://www.facebook.com/groups/453353528124367/posts/26664453989920963/",
+        "title": "Over 97% of climate scientists agree on human-caused global ...",
+        "snippet": "... climate-related papers found that scientific consensus on human-caused climate change exceeds 99.9%. The 97% Benchmark: Several historical ..."
+      },
+      {
+        "url": "https://www.forbes.com/sites/uhenergy/2016/12/14/fact-checking-the-97-consensus-on-anthropogenic-climate-change/",
+        "title": "Fact Checking The Claim Of 97% Consensus On Anthropogenic ...",
+        "snippet": "The claim that there is a 97% consensus among scientists that humans are the cause of global warming is widely made in climate change literature and by ..."
+      },
+      {
+        "url": "https://www.nature.com/articles/s41562-024-01928-2",
+        "title": "A 27-country test of communicating the scientific consensus ... - Nature",
+        "snippet": "Communicating the scientific consensus that human-caused climate change is real increases climate change beliefs, worry and support for public action."
+      },
+      {
+        "url": "https://climatecommunication.yale.edu/publications/public-understanding-vs-scientific-consensus/",
+        "title": "Public Understanding vs. Scientific Consensus",
+        "snippet": "Currently, half of Americans (52%) think that global warming, if it is happening, is mostly human caused. By contrast, one in three (32%) say ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "chevron deference supreme court ruling",
+      "category": "research",
+      "difficulty": "easy",
+      "probes": "Tests primary-source-publisher (court opinion text) vs journalism secondary vs legal-SEO."
+    },
+    "results": [
+      {
+        "url": "https://www.scotusblog.com/2024/06/supreme-court-strikes-down-chevron-curtailing-power-of-federal-agencies/",
+        "title": "Supreme Court strikes down Chevron, curtailing power of federal ...",
+        "snippet": "The Chevron doctrine, he argued, requires judges to give up their constitutional power to exercise their independent judgment, and it allows the ..."
+      },
+      {
+        "url": "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
+        "title": "[PDF] 22-451 Loper Bright Enterprises v. Raimondo (06/28/2024)",
+        "snippet": "Under the Chev- ron doctrine, courts have sometimes been required to defer to \u201cpermis- sible\u201d agency interpretations of the statutes those ..."
+      },
+      {
+        "url": "https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-august/end-chevron-deference-what-does-it-mean-what-comes-next/",
+        "title": "The End of Chevron Deference: What Does It Mean, and What ...",
+        "snippet": "The Supreme Court finally and emphatically overruled Chevron deference, the watershed rule that governed the level of deference afforded to administrative ..."
+      },
+      {
+        "url": "https://www.ncsl.org/resources/details/supreme-court-throws-out-chevron-decision-weakening-federal-regulators",
+        "title": "Supreme Court Throws Out Chevron Decision, Weakening...",
+        "snippet": "The US Supreme Court has overturned a 40-year-old precedent that directed courts to defer to federal agencies' interpretations of ambiguous laws."
+      },
+      {
+        "url": "https://www.ppic.org/blog/unpacking-the-supreme-courts-recent-ruling-on-the-chevron-doctrine/",
+        "title": "Unpacking the Supreme Court's Recent Ruling on the \u201cChevron ...",
+        "snippet": "The decision basically stated that if federal legislation is ambiguous or leaves an administrative gap, the courts must defer to the regulatory ..."
+      },
+      {
+        "url": "https://www.jacksonlewis.com/insights/go-fish-us-supreme-court-overturns-chevron-deference-federal-agencies-what-it-means-employers",
+        "title": "Go Fish! U.S. Supreme Court Overturns 'Chevron Deference' to ...",
+        "snippet": "The US Supreme Court has overturned the decades-old Chevron doctrine of judicial deference to a federal agency's interpretation of an ambiguous statute."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bk7H4YGsnnw",
+        "title": "Supreme Court Overturns Chevron Ruling - YouTube",
+        "snippet": "The US Supreme Court threw out a decades-old legal doctrine that empowered federal regulators to interpret unclear laws, ..."
+      },
+      {
+        "url": "https://supreme.justia.com/cases/federal/us/467/837/",
+        "title": "Chevron U.S.A., Inc. v. NRDC | 467 U.S. 837 (1984)",
+        "snippet": "A government agency must conform to any clear legislative statements when interpreting and applying a law, but courts will give the agency deference in ..."
+      },
+      {
+        "url": "https://www.law.cornell.edu/wex/chevron_deference",
+        "title": "Chevron deference | Wex | US Law | LII / Legal Information Institute",
+        "snippet": "However, in June of 2024, the Supreme Court overruled Chevron in Loper Bright Enterprises v. Raimondo (2024), declaring: \u201cThe Administrative Procedure Act ..."
+      },
+      {
+        "url": "https://environment.yale.edu/news/article/wake-chevron-decision",
+        "title": "In the Wake of the Chevron Decision - Yale School of the Environment",
+        "snippet": "The decision in the Loper case overturned a 40-year-old precedent that permitted agencies to resolve statutory ambiguities without excessive ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "did tucker carlson say russia is winning",
+      "category": "news",
+      "difficulty": "hard",
+      "probes": "Quote-verification with transcript availability. Tests primary (video/transcript) vs journalism (selectively-quoted) vs aggregator."
+    },
+    "results": [
+      {
+        "url": "https://www.youtube.com/shorts/VmsW81392CY",
+        "title": "Tucker Carlson: Europe won't win a war with Russia - YouTube",
+        "snippet": "I'm not giggling, I'm mad at your politicians\u201d. Speaking to The Economist's editor-in-chief Zanny Minton Beddoes, Tucker Carlson says ..."
+      },
+      {
+        "url": "http://en.kremlin.ru/events/president/news/73411",
+        "title": "Interview to Tucker Carlson - President of Russia",
+        "snippet": "Vladimir Putin answered questions from Tucker Carlson, a journalist and founder of Tucker Carlson Network."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=GRKgD1gEarw",
+        "title": "'Doing great job': Tucker Carlson hails Putin amid Ukraine war",
+        "snippet": "... said Putin has done a 'great job for Russia,' better than any recent German leader. (AI-GENERATED AUDIO) #TuckerCarlson #Putin #Germany ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/centrist/comments/1j65wsy/tucker_carlson_says_hes_definitely_more/",
+        "title": "Tucker Carlson Says He's 'Definitely More Sympathetic to Putin ...",
+        "snippet": "Carlson confessed that he's \u201cdefinitely more sympathetic to Putin than Zelensky for the following reason: I think it's fair to judge leaders on ..."
+      },
+      {
+        "url": "https://www.washingtonpost.com/opinions/2022/02/25/tucker-carlson-russia-views-evolution/",
+        "title": "How did Tucker Carlson turn into a Putin apologist?",
+        "snippet": "Addressing the Biden administration's determination to oppose Russian aggression, Carlson said, \u201cYou're going to win an important moral victory ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Tucker_Carlson%27s_interview_with_Vladimir_Putin",
+        "title": "Tucker Carlson's interview with Vladimir Putin - Wikipedia",
+        "snippet": "\"Russia historians say the Tucker Carlson interview solidified one thing about Putin \u2014 he's off the rails\". Business Insider. Retrieved February 28, 2024 ..."
+      },
+      {
+        "url": "https://www.facebook.com/fareedzakaria/posts/tucker-carlsons-interview-with-russian-president-vladimir-putin-got-a-lot-of-att/927136342117297/",
+        "title": "Tucker Carlson's interview with Russian President Vladimir Putin got ...",
+        "snippet": "He was grinning like a mule eating briars when he said all that. Tucker's point? Life is better in Putin's Russia than it is in Biden's America."
+      },
+      {
+        "url": "https://www.isdglobal.org/media-mention/the-role-of-tucker-carlson-in-russian-state-medias-propaganda-strategy/",
+        "title": "The role of Tucker Carlson in Russian state media's propaganda ...",
+        "snippet": "\u201cCarlson has emerged as one of the loudest voices opposing Western support for Ukraine, while continuing to speak positively of Russia and even Putin himself."
+      },
+      {
+        "url": "https://thehill.com/homenews/media/4465352-tucker-carlson-moscow-putin/",
+        "title": "Tucker Carlson: Moscow 'so much nicer than any city in my country'",
+        "snippet": "Pundit Tucker Carlson called Moscow \u201cnicer\u201d than any city in the United States and praised Russian President Vladimir Putin's governing of the massive world ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Qzlt1VVBcg8",
+        "title": "Tucker Carlson on US-Russia After Putin Interview - YouTube",
+        "snippet": "I wanted to interview Putin because he's the leader of a country that the US government is sort of at war with though not in in a declared way."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "docker compose v2 syntax",
+      "category": "technical",
+      "difficulty": "easy",
+      "probes": "Tests official docs primary on a versioned-syntax query."
+    },
+    "results": [
+      {
+        "url": "https://docs.docker.com/compose/",
+        "title": "Docker Compose",
+        "snippet": "Learn how to use Docker Compose to define and run multi-container applications with this detailed introduction to the tool."
+      },
+      {
+        "url": "https://docs.docker.com/reference/compose-file/",
+        "title": "Compose file reference",
+        "snippet": "It is implemented in versions 1.27.0 and above (also known as Compose v2) of the Docker Compose CLI. The Compose Specification on Docker Docs is the Docker ..."
+      },
+      {
+        "url": "https://serverfault.com/questions/761024/how-is-docker-compose-version-2-volumes-syntax-supposed-to-look",
+        "title": "How is Docker Compose version 2 \"volumes\" syntax ...",
+        "snippet": "With Docker Compose v1.6.0+, there now is a new/version 2 file syntax for the docker-compose.yml file. The changes include a separate top level key ..."
+      },
+      {
+        "url": "https://www.docker.com/blog/new-docker-compose-v2-and-v1-deprecation/",
+        "title": "Docker Compose: What's New, What's Changing, What's ...",
+        "snippet": "Enable Compose V2 under Preferences > General in Docker Desktop. For more on the differences between V1 and V2, see the Evolution of Compose in ..."
+      },
+      {
+        "url": "https://github.com/canonical/docker-compose-v2/blob/master/README.md",
+        "title": "docker-compose-v2/README.md at master",
+        "snippet": "A Compose file is used to define how one or more containers that make up your application are configured. Once you have a Compose file, you can create and start ..."
+      },
+      {
+        "url": "https://www.linode.com/docs/guides/how-to-use-docker-compose-v2/",
+        "title": "How to Use Docker Compose V2 | Linode Docs",
+        "snippet": "Docker Compose V2 integrates the compose command, which replaces the V1 docker-compose feature, directly into the Docker CLI and Docker Engine."
+      },
+      {
+        "url": "https://www.docker.com/blog/announcing-compose-v2-general-availability/",
+        "title": "Announcing Compose V2 General Availability",
+        "snippet": "On Docker Desktop version 4.4.2+, we enable aliasing of docker-compose syntax to docker compose by default. This lets you use V2 as a drop ..."
+      },
+      {
+        "url": "https://docs.docker.com/compose/intro/history/",
+        "title": "History and development of Docker Compose",
+        "snippet": "Compose v2, announced in 2020, is written in Go and is invoked with docker compose . Unlike v1, Compose v2 ignores the version top-level element in the compose."
+      },
+      {
+        "url": "https://github.com/docker/docker.github.io-1/blob/master/compose/compose-file/compose-file-v2.md",
+        "title": "compose-file-v2.md",
+        "snippet": "First, specify the arguments in your Dockerfile: # syntax=docker/dockerfile:1 ARG buildno ARG gitcommithash RUN echo \"Build number: $buildno ..."
+      },
+      {
+        "url": "https://medium.com/@giorgioto/docker-compose-yml-from-v1-to-v2-3c0f8bb7a48e",
+        "title": "Docker-compose.yml: from V1 to V2 | by giorgio ferraris",
+        "snippet": "When docker-compose execute V2 files, it will automatically build a network between all of the containers defined in the file, and every ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "kelsen pure theory of law",
+      "category": "research",
+      "difficulty": "medium",
+      "probes": "Tests academic primary text vs SEP/reference tertiary summary."
+    },
+    "results": [
+      {
+        "url": "https://scholarship.law.stjohns.edu/context/tcl/article/2087/viewcontent/03._Kelsen_s_Pure_Theory_of_Law.pdf",
+        "title": "Kelsen's Pure Theory of Law",
+        "snippet": "by H COHEN \u00b7 Cited by 1 \u2014 The pure theory of law studies norms-\"propositions that state how men should behave\" 7-whereas sociological jurisprudence stud- ies what \"is\"-how people ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pure_Theory_of_Law",
+        "title": "Pure Theory of Law",
+        "snippet": "Kelsen began to formulate his theory as early as 1913, as a \"pure\" form of \"legal science\" devoid of any moral or political, or at a general level sociological ..."
+      },
+      {
+        "url": "https://plato.stanford.edu/entries/lawphil-theory/",
+        "title": "The Pure Theory of Law - Stanford Encyclopedia of Philosophy",
+        "snippet": "by A Marmor \u00b7 2002 \u00b7 Cited by 77 \u2014 The idea of a Pure Theory of Law was propounded by the formidable Austrian jurist and philosopher Hans Kelsen (1881\u20131973)."
+      },
+      {
+        "url": "https://cdn.oujdalibrary.com/books/612/612-pure-theory-of-law-(www.tawcer.com).pdf",
+        "title": "PURE THEORY OF LAW by HANS KELSEN",
+        "snippet": "The present work is a translation of the second German edition of Hans Kelsen's Reine Rechtslehre, published in 1960, a com- pletely revised version of the ..."
+      },
+      {
+        "url": "https://www.amazon.com/Pure-Theory-Law-Hans-Kelsen/dp/1584775785",
+        "title": "Pure Theory of Law - Hans Kelsen",
+        "snippet": "The pure theory of law defines law as a system of coercive norms created by the state that rests on the validity of a generally accepted Grundnorm."
+      },
+      {
+        "url": "https://jle.aals.org/cgi/viewcontent.cgi?article=2915&context=home",
+        "title": "Hans Kelsen's Pure Theory of Law",
+        "snippet": "by RS Clark \u00b7 1969 \u00b7 Cited by 27 \u2014 The theory attempts to answer the question. 'what, and how the law is, and not how it ought to be. It is a science of law (jurisprudence), not legal ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ZJr3iwcuPiQ",
+        "title": "Hans Kelsen's Pure Theory of Law Ch.1",
+        "snippet": "A pure theory of law should use legal methods, legal reasoning, not reasoning from other disciplines in order to arrive at its conclusions."
+      },
+      {
+        "url": "https://www.ucpress.edu/book/9780520307971/pure-theory-of-law",
+        "title": "Pure Theory of Law by Hans Kelsen - Paper",
+        "snippet": "Pure Theory of Law defines law as a system of coercive norms created by the state that rests on the validity of a generally accepted Grundnorm, or basic ..."
+      },
+      {
+        "url": "https://www.scribd.com/document/638426721/Pure-theory-of-law",
+        "title": "Kelsen's Pure Theory of Law Explained | PDF | Jurisprudence",
+        "snippet": "Kelsen's Pure Theory of Law challenges traditional views on legal personality by denying any intrinsic difference between natural and juristic persons."
+      },
+      {
+        "url": "https://www.jstor.org/stable/jj.13167921",
+        "title": "Pure Theory of Law",
+        "snippet": "The Pure Theory of Law is a theory of positive law. It is a theory of positive law in general, not of a specific legal order."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "rust borrow checker e0382",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests official docs (primary) vs community (Stack Overflow) for specific error code."
+    },
+    "results": [
+      {
+        "url": "https://blog.logrocket.com/introducing-rust-borrow-checker/",
+        "title": "Understanding the Rust borrow checker - LogRocket Blog",
+        "snippet": "The borrow checker is an essential feature of the Rust language and part of what makes Rust Rust. It helps you (or forces you) to manage ownership."
+      },
+      {
+        "url": "https://users.rust-lang.org/t/where-can-i-find-the-technique-document-about-borrow-of-partially-moved-value/99144",
+        "title": "borrow of partially moved value - Rust Users Forum",
+        "snippet": "error[E0382]: borrow of partially moved value: a. I tried to find the relevant technique reference at 2094-nll - The Rust RFC Book to ..."
+      },
+      {
+        "url": "https://news.ycombinator.com/item?id=42485536",
+        "title": "Four limitations of Rust's borrow checker | Hacker News",
+        "snippet": "If you code by referencing everything, then Rust borrow-checker might be great. But your program will be a salad of references all around ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/rust/comments/15lr1do/is_the_rust_borrow_checker_really_that_challenging/",
+        "title": "Is the Rust Borrow Checker Really That Challenging? - Reddit",
+        "snippet": "The syntax and compiler messages make it abundantly clear when and where values are moved, what values are owned and what values are borrowed."
+      },
+      {
+        "url": "https://oneuptime.com/blog/post/2026-01-25-rust-borrow-checker-issues/view",
+        "title": "How to Fix 'Borrow checker' Issues in Rust - OneUptime",
+        "snippet": "Learn how to resolve common borrow checker errors in Rust. This guide covers ownership rules, mutable borrowing, lifetime issues, and practical ..."
+      },
+      {
+        "url": "https://betterprogramming.pub/the-magic-of-borrow-checkers-in-rust-238a2a97bff2",
+        "title": "The Magic of the Rust Borrow Checker | by Michael Hentges",
+        "snippet": "Rust's memory management and the borrow checker are two main reasons Rust is different. You can access memory at a low level with complete control."
+      },
+      {
+        "url": "https://stackoverflow.com/questions/32443697/fighting-with-the-rust-borrow-checker",
+        "title": "Fighting with the Rust borrow checker - Stack Overflow",
+        "snippet": "src/main.rs:45:53: 45:64 error: use of moved value: `file_reader` [E0382] src/main.rs:45 display_screenful(&rustbox, file_reader, rustbox."
+      },
+      {
+        "url": "https://rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html",
+        "title": "References and Borrowing - The Rust Programming Language",
+        "snippet": "error[E0382]: borrow of moved value: `m1` --> test.rs:5 ... Rust's borrow checker enforces a system of permissions that ensures references are used safely:."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Pg07HQJ0tvI",
+        "title": "How to fight Rust's borrow checker... and win. - YouTube",
+        "snippet": "Join our Rust Live Accelerator waitlist (free Rust Job-Ready Roadmap inside): https://letsgetrusty.com/join Let's Get Rusty is the #1 Rust ..."
+      },
+      {
+        "url": "https://squidarth.com/rc/rust/2018/05/31/rust-borrowing-and-ownership.html",
+        "title": "Fear not the Rust Borrow Checker - Sid Shanker's Blog",
+        "snippet": "In this post I'm going to demonstrate how these concepts work through some examples of code that break Rust's rules, and explain why they're problematic."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "did epstein kill himself",
+      "category": "controversial",
+      "difficulty": "hard",
+      "probes": "Tests journalism + primary (official reports) vs conspiracy SEO and aggregators on a high-noise topic."
+    },
+    "results": [
+      {
+        "url": "https://www.nytimes.com/2026/05/06/nyregion/epstein-suicide-note.html",
+        "title": "Purported Epstein Suicide Note Is Released - The New York Times",
+        "snippet": "A federal judge released the note, which Jeffrey Epstein's former cellmate said he found in a graphic novel. The New York Times has not ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Death_of_Jeffrey_Epstein",
+        "title": "Death of Jeffrey Epstein - Wikipedia",
+        "snippet": "On August 10, 2019, Jeffrey Epstein, an American financier and a child sex offender, was found unresponsive in his jail cell at 6:30 a.m, ..."
+      },
+      {
+        "url": "https://www.pbs.org/newshour/nation/judge-releases-note-that-cellmate-says-he-found-after-epsteins-suspected-suicide-attempt",
+        "title": "Judge releases note that cellmate says he found after Epstein's ...",
+        "snippet": "A note Jeffrey Epstein's former cellmate claimed he found after the financier's first suspected jail suicide attempt was made public ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=RypGKHCeodQ",
+        "title": "What we know about Jeffrey Epstein's death - YouTube",
+        "snippet": "Epstein spent 36 days at the now shuttered Metropolitan Correctional Center in New York City before he was found dead in his cell on August 10th."
+      },
+      {
+        "url": "https://www.bbc.com/news/articles/cm2y33q8l1qo",
+        "title": "Details of Jeffrey Epstein post-mortem released in latest files - BBC",
+        "snippet": "The newly released FBI report, titled \"Jeffrey Epstein death investigation\", appears to be a probe into his death by the agency's field office ..."
+      },
+      {
+        "url": "https://oig.justice.gov/sites/default/files/reports/23-085.pdf",
+        "title": "[PDF] OIG Report 23-085",
+        "snippet": "The OIG initiated this investigation upon receipt of information from the BOP that on August 10, 2019, in the Metropolitan Correctional Center ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/changemyview/comments/1r02iub/cmv_jeffrey_epstein_actually_did_kill_himself/",
+        "title": "CMV: Jeffrey Epstein actually did kill himself : r/changemyview - Reddit",
+        "snippet": "This is a long one, and probably going to ruffle some feathers - especially with the sensation around the Epstein Files - but I am ..."
+      },
+      {
+        "url": "https://www.brennancenter.org/our-work/analysis-opinion/completely-predictable-death-jeffrey-epstein",
+        "title": "The Completely Predictable Death of Jeffrey Epstein",
+        "snippet": "The reported suicide on Saturday of disgraced financier Jeffrey Epstein in a federal jail cell in the heart of Manhattan was both utterly shocking and ..."
+      },
+      {
+        "url": "https://www.paramountplus.com/shows/video/YdIl4PitcEArpE5FZWlUtDbLPfeoWS65/",
+        "title": "Watch 60 Minutes Did Jeffrey Epstein kill himself? - Paramount+",
+        "snippet": "On August 10, 2019, convicted sex offender Jeffrey Epstein was found dead at the Metropolitan Correctional Center in New York."
+      },
+      {
+        "url": "https://www.instagram.com/reel/DYDHectEmwC/",
+        "title": "A purported suicide note from convicted sex offender Jeffrey Epstein ...",
+        "snippet": "The federal court has just released an alleged suicide note written by Jeffrey Epstein prior to his death in jail seven years ago. The note ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "sec coinbase lawsuit outcome",
+      "category": "news",
+      "difficulty": "medium",
+      "probes": "Tests primary-source-publisher (SEC filings, court docket) vs journalism."
+    },
+    "results": [
+      {
+        "url": "https://www.sec.gov/newsroom/press-releases/2023-102",
+        "title": "SEC Charges Coinbase for Operating as an Unregistered Securities ...",
+        "snippet": "The SEC alleges that, since 2019, Coinbase has been engaging in an unregistered securities offering through its staking-as-a-service program, ..."
+      },
+      {
+        "url": "https://www.amundsendavislaw.com/corporate-legal-update/sec-drops-case-against-coinbase-what-are-the-implications-for-other-cryptocurrency-cases-with-the-sec",
+        "title": "SEC Drops Case Against Coinbase - Amundsen Davis",
+        "snippet": "On February 21, 2025, the Securities and Exchange Commission (SEC) announced it was dropping its case against Coinbase."
+      },
+      {
+        "url": "https://www.fintechanddigitalassets.com/2024/04/ruling-for-sec-clears-path-for-continued-litigation-in-sec-v-coinbase/",
+        "title": "Ruling for SEC Clears Path for Continued Litigation in SEC v ...",
+        "snippet": "Judge Failla largely ruled in favor of the SEC, rejecting Coinbase's MQD and fair notice defenses. ... Finally, Judge Failla rejected the SEC's ..."
+      },
+      {
+        "url": "https://uk.practicallaw.thomsonreuters.com/w-046-0363?transitionType=Default&contextData=(sc.Default)",
+        "title": "SEC Dismisses Case Against Coinbase and Halts Notable ...",
+        "snippet": "The SEC announced that it filed a joint stipulation with the operators of major crypto platform Coinbase to dismiss its civil enforcement action."
+      },
+      {
+        "url": "https://businesslawreview.uchicago.edu/online-archive/equitable-estoppel-against-federal-government-case-sec-v-coinbase",
+        "title": "Equitable Estoppel Against the Federal Government: The Case of ...",
+        "snippet": "The now-dismissed case against Coinbase is a symptom of a dynamic regulatory environment where rules for cryptocurrency trading are ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=jzO5A_MCEEc",
+        "title": "Coinbase Says End of SEC Lawsuit Frees $50 Million - YouTube",
+        "snippet": "Coinbase's Chief Legal Officer Paul Grewal says the company has money to \u201cdouble down\u201d on innovations, now that the Securities and Exchange ..."
+      },
+      {
+        "url": "https://www.aoshearman.com/en/insights/ao-shearman-on-fintech-and-digital-assets/sec-pivots-what-it-means-for-crypto",
+        "title": "SEC pivots: what it means for crypto - A&O Shearman",
+        "snippet": "On February 27, 2025, the US Securities and Exchange Commission (SEC) filed to dismiss its lawsuit against Coinbase, Inc. (Coinbase)."
+      },
+      {
+        "url": "https://www.politico.com/news/2025/02/21/coinbase-sec-lawsuit-00205303",
+        "title": "Coinbase says SEC agrees to toss lawsuit, signaling end of crypto ...",
+        "snippet": "Staff at the agency have agreed in principle to dismiss the lawsuit against Coinbase, the company said in a blog post Friday. The agreement is ..."
+      },
+      {
+        "url": "https://www.nytimes.com/2025/05/15/technology/coinbase-sec-investigation.html",
+        "title": "S.E.C. Investigating Whether Coinbase Misstated Its User Numbers",
+        "snippet": "In its 2023 lawsuit, the S.E.C. claimed that Coinbase violated federal securities law by failing to register as a broker and argued that ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "is the rosetta stone really in the british museum",
+      "category": "research",
+      "difficulty": "hard",
+      "probes": "Mixed-domain query. Tests whether official-museum primary, reference, and journalism (repatriation debate) are surfaced together."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/ancienthistory/comments/y29p1a/should_the_british_museum_return_the_rosetta_stone/",
+        "title": "Should the British Museum return the Rosetta stone? : r/ancienthistory",
+        "snippet": "Egypt is calling for the return of the Rosetta stone from the British museum. It was created in 196BC and contains more or less the same text in 2 Ancient ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Rosetta_Stone",
+        "title": "Rosetta Stone - Wikipedia",
+        "snippet": "Since 1802, it has been on public display at the British Museum almost continuously and it is the most visited object there. Study of the decree was already ..."
+      },
+      {
+        "url": "https://www.britishmuseum.org/blog/everything-you-ever-wanted-know-about-rosetta-stone",
+        "title": "The Rosetta Stone: everything you need to know | British Museum",
+        "snippet": "The Rosetta Stone is on display in the Egyptian sculpture gallery (Room 4) on the ground floor of the British Museum. Visitors can view it for ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=klJBwnBHET8",
+        "title": "The Rosetta Stone and what it actually says with Ilona Regulski",
+        "snippet": "The Rosetta Stone is one of the most famous objects in the British Museum. But what is it? What does it actually say? And did you know that ..."
+      },
+      {
+        "url": "https://www.quora.com/When-was-the-last-open-viewing-of-the-Rosetta-Stone-at-the-British-Museum",
+        "title": "When was the last open viewing of the Rosetta Stone at the British ...",
+        "snippet": "The Rosetta Stone is on general display at the British Museum. Any visitor can see it at any time within opening hours, with no additional fees."
+      },
+      {
+        "url": "https://www.facebook.com/groups/jigsawpuzzlelover/posts/1511403209595672/",
+        "title": "The great Rosetta Stone, the bad quality of the British museum ...",
+        "snippet": "The Rosetta Stone is not available for purchase outside of the British Museum as it is a part of the museum's collection in London. \u2022. \"The ..."
+      },
+      {
+        "url": "https://community.cadence.com/cadence_blogs_8/b/breakfast-bytes/posts/brit-museum",
+        "title": "The Rosetta Stone and the British Museum - Cadence Blogs",
+        "snippet": "The real Rosetta Stone is in the British Museum in London, the largest museum in the world. It is apparently the most popular exhibit in the ..."
+      },
+      {
+        "url": "https://historyreclaimed.co.uk/rosetta-stone-british-museum/",
+        "title": "Why the Rosetta Stone Belongs in the British Museum",
+        "snippet": "Why the Rosetta Stone British Museum debate matters, and why history shows the Stone is best preserved and understood where it is today."
+      },
+      {
+        "url": "https://www.pbs.org/newshour/world/egyptians-call-on-british-museum-to-return-the-rosetta-stone",
+        "title": "Egyptians call on British Museum to return the Rosetta stone - PBS",
+        "snippet": "''The British Museum's holding of the stone is a symbol of Western cultural violence against Egypt,\" said Monica Hanna, dean at the Arab Academy ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "rei vs llbean return policy",
+      "category": "commercial",
+      "difficulty": "medium",
+      "probes": "Tests commercial primary (both brand sites) for a policy comparison query."
+    },
+    "results": [
+      {
+        "url": "https://backpackinglight.com/forums/topic/82325/",
+        "title": "NPR Reports: REI vs L.L. Bean Return Policy - Backpacking Light",
+        "snippet": "In my opinion there is a big difference between REI and LL Bean, and not just in the return policy. For one, a very high percentage of LL Bean's stuff is their ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/OutdoorsGear/comments/4qnhry/return_policies_for_ll_bean_vs_rei/",
+        "title": "Return Policies for LL Bean vs REI : r/OutdoorsGear - Reddit",
+        "snippet": "REI has a one year return policy now, vs LL Bean's Lifetime return policy, for people looking to pick up new gear more than a year in advance, is it better to ..."
+      },
+      {
+        "url": "https://www.taylorbrandgroup.com/a-tale-of-two-return-policies-l-l-bean-and-rei-how-brand-personality-drove-customer-experience-and-corporate-policy/",
+        "title": "A tale of two return policies: L.L. Bean and REI, how brand ...",
+        "snippet": "The story looked at how two iconic purveyors of outdoor gear: LL Bean and REI, both with similar return policies, had found success on one hand and trouble on ..."
+      },
+      {
+        "url": "https://www.llbean.com/llb/shop/510624?page=returns-and-exchanges",
+        "title": "Returns & Exchanges - L.L.Bean",
+        "snippet": "If you are not 100% satisfied with one of our products, you may return it within one year of your purchase for a refund (special conditions may apply)."
+      },
+      {
+        "url": "https://www.facebook.com/nbcpalmsprings/posts/rei-is-taking-a-firm-stance-on-returns-banning-some-members-from-making-exchange/963370215812127/",
+        "title": "REI is taking a firm stance on returns, banning some members from ...",
+        "snippet": "REI is taking a firm stance on returns, banning some members from making exchanges due to alleged return policy abuse."
+      },
+      {
+        "url": "https://www.npr.org/sections/money/2013/09/25/223787129/what-happens-when-a-store-lets-customers-return-whatever-they-want",
+        "title": "What Happens When Stores Let Customers Return Whatever They ...",
+        "snippet": "LL Bean has an astonishingly lenient return policy. The company has taken back a live Christmas wreath that had turned brown and a shirt ripped by a rescue ..."
+      },
+      {
+        "url": "https://talk.collegeconfidential.com/t/llbean-updates-their-returns-guarantee-policy/1972499",
+        "title": "LLBean Updates Their Returns/Guarantee Policy - Parent Cafe",
+        "snippet": "I seem to remember REI having a crazy generous return policy (like LLBean) and REI changed it because of the reasons cited in this thread."
+      },
+      {
+        "url": "https://www.bogleheads.org/forum/viewtopic.php?t=241306",
+        "title": "L.L. Bean, Citing Abuse, Tightens Its Generous Policy on Returns",
+        "snippet": "Good. 30 days should be more than good enough for a \"No Questions asked\" type of return. Rest can be dealt with on a case by case basis ..."
+      },
+      {
+        "url": "https://money.com/best-return-policies-ll-bean-rei/",
+        "title": "One of the Best Return Policies in Retail Could Be Going Away",
+        "snippet": "L.L. Bean, which has long had one of the best, most generous return policies in return, may become less generous in returns and exchanges."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "is mongodb actually acid",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests vendor commercial vs community vs independent technical analysis on a contested vendor claim."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/Database/comments/18f3ol6/if_mongodb_being_a_nosql_database_is/",
+        "title": "If MongoDB being a NoSQL database is acid-compliant and ... - Reddit",
+        "snippet": "MongoDB is web scale what i've learned on this: relational DBs have been in use at web scale for decades. don't believe the NoSQL marketing hype."
+      },
+      {
+        "url": "https://medium.com/@kyle.c.r.fahey/why-you-should-probably-not-use-mongodb-03f5efd33aaa",
+        "title": "Why MongoDB is Best Left To Experienced Teams - Medium",
+        "snippet": "Even with transactions introduced, MongoDB may not be ACID compliant. Jepsen which does distributed systems safety research found that MongoDB ..."
+      },
+      {
+        "url": "https://stackoverflow.com/questions/7149890/what-did-mongodb-not-being-acid-compliant-before-v4-really-mean",
+        "title": "What did MongoDB not being ACID compliant before v4 really mean?",
+        "snippet": "It's actually not correct that MongoDB is not ACID-compliant. On the contrary, MongoDB is ACID-compilant at the document level."
+      },
+      {
+        "url": "https://www.enterprisedb.com/blog/acid-priority-or-not-can-mongodb-decide",
+        "title": "Is ACID a Priority or Not? Can MongoDB Decide? - EDB",
+        "snippet": "While Postgres offers native support for ACID compliance, MongoDB has taken years to achieve support for multi-document ACID transactions. This ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=9vz2Z5_2JZE",
+        "title": "What They Never Told You About MongoDB - YouTube",
+        "snippet": "Get started with Atlas for free today to enjoy MongoDB: https://fandf.co/3Kkxedz --- For the longest time I ignored MongoDB thinking it's a ..."
+      },
+      {
+        "url": "https://scalegrid.io/blog/mongodb-acid/",
+        "title": "MongoDB ACID Transactions - Keep Your Data Safe - ScaleGrid",
+        "snippet": "ACID stands for Atomicity, Consistency, Isolation, and Durability. These properties ensure the reliability of transactions within MongoDB\u00ae databases. They serve ..."
+      },
+      {
+        "url": "https://www.yugabyte.com/blog/are-mongodb-acid-transactions-ready-for-high-performance-applications/",
+        "title": "Are MongoDB's ACID Transactions Ready for High Performance ...",
+        "snippet": "In this post, we review the details of MongoDB's journey to ACID support and highlight the areas where the database falls short."
+      },
+      {
+        "url": "https://www.mongodb.com/products/capabilities/transactions",
+        "title": "MongoDB's ACID Transaction Guarantee",
+        "snippet": "MongoDB is the only database to combine the speed, flexibility, and power of the document model with ACID guarantees."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/thealiraza_mongodb-database-acid-activity-7381660079340654592-Fq_c",
+        "title": "MongoDB isn't ACID compliant. | Ali Raza - LinkedIn",
+        "snippet": "MongoDB isn't ACID compliant. \"I\" isolation level is important to make a database ACID. MongoDB supports snapshot level isolation but does ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "kubernetes pod stuck terminating",
+      "category": "technical",
+      "difficulty": "medium",
+      "probes": "Tests community (Stack Overflow, GitHub issues) vs SEO troubleshooting farms."
+    },
+    "results": [
+      {
+        "url": "https://stackoverflow.com/questions/35453792/pods-stuck-in-terminating-status",
+        "title": "Pods stuck in Terminating status - kubernetes - Stack Overflow",
+        "snippet": "You can use following command to delete the POD forcefully. Copy. kubectl delete pod <PODNAME> --grace-period=0 --force --namespace ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/kubernetes/comments/1q4fnl7/pod_terminating_stuck/",
+        "title": "Pod terminating stuck : r/kubernetes - Reddit",
+        "snippet": "This happens because when a node goes NotReady, the kubelet is often unreachable, so Kubernetes can't finish deleting the pods and they get ..."
+      },
+      {
+        "url": "https://kodekloud.com/blog/kubernetes-pods-stuck-in-terminating-a-resolution-guide/",
+        "title": "Kubernetes Pods Stuck in Terminating: A Resolution Guide",
+        "snippet": "The Root Cause: Pods usually stick in the \"Terminating\" state due to unfulfilled Finalizers, failed PreStop hooks, or strict StatefulSet ..."
+      },
+      {
+        "url": "https://oneuptime.com/blog/post/2026-02-09-debug-pods-terminating-force-delete/view",
+        "title": "How to Debug Pods Stuck in Terminating State and Force Delete ...",
+        "snippet": "Pods stuck in Terminating state are usually caused by finalizers, node failures, or volume unmount issues. Diagnose systematically by checking ..."
+      },
+      {
+        "url": "https://dev.to/imjoseangel/kubernetes-pods-stuck-in-terminating-a-resolution-guide-2jh3",
+        "title": "Kubernetes Pods Stuck in Terminating: A Resolution Guide",
+        "snippet": "This post describes the Pod Lifecycle conditions, reasons why they could hang in the Terminating state, and some tips to get rid of them."
+      },
+      {
+        "url": "https://sanjitcibm.medium.com/best-practice-for-deleting-pods-in-terminating-state-68f138e80120",
+        "title": "Best Practice for Deleting PODs in Terminating State",
+        "snippet": "Pods can hang in a terminating state because of finalizers running or the running resource has not exited. Normally, these actions conclude ..."
+      },
+      {
+        "url": "https://techdocs.broadcom.com/us/en/vmware-security-load-balancing/vdefend/vmware-nsx-application-platform/4-2/deploying-and-managing-the-nsx-application-platform/troubleshooting-errors/troubleshooting-nsx-application-platform-deployment-issues/kubernetes-pods-are-stuck-in-the-terminating-status.html",
+        "title": "Kubernetes Pods Are Stuck in the Terminating Status - TechDocs",
+        "snippet": "Some of the pods in the TKG Cluster on Supervisor or upstream Kubernetes cluster are stuck in the Terminating status for a few minutes or longer."
+      },
+      {
+        "url": "https://github.com/kubernetes/kubernetes/issues/51835",
+        "title": "Pods stuck on terminating \u00b7 Issue #51835 - GitHub",
+        "snippet": "Usually volume and network cleanup consume more time in termination. Can you find in which phase your pod is stuck? Volume cleanup for example?"
+      },
+      {
+        "url": "https://discourse.jupyter.org/t/pods-stuck-in-terminating-state-on-node/2964",
+        "title": "Pods stuck in terminating state on node - Jupyter Community Forum",
+        "snippet": "Our solution so far has been to use kubectl delete pod <pod-name> --grace-period=0 --force , and to drain the affected node. We are not sure ..."
+      },
+      {
+        "url": "https://medium.com/@haroldfinch01/pods-stuck-in-terminating-status-083168c6b7e8",
+        "title": "Pods stuck in Terminating status - Medium",
+        "snippet": "Pods getting stuck in the \u201cTerminating\u201d status can often be resolved by forcefully deleting the pods, removing finalizers, or addressing underlying node issues."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "trans athletes in sports research",
+      "category": "controversial",
+      "difficulty": "medium",
+      "probes": "Tests academic research primary/secondary vs advocacy organizations (both sides) vs journalism."
+    },
+    "results": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8944319/",
+        "title": "Fairness for Transgender People in Sport - PMC - NIH",
+        "snippet": "There is societal bias that superior athletic performance will be observed for transgender women who have gone through a typical male puberty in the past, even ..."
+      },
+      {
+        "url": "https://glaad.org/fact-sheet-for-reporters-transgender-participation-in-sports/",
+        "title": "Fact Sheet: Transgender Participation in Sports - GLAAD",
+        "snippet": "Research shows states that include transgender participation have more girls participating in sports than states with bans. Claims that trans ..."
+      },
+      {
+        "url": "https://bjsm.bmj.com/content/58/11/586",
+        "title": "Strength, power and aerobic capacity of transgender athletes",
+        "snippet": "Transgender women athletes demonstrated higher absolute handgrip strength than cisgender women, with no difference found relative to fat-free mass or hand size."
+      },
+      {
+        "url": "https://www.transresearch.org.au/post/trans-women-in-sport",
+        "title": "Trans Women in Sport: What Does the Science Say?",
+        "snippet": "Research suggests trans women have minimal to no performance advantage over cisgender women."
+      },
+      {
+        "url": "https://www.sf.gov/trans-women-in-sports-facts-over-fear",
+        "title": "Trans Women in Sports: Facts Over Fear | SF.gov",
+        "snippet": "Trans women have been openly playing in women's sports for decades. Trans women continue to be massively underrepresented in high school, college, and ..."
+      },
+      {
+        "url": "https://english.elpais.com/health/2026-02-04/groundbreaking-study-finds-no-evidence-that-trans-athletes-are-a-threat-to-womens-sports.html",
+        "title": "Groundbreaking study finds no evidence that trans athletes are 'a ...",
+        "snippet": "Trans and cis women show similar levels of physical fitness in competition, according to the first meta\u2011analysis of the published research."
+      },
+      {
+        "url": "https://www.athleteally.org/wp-content/uploads/2023/01/CCES_Transgender-Women-Athletes-and-Elite-Sport-A-Scientific-Review-2.pdf",
+        "title": "[PDF] Transgender Women Athletes and Elite Sport",
+        "snippet": "Published in 2022, this is an in-depth review of all English-language scientific literature published between 2011-2021 about transgender."
+      },
+      {
+        "url": "https://www.ebsco.com/research-starters/sports-and-leisure/transgender-athletes-overview",
+        "title": "Transgender Athletes: Overview | Sports and Leisure - EBSCO",
+        "snippet": "Joanna Harper noted that the most significant study up to the 2010s found that the race times of trans women runners slowed significantly after transitioning."
+      },
+      {
+        "url": "https://www.usopc.org/diversity-equity-inclusion/transgender-athlete-participation-in-sport",
+        "title": "Transgender Athlete Participation in Sport - USOPC",
+        "snippet": "It is not fair if athletes cannot participate or compete in sport because of their gender identity \u2013 participation in sport should be available to everyone."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5357259/",
+        "title": "Sport and Transgender People: A Systematic Review of ... - PMC - NIH",
+        "snippet": "This review also found transgender people had a mostly negative experience in competitive sports because of the restrictions the sport's policy placed on them."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "best mechanical keyboard 2026",
+      "category": "commercial",
+      "difficulty": "easy",
+      "probes": "Tests journalism (review sites with editorial process) vs SEO content farm vs commercial primary."
+    },
+    "results": [
+      {
+        "url": "https://www.rtings.com/keyboard/reviews/best/mechanical",
+        "title": "The 5 Best Mechanical Keyboards of 2026 - RTINGS.com",
+        "snippet": "The best full-size mechanical keyboard we've tested is the Keychron Q5 Max. This wireless keyboard has a premium-feeling construction, a heavyweight aluminum ..."
+      },
+      {
+        "url": "https://www.reddit.com/r/ErgoMechKeyboards/comments/1s9a2fn/best_mechanical_keyboard_to_get_in_2026_price/",
+        "title": "Best Mechanical Keyboard To Get In 2026? (Price & Build Quality)",
+        "snippet": "The Bluish White Silents feel really similar, with a distinct tactile bump right at the top, but just easier to press. If you're looking in the ..."
+      },
+      {
+        "url": "https://www.alexotos.com/the-best-custom-keyboards-you-can-get-right-now-2026-edition/",
+        "title": "The Best Custom Keyboards You Can Get Right Now, 2026 Edition",
+        "snippet": "TL;DR: 65% keyboard from QwertyKeys (~$105\u2013125 USD), timeless design, excellent sound, multiple color options, top pick for 2026. Check it out."
+      },
+      {
+        "url": "https://www.cnn.com/cnn-underscored/reviews/best-mechanical-keyboards",
+        "title": "The best mechanical keyboards of 2026 | CNN Underscored",
+        "snippet": "To find the best mechanical keyboards, we tested over 25 models, assessing comfort, connectivity and build."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3rKPzh3Pr0o&vl=en",
+        "title": "Full-Sized Keyboards are FINALLY Good in 2026. - YouTube",
+        "snippet": "https://amzn.to/4s05QRT ; #Fanttik ; #FanttikB11ProMax Products shown (affiliate): NuPhy Node 100: ; https://geni.us/gGiRC EPOMAKER Galaxy 100 LITE ..."
+      },
+      {
+        "url": "https://www.empireonline.com/gaming/hardware/best-gaming-keyboard/",
+        "title": "Best Gaming Keyboards: The Mechanical, TKL & Wireless Keys To ...",
+        "snippet": "Best gaming keyboard in 2026. 1. Logitech G G515 RAPID. Hands-on tested. Best overall gaming keyboard. Best gaming keyboards. Logitech G G515 ..."
+      },
+      {
+        "url": "https://www.pcmag.com/picks/the-best-mechanical-keyboards",
+        "title": "The Best Mechanical Keyboards We've Tested for 2026 | PCMag",
+        "snippet": "Our current best mechanical keyboard overall for most users is the Razer Pro Type Ultra, but we've included more choices tailored to gaming, ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=p1EoKqCBb80",
+        "title": "BEST Budget Mechanical Keyboards In 2026 - Here's What I'd Buy ...",
+        "snippet": "Links to the best budget mechanical keyboards we listed in this video: Keychron C2 - https://amzn.to/4t10gjo Logitech K845 ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=u8q6G2p7dDA",
+        "title": "These Are 2026's Best Mechanical Keyboards for Programming",
+        "snippet": "Links to the best mechanical keyboard for programming we listed in this video: Nuphy Air75 V3 - https://amzn.to/4tcRK1m Keychron K2 HE ..."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=2RVbcpXxoGQ",
+        "title": "Best Gaming Keyboards 2026 - (Which One Should You ... - YouTube",
+        "snippet": "Best Gaming Keyboards 2026 - (Which One Should You ACTUALLY Buy?) \u27a1 Links of the Best Gaming Keyboards we listed in this video. 1."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "trump indictment status",
+      "category": "news",
+      "difficulty": "easy",
+      "probes": "Tests current journalism freshness + primary (court records) vs aggregators."
+    },
+    "results": [
+      {
+        "url": "https://www.congress.gov/crs-product/LSB11016",
+        "title": "Overview of the Indictment of Former President Trump Related to the ...",
+        "snippet": "The four-count indictment alleges that the former President participated in several criminal conspiracies."
+      },
+      {
+        "url": "https://ballotpedia.org/Donald_Trump_indictments,_2023-2025",
+        "title": "Donald Trump indictments, 2023-2025 - Ballotpedia",
+        "snippet": "Across Trump's four indictments, he was charged with a total of 88 criminal counts. As of November 26, 2025, he had been found guilty of 34 criminal counts and ..."
+      },
+      {
+        "url": "https://www.manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf",
+        "title": "[PDF] Donald-J.-Trump-Indictment - Manhattan District Attorney's Office",
+        "snippet": "FIFTH COUNT: AND THE GRAND JURY AFORESAID, by this indictment, further accuses the defendant of the crime of FALSIFYING BUSINESS RECORDS IN THE FIRST DEGREE, in ..."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Prosecution_of_Donald_Trump_in_New_York",
+        "title": "Prosecution of Donald Trump in New York - Wikipedia",
+        "snippet": "Trump was convicted on all counts on May 30, 2024, becoming the first U.S. president to be convicted of a felony. Following a series of delays and Trump's 2024 ..."
+      },
+      {
+        "url": "https://www.cnn.com/interactive/2023/07/politics/trump-indictments-criminal-cases/",
+        "title": "Tracking Donald Trump's indictments - CNN",
+        "snippet": "On May 30, 2024 he was found guilty on all 34 counts of falsifying business records in the first degree by 12 jurors. Prosecutors alleged during ..."
+      },
+      {
+        "url": "https://www.justice.gov/storage/US_v_Trump_23_cr_257.pdf",
+        "title": "[PDF] United States v. Donald J. Trump - Department of Justice",
+        "snippet": "The Defendant, DONALD J. TRUMP, was the forty-fifth President of the United. States and a candidate for re-election in 2020. The Defendant lost ..."
+      },
+      {
+        "url": "https://www.nycourts.gov/LegacyPDFS/press/PDFs/Trump-Verdict-Sheet.pdf",
+        "title": "[PDF] Trump-Verdict-Sheet.pdf",
+        "snippet": "INDICTMENT No. 71543-23 against. JUSTICE JUAN MERCHAN. DONALD J. TRUMP. DATE 05/29/2024. Defendant. COUNT. NUMBER. CRIME. GUILTY. NOT GUILTY. 1."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=qSbLKFTLElM",
+        "title": "Special counsel revises indictment against Trump after Supreme ...",
+        "snippet": "A federal grand jury has returned a superseding indictment against former President Donald Trump related to obstructing the peaceful ..."
+      },
+      {
+        "url": "https://www.lawfaremedia.org/article/new-york-trump-indictment-unsealed",
+        "title": "New York Trump Indictment Unsealed - Lawfare",
+        "snippet": "On April 4, New York Supreme Court Judge Juan Merchan unsealed the indictment of former President Donald Trump. Trump is facing 34 felony charges."
+      },
+      {
+        "url": "https://www.britannica.com/biography/federal-indictment-of-Donald-J-Trump-documents-case-2226364",
+        "title": "Federal indictment of Donald J. Trump (documents case) - Britannica",
+        "snippet": "On June 8, 2023, Donald J. Trump became the first former U.S. president to be indicted by a federal grand jury. The 37-count indictment, ..."
+      }
+    ]
+  },
+  {
+    "input": {
+      "query": "where to buy authentic le creuset not counterfeit",
+      "category": "commercial",
+      "difficulty": "hard",
+      "probes": "Tests commercial primary (brand site) vs aggregator marketplace listings vs community advice on counterfeits."
+    },
+    "results": [
+      {
+        "url": "https://www.reddit.com/r/LeCreuset/comments/1pqloql/before_i_buy_this_from_a_reseller_can_anybody/",
+        "title": "r/LeCreuset - Before I buy this from a reseller, can anybody help me ...",
+        "snippet": "Before I buy this from a reseller, can anybody help me confirm if this is authentic? confirmed counterfeit."
+      },
+      {
+        "url": "https://www.lecreuset.co.za/le-creuset-scam-warning/scam-warning.html?srsltid=AfmBOor5Nkqh4urfNJEazOpkOhEoudM85wVYjPv9fivOdzGikbvG_qGj",
+        "title": "Le Creuset Scam Warning",
+        "snippet": "Scammers may try to sell \u201cauthentic\u201d Le Creuset items secondhand using fake receipts or packaging. These are often knockoffs or damaged goods ..."
+      },
+      {
+        "url": "https://www.cookingdetective.com/blogs/cookware/how-can-you-tell-a-fake-le-creuset",
+        "title": "How Can You Tell a Fake Le Creuset? - Cooking Detective",
+        "snippet": "Are you confused about the authenticity of your le Creuset cookware? No worries! Here are some tips on how you can tell a fake le Creuset within minutes."
+      },
+      {
+        "url": "https://www.instagram.com/reel/DPeYROtjZ-5/?hl=en",
+        "title": "This is how to tell if your enamel cast iron pot is actually original or ...",
+        "snippet": "Oh so guys look at this Le Creuset cast iron that I bought. I was so happy... turns out it is fake. Raw cast iron isn't expensive. Iron is one ..."
+      },
+      {
+        "url": "https://www.facebook.com/groups/671316156614466/posts/2111953325884068/",
+        "title": "this individual sold me a counterfeit le creuset pan - Facebook",
+        "snippet": "Found last week at my local Goodwill $5.99 each, Le Creuset. Took them home and cleaned them up. No photo description available ..."
+      },
+      {
+        "url": "https://www.trustpilot.com/review/lecreuset.com",
+        "title": "Le Creuset Reviews 412 - Trustpilot",
+        "snippet": "How many stars would you give Le Creuset? Join the 412 people who've already contributed. Your experience matters."
+      },
+      {
+        "url": "https://theskillfulcook.com/how-to-tell-a-fake-le-creuset/",
+        "title": "Here's How To Spot a Fake Le Creuset [With Pictures]",
+        "snippet": "To ensure a Le Creuset is authentic, buy it from a reputable source, such as a Le Creuset outlet store, or the brand's website or Amazon ..."
+      },
+      {
+        "url": "https://www.macys.com/shop/brands/le-creuset?id=52331",
+        "title": "Le Creuset Cookware - Macy's",
+        "snippet": "Cook in style with Le Creuset from Macy's. Discover colorful and high-quality cookware. Free shipping available."
+      },
+      {
+        "url": "https://www.surlatable.com/brands/le-creuset/?srsltid=AfmBOorQGqnh5dsiCiDoNFTxQowiE3iJkaI1t5a3Xshf9Qu_oPnpj58I",
+        "title": "Le Creuset Cookware Sets, Pots & Pans | Sur La Table",
+        "snippet": "Visit Sur La Table to shop our wide Le Creuset collection. These cast iron and stainless steel cookware sets are the standard for any culinary kitchen."
+      },
+      {
+        "url": "https://www.thekitchn.com/where-to-buy-le-creuset-23632480",
+        "title": "The Best Places to Buy Le Creuset Cookware - The Kitchn",
+        "snippet": "Where to Buy Le Creuset \u00b7 Le Creuset \u00b7 Williams Sonoma \u00b7 Amazon \u00b7 QVC \u00b7 Walmart \u00b7 Sur La Table \u00b7 Macy's."
+      }
+    ]
+  }
+]
