@@ -48,16 +48,34 @@ REGISTRY = _load_registry(os.environ.get("CERULEAN_REGISTRY", "benchmark/authori
 def _host(u): return (urlparse(u).hostname or "").replace("www.", "").lower()
 def _path(u): return (urlparse(u).path or "").lower()
 
+# Types whose role splits within the type and needs document-level signals.
+ROLE_REFINED = ("ACADEMIC", "PRIMARY_SOURCE_PUBLISHER", "COMMERCIAL", "REFERENCE")
+
 def _role_for(t, u):
     """Document-level role: primary/secondary/tertiary from path signals, not type alone."""
+    h, p = _host(u), _path(u)
     if t == "ACADEMIC":
-        h, p = _host(u), _path(u)
         if any(h == d or h.endswith("." + d) for d in PREPRINT) or "/abs/" in p:
             return "PRIMARY"
+        # an actual journal article / DOI is the primary research artifact
+        if any(s in p for s in ("/doi/", "/articles/", "/article/", "/stable/", "/journals/", "/full/", "/pmc")):
+            return "PRIMARY"
+        # think-tank "research"/"our-work" pages are secondary analysis
         return "SECONDARY"
     if t == "PRIMARY_SOURCE_PUBLISHER":
-        p = _path(u)
         return "SECONDARY" if ("/news/" in p or "/press" in p) else "PRIMARY"
+    if t == "COMMERCIAL":
+        if "/blog" in p:
+            return "SECONDARY"  # commentary
+        if any(s in p for s in ("/docs", "/reference", "/support", "/news", "/gp/", "/compose", "/help")):
+            return "PRIMARY"   # entity's own product/docs = official communication
+        return "SECONDARY"
+    if t == "REFERENCE":
+        if "/wiki" in p or "/wex" in p:
+            return "TERTIARY"
+        if "man7.org" in h or "/man-pages" in p or "/docs" in p or h.endswith("oauth.net"):
+            return "PRIMARY"   # specs / man pages
+        return "SECONDARY"
     return TYPE_TO_DEFAULT_ROLE.get(t, "SECONDARY")
 
 def _match(h, d): return h == d or h.endswith("." + d)
@@ -80,6 +98,6 @@ def tier1(url):
     role = TYPE_TO_DEFAULT_ROLE.get(nt, "SECONDARY")
     if ot in ("video", "social"):
         role = "SECONDARY"
-    if nt in ("ACADEMIC", "PRIMARY_SOURCE_PUBLISHER"):
+    if nt in ROLE_REFINED:
         role = _role_for(nt, url)
     return (role, nt, "tier1")
