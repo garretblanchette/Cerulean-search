@@ -16,18 +16,20 @@ const SOURCE_TERMS = { news:'src-news', reference:'src-reference', academic:'src
 // Source role: how close the source sits to original evidence (the journalistic / library-science axis).
 // Derived from source type; primary = original record, secondary = reporting/analysis, tertiary = synthesis.
 const SOURCE_ROLE = {
-  gov:        { label:'Primary source',   cls:'role-primary',   note:'Original record or official communication from the entity itself.' },
-  academic:   { label:'Primary source',   cls:'role-primary',   note:'Original research or scholarship.' },
-  docs:       { label:'Primary source',   cls:'role-primary',   note:'Official documentation from the source.' },
-  news:       { label:'Secondary source', cls:'role-secondary', note:'Reporting and analysis of events the author did not originate.' },
-  community:  { label:'Secondary source', cls:'role-secondary', note:'Discussion and commentary.' },
-  video:      { label:'Secondary source', cls:'role-secondary', note:'Creator coverage or commentary.' },
-  commercial: { label:'Secondary source', cls:'role-secondary', note:'Vendor or product material.' },
-  reference:  { label:'Tertiary source',  cls:'role-tertiary',  note:'Encyclopedic synthesis of other sources.' },
-  health:     { label:'Tertiary source',  cls:'role-tertiary',  note:'Consumer-health synthesis.' },
-  ai_slop:    { label:'Tertiary source',  cls:'role-tertiary',  note:'Aggregated or AI-generated synthesis.' },
-  indie:      { label:'Secondary source', cls:'role-secondary', note:'Independent or personal publishing.' },
-  social:     { label:'Secondary source', cls:'role-secondary', note:'Social-media post, profile, or feed.' },
+  // role = empirical majority role for the source type; [lo,hi] = 95% confidence
+  // interval for that role, from how often the type carries it in the gold set.
+  gov:        { label:'Primary source',   cls:'role-primary',   lo:81, hi:98,  note:'Original record or official communication from the entity itself.' },
+  docs:       { label:'Primary source',   cls:'role-primary',   lo:42, hi:87,  note:'Official documentation from the source.' },
+  news:       { label:'Secondary source', cls:'role-secondary', lo:89, hi:100, note:'Reporting and analysis of events the author did not originate.' },
+  community:  { label:'Secondary source', cls:'role-secondary', lo:92, hi:100, note:'Discussion and commentary.' },
+  video:      { label:'Secondary source', cls:'role-secondary', lo:92, hi:100, note:'Creator coverage or commentary.' },
+  social:     { label:'Secondary source', cls:'role-secondary', lo:85, hi:100, note:'Social-media post, profile, or feed.' },
+  indie:      { label:'Secondary source', cls:'role-secondary', lo:70, hi:99,  note:'Independent or personal publishing.' },
+  academic:   { label:'Secondary source', cls:'role-secondary', lo:37, hi:64,  note:'Academic work; primary for original research, secondary for review. Role is genuinely split for this type.' },
+  commercial: { label:'Secondary source', cls:'role-secondary', lo:25, hi:75,  note:'Vendor or product material. Role is split between the entity\'s own primary statements and third-party material.' },
+  reference:  { label:'Tertiary source',  cls:'role-tertiary',  lo:63, hi:93,  note:'Encyclopedic synthesis of other sources.' },
+  health:     { label:'Tertiary source',  cls:'role-tertiary',  lo:60, hi:85,  note:'Consumer-health synthesis.' },
+  ai_slop:    { label:'Tertiary source',  cls:'role-tertiary',  lo:80, hi:98,  note:'Aggregated or AI-generated synthesis.' },
 };
 
 function trustBadge(cls, term, label, emoji) {
@@ -361,8 +363,12 @@ function renderResults(results) {
     // Lead with source classification — the journalistic angle: role first, then type.
     const role = SOURCE_ROLE[r.source_type];
     if (role) {
-      const rb = el('span', 'role-badge ' + role.cls, role.label);
-      rb.title = role.note;
+      const rb = el('span', 'role-badge ' + role.cls);
+      rb.appendChild(document.createTextNode(role.label));
+      if (role.lo != null) {
+        rb.appendChild(el('span', 'role-ci', role.lo + '\u2013' + role.hi + '%'));
+      }
+      rb.title = role.note + ' The range is a 95% confidence interval for this classification, based on how reliably this source type carries this role in our evaluation set.';
       meta.appendChild(rb);
     }
     if (r.source_type && r.source_type !== 'other') {
