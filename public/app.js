@@ -32,6 +32,35 @@ const SOURCE_ROLE = {
   ai_slop:    { label:'Tertiary source',  cls:'role-tertiary',  lo:80, hi:98,  note:'Aggregated or AI-generated synthesis.' },
 };
 
+// Academic role is genuinely split: original research is primary, reviews and
+// institutional explainers are secondary. Resolve the subtype per result from URL
+// structure (matching the classifier's academic role rules) and show the subtype's
+// own, tighter CI rather than one wide pooled interval for the whole type.
+const ACAD_ROLE = {
+  primary:   { label:'Primary source',   cls:'role-primary',   lo:90, hi:100, note:'Original research: journal article, preprint, dataset, or repository paper.' },
+  secondary: { label:'Secondary source', cls:'role-secondary', lo:73, hi:95,  note:'Academic synthesis or reporting: review, institutional explainer, press release, or research guide.' },
+};
+function academicRole(u) {
+  let h = '', p = '';
+  try { const a = new URL(u); h = (a.hostname || '').replace(/^www\./, '').toLowerCase(); p = (a.pathname || '').toLowerCase(); }
+  catch (e) { return 'secondary'; }
+  const isHost = ds => ds.some(d => h === d || h.endsWith('.' + d));
+  const PRE = ['arxiv.org', 'biorxiv.org', 'medrxiv.org', 'ssrn.com'];
+  const PHOST = ['pmc.ncbi.nlm.nih.gov', 'pubmed.ncbi.nlm.nih.gov', 'jstor.org', 'nature.com', 'pnas.org',
+    'thelancet.com', 'nejm.org', 'jamanetwork.com', 'link.springer.com', 'sciencedirect.com', 'iopscience.iop.org',
+    'journals.asm.org', 'journals.uchicago.edu', 'tandfonline.com', 'bjsm.bmj.com', 'cambridge.org',
+    'mitpress.mit.edu', 'ucpress.edu', 'politybooks.com'];
+  const SECP = ['/news/', '/press', '/stories/', '/our-work/', '/publications/', '/information-sheets/',
+    '/resources/', '/feature', '/analysis', '/blog', '/short-reads/', 'educational-resources', '/issues/',
+    '/research/', '/news-archive', '/today/', '/media-mention/', '/evaluation/', '/awards', '/virtual/'];
+  if (isHost(PRE)) return 'primary';
+  if (/\/doi\/|fullarticle|\/stable\/|viewcontent|\/abs\//.test(p) || p.endsWith('.pdf')) return 'primary';
+  if (isHost(PHOST) && !/\/news\/|\/press|\/stories\//.test(p)) return 'primary';
+  if (h.startsWith('news.') || SECP.some(s => p.includes(s))) return 'secondary';
+  if (/bookdetail|\/book\/|\/article\/|\/articles\/|\/content\//.test(p) || h.includes('feynmanlectures')) return 'primary';
+  return 'secondary';
+}
+
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
   if (emoji) {
@@ -361,7 +390,7 @@ function renderResults(results) {
 
     const meta = el('div', 'meta-row');
     // Lead with source classification — the journalistic angle: role first, then type.
-    const role = SOURCE_ROLE[r.source_type];
+    const role = r.source_type === 'academic' ? ACAD_ROLE[academicRole(r.url)] : SOURCE_ROLE[r.source_type];
     if (role) {
       const rb = el('span', 'role-badge ' + role.cls);
       rb.appendChild(document.createTextNode(role.label));
