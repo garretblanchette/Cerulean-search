@@ -61,6 +61,39 @@ function academicRole(u) {
   return 'secondary';
 }
 
+// Reference role splits three ways: authoritative docs/specs are primary, library
+// research guides and educational explainers are secondary, encyclopedic synthesis is
+// tertiary. Commercial splits into the vendor speaking for its own product (primary)
+// vs third-party material (secondary). Resolved per result so the CI reflects subtype.
+const REF_ROLE = {
+  primary:   { label:'Primary source',   cls:'role-primary',   lo:57, hi:100, note:'Authoritative technical documentation or specification: official docs, man pages, or RFC.' },
+  secondary: { label:'Secondary source', cls:'role-secondary', lo:77, hi:100, note:'Library research guide or educational explainer synthesizing primary material.' },
+  tertiary:  { label:'Tertiary source',  cls:'role-tertiary',  lo:74, hi:97,  note:'Encyclopedic synthesis: encyclopedia, wiki, dictionary, or reference-starter entry.' },
+};
+const COM_ROLE = {
+  primary:   { label:'Primary source',   cls:'role-primary',   lo:82, hi:100, note:'Vendor or maker speaking for its own product: official docs, product page, support, or announcement.' },
+  secondary: { label:'Secondary source', cls:'role-secondary', lo:56, hi:80,  note:'Third-party commercial material about a product. Role is hard to pin down structurally for this type.' },
+};
+function referenceRole(u) {
+  let h = '', p = '';
+  try { const a = new URL(u); h = (a.hostname || '').replace(/^www\./, '').toLowerCase(); p = (a.pathname || '').toLowerCase(); }
+  catch (e) { return 'tertiary'; }
+  const isHost = ds => ds.some(d => h === d || h.endsWith('.' + d));
+  const DOCS = ['postgresql.org', 'docs.python.org', 'man7.org', 'oauth.net', 'kernel.org'];
+  const ENC = ['en.wikipedia.org', 'wikipedia.org', 'britannica.com', 'investopedia.com', 'plato.stanford.edu', 'ballotpedia.org', 'oyez.org', 'ebsco.com'];
+  if (isHost(DOCS) || p.includes('/man-pages/') || (p.includes('/docs/') && (h === 'postgresql.org' || h === 'docs.python.org'))) return 'primary';
+  if (isHost(ENC) || /\/wiki\/|\/terms\/|\/wex\/|\/entries\/|\/research-starters\/|\/cases/.test(p)) return 'tertiary';
+  if (h.startsWith('guides.') || h.startsWith('libguides.') || h.startsWith('library.') || h.includes('libguides') || h.includes('guides.library') ||
+      /\/education\/|\/learn\/|\/lesson-plans|\/interpretations\/|primarysources|\/primary-and-secondary|\/answers\/|\/documents\/|\/resources\/|\/details\//.test(p)) return 'secondary';
+  return 'tertiary';
+}
+function commercialRole(u) {
+  let p = '';
+  try { p = (new URL(u).pathname || '').toLowerCase(); } catch (e) { return 'secondary'; }
+  if (/\/docs|\/reference|\/support|\/news|\/gp\/|\/compose|\/help/.test(p)) return 'primary';
+  return 'secondary';
+}
+
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
   if (emoji) {
@@ -390,7 +423,11 @@ function renderResults(results) {
 
     const meta = el('div', 'meta-row');
     // Lead with source classification — the journalistic angle: role first, then type.
-    const role = r.source_type === 'academic' ? ACAD_ROLE[academicRole(r.url)] : SOURCE_ROLE[r.source_type];
+    let role;
+    if (r.source_type === 'academic') role = ACAD_ROLE[academicRole(r.url)];
+    else if (r.source_type === 'reference') role = REF_ROLE[referenceRole(r.url)];
+    else if (r.source_type === 'commercial') role = COM_ROLE[commercialRole(r.url)];
+    else role = SOURCE_ROLE[r.source_type];
     if (role) {
       const rb = el('span', 'role-badge ' + role.cls);
       rb.appendChild(document.createTextNode(role.label));
