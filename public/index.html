@@ -43,6 +43,10 @@
 
         <!-- Primary control row: mode toggle, summarize, provider, overflow -->
         <div id="controls" class="controls hidden">
+        <div class="seg" role="radiogroup" aria-label="Sort order">
+          <button class="seg-btn active" data-sort="relevance" role="radio" aria-checked="true">Relevance</button>
+          <button class="seg-btn" data-sort="evidence" role="radio" aria-checked="false">Closest to evidence</button>
+        </div>
           
 
           <button class="chip" id="chip-summarize" data-key="summarize" aria-pressed="false" title="Extractive top sentences from result snippets. No AI involved.">
@@ -102,7 +106,7 @@
     </footer>
   </div>
 
-  <script src="/app.js?v=11"></script>
+  <script src="/app.js?v=12"></script>
   <script defer src="/_vercel/insights/script.js"></script>
   <script src="/glossary.js?v=2" defer></script>
   <script src="/tier-glossary.js?v=3" defer></script>

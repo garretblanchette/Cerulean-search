@@ -157,21 +157,21 @@ function applyDark(on) {
 applyDark(state.dark === null ? false : state.dark);
 if ($darkBtn) $darkBtn.addEventListener('click', () => applyDark(!(state.dark === true)));
 
-/* ---- Segmented control (mode) ---- */
-function setMode(mode) {
-  state.mode = mode;
-  LS.write('cer.mode', mode);
+/* ---- Segmented control (sort order) ---- */
+function setSort(sort) {
+  state.sort = sort;
+  LS.write('cer.sort', sort);
   document.querySelectorAll('.seg-btn').forEach(b => {
-    const active = b.dataset.mode === mode;
+    const active = b.dataset.sort === sort;
     b.classList.toggle('active', active);
     b.setAttribute('aria-checked', active ? 'true' : 'false');
   });
-  if (state.hasSearched) runSearch();
+  if (state.lastResults) renderResults(state.lastResults);
 }
 document.querySelectorAll('.seg-btn').forEach(b => {
-  b.addEventListener('click', () => setMode(b.dataset.mode));
+  b.addEventListener('click', () => setSort(b.dataset.sort));
 });
-setMode(state.mode);
+setSort(LS.read('cer.sort', 'relevance'));
 
 /* ---- Summarize chip ---- */
 const $summarizeChip = document.getElementById('chip-summarize');
@@ -404,6 +404,11 @@ function renderResults(results) {
     var h = '<span class="meter">';
     for (var i=1;i<=3;i++){ h += '<i' + (i<=lit ? ' class="on"' : '') + '></i>'; }
     return h + '</span>';
+  }
+
+  if (state.sort === 'evidence') {
+    var rk = function(r){ var ro = roleFor(r); var c = ro ? ro.cls : ''; return c === 'role-primary' ? 0 : c === 'role-secondary' ? 1 : c === 'role-tertiary' ? 2 : 3; };
+    results = results.map(function(r, i){ return {r:r, i:i}; }).sort(function(a, b){ return (rk(a.r) - rk(b.r)) || (a.i - b.i); }).map(function(x){ return x.r; });
   }
 
   results.forEach(function(r, idx){
