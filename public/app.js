@@ -492,7 +492,7 @@ async function runSearch() {
   tryInstantAnswer(q);
   setStatus('Searching\u2026', true);
 
-  const boost = state.mode === 'boost';
+  const boost = false;
   const payload = {
     q: q.trim(),
     provider: state.provider,
