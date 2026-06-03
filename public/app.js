@@ -367,20 +367,24 @@ function filterResults(results) {
 
 function renderResults(results) {
   state.lastResults = results;
-
-  // Cache-migration: legacy 'shopping' → 'commercial'
-  results = (results || []).map(r => {
+  results = (results || []).map(function(r){
     if (r && r.source_type === 'shopping') r.source_type = 'commercial';
     return r;
   });
-
-  const total = results.length;
+  var total = results.length;
   results = filterResults(results);
-  const hidden = total - results.length;
-
+  var hidden = total - results.length;
   if (!$results) return;
   $results.innerHTML = '';
 
+  if (results.length) {
+    var lg = el('div', 'ev-legend');
+    lg.innerHTML = '<span class="ev-l">How close to the evidence</span>' +
+      '<span class="ev-i ev-p"><i></i><i></i><i></i>Primary <em>original record</em></span>' +
+      '<span class="ev-i ev-s"><i></i><i></i><i></i>Secondary <em>reports on it</em></span>' +
+      '<span class="ev-i ev-t"><i></i><i></i><i></i>Tertiary <em>synthesizes it</em></span>';
+    $results.appendChild(lg);
+  }
   if (hidden > 0) {
     $results.appendChild(el('div', 'filter-note', hidden + ' result' + (hidden===1?'':'s') + ' hidden by filters'));
   }
@@ -389,23 +393,54 @@ function renderResults(results) {
     return;
   }
 
-  results.forEach((r, idx) => {
-    const card = el('div', 'result');
+  function roleFor(r){
+    if (r.source_type === 'academic') return ACAD_ROLE[academicRole(r.url)];
+    if (r.source_type === 'reference') return REF_ROLE[referenceRole(r.url)];
+    if (r.source_type === 'commercial') return COM_ROLE[commercialRole(r.url)];
+    return SOURCE_ROLE[r.source_type];
+  }
+  function meterHTML(cls){
+    var lit = cls === 'role-primary' ? 1 : cls === 'role-secondary' ? 2 : 3;
+    var h = '<span class="meter">';
+    for (var i=1;i<=3;i++){ h += '<i' + (i<=lit ? ' class="on"' : '') + '></i>'; }
+    return h + '</span>';
+  }
+
+  results.forEach(function(r, idx){
+    var role = roleFor(r);
+    var rail = role ? (' ' + role.cls.replace('role-','r-')) : '';
+    var card = el('div', 'result' + rail);
     card.style.animationDelay = (idx * 0.04) + 's';
 
-    const citeRow = el('div', 'cite-url');
-    const favicon = document.createElement('img');
+    if (role) {
+      var cl = el('div', 'classline');
+      var rb = el('span', 'role ' + role.cls);
+      rb.innerHTML = meterHTML(role.cls);
+      rb.appendChild(document.createTextNode(role.label));
+      if (role.lo != null) rb.appendChild(el('span', 'ci', role.lo + '–' + role.hi + '%'));
+      rb.title = (role.note || '') + ' The range is a 95% confidence interval for how reliably this source type carries this role in our evaluation set.';
+      cl.appendChild(rb);
+      if (r.source_type && r.source_type !== 'other') {
+        var stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
+        var stTerm = SOURCE_TERMS[r.source_type];
+        if (stTerm) cl.appendChild(trustBadge('typetag', stTerm, stLabel, null));
+        else cl.appendChild(el('span', 'typetag', stLabel));
+      }
+      card.appendChild(cl);
+    }
+
+    var citeRow = el('div', 'cite-url');
+    var favicon = document.createElement('img');
     favicon.className = 'favicon';
-    favicon.src = 'https://www.google.com/s2/favicons?domain=' + r.domain + '&sz=16';
-    favicon.alt = '';
-    favicon.width = 16; favicon.height = 16;
-    favicon.onerror = function() { this.style.display = 'none'; };
+    favicon.src = 'https://www.google.com/s2/favicons?domain=' + r.domain + '&sz=32';
+    favicon.alt = ''; favicon.width = 16; favicon.height = 16;
+    favicon.onerror = function(){ this.style.display = 'none'; };
     citeRow.appendChild(favicon);
     citeRow.appendChild(document.createTextNode(r.domain));
     card.appendChild(citeRow);
 
-    const title = el('div', 'title');
-    const a = document.createElement('a');
+    var title = el('div', 'title');
+    var a = document.createElement('a');
     a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
     a.textContent = r.title;
     title.appendChild(a);
@@ -413,48 +448,25 @@ function renderResults(results) {
 
     if (r.snippet) card.appendChild(el('div', 'snippet', r.snippet));
 
-    // Topic callout (only when Summarize is on and backend returned a topic)
     if (state.summarize && r.topic) {
-      const topic = el('div', 'topic-callout');
+      var topic = el('div', 'topic-callout');
       topic.appendChild(el('span', 'topic-label', 'Topic'));
       topic.appendChild(el('span', 'topic-body', r.topic));
       card.appendChild(topic);
     }
 
-    const meta = el('div', 'meta-row');
-    // Lead with source classification — the journalistic angle: role first, then type.
-    let role;
-    if (r.source_type === 'academic') role = ACAD_ROLE[academicRole(r.url)];
-    else if (r.source_type === 'reference') role = REF_ROLE[referenceRole(r.url)];
-    else if (r.source_type === 'commercial') role = COM_ROLE[commercialRole(r.url)];
-    else role = SOURCE_ROLE[r.source_type];
-    if (role) {
-      const rb = el('span', 'role-badge ' + role.cls);
-      rb.appendChild(document.createTextNode(role.label));
-      if (role.lo != null) {
-        rb.appendChild(el('span', 'role-ci', role.lo + '\u2013' + role.hi + '%'));
-      }
-      rb.title = role.note + ' The range is a 95% confidence interval for this classification, based on how reliably this source type carries this role in our evaluation set.';
-      meta.appendChild(rb);
+    var foot = el('div', 'foot');
+    if ((r.ai_likelihood || 0) >= 0.4) {
+      var fl = el('span', 'flag warn');
+      fl.textContent = 'AI-style writing';
+      fl.title = 'Heuristic from stylistic tells — stock phrases, em-dash density, undated text. A smell test, not a detector.';
+      foot.appendChild(fl);
     }
-    if (r.source_type && r.source_type !== 'other') {
-      const stTerm = SOURCE_TERMS[r.source_type];
-      const stLabel = SOURCE_LABELS[r.source_type] || r.source_type;
-      if (stTerm) meta.appendChild(trustBadge('src-badge src-' + r.source_type, stTerm, stLabel, null));
-      else meta.appendChild(el('span', 'src-badge src-' + r.source_type, stLabel));
+    if (r.published) {
+      if (foot.childNodes.length) foot.appendChild(el('span', 'sep', '·'));
+      foot.appendChild(el('span', 'date', r.published));
     }
-    // Quality signal, secondary to the source classification.
-    getTrustSignals(r.score, r.reasons).forEach(sig => {
-      const tm = TIER_TERMS[sig.label];
-      if (tm) meta.appendChild(trustBadge('trust-badge ' + sig.cls, tm.term, sig.label, tm.emoji));
-      else meta.appendChild(el('span', 'trust-badge ' + sig.cls, sig.label));
-    });
-    if (r.source_type !== 'commercial' && Array.isArray(r.reasons) && r.reasons.some(x => String(x).startsWith('commerce:'))) {
-      meta.appendChild(trustBadge('src-badge src-commercial src-secondary', 'src-commercial', 'Commercial', null));
-    }
-    if ((r.ai_likelihood || 0) >= 0.4) meta.appendChild(trustBadge('ai-warn-badge', 'likely-ai', 'Likely AI', null));
-    if (r.published) meta.appendChild(el('span', 'date-badge', r.published));
-    card.appendChild(meta);
+    if (foot.childNodes.length) card.appendChild(foot);
 
     $results.appendChild(card);
   });
@@ -463,6 +475,7 @@ function renderResults(results) {
     window.cerulean.refreshGlossary();
   }
 }
+
 
 /* ======== SEARCH ======== */
 
