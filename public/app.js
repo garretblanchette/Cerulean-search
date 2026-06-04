@@ -94,6 +94,20 @@ function commercialRole(u) {
   return 'secondary';
 }
 
+const GOV_ROLE = {
+  primary:   { label:'Primary source',   cls:'role-primary',   lo:91, hi:100, note:'Original government or official record: statute, regulation, ruling, court filing, dataset, press release, or transcript.' },
+  secondary: { label:'Secondary source', cls:'role-secondary', lo:61, hi:100, note:'Official institution explaining or synthesizing a topic (FAQ, overview, explainer, blog). Authoritative source, but this page is not an original record.' },
+};
+function govRole(u) {
+  var p = '';
+  try { p = (new URL(u).pathname || '').toLowerCase(); } catch (e) { return 'primary'; }
+  var REC = ['.pdf','/bill','/statute','/regulation','/opinion','/slipopinion','/cases/','/case/','/text','/press','/newsroom','/newsevents','/transcript','/document','/milestone','/federalregister','/fomccalendar','/nchs','/data','/clip/','/program/','/events/news','/nomination','/details/','/portals/','/storage/','/sites/default/files','/factsheet','/artandhistory','/reports/'];
+  var EXP = ['/faq','mythbuster','/blog','/learn','/education','/students','/basics','/understanding','/consumer-updates','/highlights','/scientific-consensus','/facts-over','/what-is'];
+  if (REC.some(function(s){ return p.indexOf(s) >= 0; })) return 'primary';
+  if (EXP.some(function(s){ return p.indexOf(s) >= 0; })) return 'secondary';
+  return 'primary';
+}
+
 function trustBadge(cls, term, label, emoji) {
   const badge = el('span', cls);
   if (emoji) {
@@ -397,6 +411,7 @@ function renderResults(results) {
     if (r.source_type === 'academic') return ACAD_ROLE[academicRole(r.url)];
     if (r.source_type === 'reference') return REF_ROLE[referenceRole(r.url)];
     if (r.source_type === 'commercial') return COM_ROLE[commercialRole(r.url)];
+    if (r.source_type === 'gov') return GOV_ROLE[govRole(r.url)];
     return SOURCE_ROLE[r.source_type];
   }
   function meterHTML(cls){
